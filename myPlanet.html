@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <title>My first three.js app</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        canvas {
+            width: 100%;
+            height: 100%
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.js"></script>
+    <script src="js/myThree.js"></script>
+    <script src="js/myterra.js"></script>
+
+
+    <script>
+        var onRenderFcts = [];
+        var scene = new THREE.Scene();
+        var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+
+        var renderer = new THREE.WebGLRenderer();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+        var geometry = new THREE.SphereGeometry(0.5, 32, 32)
+        var material = new THREE.MeshPhongMaterial()
+        var earthMesh = new THREE.Mesh(geometry, material);
+        // scene.add(earthMesh);
+
+        material.map = THREE.ImageUtils.loadTexture('foto/terra.jpg')
+        material.specularMap = THREE.ImageUtils.loadTexture('foto/terrabumb.jpg')
+        material.specular = new THREE.Color('grey')
+        var canvasCloud = 'foto/star.jpg';
+        var geometry = new THREE.SphereGeometry(0.51, 32, 32)
+        var material = new THREE.MeshPhongMaterial({
+            map: new THREE.Texture(canvasCloud),
+            side: THREE.DoubleSide,
+            opacity: 0.8,
+            transparent: true,
+            depthWrite: false,
+        })
+        var cloudMesh = new THREE.Mesh(geometry, material)
+        earthMesh.add(cloudMesh)
+        onRenderFcts.push(function(delta, now) {
+            earthMesh.rotation.y += 1 / 32 * delta
+        })
+        onRenderFcts.push(function(delta, now) {
+                cloudMesh.rotation.y += 1 / 16 * delta
+            })
+            // create the geometry sphere
+        var geometry = new THREE.SphereGeometry(90, 32, 32)
+            // create the material, using a texture of startfield
+        var material = new THREE.MeshBasicMaterial()
+        material.map = THREE.ImageUtils.loadTexture('foto/star.jpg')
+        material.side = THREE.BackSide
+            // create the mesh based on geometry and material
+        var mesh = new THREE.Mesh(geometry, material)
+        earthMesh.add(mesh);
+        scene.add(earthMesh);
+        renderer.render(scene, camera);
+    </script>
+
+</body>
+
+</html>

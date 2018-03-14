@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <!--  <meta Content-Type: text/html; charset="utf-8">
+    <meta Content-Type: multipart/form-data; boundary="something">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  -->
+    <title>Terra !!!!</title>
+    <style>
+        body {
+            color: #808080;
+            font-family: Monospace;
+            font-size: 13px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 0px;
+            overflow: hidden;
+        }
+        
+        #info {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            font-size: 20px;
+            padding: 5px;
+        }
+        
+        a {
+            color: #0080ff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+    </div>
+
+
+
+
+    <script src="three.js-master/build/three.js"></script>
+
+    <script src="three.js-master/examples/js/renderers/Projector.js"></script>
+    <script src="three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
+
+    <script src="stats.min.js"></script>
+
+    <script>
+        var terramesh;
+        var terramesh1;
+        var lunamesh;
+        initializeScene();
+        animateScene();
+
+        function initializeScene() {
+            // Check whether the browser supports WebGL. If so, instantiate the hardware accelerated 
+            // WebGL renderer. For antialiasing, we have to enable it. The canvas renderer uses 
+            // antialiasing by default. 
+            // The approach of multiplse renderers is quite nice, because your scene can also be 
+            // viewed in browsers, which don't support WebGL. The limitations of the canvas renderer 
+            // in contrast to the WebGL renderer will be explained in the tutorials, when there is a 
+            // difference. 
+
+
+            //if (Detector.webgl) {
+            //             renderer = new THREE.WebGLRenderer({
+            //                antialias: true
+            //           });
+
+            // If its not supported, instantiate the canvas renderer to support all non WebGL browsers 
+            //      } else {
+            renderer = new THREE.CanvasRenderer();
+            //     }
+
+            // Set the background color of the renderer to black, with full opacity 
+            //   renderer.setClearColor(0x000000, 1);
+
+            // Get the size of the inner window (content area) to create a full size renderer 
+            canvasWidth = window.innerWidth;
+            canvasHeight = window.innerHeight;
+
+            // Set the renderers size to the content areas size 
+            renderer.setSize(canvasWidth, canvasHeight);
+
+            // Get the DIV element from the HTML document by its ID and append the renderers DOM 
+            // object to it 
+            document.getElementById("container").appendChild(renderer.domElement);
+
+            // Create the scene, in which all objects are stored (e. g. camera, lights, 
+            // geometries, ...) 
+            scene = new THREE.Scene();
+
+            // Now that we have a scene, we want to look into it. Therefore we need a camera. 
+            // Three.js offers three camera types: 
+            //  - PerspectiveCamera (perspective projection) 
+            //  - OrthographicCamera (parallel projection) 
+            //  - CombinedCamera (allows to switch between perspective / parallel projection 
+            //    during runtime) 
+            // In this example we create a perspective camera. Parameters for the perspective 
+            // camera are ... 
+            // ... field of view (FOV), 
+            // ... aspect ratio (usually set to the quotient of canvas width to canvas height) 
+            // ... near and 
+            // ... far. 
+            // Near and far define the cliping planes of the view frustum. Three.js provides an 
+            // example (http://mrdoob.github.com/three.js/examples/ 
+            // -> canvas_camera_orthographic2.html), which allows to play around with these 
+            // parameters. 
+            // The camera is moved 10 units towards the z axis to allow looking to the center of 
+            // the scene. 
+            // After definition, the camera has to be added to the scene. 
+            camera = new THREE.PerspectiveCamera(45, canvasWidth / canvasHeight, 1, 100);
+            camera.position.set(0, 0, 10);
+            camera.lookAt(scene.position);
+            scene.add(camera);
+
+            // To create a pyramid, we use THREE.CylinderGeometry. By its five parameters, we are 
+            // able to create the geometry of the pyramid (subtype of a cylinder). 
+            // Parameter 1 'radiusTop': Controls the radius of the upper end of the cylinder. If we 
+            //                          set to to '0', we have a cone. 
+            // Parameter 2 'radiusBottom': Controls the radius of the lower end. 
+            // Parameter 3 'height': Sets the height of the cylinder. 
+            // Parameter 4 'segments': Number of segments, forming the cylindrical shell. To create 
+            //                         a pyramid, we choose '4'. 
+            // Parameter 5 'openEnded': Allows to have open ends ('true') or closed ends ('false') 
+            //                          of the cylindern. Since the pyramid shall have a bottom 
+            //                          face, we set it to 'false'. 
+            //  var pyramidGeometry = new THREE.CylinderGeometry(0, 1.5, 1.5, 4, false); 
+            /*  var background = new THREE.TextureLoader();
+            background.load('versolinfinitoeoltre.jpg', function(texture) {
+                var geometry0 = new THREE.PlaneGeometry(22, 12, 1, 1);
+                var material0 = new THREE.MeshPhongMaterial({
+                    map: texture,
+                    overdraw: 0.5
+                });
+
+                background = new THREE.Mesh(geometry0, material0);
+                //  terramesh1.position.set(-1.5, 0.0, 3.0);
+                scene.add(background);
+            });
+*/
+            var testo = new THREE.FontLoader();
+
+            testo.load('fonts/helvetiker_regular.typeface.json', function(font) {
+
+                var geometry3 = new THREE.TextGeometry('Hello three.js!', {
+                    font: font,
+                    size: 1,
+                    height: 1
+                        //  curveSegments: 12,
+                        //  bevelEnabled: true,
+                        //  bevelThickness: 10,
+                        //    bevelSize: 8,
+                        //   bevelSegments: 5
+                });
+                var material3 = new THREE.MeshPhongMaterial({
+                    color: 0xffffff,
+                    overdraw: 0.5
+                });
+                testo = new THREE.Mesh(geometry3, material3);
+                testo.position.set(-2.5, 0.0, 5.0);
+                scene.add(testo);
+                console.log(testo);
+            });
+        }
+
+        function animateScene() {
+            // Increase the y rotation of the triangle 
+            //terramesh.rotation.z += 0.02;
+
+            // Decrease the rotation of the cube 
+            //    terramesh1.rotateOnAxis(new THREE.Vector3(1, 1, 1).normalize(), 0.075);
+
+            // Define the function, which is called by the browser supported timer loop. If the 
+            // browser tab is not visible, the animation is paused. So 'animateScene()' is called 
+            // in a browser controlled loop. 
+            requestAnimationFrame(animateScene);
+
+            // Map the 3D scene down to the 2D screen (render the frame) 
+            renderScene();
+        }
+
+
+        function renderScene() {
+            // terramesh1.rotation.y += 0.002;
+            //  terramesh1.rotation.z += 0.002;
+            renderer.render(scene, camera);
+        }
+    </script>
+</body>
+
+</html>

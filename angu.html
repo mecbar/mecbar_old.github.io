@@ -1,0 +1,26 @@
+<div class="angular2">
+ <br>
+ <h3 class="center brown-text"> Elenco Nazioni : esempio creato con AngularJs <cite>(direttive ng-repeat ng-show) </cite> </h3>
+ <p class="center"> <button id="but1" class="button" name="button"> Visualizza  elenco </button>  
+ <button id="nascondi" class="button" name="button"> Nascondi elenco </button> 
+ </p>
+ <br>
+
+<div id="elenco">
+ <table  style="width:100%" ng-controller="NationListCtrl">
+   <tr>
+    <th>Numero</th>
+    <th>Codice</th>
+    <th>Nazione</th>
+   </tr>
+       <tbody ng-repeat="nation in nations">
+        <tr   ng-repeat="(key,value) in nation">
+        <td>  {{ key +1 }} </td> 
+        <td> {{ value.code }} </td>
+        <td> {{ value.name }} </td>
+       </tbody>
+  </table>
+ </div>
+</div>
+
+

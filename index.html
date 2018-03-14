@@ -1,0 +1,1643 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+
+    <title>MecBar | Machine learning & javascript </title>
+
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   -->
+
+    <script src='js/convnet-min.js'></script>
+    <script src='js/recurrent.js'></script>
+    <script src='js/nprogress.js'></script>
+    <script src='js/ApiAi.min.js'></script>
+    <link rel='stylesheet' href='css/nprogress.css' />
+    <script src="js/libmxnet_predict.js"></script>
+    <script src="js/mxnet_predict.js"></script>
+    <script src="js/classify_image.js"></script>
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+    <script src="js/app.js"></script>
+    <script src="js/comandi.js"></script>
+    <script src="js/myConv.js"></script>
+    <script src="js/lstm.js"></script>
+    <!-- sumome  link social -->
+    <script src="//load.sumome.com/" data-sumo-site-id="98711fc4997a561007230296cfc67bf8fe083e4799bea5270763985560b583ec" async="async"></script>
+    <!-- font x icone social + email -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- facebook open graph -->
+    <meta property="og:url" content="https://www.mecbar.com" />
+    <meta property="og:title" content="MecBar the webt for you" />
+    <meta property="og:image" content="https://www.mecbar.com/mecface.jpg" />
+    <meta property="og:description" content="MecBar for you" />
+
+
+</head>
+
+<body>
+    <!-- nav bar fissa -->
+    <!--   <v class="navbar-fixed"> -->
+    <nav>
+        <li class="nav-wrapper white" id="head">
+            <!-- class="nav-wrapper white" id="head">
+           <div class="nav-wrapper white">  -->
+            <a href="#!" class="brand-logo">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#dev">Development</a></li>
+                <li><a href="#linux">Linux</a></li>
+                <li><a href="#us">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#dev">Development</a></li>
+                <li><a href="#linux">Linux</a></li>
+                <li><a href="#us">Contatti</a></li>
+            </ul>
+            </div>
+    </nav>
+
+    <div class="ml" id="ml">
+        <div class="titoloml">
+            Machine learning
+        </div>
+        <div class="titolocnn">
+            Deep Learning <span style="margin-left:600px"><img src="foto/ita.png" id="ita" class="flag"><img src="foto/ing.png" id="ing" style="margin-left:30px" class="flag"></span>
+        </div>
+        <div class="titolocnn">
+            Convolutional Neural Network - CNN
+        </div>
+        <div class="testoml" id="testo1">
+            Here you can test the power of Artificial Intelligence <br> Insert an image and the computer tell you the category identified from the image that it is compared with a model generated from CNN (MXNET for Javascript) into your browser serverless.
+            <br>
+
+            <div id="cnn-eng">
+                The Convolutional Neural Network is a tools of Deep Learning and it's used for classification of the object inserted into the image. La Convolution Neural Network is composed of the followings phases: Convolution, Pooling, Flattening and Full Connection.<br>                The first, the convolution, is used for minimize the dimension of the image and for higher the process.<br> The matemathical formula is the following:
+                <img src="foto/formula_conv.png" width="20%" height="30px" alt="formula convolution">
+                <br> At first, you take the matrix of input image and some matrix of 3x3 (5x5 or 7x7 with other methods). This matrix is called Feature Detector or Kernel and is used for reduce dimension of image in bytes. For example in the below image,
+                we extract into the input image matrix a mini matrix of 3x3 element, which we multiply with the element of the Feature Detector matrix. Then, in this new matrix, we must sum the its values and put the result into the relative cell of the
+                Feature Map. The matrixs of 3x3 must be extrapolated from input matrix from left to right and then from high to low.
+
+                <img src="foto/convolutional.png" class="ml_graf" width="100%" height="200px" alt="create Feature map"> <br>
+                <div class="row">
+                    <div class="col s12 m12 l6">
+                        Run this process for any the Feature Map to create. I remember you that it must be numerous to have a lot of layer inserted into the Neural Network. So, there are some different Feature Detector used for remove some features at the insert image. For example,
+                        I can insert a Feature Detector for remove the color. In the image below there is the scheme of Features Maps create.
+                    </div>
+                    <div class="col s12 m12 l6">
+                        <img src="foto/features_maps.png" class="ml_graf" width="100%" height="200px" alt="Feature map"> <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l4">
+                        <img src="foto/rectifier.png" class="ml_graf" width="100%" height="150px" alt="Feature map"> <br>
+                    </div>
+                    <div class="col s12 m12 l8">
+                        To have a non Linear representation, we must use an activation function for the Deep Learning. Most function used is the Rectfier, which is called ReLU Rectified Linear Unit. Obviously, There are other activation function, as the Sigmoid Function, or
+                        variants of the ReLU, as the Noisy ReLUs or the Leaky ReLUs.
+                    </div>
+                </div>
+                Now we analizing the Pooling phase, which takes the Features Maps just created and, by the Max Pooling Method, we creating the Pooled Features Maps.<br> This method extracts into the Feature Map some matrix 2x2 and, from theese is taken
+                the max value, inserting then it into the Pooled Featured Map.<br> Into the below scheme, you can see in different colors the extract matrixs and the relative results.<br>
+                <br> In the Pooling phase we obtain the Pooled Features Map, in which we reducing yet data dimentions that are representative of image.
+                <br>Then we have the Flattening phase, in which for every we create a vector where we insert the values present into the map. This vectors are the input layer.
+                <br>
+                <img src="foto/pooling.png" class="ml_graf" width="100%" height="300px" alt="Feature map"><br> The last phase is the Full Connection where the vectors are inserted into the our Neural Network with the hidden layer.<br> The Neural Network
+                return us the n output(y1, y2, yn) and, throught the Softmax Function, the y output with the greater probabily will be the final result.<br> In the following image, there is the scheme of the process just described and the Softmax Function
+                formula.
+                <br>
+                <img src="foto/fullconnect.png" class="ml_graf" width="100%" height="300px" alt="schema cnn">
+            </div>
+            <a href="#ml"> <button class="blog-btn-espandi" type="button" id="cnn-eng-espandi" onclick="espandiCnneng()"> Read more</button>
+            </a>
+            <br> Insert image:
+            <input type="file" class="immmagine" id="immmagine" accept="image/*" onchange="handleFiles(this.files)">
+        </div>
+
+        <div class="testoml" id="testo2">
+            Puoi provare la potenza dell'Intelligenza Artificiale <br> Inserisci una immagine ed il sistema ti dirà a quale categoria appartiene l'immagine la quale viene confrontata con un modello predisposto con la CNN (MXNET for Javascript) nel tuo
+            browser senza nessun collegamento con un server. <br>
+
+            <div id="cnn-ita">
+                La Convolutional Neural Network è un metodo che viene utilizzato principalmente per classificare gli oggetti o le lettere inserite nelle immagini. La Convolution Neural Network è composta da diverse fasi : Convolution, Pooling, Flattening and Full Connection.<br>                La prima fase la convolution si usa per ridurre le dimensioni delle immagini per occupare minor spazio e rendere piu veloce il procedimento.<br> La formula matematica è la seguente: <img src="foto/formula_conv.png" width="20%" height="30px"
+                    alt="formula convolution"> <br> Si prende la matrice che rappresenta l'immagine e si prendono alcune matrici 3x3 (nel nostro caso mentre altri prendono matrici anche 5x5 o 7x7). Queste matrici si chiamono Feature Detector o Kernel e si
+                usano per ridurre le dimensioni delle immagini. Come nell'immagine sottostante, si prende all'interno della matrice input immagine una mini matrice 3x3 e la si moltiplica per la matrice 3x3 Feature Detector. Poi nella matrice così creata
+                si fa la somma dei valori ed il risultato si inserisce come elemento nella relativa posizione nella Feature Map. Le matrici 3x3 vanno estrapolate dalla input image da sinistra a destra e poi dall'alto in basso.
+                <img src="foto/convolutional.png" class="ml_graf" width="100%" height="200px" alt="create Feature map"> <br>
+                <div class="row">
+                    <div class="col s12 m12 l6"> Questo procedimento si ripete per ogni Feature Map da creare, ricordo che devono essere molte per avere diversi layer da inserire nel Neural Network. Quindi devo avere diverse Feature Detector ognuna delle quali si usa per eliminare
+                        delle caratteristiche alle immagini. Ad esempio, posso utilizzare un Feature Detector per eliminare il colore. Sotto mostro lo schema delle Features Maps create di cui poi estrapoleremo i nostri layer.
+                    </div>
+                    <div class="col s12 m12 l6">
+                        <img src="foto/features_maps.png" class="ml_graf" width="100%" height="200px" alt="Feature map"> <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l4">
+                        <img src="foto/rectifier.png" class="ml_graf" width="100%" height="150px" alt="Feature map"> <br>
+                    </div>
+                    <div class="col s12 m12 l8">
+                        Per passare ad un ambiente non lineare, bisogna utilizzare una activation function nel Deep Learning. La più indicata è la Rectfier chiamata ReLU Rectified Linear Unit. Naturalmente ci sono altre activation function, come la Sigmoid Function, o varianti
+                        della stessa ReLU, come la Noisy ReLUs o la Leaky ReLUs.
+                    </div>
+                </div>
+                Ora analiziamo la fase di Pooling, in cui si prendono le Features Maps appena create e, tramite il metodo Max Pooling, creiamo le Pooled Features Map.
+                <br> Il metodo consiste nell'estrapolare nelle Feature Map delle matrici 2x2 e, da quest'ultime, si prende il valore massimo e lo si inserisce nella Pooled Featured Map.<br> Nello schema sottostante, si possono notare in diversi colori
+                le diverse matrici acquisite ed i relativi risultati.<br> Nella fase di Pooling otteniamo la Pooled Featured Map, in cui riduciamo ancora le dimensioni dei dati che rappresentano l'immagine. <br> La fase successiva è la Flattening in cui
+                per ogni Pooled Features Map si crea un vettore in cui inserire i valori presenti nella map. I vettori creati saranno gli input layer.
+                <br>
+                <img src="foto/pooling.png" class="ml_graf" width="100%" height="300px" alt="Feature map"><br> L'ultima fase è la full connection in cui i vettori creati in precedenza vengono inseriti nel nostro Neural Network insieme agli hidden layer.<br>                Il Neural Network ci restituirà n output(y1, y2, yn) e, tramite la funzione Softmax, l'output y con la maggiore probabilità sarà il nostro risultato finale.<br> Nell'immagine seguente, c'è lo schema del procedimento appena descritto e
+                la formula della funzione Softmax.<br>
+                <img src="foto/fullconnect.png" class="ml_graf" width="100%" height="300px" alt="schema cnn">
+            </div>
+            <a href="#ml">
+                <button class="blog-btn-espandi" type="button" id="cnn-ita-espandi" onclick="espandiCnnita()"> Read more</button>
+            </a>
+            <br> Inserisci immagine:
+            <input type="file" class="immmagine" id="immmagine" accept="image/*" onchange="handleFiles(this.files)">
+        </div>
+        <br>
+        <br>
+    </div>
+    <div class="row" id="cnn1">
+        <div class="col s12 m8 l8" id="ipg">
+            <div id="re">
+
+            </div>
+            <div id="load">Loading model.... please wait ...</div>
+            <div id="resu" class="classification">
+            </div>
+        </div>
+
+        <div class="col s19 m3 l3" id="immmage">
+
+            <canvas id="retina1" width="224" height="224"></canvas>
+        </div>
+        <div class="col s3 m1 l1">
+            <button class="class-btn-chiudi" type="button" id="chiudi_cnn1" onclick="chiudi_cnn1()">close</button>
+        </div>
+    </div>
+    <!--
+    <div class="ml1" id="ml2">
+        <div class="titoloml">
+            Machine learning
+        </div>
+        <div class="titolocnn">
+            Deep Learning
+        </div>
+        <div class="titolocnn">
+            Recurrent Neural Network - LSTM <span style="margin-left:600px"><img src="foto/ita.png" id="ita2" class="flag"><img src="foto/ing.png" id="ing2" style="margin-left:30px" class="flag"></span>
+        </div>
+        <div class="testoml" id="testo1">
+        </div>
+
+        <div class="testoml" id="testo2">
+        </div>
+        <br> Insert image:
+        <button type="button" class="btn btn-primary" onclick="go()">lstm</button>
+        <div id="lstm"></div>
+    </div>
+-->
+    <div class="ml1" id="ml3">
+        <div class="titoloml">
+            Machine learning
+        </div>
+        <div class="titolocnn">
+            Deep Learning <span style="margin-left:600px"><img src="foto/ita.png" id="ita2" class="flag"><img src="foto/ing.png" id="ing2" style="margin-left:30px" class="flag"></span>
+        </div>
+        <div class="titolocnn">
+            Convolutional Neural Network - CNN
+        </div>
+        <div class="testoml" id="testo1">
+        </div>
+
+        <div class="testoml" id="testo2">
+        </div>
+        <br> Insert image:
+        <input type="file" class="immmagine" id="immmagine2" accept="image/*" onchange="cnn2Files(this.files)">
+        <span>
+            <button class="btn btn-purple" id="stop" onclick="stop()">stop</button>
+        </span>
+        <div class="row" id="cnnsh" style="margin-top:30px">
+            <div class="col s12 m6 l6">
+                <div id="cnnn2" style="margin-top:10px;color:rgb(240, 235, 235)">immagine inserita
+                    <canvas id="canv2" height="150" width="150"></canvas>
+                </div>
+            </div>
+            <div class="col s12 m6 l6">
+                <div id="cnnn2_2" style="margin-top:10px;color:rgb(240, 235, 235)">immagine ricreata
+                    <canvas id="canv2_2" height="150" width="150"></canvas>
+                </div>
+            </div>
+        </div>
+        <div id="rapporto" style="color:black;margin-top:50px"></div>
+
+    </div>
+
+    <div class="ml4" id="ml4">
+        <div class="titoloml spazio2001">
+            Machine learning
+        </div>
+        <div class="titolocnn">
+            ChatBots <span style="margin-left:600px"><img src="foto/ita.png" id="itachat" class="flag"><img src="foto/ing.png" id="ingchat" style="margin-left:30px" class="flag"></span>
+        </div>
+        <div class="testoml" id="testochati">
+            Ora analizziamo un altro strumento della Intelligenza Artificiale, la ChatBots, programma creato tramite machine learning che permette di far comunicare gli umani con un computer.
+            <br> Se vuoi provare la ChatBots inserisci una domanda con le seguenti keyword (django, python, javascript, pm2, nodejs, uwsgi, hello, hi)<br>
+            <img src="foto/bot.png" id="bot10" width="105px" height="275px" alt="bot">
+
+        </div>
+        <div class="testoml" id="testochate">
+            Now, we showing you another tool of Artificial Intelligence, the ChatBots, which is a program create by machine learning for chat humans with an algorithm.<br> If you would testing the ChatBots you can ask a question inserting, for example,
+            the keyword as django, python, javascript, pm2, nodejs, uwsgi, hello or hi<br>
+            <img src="foto/bot.png" id="bot11" width="105px" height="275px" alt="bot">
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m6 l2"></div>
+            <div class="col s12 m6 l6">
+                <div class="mlnlp">
+                    <!--  <div class="row" id="bot">
+                        <div class="col-lg-12" id="bot1">
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div id="output1" class="output1">
+                            <span id="input1"></span>
+        
+                        </div>
+                    </div> -->
+                </div>
+            </div>
+            <div class="col s12 m6 l2"></div>
+        </div>
+        <div class="row">
+            <div class="col s12 m6 l3"></div>
+            <div class="col s12 m6 l6">
+                <!--   <span class="insert1">Your question: </span> 
+
+                <input type="textarea" id="insert" class="input1" placeholder="Insert your question" style="color:black">
+
+                <a class="blog-btn-espandi" onclick="question(window.insert.value)">
+                    <i class="material-icons right">send</i>
+                </a>
+                <button class="blog-btn-espandi" id="close_button" type="button" style="margin-left:15px" onclick="closeChat()">Close ChatBots</button>
+            -->
+            </div>
+        </div>
+    </div>
+
+    <!-- blog -->
+    <div class="blog-head" id="blog">
+        <div class="rowcenter"> Mecbar blog </div>
+        <div class="logit">
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="logistic-titolo center"> The Bank Marketing project with the Machine Learning Logistic Regression </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        <div id="intro" class="scrollspy">
+                            <div class="row caratter-text2">
+                                We create a model for predict if a client will subscribe a product of the bank the Term Deposit with a Direct Marketing offert.<br> The same project will create with <b id="#idgretl"> Gretl</b>, <b id="#idpython">Python</b>                                and <b id="#iddeep">Deep Learning in Python</b>.<br> We use for create the model the Backward elimination method and the CAP for evaluate it. <br> We use the regression but is not possible use the Multiple Linear Regression
+                                because the result of the function is a discrete variable(0, 1) then we use the Logistic Regression.<br> The Logistic Regression is a regression model to determine the probability of a dependent variable that is categorical(Yes
+                                or No) or binary how in our case(0,1).
+                                <br>This is the formula : y(probability - dependent variable) = &sigma;(&beta;<span class="mat1"> 0</span> + &beta;<span class="mat1"> 1</span>x<span class="mat1"> 1</span> + &beta;<span class="mat1"> 2</span>x
+                                <span class="mat1"> 2</span> + ... + &beta;
+                                <span class="mat1"> n</span>x<span class="mat1"> n</span>)<br> dove &sigma; è la Sigmoid Function (image below), &beta;<span class="mat1"> 0</span> .... &beta;<span class="mat1"> n</span> are the coefficients and x
+                                <span class="mat1"> 1</span> .. x
+                                <span class="mat1"> n</span> are the independent variables.<br>
+
+
+                            </div>
+                            The Sigmoid Function is function that return us result 0 or 1 according a discriminating value that is generally 0.5 how in the image below :<br>
+                            <img src="foto/logit/sigmoid_graph.png" width="400px" height="200px" alt="logistic regression"> The Sigmoid Function formula :
+                            <img src="foto/logit/sigmoid.png" width="150px" height="99px" alt="logistic regression"><br>
+                            <br> To create a model minimizing the <b>cost function</b> (a cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between x and y) to find the best coefficients with
+                            <b>Gradient Descent</b>(Gradient descent is an efficient optimization algorithm that attempts to find a minimum of a function)<br>
+                            <a href="file:///media/mecbar/DATA/develop/sito/progetto_banka.html" target="_blank"><button class="blog-btn-espandi" type="button" id="blog-logit"> Read more</button>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="frame">
+            <div id="frame-inizio">
+                <div class="row">
+                    <div class="blog-principale" id="vr-frame1">
+                        <div class="blog2">
+                            <div class="row">
+                                <!-- <div id="vr-ita">
+                                    <h3 class="blog-titolo" style="padding-top:20px">La realtà virtuale </h3>
+                                    <div class="col s12 m6 l3" id="vr-testa">
+                                        <img src="foto/vr-terra.png" id="vr-spazio" class="spazioimg" width="100%" height="250px" alt="images virtual box">
+                                    </div>
+                                    <div class="col l9" id="vr-coda">
+                                        <div classe="blog-img-principale">
+                                            <p class="caratter-text">
+                                                In questo post parliamo della realtà virtuale e più specificamente del web framework A-FRAME per inserire nelle pagine web immagini da noi create. Per fare questo si possono utilizzare delle risorse già create o crearne delle personali tramite delle librerie
+                                                apposite. Nella finestra sottostante un esempio di cosa si può creare. </p>
+                                            <iframe id="vr-frame" src="vr/vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe>
+                                            <button class="blog-btn-espandi" type="button" id="blog-frame-espandi" onclick="espandiBlog2()"> Read more</button>
+                                            <div class="caratter-text" id="blog-btn-espandi2">
+                                                Iniziamo a vedere le librerie disponibili <br> inserire il seguente script con la libreria
+                                                <p class="terminal">
+                                                    https://aframe.io/releases/0.6.1/aframe.min.js
+                                                </p>
+                                                per definire poi delle figure predisposte e riutilizzabili utilizziamo anche le suguenti librerie
+                                                <p class="terminal">
+                                                    https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js
+                                                    https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.js
+                                                </p>
+                                                Possiamo prendere delle figure già create inserendo
+                                                <img src="vr/vr1.png" width="100%" height="100px" alt="comandi vr"> opppure si possono inserire foto a 360 gradi come esempio seguente.
+                                                <iframe id="vr-foto" src="vr/foto-vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe> Inoltre possiamo creare tutto ciò che vogliamo utilizzando la libreria Three.js
+                                                che ci mette a disposizione innumerevoli funzioni javascript. Il sottostante frame è stato creato con Three.js ed è sensibile al movimento del mouse nel frame.
+                                                <button class="blog-btn-espandi" type="button" onclick="planet2()"> Change Earth</button>
+                                                <button class="blog-btn-espandi" type="button" onclick="planet3()"> Change Earth and Mars</button>
+                                                <div id="globo"></div>
+
+                                                Vediamo nello specifico come creare immagini statiche o animate con Three.js. Innanzi tutto bisogna definire in uno script gli oggetti SCENE, CAMERA e RENDERER<br> L'oggetto SCENE identifica lo spazio dove
+                                                inserire altri oggetti mentre l'oggetto CAMERA definisce il modo di visualizzazione e l'oggetto RENDERER definisce la pubblicazione delle immagini create. Naturalmente poi per oggetto che creiamo ci sono
+                                                diversi parametri da inserire come poi vedremo negli esempi successivi. Altri oggetti da definire sono GEOMETRY come ad esempio box o sfere o altre figure geometriche, MATERIAL oggetti da inserire da complemento
+                                                come ad esempio il parametro color e MESH.Quest'ultimo prende GEOMETRY e ci applica MATERIAL. Poi dobbiamo prendere l'oggetto creato con MESH e lo aggganciamo a SCENE con il comando Camera.position.z = 5
+                                                -> assegniamo una posizione diversa per non assegnare a tutti le coordinate(0,0,0) a questo punto basta fare il RENDERER per visualizzare a video l'oggetto creato oppure se vogliamo una animazione la inseriamo
+                                                contestualmente. Animate per creare una animazione e renderer.render(scene,camera) per visualizza l'oggetto creato senza animazione. Ora vediamo nello specifico l'html utilizzato.
+                                                <img src="three/torus.png" width="100%" height="500px" alt="javascript command"> <br> e questo è il risultato di questo semplice script in javascript <br>
+                                                <div id="terra1"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div id="vr-eng">
+                                    <h3 class="blog-titolo" style="padding-top:20px">The virtual reality </h3>
+                                    <div class="col s12 m12 l3" id="vr-testa">
+                                        <img src="foto/vr-terra.png" id="vr-spazio" class="spazioimg" width="100%" height="250px" alt="images virtual box">
+                                    </div>
+                                    <div class="col m12 l9" id="vr-coda">
+                                        <div classe="blog-img-principale">
+                                            <p class="caratter-text">
+                                                In this post we analyze the virtual reality and specifically of the Web Framework A-FRAME. We use A-FRAME for inserting image into web pages. To do this we can use resources already created or create new with special library. In below window there is
+                                                an example. </p>
+
+                                            <iframe id="vr-frame" src="vr/vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe>
+                                            <a href="#blog"><button class="blog-btn-espandi" type="button" id="blog-frame-espandi" onclick="espandiBlog2()"> Read more</button>
+                                         </a>
+                                            <div class="caratter-text" id="blog-btn-espandi2">
+                                                Now, the library available
+                                                <br> insert into html page the script :
+                                                <p class="terminal">
+                                                    https://aframe.io/releases/0.6.1/aframe.min.js
+                                                </p>
+                                                Then you must insert the others library for create new images or for use old images :
+                                                <p class="terminal">
+
+                                                    https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js
+                                                    https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.js
+                                                </p>
+                                                If you want use images already available, you must insert the following code :
+                                                <img src="vr/vr1.png" width="100%" height="100px" alt="comandi vr"> We can also include 360 degree photos. Below there is an example:
+                                                <iframe id="vr-foto" src="vr/foto-vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe> Furthermore, with the javascript library Three.Js we can create any object.
+                                                The frame below, for example, is been created with Three.js and it moves with the scroll of the mouse. Click on the following button for change the images into the frame.
+
+
+                                                <button class="blog-btn-espandi" type="button" onclick="planet2()"> Change Earth</button>
+
+                                                <button class="blog-btn-espandi" type="button" onclick="planet3()"> Change Earth and Mars</button>
+
+                                                <div id="globo"></div>
+
+                                                Now, we see how create static or animated images with Three.js. First of all, we have need to define into an script the objects SCENE, CAMERA and RENDERER.
+
+                                                <br> The SCENE object identifies the space where will be insert the others objects, while the object CAMERA defines how to view the images and the object RENDERER defines how publicat the images created.
+                                                Naturally, for every object, there will be others parameter to insert how we'll see in the later examples. Others objects to define are GEOMETRY (as box and spheres or the geometry figures), MATERIAL (complement
+                                                object as, for example , color parameter) and MESH. This MESH takes object GEOMETRY and apply to it the object MATERIAL. Then we must take the object created with MESH and we catch it with SCENE with the
+                                                command Camera.position.z = 5 attention to assign a different position at the objects, otherwise everyone has the coordinate (0,0,0). Now we must do the RENDERER for viewing into the video the object created
+                                                or, if we need an animation, we can insert it simultaneously. Animate for create an animation and RENDERER. RENDER(scene, camera) for view created object without animation. In the image below we see the
+                                                html code used.
+
+
+                                                <img src="three/torus.png" width="100%" height="500px" alt="javascript command">
+                                                <br> This is the result of the same code in javascript.
+                                                <br>
+                                                <div id="terra1"></div>
+
+
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="blog" id="bloggo">
+            <div id="blog-inizio" style="margin-bottom:15px">
+
+                <div class="row">
+                    <div class="blog-principale" id="vm-principale">
+                        <div class="blog2">
+                            <div class="row">
+                                <div id="vm-eng"></div>
+                                <h4 class="blog-titolo" style="padding-top:20px">Create a virtual machine with Virtual Box</h4>
+                                <div class="col s12 m12 l3" id="vm-testa">
+                                    <img src="foto/virtualbox.jpg" class="spazioimg" id="vbox" width="100%" height="350px" alt="images virtual box">
+                                </div>
+                                <div class="col m12 l9" id="vm-coda">
+                                    <div classe="blog-img-principale">
+                                        <p class="caratter-text">
+                                            Now we talk about virtual box. First of all we download the installer file from www.virtualbox.org relative of the version of operating system. Download also the Virtual Box Extension Pack.<br> Install the Virtual
+                                            Box previosly downloaded. Now start the Virtual Box and download the virtual machine file ready for the V.M. for example file with extension .ova</p>
+                                        <img src="foto/VM/vm5.png" class="spazio2001" width="100%" height="400px" alt="virtual box">
+                                        <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi1" onclick="espandiBlog1()"> Read more</button>
+                                        <div class="caratter-text" id="blog-btn-espandi1">
+                                            Into the microsoft site at the link highlighted in the image below select the system that you want virtualize and the Virtual Box platform.
+                                            <img src="foto/VM/vm-micro.PNG" class="spazio2001" width="100%" height="400px" alt="vm microsoft">
+                                            <p class="caratter-text">
+                                                Download the zip file, extract the file .ova and with a double click launch the automatic installation of the V.M. In the example below we create a V.M. with Windows7 and Internet Explorer 8.
+                                            </p>
+                                            Select import and confirm for terminate the installation.
+                                            <img src="foto/VM/vm-inst.PNG" class="spazio2001" width="100%" height="100px" alt="vm installazione w7 microsoft"> When the installation terminated the V.M. will open and you will choose the net(you could always
+                                            change the parameter).
+                                            <img src="foto/VM/vm-ova.PNG" class="spazio2001" width="100%" height="400px" alt="vm ova install windows seven">
+                                            <p class="caratter-text"> In the image below the screenshot of the V.M. installed..</p>
+                                            <p class="caratter-text">
+                                                Remember to take note of the user and password that you'll have to enter every time you will open the V.M.
+                                            </p>
+                                            <img src="foto/VM/vm-w7.PNG" class="spazio2001" width="100%" height="500px" alt="vm windows 7 home page">
+                                            <p class="caratter-text">Now in the start button of the V.M. you launch the restart and wait the install of any updates.
+                                            </p>
+                                            <img src="foto/VM/vm-ie8.PNG" class="spazio2001" width="100%" height="500px" alt="vm w seven IE8">
+                                            <p class="caratter-text">The image of Windows7 in valdate for 90 days but you can save the image with the snapshot function. That function is helpful for create a copy before take the updates for eventually restore the V.M.
+                                            </p>
+                                            <img src="foto/VM/vm-istantanea.PNG" class="spazio2001" width="100%" height="500px" alt="vm microsoft">
+                                            <p class="caratter-text"> For customize your V.M. modify the setup parameterin the setting menu. For use USB port or setup parameter of the Net it's necessary install the Extension Pack previosly downloaded. </p>
+                                            <img src="foto/VM/vm-rete.PNG" class="spazio2001" width="100%" height="500px" alt="vm impostazioni">
+                                            <p class="caratter-text"> If you want you can install more V.M. for example a Linux machine.
+                                            </p>
+                                            <img src="foto/VM/vm6.png" class="spazio2001" width="100%" height="500px" alt="vm sistema linux">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--      <div id="vm-ita">
+
+                                <h4 class="blog-titolo" style="padding-top:20px">Creare una macchina virtuale con Virtual Box</h4>
+                                <div class="col s12 m12 l3" id="vm-testa">
+                                    <img src="foto/virtualbox.jpg" class="spazioimg" id="vbox" width="100%" height="350px" alt="images virtual box">
+                                </div>
+                                <div class="col m12 l9" id="vm-coda">
+                                    <div classe="blog-img-principale">
+                                        <p class="caratter-text">
+                                            Iniziamo con lo scaricare la virtual box dal sito www.virtualbox.org selezionando la versione compatibile con il nostro sistema operativo. Scaricare anche il virtual box Extension Pack che ci servirà poi. Dopo aver installato la virtual box dobbiamo poi
+                                            installare le nostre macchine virtuali.</p>
+                                        <img src="foto/VM/vm5.png" class="spazio2001" width="100%" height="400px" alt="virtual box">
+                                        <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi1" onclick="espandiBlog1()"> Read more</button>
+                                        <div class="caratter-text" id="blog-btn-espandi1">
+                                            Il modo più semplice per creare una VM è scaricare il file con una immagine dedicata alla macchina virtuale es. file .ova. In questo post simuliamo la creazione di una VM di Windows7 con IE8. Andiamo sul sito di Microsoft all'indirizzo evidenziato presente
+                                            nell'immagine sottostante.
+                                            <img src="foto/VM/vm-micro.PNG" class="spazio2001" width="100%" height="400px" alt="vm microsoft">
+                                            <p class="caratter-text">
+                                                Selezionare il sistema che si vuole virtualizzare e la piattaforma virtualbox. Scaricare dal sito microsoft il file di installazione zip estrarre .ova e lanciarlo. Così si avvia in automatico la creazione della nostra vm.</p>
+                                            <img src="foto/VM/vm-ova.PNG" class="spazio2001" width="100%" height="400px" alt="vm ova install windows seven">
+                                            <p class="caratter-text"> Selezionare importa così inizia la creazione.</p>
+                                            <img src="foto/VM/vm-inst.PNG" class="spazio2001" width="100%" height="100px" alt="vm installazione w7 microsoft">
+                                            <p class="caratter-text">
+                                                Terminata l'importazione si aprirà la VM e vi chiederà quale rete utilizzare anche se poi si potrà modificare poi al termine installazione si avrà la videata seguente.</p>
+                                            <img src="foto/VM/vm-w7.PNG" class="spazio2001" width="100%" height="500px" alt="vm windows 7 home page">
+                                            <p class="caratter-text">Prendete nota della user e della password che servirà per entrare nella VM ogni volta che la si apre. Ora Ora andiamo sullo start e selezioniamo il restart della v. m. e lasciamo eseguire eventuali aggiornamenti
+                                                quando la macchina è ripartita siamo pronti.
+                                            </p>
+                                            <img src="foto/VM/vm-ie8.PNG" class="spazio2001" width="100%" height="500px" alt="vm w seven IE8">
+                                            <p class="caratter-text">L'mmagine dura 90 gg. ma possamo utilizzare la funzione Istantanea con cui faciamo una foto della v.m. che si può riattivare quando necessario. Ad esempio possiamo fare una istantanea prima di eseguire delle
+                                                modifiche che potrebbero danneggiare la VM.
+                                            </p>
+                                            <img src="foto/VM/vm-istantanea.PNG" class="spazio2001" width="100%" height="500px" alt="vm microsoft">
+                                            <p class="caratter-text"> Inserire un nome e premere ok. se si seleziona impostazioni si possono modificare le impostazioni della rete o aggiungere usb ecc. per fare questo è necessario installare l'Extension Pack di virtual box.
+                                            </p>
+                                            <img src="foto/VM/vm-rete.PNG" class="spazio2001" width="100%" height="500px" alt="vm impostazioni">
+                                            <p class="caratter-text"> Naturalmente possiamo creare più macchine virtuali con sistemi operativi diversi come ad esempio linux.
+                                            </p>
+                                            <img src="foto/VM/vm6.png" class="spazio2001" width="100%" height="500px" alt="vm sistema linux">
+                                        </div>
+                                    </div>-->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="col s12 m10 l10" id="box-blog1">
+        <div class="row" id="blog-row">
+            <div class="col s12 m12 l4" id="change-blog">
+                <div class="row blog-second" id="blog-second">
+                    <div class="contenitore">
+                        <div class="row img-space" id="space1">
+                            <div class="col s1"></div>
+                            <div class="col s10">
+                                <div style="background-image:url('foto/index.png')" id="img1" class="blog-img-secondario" alt="">
+                                </div>
+                            </div>
+                            <div class="col s1"></div>
+                        </div>
+
+
+
+
+
+                        <!-- <div id="box1-ita">
+                            <h4 class="blog-titolo">Attivare una applicazione server Node.js com PM2 e Nginx su ubuntu 16.04 Lts</h4>
+                            <div class="col s12 m12 l12" style="text-align: center">
+                                <h6> by Mecbar 13 luglio 2017 </h6>
+                            </div>
+                            <div style="margin-top:10px">
+                                <p class="caratter-text">
+                                    Per prima cosa dobbiamo installare NodeJs con il seguente comando da Terminal :<br><em class="terminal">sudo apt-get install </em><br> <em class="terminal">sudo apt-get install build-essential</em> <br> Se la nostra
+                                    app è pronta installiamo il process manager pm2 con il comando:<br><em class="terminal">sudo npm install -g pm2</em><br> ora avviamo l'app con <br><em class="terminal">pm2 start menu.js</em><br> e verifichiamo che l'app
+                                    sia in esecuzione sul browser all'indirizzo localhost:5500 n.b. la porta è quella che si è predisposta nell'app<br>
+                                    <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog('zero')"> Read more</button>
+                                    <div class="caratter-text" id="blog-btn-espandi"><br>Ora impostiamo l'attivazione automatica di PM2 alla partenza della macchina :<br>
+                                        <em class="terminal">sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u root --hp /home/root</em><br> Impostiamo Nginx il nostro http server come reverse proxy aprendo il file seguente
+                                        con l'editor nano:<br>
+                                        <em class="terminal">sudo nano /etc/nginx/sites-available/default</em><br>
+                                        <p class="caratter-text">ed inseriamo il testo seguente :<br> location / { <br> proxy_pass http://localhost:5500;<br> proxy_http_version 1.1;<br> proxy_set_header Upgrade $http_upgrade;<br> proxy_set_header Connection 'upgrade';
+                                            <br> proxy_set_header Host $host;<br> proxy_cache_bypass $http_upgrade;<br> }
+                                            <br> }
+                                            <br> per inserire altra app _ basta inserire una nuova location così : location / {}<br> Salvare il file con ctrl+o ed uscire con ctrl+x<br> Ora per verificare se tutto funziona spegniamo la macchina virtuale
+                                            e la restartiamo, appena tornata attiva inseriamo il comando come da immagine seguente :<br>
+                                        </p>
+                                        <img src="foto/blog-pm2.png" width="100%" height="250px" alt="pm2 status">
+                                        <p class="caratter-text">Quindi come possiamo vedere il sistema avvia in automatico il process manager pm2 che gestisce per noi l'app. Con il comando pm2 show 0 o pm2 show menu.js vediamo che l'app è attiva e se nel nostro browser inseriamo
+                                            localhost:5500 abbiamo la nostra applicazione pronta ad interagire.<br> Inserire nel terminal : </p>
+                                        <em class="terminal">sudo pm2 show 0 </em>
+                                        <img src="foto/pm2show.png" width="100%" height="300px" alt="pm2 process attivi">
+                                        <p class="spazio1999">e poi nel browser inseriamo l'indirizzo localhost:5500</p>
+                                        <img src="foto/homemecbar-foto.png" width="100%" height="300px" alt="app pronta ad uso">
+                                        <br> ed ecco la nostra applicazione pronta per l'uso.
+                                    </div>
+
+                            </div>
+                        </div>-->
+                        <div id="box1-eng">
+                            <h4 class="blog-titolo">Application server with Node.js, PM2 and Nginx on Linux Ubuntu 16.04 Lts</h4>
+                            <div class="col s12 m12 l12" style="text-align: center">
+                                <h6> by Mecbar 13 luglio 2017 </h6>
+                            </div>
+                            <div style="margin-top:10px">
+                                <p class="caratter-text">
+                                    For install NodeJs from Terminal insert :<br><em class="terminal">sudo apt-get install </em><br> <em class="terminal">sudo apt-get install build-essential</em> <br> If our application is ready install the process manager
+                                    pm2 with the command:<br><em class="terminal">sudo npm install -g pm2</em><br> and then start the aplication from Terminal <br><em class="terminal">pm2 start name_app.js  #from the directory of the app</em><br> verify
+                                    if the app is in execution in the browser insert the link <em>localhost:5500 </em> (port assigned into the app)<br>
+                                    <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog('zero')"> Read more</button>
+                                    <div class="caratter-text" id="blog-btn-espandi"><br> If the app is running set the automatic start of Pm2 at the ipl of the machine:<br>
+                                        <em class="terminal">sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u root --hp /home/root</em><br> Now setup the Http Server Nginx hw reverse proxy opening the following file with
+                                        an editor, here use Nano: seguente con l'editor nano:<br>
+                                        <em class="terminal">sudo nano /etc/nginx/sites-available/default</em><br>
+                                        <p class="caratter-text">insert the following text:<br> location / { <br> proxy_pass http://localhost:5500;<br> proxy_http_version 1.1;<br> proxy_set_header Upgrade $http_upgrade;<br> proxy_set_header Connection 'upgrade';
+                                            <br> proxy_set_header Host $host;<br> proxy_cache_bypass $http_upgrade;<br> }
+                                            <br> }
+                                            <br> if you want insert an other application add the following instruction: location / {}<br> when all test is written save the file with command ctrl+o and exit with ctrl+x <br> Now for verifycation the correct
+                                            operation shutdown the machine and restart it.
+
+                                            <br>
+                                        </p>
+                                        <img src="foto/blog-pm2.png" width="100%" height="250px" alt="pm2 status">
+                                        <p class="caratter-text">
+                                            For verification correct automatic start of the process manager pm2 that runs the app insert from Terminal the command pm2 show name_app or pm2 show number_app <br> We see that the app run and it's active. insert
+                                            from Terminal : </p>
+                                        <em class="terminal">sudo pm2 show 0 </em>
+                                        <img src="foto/pm2show.png" width="100%" height="300px" alt="pm2 process attivi">
+                                        <p class="spazio1999"> We see that the app run and it's active. From the browser insert the link http://localhost:5500 we can open our app and it's work.<br> </p>
+                                        <img src="foto/homemecbar-foto.png" width="100%" height="300px" alt="app pronta ad uso">
+                                        <br>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m12 l4" id="change-blog1">
+                <div class="row blog-second" id="blog-mini1">
+                    <div class="contenitore">
+                        <div class="row img-space" id="space2">
+                            <div id="img2" class="col s12 m12 l12 blog-img-secondario-django">
+                                <img src="foto/django-web-server.png" width="100%" height="180px">
+                            </div>
+                        </div>
+                        <div id="django-eng">
+                            <h5 class="blog-titolo">Create a web server with uWSGI & Django</h5>
+                            <div class="col s12" style="text-align: center">
+                                <h6> by Mecbar 2 settembre 2017 </h6>
+                            </div>
+                            <div style="margin-top:10px;">
+                                <p class="caratter-text"> For execute an web application with Django you can use the web server into Python or create an application server with Uwsgi. Here we see how to create an application server with Uwsgi. First of all install Uwsgi from Terminal:
+                                    <br> </p>
+                                <em class="terminal">pip install uwsgi </em><br>
+                                <p class="caratter-text">for test correct execution of Uwsgi create a file python test.py </p>
+
+                                <button class="blog-btn-espandi-mini1" type="button" id="blog-tasto-espandi-mini1" onclick="espandiBlog('uno')"> Read more</button>
+                                <div class="caratter-text" id="blog-btn-espandi-mini1">
+                                    <em class="terminal"># test.py<br> def application(env, start_response):<br> start_response('200 OK', [('Content-Type','text/html')])<br> return [b"Hello World"] # python3<br>
+                                            return ["Hello World"] # python2</em>
+                                    <p class="caratter-text>"> from Terminal to launch Uwsgi
+                                        <em class="terminal"> sudo uwsgi --http :8000 --wsgi-file_test.py</em><br>and into browser insert http://localhost:8000</p><br><em class="terminal"> sudo uwsgi --http :8000 --wsgi-file test.py</em><br>
+                                    <p class="caratter-text">
+                                        it's the result of the command python manage.py runserver. Now install Nginx and use an Unix socket for connect to the app</p><br>
+                                    <em class="terminal"> sudo apt-get install nginx</em><br> then start the service<br><em class="terminal"> sudo /etc/init.d/nginx start</em><br> Now go in the directory of the app and create a configuration file of Nginx
+                                    for the app with tha Nano editor <br>
+                                    <em class="terminal"> sudo nano app_nginx.conf</em>
+                                    <br> and insert
+                                    <br>
+                                    <p class="terminal2"># nginx.conf
+                                        <br> upstream django {<br> # connect to this socket<br> # server unix:///path app/name_app.sock; # for a file socket<br> server 127.0.0.1:8001; # for a web port socket<br> }<br> # the port your site will be served
+                                        on
+                                        <br> listen 8000;<br> # the domain name it will serve for server_name 127.0.0.1;<br> # substitute your machine's IP address or FQDN charset utf-8; # max upload size client_max_body_size 75M; # adjust to taste
+                                        <br># Django media
+                                        <br>location /media { alias /path_app/static/images; # your Django project's media files - amend as required } # si possono inserire nel file setting.py location /static { alias /percorso mia app/static; # your
+                                        Django project's
+                                        <br> static files - amend as required<br> } <br># Finally, send all non-media requests to the Django server.<br> location / {
+                                        <br>uwsgi_pass django;<br> include /etc/nginx/uwsgi_params; # the uwsgi_params file you installed<br> } <br>}</p><br> press ctrl+o for save and ctrl+x to exit. Now create the link between the file .conf created
+                                    with Nginx
+                                    <br>
+                                    <p class="terminal"> sudo ln -s ~/path_app/name_app_nginx.conf /etc/nginx/sites-enabled/ </p> <br> into file setting.py of the app insert STATIC_ROOT = os.path.join(BASE_DIR,"static/") for handle static files.
+                                    <br> Now restart Nginx <br><em class="terminal"> sudo /etc/init.d/nginx restart <br></em>[ ok ] Restarting nginx (via systemctl): nginx.service.<br>
+                                    <em class="terminal"> sudo systemctl status nginx.service </em><br>
+                                    <p class="terminal2">● nginx.service - A high performance web server and a reverse proxy server Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+                                        <br> Active: active (running) since mer 2017-08-30 00:10:31 CEST; 4s ago <br>Process: 14530 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+                                        <br>Process: 14830 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+                                        <br>Process: 14827 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS) Main PID: 14831 (nginx) <br>CGroup: /system.slice/nginx.service ├─14831 nginx: master process
+                                        /usr/sbin/nginx -g daemon on; master_process on ├─14832 nginx: worker process ├─14833 nginx: worker process ├─14834 nginx: worker process └─14835 nginx: worker process ago 30 00:10:31 mecbar systemd[1]: Starting
+                                        A high performance web server and a reverse proxy server... ago 30 00:10:31 mecbar systemd[1]: Started A high performance web server and a reverse proxy server.
+                                    </p>
+                                    <br> copy uwsgi.params into the project directory. Now test the socket<br>
+                                    <em class="terminal">sudo uwsgi --socket :8001 --wsgi-file_test.py</em><br>we see the following message how response:<br>
+                                    <p class="terminal2">*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 00:35:30 2017] ***<br> compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC
+                                        2017
+                                        <br> nodename: xxxxxx<br> machine: x86_64<br> clock source: unix detected
+                                        <br> number of CPU cores: 4 <br>current working directory: /percorso app<br> detected binary path: /usr/local/bin/uwsgi<br> !!! no internal routing support, rebuild with pcre support !!!
+                                        <br> *** WARNING: you are running uWSGI without its master process manager ***
+                                        <br> your processes number limit is 31000<br> your memory page size is 4096 bytes<br> detected max file descriptor number: 1024<br> lock engine: pthread robust mutexes <br>thunder lock: disabled (you can enable
+                                        it with --thunder-lock)
+                                        <br> uwsgi socket 0 bound to TCP address :8001 fd 3<br> Python version: 2.7.12 (default, Nov 19 2016, 06:48:10) [GCC 5.4.0 20160609] <br>*** Python threads support is disabled. You can enable it with --enable-threads
+                                        ***
+                                    </p>
+                                    <br>.... if we insert into the browser http://localhost:8000 we see 'hello world' . For error or problem read the log of Nginx at the link /var/log/nginx/error.log) if error 13: Permission denied or other messagge insert
+                                    the following command:<br><em class="terminal"> sudo uwsgi --socket name_app.sock --wsgi-file_test.py --chmod-socket=666 <br> sudo uwsgi --socket mysite.sock --wsgi-file_test.py --chmod-socket=664 # (more sensible) </em><br>                                    Se tutto ok ci siamo e proviamo il socket con la nostra applicazione che per esempio la chiamiamo app <br><em class="terminal"> sudo uwsgi --socket app.sock --module app.wsgi –chmod-socket=666</em><br> N.B: se errore
+                                    <p class="terminal2">
+                                        502 bad gateway read the log /var/log/nginx → error.log if error 13 Permission denied folder project delete the file app.sock and try again <br>*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 19:41:56 2017] ***
+                                        compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC ..... *** uWSGI is running in multiple interpreter mode ***</p>
+                                    <br>into the browser http://localhost:8000 we have our app ready and run through Django, Uwsgi e Nginx. Config uWSGI for execute it with .ini file insert the data into a file and then run it<br>
+                                    <em class="terminal"> sudo nano app_uwsgi.ini </em><br>
+                                    <p class="terminal2"> # mysite_uwsgi.ini file<br> [uwsgi]<br> # Django-related settings<br> # the base directory (full path)<br> chdir = /path_app
+                                        <br> # Django's wsgi file
+                                        <br>module = app.wsgi <br># the virtualenv (full path)<br> home = /path/virtualenv<br> # process-related settings<br> # master master = true <br># maximum number of worker processes processes = 10
+                                        <br> # the socket (use the full path to be safe<br> socket = /path/app.sock # ... with appropriate permissions - may be needed<br> # chmod-socket = 664 # chmod-socket = 666 <br># clear environment on exit
+                                        <br> vacuum = true</p> <br>press ctrl+o to save then ctrl+x for exit and execute created file <br><em class="terminal"> sudo uwsgi --ini app_uwsgi.ini # the --ini option it means that is a file </em><br>
+                                    <p class="terminal2"> [uWSGI] getting INI configuration from app_uwsgi.ini *** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:49:26 2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu
+                                        SMP Fri Aug 11 14:07:24 UTC 2017...........</p>
+                                    <br> For the end of configuration set Emperor methd for handle more application on the same server (uid user id – gid group id) - create the directory uwsgi into the folder /etc<br>
+                                    <em class="terminal"> sudo mkdir /etc/uwsgi <br> sudo mkdir /etc/uwsgi/vassals</em><br>than a file ini with folder vassals <br><em class="terminal">sudo
+                                            ln -s /path/app_uwsgi.ini /etc/uwsgi/vassals/ <br>sudo uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data </em><br>
+                                    <p class="terminal2">*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:57:24 2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017 nodename:
+                                        xxxxxx machine: x86_64 clock source: unix detected number of CPU cores: 4 current working directory: /path_app detected binary path: /usr/local/bin/uwsgi !!! no internal routing support, rebuild with pcre support
+                                        !!! setgid() to 33 setuid() to 33 *** WARNING: you are running uWSGI without its master process manager *** your processes number limit is 31000 your memory page size is 4096 bytes detected max file descriptor number:
+                                        1024 *** starting uWSGI Emperor *** *** has_emperor mode detected (fd: 6) *** [uWSGI] getting INI configuration from app_uwsgi.ini *** .... - [emperor] vassal app_uwsgi.ini is now loyal.</p>
+                                    <br> Into the browser app is ready.<br> Now set the automatic start of the service Uwsgi with the systemctl of linux. <br> Create the file uwsgi.service
+                                    <br><em class="terminal"> sudo nano /etc/systemd/system/uwsgi.service </em> <br> and insert the following data<br>
+                                    <p class="terminal2"> [Unit]<br> Description=uWSGI Emperor
+                                        <br> After=syslog.target<br> [Service]<br> ExecStart=/usr/local/bin/sudo uwsgi --emperor /etc/uwsgi/vassals/ --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log <br># Requires systemd version 211
+                                        or newer
+                                        <br> RuntimeDirectory=uwsgi
+                                        <br>Restart=always<br> KillSignal=SIGQUIT<br> Type=notify StandardError=syslog<br> NotifyAccess=all
+                                        <br> [Install]<br> WantedBy=multi-user.target </p><br> ctrl+o for save and crl+x for exit. Start the service and test if it is active<br><em class="terminal"> sudo systemctl start uwsgi.service<br> sudo systemctl status uwsgi.service</em><br>
+                                    <br>
+                                    <img src="foto/uwsgiserv.png" width="100%" height="300px" alt="uwsgi service status">
+                                    <br> For test if service is automatic active at every restart run the system restart and just the system is ready check the status of service. if it's active we finished. That's all<br>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--
+<div id="django-it">
+    <h5 class="blog-titolo">Creare web server con uWSGI & Django - Python</h5>
+    <div class="col s12" style="text-align: center">
+        <h6> by Mecbar 2 settembre 2017 </h6>
+    </div>
+    <div style="margin-top:10px;">
+        <p class="caratter-text"> Per eseguire una applicazione web con django si può utilizzare il web server fornito da python oppure creare una
+            application server con UWSGI vediamo come realizzarla e renderla sempre disponibile. Iniziamo con l’installazione
+            di Uwsgi :
+            <br> </p>
+        <em class="terminal">pip install uwsgi </em>
+        <br>
+        <p class="caratter-text">per verificare se uwsgi funziona e bene crearsi un file in python test.py dove inserire i comandi </p>
+
+        <button class="blog-btn-espandi-mini1" type="button" id="blog-tasto-espandi-mini1" onclick="espandiBlog('uno')"> Read more</button>
+        <div class="caratter-text" id="blog-btn-espandi-mini1">
+            <em class="terminal"># test.py
+                <br> def application(env, start_response):
+                <br> start_response('200 OK', [('Content-Type','text/html')])
+                <br> return [b"Hello World"] # python3
+                <br> return ["Hello World"] # python2</em>
+            <p class="caratter-text>"> eseguiamo uwsgi da terminal e nel browser inseriamo localhost:8000</p>
+            <br>
+            <em class="terminal"> sudo uwsgi --http :8000 --wsgi-file test.py</em>
+            <br>
+            <p class="caratter-text"> con questo comando si ottiene lo stesso risultato di python manage.py runserver. Ora installiamo nginx se ancora
+                non lo abbiamo fatto ed usiamo un Unix socket per connetterci alla app :</p>
+            <br>
+            <em class="terminal"> sudo apt-get install nginx</em>
+            <br> poi eseguiamo lo start del servizio :
+            <br>
+            <em class="terminal"> sudo /etc/init.d/nginx start</em>
+            <br> Mi posiziono nella directory della mia app con cd nome_cartella e vado a creare file configurazione di nginx
+            per la mia app :
+            <br>
+            <em class="terminal"> sudo nano app_nginx.conf</em>
+            <br> ed inseriamo
+            <br># nginx.conf
+            <br> upstream django {
+            <br> # connect to this socket
+            <br> # server unix:///percorso della mia app/nome_app.sock; # for a file socket
+            <br> server 127.0.0.1:8001; # for a web port socket
+            <br> }
+            <br> # the port your site will be served on
+            <br> listen 8000;
+            <br> # the domain name it will serve for server_name 127.0.0.1;
+            <br> # substitute your machine's IP address or FQDN charset utf-8; # max upload size client_max_body_size 75M; #
+            adjust to taste
+            <br># Django media
+            <br>location /media { alias /percorso mia app/static/images; # your Django project's media files - amend as required
+            } # si possono inserire nel file setting.py location /static { alias /percorso mia app/static; # your Django
+            project's
+            <br> static files - amend as required
+            <br> }
+            <br># Finally, send all non-media requests to the Django server.
+            <br> location / {
+            <br>uwsgi_pass django;
+            <br> include /etc/nginx/uwsgi_params; # the uwsgi_params file you installed
+            <br> }
+            <br>}
+            <br> premere ctrl+o per salvare e ctrl+x per uscire. Ora creiamo un link tra il file .conf creato con nginx
+            <br>
+            <em class="terminal"> sudo ln -s ~/percorso mia app/nome_app_nginx.conf /etc/nginx/sites-enabled/ </em>
+            <br> nel file setting.py della app inserire STATIC_ROOT = os.path.join(BASE_DIR,"static/") per gestire file static.
+            <br> Dobbiamo ora fare il restart di nginx
+            <br>
+            <em class="terminal"> sudo /etc/init.d/nginx restart
+                <br>
+            </em>[ ok ] Restarting nginx (via systemctl): nginx.service.
+            <br>
+            <em class="terminal"> sudo systemctl status nginx.service </em>
+            <br>● nginx.service - A high performance web server and a reverse proxy server Loaded: loaded (/lib/systemd/system/nginx.service;
+            enabled; vendor preset: enabled)
+            <br> Active: active (running) since mer 2017-08-30 00:10:31 CEST; 4s ago
+            <br>Process: 14530 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited,
+            status=0/SUCCESS)
+            <br>Process: 14830 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+            <br>Process: 14827 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+            Main PID: 14831 (nginx)
+            <br>CGroup: /system.slice/nginx.service ├─14831 nginx: master process /usr/sbin/nginx -g daemon on; master_process
+            on ├─14832 nginx: worker process ├─14833 nginx: worker process ├─14834 nginx: worker process └─14835 nginx: worker
+            process ago 30 00:10:31 mecbar systemd[1]: Starting A high performance web server and a reverse proxy server...
+            ago 30 00:10:31 mecbar systemd[1]: Started A high performance web server and a reverse proxy server.
+            <br> Copiamo uwsgi.params nella directory del progetto. Ora proviamo il socket
+            <br>
+            <em class="terminal">sudo uwsgi --socket :8001 --wsgi-file test.py</em>
+            <br>ed avremo il seguente messaggio come risposta :
+            <br>*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 00:35:30 2017] ***
+            <br> compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14
+            <br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017
+            <br> nodename: xxxxxx
+            <br> machine: x86_64
+            <br> clock source: unix detected
+            <br> number of CPU cores: 4
+            <br>current working directory: /percorso app
+            <br> detected binary path: /usr/local/bin/uwsgi
+            <br> !!! no internal routing support, rebuild with pcre support !!!
+            <br> *** WARNING: you are running uWSGI without its master process manager ***
+            <br> your processes number limit is 31000
+            <br> your memory page size is 4096 bytes
+            <br> detected max file descriptor number: 1024
+            <br> lock engine: pthread robust mutexes
+            <br>thunder lock: disabled (you can enable it with --thunder-lock)
+            <br> uwsgi socket 0 bound to TCP address :8001 fd 3
+            <br> Python version: 2.7.12 (default, Nov 19 2016, 06:48:10) [GCC 5.4.0 20160609]
+            <br>*** Python threads support is disabled. You can enable it with --enable-threads ***
+            <br>.... e se andiamo su browser e dicitiamo localhost:8000 → abbiamo hello world Per errori o malfunzionamenti verificare
+            il log di nginx al seguente percorso /var/log/nginx/error.log) Se avete error 13: Permission denied o altri prb
+            provate I seguenti comandi :
+            <br>
+            <em class="terminal"> sudo uwsgi --socket nome_app.sock --wsgi-file test.py --chmod-socket=666
+                <br> sudo uwsgi --socket mysite.sock --wsgi-file test.py --chmod-socket=664 # (+ sensibile) </em>
+            <br>Se tutto ok ci siamo e proviamo il socket con la nostra applicazione che per esempio la chiamiamo app
+            <br>
+            <em class="terminal"> sudo uwsgi --socket app.sock --module app.wsgi –chmod-socket=666</em>
+            <br> N.B: se errore 502 bad gateway leggere log /var/log/nginx → error.log se errore 13 Permission denied dalla cartella
+            progetto cancellare il file app.sock e riprovare
+            <br>*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 19:41:56 2017] *** compiled with version: 5.4.0 20160609 on
+            29 August 2017 23:10:14
+            <br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC ..... *** uWSGI is running in multiple
+            interpreter mode ***
+            <br>nel browser localhost:8000 abbiamo la nostra app pronta e funzionante tramite django, uwsgi e nginx. Configuriamo
+            uWSGI per essere eseguito con un .ini file inseriamo i dati all’interno di un file e poi lo eseguiamo
+            <br>
+            <em class="terminal"> sudo nano app_uwsgi.ini </em>
+            <br> # mysite_uwsgi.ini file
+            <br> [uwsgi]
+            <br> # Django-related settings
+            <br> # the base directory (full path)
+            <br> chdir = /percorso app
+            <br> # Django's wsgi file
+            <br>module = app.wsgi
+            <br># the virtualenv (full path)
+            <br> home = /percorso/virtualenv
+            <br> # process-related settings
+            <br> # master master = true
+            <br># maximum number of worker processes processes = 10
+            <br> # the socket (use the full path to be safe
+            <br> socket = /percorso/app.sock # ... with appropriate permissions - may be needed
+            <br> # chmod-socket = 664 # chmod-socket = 666
+            <br># clear environment on exit
+            <br> vacuum = true
+            <br>premere ctrl+o per salvare poi ctrl+x per uscire e lanciamo il file creato
+            <br>
+            <em class="terminal"> sudo uwsgi --ini app_uwsgi.ini # the --ini option indica che è un file </em>
+            <br> [uWSGI] getting INI configuration from app_uwsgi.ini *** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:49:26
+            2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu
+            SMP Fri Aug 11 14:07:24 UTC 2017...........
+            <br> Per completare la configurazione impostiamo il metodo Emperor per gestire più applicazioni sullo stesso server
+            (uid user id – gid group id) - creiamo la directory uwsgi nella cartella /etc
+            <br>
+            <em class="terminal"> sudo mkdir /etc/uwsgi
+                <br> sudo mkdir /etc/uwsgi/vassals</em>
+            <br>poi un file ini con cartella vassals
+            <br>
+            <em class="terminal">sudo ln -s /percorso/app_uwsgi.ini /etc/uwsgi/vassals/
+                <br>sudo uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data </em>
+            <br>*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:57:24 2017] *** compiled with version: 5.4.0 20160609 on
+            29 August 2017 23:10:14 os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017 nodename:
+            xxxxxx machine: x86_64 clock source: unix detected number of CPU cores: 4 current working directory: /percorso
+            app detected binary path: /usr/local/bin/uwsgi !!! no internal routing support, rebuild with pcre support !!!
+            setgid() to 33 setuid() to 33 *** WARNING: you are running uWSGI without its master process manager *** your
+            processes number limit is 31000 your memory page size is 4096 bytes detected max file descriptor number: 1024
+            *** starting uWSGI Emperor *** *** has_emperor mode detected (fd: 6) *** [uWSGI] getting INI configuration from
+            app_uwsgi.ini *** .... - [emperor] vassal app_uwsgi.ini is now loyal. Nel browser l'app è pronta.
+            <br> Ora impostiamo la partenza automatica del service uwsgi con il systemctl di linux.
+            <br> Creiamo il file uwsgi.service
+            <br>
+            <em class="terminal"> sudo nano /etc/systemd/system/uwsgi.service </em>
+            <br>ed inseriamo i seguenti dati
+            <br> [Unit]
+            <br> Description=uWSGI Emperor
+            <br> After=syslog.target
+            <br> [Service]
+            <br> ExecStart=/usr/local/bin/sudo uwsgi --emperor /etc/uwsgi/vassals/ --uid www-data --gid www-data --daemonize
+            /var/log/uwsgi-emperor.log
+            <br># Requires systemd version 211 or newer
+            <br> RuntimeDirectory=uwsgi
+            <br>Restart=always
+            <br> KillSignal=SIGQUIT
+            <br> Type=notify StandardError=syslog
+            <br> NotifyAccess=all
+            <br> [Install]
+            <br> WantedBy=multi-user.target
+            <br> ctrl+o e crl+x attiviamo ora il service e verifichiamo se è attivo
+            <br>
+            <em class="terminal"> sudo systemctl start uwsgi.service
+                <br> sudo systemctl status uwsgi.service</em>
+            <br>
+            <br>
+            <img src="foto/uwsgiserv.png" width="100%" height="300px" alt="uwsgi service status">
+            <br> Per verificare che il service sia active in automatico fare il restart del sistema ed alla ripartenza verificare
+            lo status del service. Se è active abbiamo terminato. it's ok
+            <br>
+
+        </div>
+    </div>
+</div> -->
+                    </div>
+                </div>
+            </div>
+
+            <div class="col s12 m12 l4" id="change-blog2">
+                <div class="row blog-second" id="blog-mini2">
+                    <div class="contenitore">
+                        <div class="row img-space" id="space3">
+                            <div class="col s12 m4 l4">
+                                <img src="foto/linux.png" id="ngx1" width="100%" height="180px" alt="linux">
+                            </div>
+                            <div class="col s12 m4 l4">
+                                <img src="foto/nginx.png" id="ngx2" width="100%" height="180px" alt="nginx">
+                            </div>
+                            <div class="col s12 m4 l4">
+                                <img src="foto/PM2.png" id="ngx3" width="100%" height="180px" alt="pm2">
+                            </div>
+                        </div>
+                        <!--       <div id="blog3-ita">
+                                        <h5 class="blog-titolo">Conosciamo meglio nginx pm2 firewall di linux</h5>
+                                        <div class="col s12 m12 l12" style="text-align: center">
+                                            <h6> by Mecbar 13 settembre 2017 </h6>
+                                        </div>
+                                        <div style="height:200px;margin-top:10px">
+                                            <p class="caratter-text">Nei post precedenti abbiamo usato Nginx e PM2 e ora approfondiamo la loro conoscenza. La piattaforma utilizzata è linux Ubuntu 16.04 LTS. Nginx è un web server/reverse proxy con alte prestazioni e può essere
+                                                utilizzato anche come server proxy di posta elettronica su diversi sistemi operativi. Per prima cosa lo installiamo nel nostro sistema con il seguente comando
+                                            </p> <em class="terminal">
+                                            sudo apt-get install nginx </em><br>
+                                            <button class="blog-btn-espandi-mini2" type="button" id="blog-tasto-espandi-mini2" onclick="espandiBlog('due')"> Read more</button>
+                                            <div class=caratter-text id="blog-btn-espandi-mini2">
+                                                poi impostiamo lo start automatico del servizio<br>
+                                                <em class="terminal"> sudo /etc/init.d/nginx start</em>
+                                                <br>
+                                                <em class="terminal">[ ok ] Starting nginx (via systemctl): nginx.service.</em>
+                                                <br>
+                                                <em class="terminal">sudo systemctl status nginx.service </em>
+                                                <img src="foto/nginxstatus.png" class="blog-images" width="100%" height="300px" alt="staus nginx service"> altri comandi sono stop del service o restart sudo systemctl stop nginx.service sudo systemctl restart
+                                                nginx.service Nello schema seguente vediamo come Nginx interagisce con le nostre applicazioni ed il web.
+                                                <section class="">
+                                                    <div class="row">
+                                                        <div class="col s3 m3 l3">
+                                                            <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                                        </div>
+                                                        <div class="col s1 m1 l1">
+                                                            <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                        </div>
+                                                        <div class="col s2 m2 l2">
+                                                            <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                                                        </div>
+                                                        <div class="col s1 m1 l1">
+                                                            <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                        </div>
+                                                        <div class="col s2 m2 l2">
+                                                            <img class="blog-images" src="foto/uwsgi.png" width="100%" height="300px" alt="internet utenti">
+                                                        </div>
+                                                        <div class="col s1 m1 l1">
+                                                            <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                        </div>
+                                                        <div class="col s2 m2 l2">
+                                                            <img class="blog-images" src="foto/django.png" width="100%" height="300px" alt="internet utenti">
+                                                        </div>
+                                                    </div>
+                                                    < </section>
+                                                        Mentre nel caso di una applicazione creata con NodeJs lo schema logico è il seguente
+                                                        <section class="">
+                                                            <div class="row">
+                                                                <div class="col s3 m3 l3">
+                                                                    <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                                                </div>
+                                                                <div class="col s1 m1 l1">
+                                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                                </div>
+                                                                <div class="col s2 m2 l2">
+                                                                    <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                                                                </div>
+                                                                <div class="col s1 m1 l1">
+                                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                                </div>
+                                                                <div class="col s2 m2 l2">
+                                                                    <img class="blog-images" src="foto/PM2-vert.png" width="100%" height="300px" alt="internet utenti">
+                                                                </div>
+                                                                <div class="col s1 m1 l1">
+                                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                                </div>
+                                                                <div class="col s2 m2 l2">
+                                                                    <img class="blog-images" src="foto/nodejs-vert.png" width="100%" height="300px" alt="internet utenti">
+                                                                </div>
+                                                            </div>
+
+                                                        </section>
+                                                        Per poter comunicare con il sistema operativo dobbiamo oltrepassare il firewall permettendo a nginx di comunicare verso e dall'interno. Vediamo alcuni comandi per gestire il firewall <br>
+                                                        <ul>
+                                                            <li>sudo ufw status </li>
+                                                            <li> sudo ufw enable # attiva il firewall</li>
+                                                            <li> sudo ufw disable # disattiva uk firewall</li>
+                                                            <li> sudo ufw allow port # abilita porta ad es. la porta 80 </li>
+                                                            <li>sudo ufw allow 'Nginx http' # abilita nginx</li>
+                                                        </ul> <br> vediamo ora quali porte e/o applicazioni sono aperte
+                                                        <img class="blog-images" src="foto/firewall.png" width="100%" height="450px" alt="firewall"> Nei post precedenti abbiamo visto come far comunicare le nostre applicazioni con nginx per cui ora vediamo
+                                                        il Process Manager PM2. PM2 ci permette di gestire più applicazioni web che contemporaneamente sono pronte ad essere utilizzare e tramite dei comandi possiamo gestire pm2 e controllare che le nostre
+                                                        applicazioni siano in funzione. Nel post precedente abbia o visto come installare PM2 ed attivarlo con Nginx ora vediamo altri comandi utili.
+                                                        <ul>
+                                                            <li>sudo systemctl status pm2 #per vedere lo status di PM2</li>
+                                                            <li> sudo systemctl stop pm2 # per stop esecuzione PM2</li>
+                                                            <li>sudo systemctl start pm2</li>
+                                                            <li>sudo systemctl restart pm2</li>
+                                                        </ul>
+                                                        Ora ediamo dei comandi per vedere lo stato delle applicazioni gestite da PM2.
+                                                        <ul>
+                                                            <li>sudo pm2 show n.ro applicazione o nome applicazione
+                                                                <img class="blog-images" src="foto/pm2show.png" width="100%" height="450px" alt="pm2 show app">
+                                                            </li>
+                                                            <li>sudo pm2 monit</li>
+                                                            <li> sudo pm2 list # lista di applicazione gestite da PM2</li>
+                                                            <li>sudo pm2 start nome_app # attivare una applicazione</li>
+                                                            <li> sudo pm2 restart nome_app # restart una app</li>
+                                                            <li> sudo pm2 stop nome_app # stop esecuzione di una app</li>
+                                                        </ul>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                        <div id="blog3-eng">
+                            <h5 class="blog-titolo">View Nginx PM2 and firewall of Linux</h5>
+                            <div class="col s12 m12 l12" style="text-align: center">
+                                <h6> by Mecbar 13 settembre 2017 </h6>
+                            </div>
+                            <div style="height:200px;margin-top:10px">
+                                <p class="caratter-text">In the previous post we have used Nginx and PM2. Now we see how use them on Linux Ubuntu 16.04 Lts. Nginx is a web server/reverse proxy with elevate performans and can be used also as server proxy for email on different
+                                    operating system. First of all install it with the command from Terminal</p>
+                                <em class="terminal">
+                                            sudo apt-get install nginx </em><br>
+                                <button class="blog-btn-espandi-mini2" type="button" id="blog-tasto-espandi-mini2" onclick="espandiBlog('due')"> Read more</button>
+                                <div class=caratter-text id="blog-btn-espandi-mini2">
+                                    then setup the automatic start of the service<br>
+                                    <em class="terminal"> sudo /etc/init.d/nginx start</em>
+                                    <br>
+                                    <em class="terminal">[ ok ] Starting nginx (via systemctl): nginx.service.</em>
+                                    <br>
+                                    <em class="terminal">sudo systemctl status nginx.service </em>
+                                    <img src="foto/nginxstatus.png" class="blog-images" width="100%" height="300px" alt="staus nginx service"> other command are service stop or restart sudo systemctl stop nginx.service sudo systemctl restart nginx.service
+                                    In the following scheme we see how Nginxinteracts with the other application and the web. From the browser the user call Nginx that transfer the request at Uwsgi/Django (back-end). Django create the answer and through
+                                    Uwsgi send it via Nginx at browser for the user.
+
+                                    <section class="">
+                                        <div class="row">
+                                            <div class="col s3 m3 l3">
+                                                <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s1 m1 l1">
+                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s2 m2 l2">
+                                                <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s1 m1 l1">
+                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s2 m2 l2">
+                                                <img class="blog-images" src="foto/uwsgi.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s1 m1 l1">
+                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s2 m2 l2">
+                                                <img class="blog-images" src="foto/django.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                        </div>
+                                    </section>
+                                    In the image below the scheme with the web server NodeJs(Javascript) and the process manager PM2.
+
+                                    <section class="">
+                                        <div class="row">
+                                            <div class="col s3 m3 l3">
+                                                <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s1 m1 l1">
+                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s2 m2 l2">
+                                                <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s1 m1 l1">
+                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s2 m2 l2">
+                                                <img class="blog-images" src="foto/PM2-vert.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s1 m1 l1">
+                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                            <div class="col s2 m2 l2">
+                                                <img class="blog-images" src="foto/nodejs-vert.png" width="100%" height="300px" alt="internet utenti">
+                                            </div>
+                                        </div>
+
+                                    </section>
+                                    For communicate with the operating system we need to open the firewall policy so Nginx can transfer request and answer between client and server.
+                                    <br> Some commands for Firewall of Linux are the followings:
+                                    <ul>
+                                        <li>sudo ufw status </li>
+                                        <li> sudo ufw enable # enable the firewall</li>
+                                        <li> sudo ufw disable # disable the firewall</li>
+                                        <li> sudo ufw allow port 80 # enable port for ex. the port 80 </li>
+                                        <li>sudo ufw allow 'Nginx http' # enable nginx for protocol http</li>
+                                    </ul> <br> In the example below we see the open port from Firewall.
+                                    <img class="blog-images" src="foto/firewall.png" width="100%" height="450px" alt="firewall"> In the previous post we see how use Nginx with Uwsgi and Django now instead we talk about PM2 for NodeJs. PM2 is a process
+                                    manager. It allows us to handle more web application on one server. With PM2 the application are always ready on the server for the request of the user In the previous post we have seen how to install and use it with
+                                    Nginx. Now we show some commands for PM2.<br>
+
+                                    <ul>
+                                        <li>sudo systemctl status pm2 #for show status of PM2</li>
+                                        <li> sudo systemctl stop pm2 # for stop run of PM2</li>
+                                        <li>sudo systemctl start pm2</li>
+                                        <li>sudo systemctl restart pm2</li>
+                                    </ul>
+                                    Below the command for see status of web application handles by Pm2.
+                                    <ul>
+                                        <li>sudo pm2 show n.ro application or name of application
+                                            <img class="blog-images" src="foto/pm2show.png" width="100%" height="450px" alt="pm2 show app">
+                                        </li>
+                                        <li>sudo pm2 monit</li>
+                                        <li> sudo pm2 list # application list handle by PM2</li>
+                                        <li>sudo pm2 start name_app # start the app</li>
+                                        <li> sudo pm2 restart name_app # restart the app</li>
+                                        <li> sudo pm2 stop name_app # stop run app</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <!-- VR  -->
+    <section>
+
+        <a-scene physics>
+            <a-box position="-1 4 -3" rotation="0 45 0" color="#4CC3D9" dynamic-body></a-box>
+            <a-plane position="0 0 -4" rotation="-90 0 0" width="4" height="4" color="#7BC8A4" static-body></a-plane>
+            <a-sky color="#ECECEC"></a-sky>
+        </a-scene>
+    </section>
+
+    <div class="rowcenter" id="dev">
+
+        Development case history
+
+    </div>
+    <div>
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Survey liking for your site</div>
+                <div class="collapsible-body">
+
+                    <!-- QUESTIONARIO -->
+                    <div class="section1" id="cono">
+                        <div class="container">
+                            <div class="row">
+                                <div class="spazio1999 center">Example insert Survey </div>
+                            </div>
+                            <div class="row">
+                                <div class="col s12 m6">
+                                    <div class="icon-block center">
+                                        <a class="typeform-share button" href="https://mecbar.typeform.com/to/cb5S8D" data-mode="drawer_left" style="display: inline-block; text-decoration: none; background-color: #267DDD; color: white; cursor: pointer; font-family: Helvetica, Arial, sans-serif; font-size: 20px; line-height: 0.5em; padding: 10px 30px; margin: 0; height: 1.5em; border-radius: 50px; box-shadow: none; background-image: none; border: none"
+                                            target="_blank">Survey pop up</a>
+                                        <script>
+                                            (function() {
+                                                var qs, js, q, s, d = document,
+                                                    gi = d.getElementById,
+                                                    ce = d.createElement,
+                                                    gt = d.getElementsByTagName,
+                                                    id = "typef_orm_share",
+                                                    b = "https://s3-eu-west-1.amazonaws.com/share.typeform.com/";
+                                                if (!gi.call(d, id)) {
+                                                    js = ce.call(d, "script");
+                                                    js.id = id;
+                                                    js.src = b + "share.js";
+                                                    q = gt.call(d, "script")[0];
+                                                    q.parentNode.insertBefore(js, q)
+                                                }
+                                            })()
+                                        </script>
+                                    </div>
+                                </div>
+                                <div class="col s12 m6">
+                                    <div class="icon-block center">
+                                        <!--     <h2 class="center brown-text"><i class="material-icons">group</i></h2> -->
+                                        <a class="typeform-share button" href="https://mecbar.typeform.com/to/cb5S8D" data-mode="popup" style="display: inline-block; text-decoration: none; background-color:#C42929; color: white; cursor: pointer; font-family: Helvetica, Arial, sans-serif; font-size: 20px; line-height: 0.5em; padding: 10px 30px; margin: 0; height: 1.5em; border-radius: 50px; box-shadow: none; background-image: none; border: none"
+                                            target="_blank">Survey full page</a>
+                                        <script>
+                                            (function() {
+                                                var qs, js, q, s, d = document,
+                                                    gi = d.getElementById,
+                                                    ce = d.createElement,
+                                                    gt = d.getElementsByTagName,
+                                                    id = "typef_orm_share",
+                                                    b = "https://s3-eu-west-1.amazonaws.com/share.typeform.com/";
+                                                if (!gi.call(d, id)) {
+                                                    js = ce.call(d, "script");
+                                                    js.id = id;
+                                                    js.src = b + "share.js";
+                                                    q = gt.call(d, "script")[0];
+                                                    q.parentNode.insertBefore(js, q)
+                                                }
+                                            })()
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="fa fa-envelope" aria-hidden="true"></i> Request sign up to Mailing List</div>
+                <div class="collapsible-body">
+
+                    <!--     mail lis  -->
+                    <div class="container">
+                        <div class="row">
+                            <div class="section  center">
+                                <h4 class="center brown-text">Example request mail for sign up in the Mailing List</h4>
+                                <div class="input-field col s12 l6 offset-l3">
+                                    <!-- inserire email x mail list-->
+                                    <br>
+                                    <div id="mc_embed_signup">
+                                        <form action="http://github.us15.list-manage.com/subscribe/post?u=11d1ee8dfbd9869f04ba74522&amp;id=a663aefcc9" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                            <div id="mc_embed_signup_scroll">
+                                                <input type="email" value="" name="EMAIL" class="email validate center black-text" id="mce-EMAIL" placeholder="Insert your mail" required>
+
+                                                <button class="btn btn-registrazione waves-effect waves-light red lighten-1" type="submit" name="action">I want Sign up!</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <br><br>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create new AngularJs project </div>
+                <div class="collapsible-body">
+
+                    <section id="codice">
+                        <div class="rowcenter" id="dev">
+                            Create project with Web Framework AngularJs - CSS Grid of Mozilla
+                        </div>
+
+                        <div class="grid-container">
+                            <div class="item-2">
+                                <pre> 
+   
+                           Verify version installed software :
+                            - bower  --version  
+                            - karma  --version 
+                              
+                            Create directory for save files ex. ProgettoA then insert :
+                            - cd ProgettoA
+                            - git init
+      - yo angular –minsafe –karma  (the minsafev parametr is for minification)
+      - bower install  <!--#instll tutti i file necessari) -->
+      - npm install    <!-- (installa tutte le dipendenze di js)  -->
+      - karma init     <!-- (chiede i parametri x test es. phantomjs)  -->
+         
+      - Into the file karma.conf.js there are all configuration  params 
+      - the command:  grunt karma    test if alright  
+ 
+      - the command:  grunt server   active the web server (localhost:9000 )   </pre>
+                            </div>
+                            <div class="item-5">
+                                <pre>
+ Now create the controller and the views :
+   - yo angular:controller name_controller
+       ex. ProgettoACtrl
+   - yo angular:view  name_view 
+       ex. ProgettoAView 
+           
+  
+  
+   - git status    for verify the files created into the local repository 
+
+ 
+   - Create the sub directory /app/data into project folder ex. PreogettoA 
+    
+     then in  C:\ProgettoA/app/data  insert the json file 
+           with the application data </pre>
+                            </div>
+                            <div class="item-1">
+                                <pre>
+      Create working environment  
+      -  npm install –g nodejs
+      -  npm install –g bower
+      -  npm install –g grunt-cli
+      -  npm install –g yo 
+      -  npm install –g generator-angular
+      -  npm install –g karma
+      -  Install phantomjs(browser dedicato ai test)
+      </pre>
+                            </div>
+                            <div class="item-6">
+                                <pre>
+  Ok  ..... Now with an editor can modify the views and the controller for  your   
+      Front-end Framework with the AngularJs Directives:
+             - ng-app
+             - ng-controller
+             - ng-model
+             - ng-repeat
+             - ng-show
+             - and furthermore the service and filters  ecc ....
+
+      </pre>
+                            </div>
+                        </div>
+
+                    </section>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Example Form with AngularJs</div>
+                <div class="collapsible-body">
+                    <!-- esempio angularls -->
+                    <br>
+                    <br>
+
+
+                    <div class="angular" ng-app="mecbar">
+                        <br>
+                        <div class="container">
+                            <div class="row">
+                                <h3 align='center'>Example of AngularJs Form </h3>
+                                <br>
+                                <br>
+                                <div>
+                                    <h4 class="center brown-text">Insert your name:</h4>
+                                    <div class="input-field col s12 l6 offset-l3">
+                                        <input class="center black-text" type="text" name="nome" ng-model="nome">
+
+                                        <h5 class="center red-text" ng-show="nome">Hello, {{nome}}</h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Example view file from Server without refresh all page with Angularjs and Ajax</div>
+                <div class="collapsible-body">
+
+
+                    <!-- angular vista elenco nazioni -->
+
+                    <div class="angular2">
+                        <br>
+                        <h3 class="center brown-text"> List Nation: example created with AngularJs </h3>
+                        <p class="center"> <button id="but1" class="button" name="button"> Displays List </button>
+                            <button id="nascondi" class="button" name="button"> Hide List </button>
+                        </p>
+                        <br>
+
+                        <div id="elenco">
+                            <table style="width:100%" ng-controller="NationListCtrl">
+                                <tr>
+                                    <th>Number</th>
+                                    <th>Code</th>
+                                    <th>Nation</th>
+                                </tr>
+                                <tbody ng-repeat="nation in nations">
+                                    <tr ng-repeat="(key,value) in nation">
+                                        <td> {{ key +1 }} </td>
+                                        <td> {{ value.code }} </td>
+                                        <td> {{ value.name }} </td>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="row center">
+                            <br>
+                            <p class="text"> Code html for view the data that ng-controller load from server to browser and the directive ng-repeat create the table with pattern MVC </p>
+                            <img src="foto/es_ angular_elenco.jpg" width="90%" height="400px">
+                        </div>
+
+                        <div class="row center">
+                            <p class="text"> Code Javascript for load file nation.json into the browser ( $scope.nations ) </p>
+                            <img src="foto/es_angular_script.jpg" width="90%" height="400px">
+                        </div>
+
+                    </div>
+                </div>
+
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Parallax Background Scrolling Model</div>
+                <div class="collapsible-body">
+                    <div class="parallax-container valign-wrapper">
+                        <div class="section no-pad-bot">
+                            <div class="container">
+                                <div class="row center">
+                                    <h5 class="header col s12 light white-text">Mecbar parallax background model</h5>
+                                </div>
+                                <div class="parallax"><img src="back2012.jpg" alt="Unsplashed background img 3"></div>
+                            </div>
+                        </div>
+                    </div>
+            </li>
+        </ul>
+        </div>
+
+        <div class="col s12 m12 l12">
+
+            <div class="rowcenter" style="vertical-align: text-center;margin-top:100px" id="linux">
+                Linux Ubuntu
+            </div>
+        </div>
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header"><i class="fa fa-terminal" aria-hidden="true"></i> Create virtual environment for Python</div>
+                <div class="collapsible-body">
+                    For create a virtual environment with Anaconda before you must download ed install Anaconda the from Terminal insert the command<br> <span class="terminal">conda env create -f name_file.yml </span> - create virtual environment with
+                    list application for Anaconda with Anaconda we have Python with Spider and Jupyter Notebook Example name_file.yml <br> name virtualenv channels:<br> - soumith <br>- menpo<br> - conda <br>-forge <br>- defaults dependencies:
+                    <br>- anaconda-client=1.6.3=py35_0
+                    <br> - asn1crypto=0.22.0=py35_0 <br> - pip: <br> - backports.shutil-get-terminal-size==1.0.0 <br> - defusedxml==0.5.0 <br> ecc..
+                    <br>prefix: path/name virtual environment<br> all packet=py35_0 for Python3.5<br> Otherwise you can install the packet with PIP <br>
+                    <div>
+                    </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="fa fa-terminal" aria-hidden="true"></i> Activate virtualenv from Terminal </div>
+                <div class="collapsible-body">
+
+                    - into Terminal insert command : <span class="terminal">source activate name_virtualenv </span> - for install other packet you can use Conda : <span class="terminal">conda install name_packet</span> or conda search name_packet for
+                    search many archive - for exit from virtualenv in Terminal : <span class="terminal">source deactivate</span>
+
+
+                </div>
+                </div>
+            </li>
+
+
+            <li>
+                <div class="collapsible-header"><i class="fa fa-terminal" aria-hidden="true"></i> Kill process on linux </div>
+                <div class="collapsible-body">
+                    if a port is occupy by a process into Terminal insert the command for kill process for port 8000:<br>
+
+                    <span class="terminal"> sudo fuser -k 8000/tcp</span>
+
+
+                </div>
+                </div>
+            </li>
+        </ul>
+
+
+
+        <div class="section">
+
+            <div class="col s12 m12 l12">
+
+                <div class="rowcenter" style="vertical-align: text-center" id="us">
+                    Contact us
+                </div>
+                <div class="spazioimg"></div>
+            </div>
+
+            <div class="row center" style="margin-top:170px;margin-bottom:150px">
+                <a href=mailto:info@mecbar.com class="social-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+  </a>
+                <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmecbar.com%2F" class="social-icon" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/gabriele-mecella-1547b1137" class="social-icon" target="_blank">
+                    <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                </a>
+                <a href="https://www.twitter.com/mec252525" class="social-icon" target="_blank">
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="https://plus.google.com/115226907752727184469" class="social-icon" target="_blank">
+                    <i class="fa fa-google-plus" aria-hidden="true"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <div id="botwin">
+
+        MecBot <button type="button" class="xbot" onclick="closeChat()">X</button><br> Here the ChatBot by Mecbar
+        <div class="my_botto">
+            <div class="my_botto1">
+                <div class="row" id="bot">
+                    <div class="col-lg-12" id="bot1">
+
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div id="output1" class="output1">
+                        <span id="input1"></span>
+                        <!-- {{ speech }} id : {{ id}} -->
+                    </div>
+                </div>
+                <input type="textarea" id="insert" class="input1" placeholder="Insert your question" style="color:black">
+
+                <a class="blog-btn-espandi send-bot" onclick="question(window.insert.value)">
+                    <i class="material-icons right">send</i>
+                </a>
+                <button class="blog-btn-espandi" id="close_button" type="button" style="margin-left:15px" onclick="closeChat()">Close ChatBots</button>
+            </div>
+        </div>
+    </div>
+    <button onclick="callBot()" id="tasto-bot" title="Bot">Call Bot</button>
+    <button onclick="topFunction()" id="tasto-su" title="Go to top">Scroll-Top</button>
+</body>
+<footer class="page-footer" style="background-color:white;color:#a3333d">
+    <div class="container">
+
+        <div class="col s12 m12 l12 center">
+            <h5>MecBar</h5>
+            <p>Don't Warry Be Happy</p>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container center">
+            <a style="color:#aa111e"> &copy 2017-2027  Mecbar</a>
+        </div>
+    </div>
+</footer>
+
+
+<!--  Scripts-->
+<script src=" https://code.jquery.com/jquery-2.1.1.min.js "></script>
+<script src="js/materialize.js "></script>
+<script src="js/init.js "></script>
+
+<!-- google analytics -->
+<script>
+    (function(i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function() {
+            (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-93827509-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+<!-- script personalizzazione jquery  -->
+<script>
+    $('.button').click(function() {
+        $('#elenco').show();
+    });
+
+    $('#nascondi').click(function() {
+        $('#elenco').hide();
+    });
+
+
+    $(document).ready(function() {
+        $('.carousel').carousel();
+    });
+
+    $('.carousel slide').carousel({
+        fullWidth: false
+    });
+
+    $('.button-collapse').sideNav();
+</script>
+
+
+</html>

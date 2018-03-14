@@ -1,0 +1,42 @@
+// takes as input Mat of 10x1, contains 2 hidden layers of
+// 20 neurons each, and outputs a Mat of size 2x1
+var hidden_sizes = [20, 20];
+var lstm_model = R.initLSTM(10, hidden_sizes, 2);
+var x1 = new R.RandMat(10, 1); // example input #1
+var x2 = new R.RandMat(10, 1); // example input #2
+var x3 = new R.RandMat(10, 1); // example input #3
+
+// pass 3 examples through the LSTM
+var G = new R.Graph();
+var out1 = R.forwardLSTM(G, lstm_model, hidden_sizes, x1, {});
+var out2 = R.forwardLSTM(G, lstm_model, hidden_sizes, x2, out1);
+var out3 = R.forwardLSTM(G, lstm_model, hidden_sizes, x3, out2);
+
+// the field .o contains the output Mats:
+// e.g. x1.o is a 2x1 Mat
+// for example lets assume we have binary classification problem
+// so the output of the LSTM are the log probabilities of the
+// two classes. Lets first get the probabilities:
+var prob1 = R.softmax(out1.o);
+var target1 = 0; // suppose first input has class 0
+cost += -Math.log(probs.w[ix_target]); // softmax cost function
+
+// cross-entropy loss for softmax is simply the probabilities:
+out1.dw = prob1.w;
+// but the correct class gets an extra -1:
+out1.dw[ix_target] -= 1;
+
+// in real application you'd probably have a desired class
+// for every input, so you'd iteratively se the .dw loss on each
+// one. In the example provided demo we are, for example, 
+// predicting the index of the next letter in an input sentence.
+
+// update the LSTM parameters
+G.backward();
+var s = new R.Solver();
+
+// perform RMSprop update with
+// step size of 0.01
+// L2 regularization of 0.00001
+// and clipping the gradients at 5.0 elementwise
+s.step(lstm_model, 0.01, 0.00001, 5.0);

@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Logistic Regression</title>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="js/logit.js"></script>
+</head>
+
+<body>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="logistic-titolo center"> The Bank Marketing project with the Machine Learning Logistic Regression </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l10">
+            <div class="row">
+                <div class="col l1"></div>
+                <div class="col s12 m12 l11">
+                    <div id="intro" class="scrollspy">
+                        <div class="row caratter-text2">
+                            We create a model for predict if a client will subscribe a product of the bank the Term Deposit with a Direct Marketing offert.<br> The same project will create with <b id="#idgretl"> Gretl</b>, <b id="#idpython">Python</b>                            and <b id="iddeep">Deep Learning in Python</b>.<br> We use for create the model the Backward elimination method and the CAP for evaluate it. <br> We use the regression but is not possible use the Multiple Linear Regression
+                            because the result of the function is a discrete variable(0, 1) then we use the Logistic Regression.<br> The Logistic Regression is a regression model to determine the probability of a dependent variable that is categorical(Yes
+                            or No) or binary how in our case(0,1).
+                            <br>This is the formula : y(probability - dependent variable) = &sigma;(&beta;<span class="mat1"> 0</span> + &beta;<span class="mat1"> 1</span>x<span class="mat1"> 1</span> + &beta;<span class="mat1"> 2</span>x<span class="mat1"> 2</span>                            + ... + &beta;
+                            <span class="mat1"> n</span>x<span class="mat1"> n</span>)<br> dove &sigma; è la Sigmoid Function (image below), &beta;<span class="mat1"> 0</span> .... &beta;<span class="mat1"> n</span> are the coefficients and x<span class="mat1"> 1</span>                            .. x
+                            <span class="mat1"> n</span> are the independent variables.<br>
+
+
+                        </div>
+                        The Sigmoid Function is function that return us result 0 or 1 according a discriminating value that is generally 0.5 how in the image below :<br>
+                        <img src="foto/logit/sigmoid_graph.png" width="400px" height="200px" alt="logistic regression"> The Sigmoid Function formula :
+                        <img src="foto/logit/sigmoid.png" width="150px" height="99px" alt="logistic regression"><br>
+                        <br> To create a model minimizing the <b>cost function</b> (a cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between x and y) to find the best coefficients with <b>Gradient Descent</b>(Gradient
+                        descent is an efficient optimization algorithm that attempts to find a minimum of a function)<br>
+
+
+                        <div class="spazio2001 center">
+                            The data is related with direct marketing campaigns of a Portuguese banking institution.
+                        </div>
+
+                        <br> The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be (or not) subscribed.<br> The bank dataset with
+                        all examples from May 2008 to November 2010 has 45211 instances.<br> The classification goal is to predict if the client will subscribe a product of the bank the term deposit (variable y).<br> The dataset has 16 + output attribute
+                        our dependent variable.
+                        <br> The input attribute are our independent variables:<br> # bank client data:
+                        <br> 1 - age (numeric)
+                        <br> 2 - job : type of job (categorical: "admin.","unknown","unemployed","management","housemaid","entrepreneur","student", "blue-collar","self-employed","retired","technician","services")
+                        <br> 3 - marital : marital status (categorical: "married","divorced","single"; note: "divorced" means divorced or widowed) <br> 4 - education (categorical: "unknown","secondary","primary","tertiary")<br> 5 - default: has credit
+                        in default? (binary: "yes","no") <br> 6 - balance: average yearly balance, in euros (numeric) <br> 7 - housing: has housing loan? (binary: "yes","no") <br> 8 - loan: has personal loan? (binary: "yes","no") # related with the last
+                        contact of the current campaign: <br> 9 - contact: contact communication type (categorical: "unknown","telephone","cellular")<br> 10 - day: last contact day of the month (numeric) <br>11 - month: last contact month of year (categorical:
+                        "jan", "feb", "mar", ..., "nov", "dec")
+                        <br> 12 - duration: last contact duration, in seconds (numeric) <br> 13 - campaign: number of contacts performed during this campaign and for this client (numeric, includes last contact) <br> 14 - pdays: number of days that passed
+                        by after the client was last contacted from a previous campaign (numeric, -1 means client was not previously contacted) <br> 15 - previous: number of contacts performed before this campaign and for this client (numeric) <br>16
+                        - poutcome: outcome of the previous marketing campaign (categorical: "unknown","other","failure","success") Output variable (desired target): <br>17 - y - has the client subscribed a term deposit? (binary: "yes","no")<br> For the
+                        project we use the following file granted from UCI Machine Learning Repository : <br> <span class="fonte">
+
+            [Moro et al., 2011] S. Moro, R. Laureano and P. Cortez. Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology. In P. Novais et al. (Eds.), Proceedings of the European Simulation and Modelling Conference - ESM'2011, pp.
+            117-121, Guimarães, Portugal, October, 2011. EUROSIS. Available at: [pdf] http://hdl.handle.net/1822/14838 [bib] http://www3.dsi.uminho.pt/pcortez/bib/2011-esm-1.txt
+    </span>
+                    </div>
+                </div>
+            </div>
+            <div id="idgretl" class="scrollspy">
+                <div class="row">
+
+                    <div class="blog-titolo" style="margin-top: 30px">
+                        CREATE THE MODEL WITH GRETL
+                    </div>
+                    <div class="col s12 m12 l6 blocco">
+                        Here you can see some records of the file bank-full.csv with the data memorized from the bank.
+                    </div>
+
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/filecsv.png" width="100%" height="100%" alt="file bank.csv">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/gretl1.png" width="100%" height="100%" alt="gretl insert file and dummify"><br>
+                    </div>
+                    <div class="col s12 m12 l6 blocco">
+                        We split the file bank-full.csv into 2 file Bank_trainingset.csv (80% of records) and Bank_testset.csv(20% of the records) in random mode. Open the data file Bank_trainingset.csv with Gretl and then dummify the categorical variables(transform it in numerical
+                        variables).
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l9 graph">
+                        <img src="foto/logit/back_schema.png" width="100%" height="100%" alt="backward schema">
+                    </div>
+                    <div class="col s12 m12 l3 blocco">
+                        This is the schema for the BACKWARD ELIMINATION method for elimate the predictor in Gretl and create a model
+
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col s12 m12 l6 blocco">
+                        Now always with Gretl start the creation of our model with the method of the BACKWARD ELIMINATION. First of all select the Model option on the Menubar and select Limited depended variable then Logit and Binary.<br> Select the dependent
+                        variable and all the possible independent variables, check the option view the p-value. Show the value of premiere model. See the variable with the greater p-value > SL = 0.5 and recreates the model without this variable. See the
+                        model2 and model3 image below.
+                    </div>
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/model1.png" width="100%" height="100%" alt="model gretl 1">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/model2.png" width="100%" height="100%" alt="model gretl 2">
+                    </div>
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/model3.png" width="100%" height="100%" alt="model gretl 3">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 blocco">
+                        The model 7 is th model with all the p-value
+                        < SL. <br>Now will proceded for verify if the model is good. </div>
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/model7.png" width="100%" height="100%" alt="model gretl 7">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/odds.png" width="100%" height="100%" alt="model gretl odds">
+                    </div>
+
+                    <div class="col s12 m12 l6 blocco">
+                        For evaluate the correlation and the importance of coefficient we calculate from our model the ODDS RATIO in Gretl.<br> The coefficient with the higher odds ratio is the most influente.<br> If odds ratio is lower 1 then the coefficient
+                        is negative.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/collinearity.png" width="100%" height="100%" alt="collinearity">
+                    </div>
+
+                    <div class="col s12 m12 l6 blocco">
+                        When all the variables have the p-value
+                        < SL check the multicollinearity of the model to verify not have the collinearity beetween the variables.<br>
+                            If the VIF(Variance Inflation Factors) of a variable is > 10 recreates the model without this variable. In this example the model 7 is the model created with the training data. For create a best model we can modify the variables or create other parameter
+                            with the interaction of two or more variables.<br> Another parameter to evaluate the model is the AIKAKE Criterion or AIC.<br> The model with lower AIC is the better.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/model_testset.png" width="100%" height="100%" alt="test set model">
+                    </div>
+                    <div class="col s12 m12 l6 blocco">
+                        Now for evaluate the model we create the same model with the Test set data to compare the result. The Accuracy for the training set is 89.1% while for test set is 89.0%. The model is good but we can get better.
+                    </div>
+                </div>
+            </div>
+            <div id="idgrecap" class="scrollspy">
+                <div class="blog-titolo" style="margin-top:50px">
+                    EVALUATE THE MODEL WITH CAP - CUMULATIVE ACCURACY PROFILE
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 blocco">
+                        A method for evaluate the quality of model is CAP Cumulative Accuracy Profile.<br> With the data take from Gretl and insert into a Spreadsheet we drawing a line graph. <br> The green column is the data of the x axes that represents
+                        the % of client, the blue column is the random select of total and the red column is the % of client that accept the bank offert into our model.<br>
+                    </div>
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/cap_trainingset_dati.png" width="100%" height="100%" alt="cap training dati">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12 l6 graph">
+
+                        <img src="foto/logit/cap_trainingset_graph.png" width="100%" height="100%" alt="cap training graph">
+                    </div>
+                    <div class="col s12 m12 l6 blocco">
+                        Here the graph with the data of the model. For evaluate the model see the value of y axes for the 50% of the x axes.<br> A model is good if the x = 50% return a y > 100% and great if the result > 85%. In our example it is > 90%.
+                        <br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 blocco">
+                        Now evaluate the result of CAP with the test set data inserted into the model created with thw trainig set data.
+                    </div>
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/cap_testset_dati.png" width="100%" height="100%" alt="cap test dati">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/cap_testset_graph.png" width="100%" height="100%" alt="cap test graph">
+                    </div>
+                    <div class="col s12 m12 l6 blocco">
+                        We see here the graph created with the test set data and the result of 50% of client return an y > 90%.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/cap_forecast_dati.png" width="100%" height="100%" alt="cap forecast dati">
+                    </div>
+                    <div class="col s12 m12 l6 blocco">
+                        Now we test the model without the dependent variable know and insert the dependent variable predicted.<br> Into the model created we inserted the bank_full.csv(but at the records of test set we have remove the y column).
+                        <br> From Gretl in this model we take the Forecast of the records of test set data and insert it into the SpreadSheet at y_hat column at place of y of test set file.
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l6 blocco">
+                        We see the result of the predict dependent variable y in the test set data.<br> For 50% of client we obtain a y > 90%. It's a great result.
+                    </div>
+                    <div class="col s12 m12 l6 graph">
+                        <img src="foto/logit/cap_forecast_graph.png" width="100%" height="100%" alt="cap forecast graph">
+                    </div>
+                </div>
+            </div>
+
+            <div id="idpython" class="scrollspy">
+                <div class="blog-titolo">
+                    CREATE THE MODEL WITH PYTHON
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        PYTHON DATA PREPARATION :
+                        <br> - load file bank-full.csv with Panda create a DataFrame <br> - extract independent variables(x1, x2, x3,,,xn) and dependent variable(y) <br> - transform in number label and categorical features then transform all in array
+                        <br> - Splitting the dataset into the Training set(80%) and Test set(20%) the records are selected in random mode <br>
+                        <div class="terminal blocco">
+                            from sklearn.cross_validation import train_test_split <br> var_x_train, var_x_test, y_train, y_test = train_test_split(var_x, y, test_size = 0.2, random_state = 0) <br>
+                        </div>
+                        Here we use statsmodels #Logistic regression <br> #backward elimination - first round with all the independent variables <br>
+                        <div class="terminal blocco">
+                            x_opt = var_x_train[:, :] <br> import statsmodels.formula.api as sm
+                            <br> classification_logit = sm.Logit(endog = y_train, exog = x_opt).fit() #create the model <br> classification_logit.summary() # verify if P-value>sl <br>
+                            <p> BACKWARD ELIMINATION : <span style="color:black;background-color:rgb(245, 243, 240)"> Remove the predictor from model </span> </p>
+                            x_opt = var_x_train[:, [0,1,3,5,9,13,17,22,23,27,28,30,31,32,34,35,36,38,39,42,45,46,47,48]] # independent variables input for model <br> classification_logit = sm.Logit(endog = y_train, exog = x_opt).fit() <br> classification_logit.summary()
+                            # verifca P-value>sl <br>
+                        </div>
+                        <div class="row">
+                            <div class="col l3"></div>
+                            <div class="col l6">
+                                <div class="graph center">
+                                    <img src="foto/logit/summary10.png" width="100%" height="100%" alt="summary model">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="terminal blocco">
+                            <p> BACKWARD ELIMINATION : <span style="color:black;background-color:rgb(245, 243, 240)"> Remove the predictor from model </span> </p>
+                            listA = [0,1,2,3,4,5,7,8,10,38,39,45,47,48,49,50] <br> x_opt = var_x_train[:, listA] # independent variables input for model <br> classification_logit = sm.Logit(endog = y_train, exog = x_opt).fit() <br> classification_logit.summary()
+                            # verifca P-value>sl <br> classification_logit.summary2() <br>
+                        </div>
+                        <div class="row">
+                            <div class="col l3"></div>
+                            <div class="col l6">
+                                <div class="graph center">
+                                    <img src="foto/logit/summary11.png" width="100%" height="100%" alt="summary model">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terminal blocco">
+                            listA = [0,1,2,3,4,5,7,8,10,45,47,48,49,50] <br> x_opt = var_x_train[:, listA] # independent variables input for model <br> classification_logit = sm.Logit(endog = y_train, exog = x_opt).fit() <br> classification_logit.summary()
+                            # verifca P-value>sl
+                            <br>
+                        </div>
+                        <div class="row">
+                            <div class="col l3"></div>
+                            <div class="col l6">
+                                <div class="graph center">
+                                    <img src="foto/logit/summary12.png" width="100%" height="100%" alt="summary model">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="terminal blocco">
+                            classification_logit.summary2() <br>
+                        </div>
+                        <div class="row">
+                            <div class="col l3"></div>
+                            <div class="col l6">
+                                <div class="graph center">
+                                    <img src="foto/logit/summary2.png" width="100%" height="100%" alt="summary model">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row blocco">
+                            <div class="center"> <b>Multicollinearity</b> </div>
+                            Evaluate the impact of every independent variables with the coefficient parameter in the report above.<br> We can eliminate the variables with the coefficient of lower impact in the model.
+                            <br> For evaluate the collinearity between the predictor we calculate the VIF code for all the input variables. <br> The values must be
+                            < 10 if a input variable has VIF> 10 it must be not inserted into the model with the process of backward as for the creation of the model <br>
+
+                        </div>
+                        <div class="terminal blocco">
+                            vif_calculate(input_dataFrame=df)
+                        </div>
+                        <div class="row">
+                            <div class="col l8 blocco">
+                                This is the result of vif_calculate function.<br> It report a vif value of any variables of the model.<br> The minimum value is 1.<br> All the VIF value are lower of 10 then we don't habe problem with the collinearity and
+                                can proceed with the analysis of the model.
+
+
+                            </div>
+                            <div class="col l4 graph center">
+                                <img src="foto/logit/vif.png" width="100%" height="80%" alt="vif">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="idpycm" class="scrollspy">
+                <div class="blog-titolo">
+                    Evaluate model with Confusion Matrix & Accuracy with Training set
+                </div>
+                <div class="spazio2001 center">
+                    <b> CONFUSION MATRIX </b>
+                </div>
+                <div class="terminal blocco">
+
+                    conf_mat_training = classification_logit.pred_table()
+                </div>
+                <div class="row">
+                    <div class="col l3"></div>
+                    <div class="col l6 graph center">
+                        <img src="foto/logit/cm_tra.png" width="100%" height="80%" alt="confusion matrix training">
+                    </div>
+                </div>
+                <div class="spazio2001 caratter-text2 center">
+                    <b> ACCURACY </b>
+                    <br> accuracy_training = 31394 + 786 / 36168 <br> Accuracy of logistic regression on training set : 0.89 <br> We have 89% of correct prediction on training set dataset.
+
+                    <div class="blog-titolo">
+                        Evaluate model with Confusion Matrix & Accuracy with Test set
+                    </div>
+                    <div class="spazio2001 center">
+                        <b> CONFUSION MATRIX</b>
+                    </div>
+                    <div class="terminal blocco">
+                        y_pred = classification_logit.predict(exog=x_test)
+                        <br> from sklearn.metrics import confusion_matrix<br> confusion_matrix = confusion_matrix(y_test, y_pred)
+                    </div>
+                    <div class="row">
+                        <div class="col l3"></div>
+                        <div class="col l6 graph center">
+                            <div class="spazio2001 center">
+                                <img src="foto/logit/cm_test.png" width="100%" height="100%" alt="confusion matrix test set">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="spazio2001 center">
+                        <b> ACCURACY</b>
+                    </div>
+                    <div class="terminal blocco">
+                        tot1 = len(y_test)<br> accuracy_test = (confusion_matrix[0,0]+ confusion_matrix[1,1])/tot1
+                        <br> print('Accuracy of logistic regression on test set : {:.2f}'.format(accuracy_test))
+                    </div>
+                    <div class="spazio2001">
+                        <div class="caratter-text2 center">
+                            accuracy_test = 7831 + 197 / 9043 <br> We use the created model for predict the result(y) for the test set (20% of the total dataset)
+                            <br> Accuracy of logistic regression on test set : 0.89
+                            <br> We have 89% of correct prediction on test set dataset too.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="idpycap" class="scrollspy">
+                <div class="blog-titolo" style="margin-top:50px">
+                    EVALUATE THE MODEL WITH CAP - CUMULATIVE ACCURACY PROFILE
+                </div>
+                <div class="blog-titolo">
+                    CAP with the Training set data
+                </div>
+                <div class="terminal blocco">
+                    y_pred_proba_train = classification_logit.predict(x_opt) <br> capcurve(y_values=y_train, y_pro_predict=y_pred_proba_train) <br>
+                </div>
+                <div class="caratter-text2 center" style="margin-top: 50px">
+                    The variable y_pred_proba_train is the variable dependent, the probability predicted by our model that the client subscribe the term deposit offert by bank , for any record of the training set.<br> The function capcurve create the
+                    graph below with the original y variable and the y variable predicted by our model.
+                    <br> Into the graph we have three line, random line, our model line and the perfet line.<br> The Cap Curve help us to evaluate the model. <br> For x = 50% we doing view the corrispondent y where the x line cross the red line of our
+                    model.
+                    <br> If y > 60% the model is good. If y > 85% the model is very very good.<br> In this example is 92%.
+                </div>
+                <div class="row">
+                    <div class="col l3"> </div>
+                    <div class="col l6 graph center">
+                        <div class="spazio2001 center">
+                            <img src="foto/logit/cap_python_training.png" width="100%" height="100%" alt="cap python training">
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-titolo">
+                    CAP with the Test set data
+                </div>
+                <div class="terminal blocco">
+                    y_pred_proba_test = classification_logit.predict(x_test) <br> capcurve(y_values=y_test, y_pro_predict=y_pred_proba_test) <br>
+                </div>
+                <div class="caratter-text2 center" style="margin-top: 50px">
+                    The y_pred_proba_test is the variable dependent create by our model with the Test set dataset.<br> This inserted into the function capcurve together the original y of test set dataset draw the below graph.<br> Here the result for x
+                    = 50% is 91% of y is a little lower of the result for the Cap of Training set confiming that our model is a very very good model.
+                </div>
+                <div class="row">
+                    <div class="col l3"> </div>
+                    <div class="col l6 graph center">
+                        <div class="spazio2001 center">
+                            <img src="foto/logit/cap_python_test.png" width="100%" height="100%" alt="summary model"> <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="iddeep" class="scrollspy">
+                <div class="blog-titolo">
+                    CREATE THE MODEL WITH DEEP LEARNING IN PYTHON
+                </div>
+                <div class="row">
+                    <div class="col s12 m12 l12">
+                        PYTHON DATA PREPARATION :
+                        <br>
+                        <ul>
+                            <li> load file bank-full.csv with Panda create a DataFrame</li>
+                            <li> extract independent variables(x1, x2, x3,,,xn) and dependent variable(y) </li>
+                            <li> transform in number label and categorical features then transform all in array </li>
+                            <li> Splitting the dataset into the Training set(80%) and Test set(20%) the records are selected in random mode </li>
+                        </ul>
+                        <div class="terminal blocco">
+                            from sklearn.cross_validation import train_test_split <br> var_x_train, var_x_test, y_train, y_test = train_test_split(var_x, y, test_size = 0.2, random_state = 0) <br>
+                        </div>
+                        <div class="caratter-text2">
+
+                            Here we standardize the data for then use normalize values that allow the comparison of corresponding normalized values.
+                        </div>
+                        <div class="terminal blocco">
+
+                            from sklearn.preprocessing import StandardScaler<br> sc = StandardScaler()<br> var_x_train = sc.fit_transform(var_x_train) <br> var_x_test = sc.transform(var_x_test)
+
+                        </div>
+                        <div class="caratter-text2">
+                            # Importing the Keras libraries and packages, create and fit the model
+                        </div>
+                        <div class="terminal blocco">
+
+                            import keras from keras.models import Sequential <br> from keras.layers import Dense classifier = Sequential()<br><br> # Adding the input layer and the first hidden layer <br> classifier.add(Dense(output_dim = 12, activation
+                            = 'relu', input_dim= 126)) <br> <br> # Adding the second hidden layer <br> classifier.add(Dense(output_dim = 8, activation = 'relu'))<br> <br> # Adding the output layer <br> classifier.add(Dense(output_dim = 1, activation =
+                            'sigmoid'))
+                            <br> <br> # Compiling the ANN <br> classifier.compile(optimizer = 'adam', loss ='mean_squared_error', metrics = ['accuracy']) <br> <br> # Fitting the ANN to the Training set<br> classifier.fit(var_x_train, y_train, batch_size
+                            = 10, nb_epoch = 30)
+                        </div>
+                        <div class="caratter-text2">
+                            # Part 3 - Making the predictions and evaluating the model
+                        </div>
+                        <div class="terminal blocco">
+                            y_pred_tra = classifier.predict(var_x_train)
+                            <br> y_pred_tra = (y_pred_tra > 0.5)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="iddlcm" class="scrollspy">
+                <div class="blog-titolo">
+                    Evaluate model with Confusion Matrix & Accuracy with Training set
+                </div>
+                <div class="spazio2001 center">
+                    <b> CONFUSION MATRIX </b>
+                </div>
+                <div class="terminal blocco">
+                    from sklearn.metrics import confusion_matrix<br> cm_tra = confusion_matrix(y_train, y_pred_tra)
+                </div>
+
+                <div class="row">
+                    <div class="col l3"></div>
+                    <div class="col l6 graph center">
+                        <div class="spazio2001 center">
+                            <img src="foto/logit/cm_dl_tra.png" width="100%" height="100%" alt="confusion matrix test set">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="terminal blocco">
+                    accuracy_training = (cm_tra[0,0]+cm_tra[1,1])/len(var_x_train) <br>
+
+                </div>
+                <div class="caratter-text2 center">
+                    <b> ACCURACY </b>
+                    <br> accuracy_training = (31052 + 2528) / 36168 <br> Accuracy of logistic regression on training set : 0.928 <br> We have 92.8% of correct prediction on training set dataset.
+                </div>
+                <div class="blog-titolo center">
+                    Evaluate model with Confusion Matrix & Accuracy with Test set
+                </div>
+                <div class="terminal blocco">
+                    # Predicting the Test set results<br> y_pred = classifier.predict(var_x_test)<br> y_pred = (y_pred > 0.5)
+                </div>
+                <div class="spazio2001 center">
+                    <b> CONFUSION MATRIX</b>
+                </div>
+                <div class="caratter-text2">
+                    # Confusion Matrix of test set
+                </div>
+                <div class="terminal blocco">
+                    cm = confusion_matrix(y_test, y_pred)
+                </div>
+                <div class="row">
+                    <div class="col l3"></div>
+                    <div class="col l6 graph center">
+                        <div class="spazio2001 center">
+                            <img src="foto/logit/cm_dl_test.png" width="100%" height="100%" alt="confusion matrix test set">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="caratter-text2 center">
+                    We calculate the accuracy of model of test set data <br> accuracy_test = (7581 + 504) / 9043 <br> Accuracy of logistic regression on test set : 0.894 <br> We have 89.4% of correct prediction on test set dataset
+
+                </div>
+
+                <div class="terminal blocco">
+
+                    accuracy_test = (cm[0,0]+cm[1,1])/len(var_x_test)
+
+                </div>
+            </div>
+            <div id="iddlcap" class="scrollspy">
+                <div class="blog-titolo" style="margin-top:50px">
+                    EVALUATE THE MODEL WITH CAP - CUMULATIVE ACCURACY PROFILE
+                </div>
+                <div class="blog-titolo">
+                    CAP with the Training set data
+                </div>
+                <div class="terminal blocco">
+                    y_pred_proba_train = classification_logit.predict(var_x_train)
+                    <br> capcurve(y_values=y_train, y_pro_predict=y_pred_proba_train) <br>
+                </div>
+                <div class="caratter-text2" style="margin-top: 50px">
+                    The variable y_pred_proba_train is the variable dependent, the probability predicted by our model that the client subscribe the term deposit offert by bank , for any record of the training set.<br> The function capcurve create the
+                    graph below with the original y variable and the y variable predicted by our model.
+                    <br> Into the graph we have three line, random line, our model line and the perfet line.<br> The Cap Curve help us to evaluate the model. <br> For x = 50% we doing view the corrispondent y where the x line cross the red line of our
+                    model.
+                    <br> If y > 60% the model is good. If y > 85% the model is very very good.<br> In this example is 98%.
+                </div>
+
+
+                <div class="row">
+                    <div class="col l3"> </div>
+                    <div class="col l6 center">
+                        <div class="spazio2001 graph center">
+                            <img src="foto/logit/cap_dl_python_training.png" width="100%" height="100%" alt="cap python training">
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-titolo">
+                    CAP with the Test set data
+                </div>
+                <div class="terminal blocco">
+                    y_pred_proba_test = classification_logit.predict(var_x_test) <br> capcurve(y_values=y_test, y_pro_predict=y_pred_proba_test) <br>
+                </div>
+                <div class="caratter-text2" style="margin-top: 50px">
+                    The y_pred_proba_test is the variable dependent create by our model with the Test set dataset.<br> This inserted into the function capcurve together the original y of test set dataset draw the below graph.<br> Here the result for x
+                    = 50% is 97% of y is a little lower of the result for the Cap of Training set confiming that our model is a very very good model.
+                </div>
+                <div class="row">
+                    <div class="col l3"> </div>
+                    <div class="col l6 center">
+                        <div class="spazio2001 graph center">
+                            <img src="foto/logit/cap_dl_python_test.png" width="100%" height="100%" alt="cap dl test set"> <br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="iddlkf" class="scrollspy">
+                <div class="blog-titolo" style="margin-top:50px">
+
+                    EVALUATE THE MODEL WITH K-FOLD - CROSS VALIDATION
+                </div>
+                <div class="caratter-text2">
+                    Now, we evaluate the model with a K-Fold Cross Validation a method to verify the accuracy of model with a number of test set taken from training data. <br> The StratifiedKFold randomize the training set data and then split it in n_splits
+                    training set and n_splits test set.<br> The result is n accuracy ratio, the mean and the deviation standard.
+
+                </div>
+                <div class="terminal blocco">
+                    # Applying k-Fold Cross Validation <br> from sklearn.model_selection import StratifiedKFold <br> kfold = StratifiedKFold(n_splits=10, shuffle=True, random_state=0) <br> listScores = [] <br> for train, test in kfold.split(var_x_train,
+                    y_train):
+                    <br> <br># create model <br> model = Sequential()
+                    <br> model.add(Dense(12, input_dim=126, activation='relu'))
+                    <br> model.add(Dense(8, activation='relu'))
+                    <br> model.add(Dense(1, activation='sigmoid'))
+                    <br><br># Compile model
+                    <br> model.compile(loss ='mean_squared_error', optimizer='adam', metrics=['accuracy'])
+                    <br><br> # Fit the model
+                    <br> model.fit(var_x_train[train], y_train[train], epochs=30, batch_size=10, verbose=0)<br>
+                    <br># evaluate the model<br> scores = model.evaluate(var_x_train[test], y_train[test], verbose=0)
+                    <br> print("%s: %.2f%%" % (model.metrics_names[1], scores[1]*100))
+                    <br> listScores.append(scores[1] * 100)
+                </div>
+                <div class="caratter-text2">
+                    Print the Mean and Deviation Standard of the K Fold Cross Validation
+
+                </div>
+                <div class="terminal blocco">
+                    print("%.2f%% (+/- %.2f%%)" % (np.mean(listScores), np.std(listScores)))
+                </div>
+                <div class="spazio2001">
+                    This is the result of the K-Fold test :<br>
+                    <br> ACCURACY : <br> acc: 89.39% <br> acc: 90.02% <br> acc: 89.22% <br> acc: 90.38% <br> acc: 90.85% <br> acc: 89.38% <br> acc: 89.52% <br> acc: 89.44% <br> acc: 89.66% <br> acc: 89.49% <br> Mean : 89.73% Deviation Standard : (+/-
+                    0.50%)
+                </div>
+
+                <div class="caratter-text2">
+                    Now we use the GridSearch for testing and evaluate the parameters for create a better model.<br> The parameters that we evaluate are bacth_size, epochs and optimizer.<br>
+
+
+                </div>
+                <div class="terminal blocco">
+                    <div class="row">
+                        <div class="col s12 m12 l12">
+                            #Search best parameters for Artificial Neural Network<br>
+                            <br>from keras.wrappers.scikit_learn import KerasClassifier<br> from sklearn.model_selection import GridSearchCV<br> from keras.models import Sequential<br> from keras.layers import Dense<br> def my_classifier(optimizer):<br>                            classifier = Sequential()<br>
+                        </div>
+                        <div class="col s1 m1 l1"></div>
+                        <div class="col s11 m11 l11">
+                            classifier.add(Dense(units = 12, kernel_initializer = 'uniform', activation = 'relu', input_dim = 126))
+                            <br> classifier.add(Dense(units = 8, kernel_initializer = 'uniform', activation = 'relu'))
+                            <br> classifier.add(Dense(units = 1, kernel_initializer = 'uniform', activation = 'sigmoid'))
+                            <br> classifier.compile(optimizer = optimizer, loss = 'mean_squared_error', metrics = ['accuracy'])
+                            <br> return classifier<br>
+                        </div>
+                        <br> classifier = KerasClassifier(build_fn = my_classifier)
+                        <br>
+                        <br> parameters = {'batch_size': [25, 32],
+                        <div class="row">
+                            <div class="col s1 m1 l1"></div>
+                            <div class="col s11 m11 l11">
+                                'epochs': [10, 30],
+                                <br> 'optimizer': ['adam', 'rmsprop']}
+                            </div>
+                        </div>
+                        <br> grid_search = GridSearchCV(estimator = classifier,
+                        <div class="row">
+                            <div class="col s1 m1 l1"></div>
+                            <div class="col s11 m11 l11">
+                                param_grid = parameters,
+                                <br> scoring = 'accuracy',
+                                <br> cv = 10)
+                            </div>
+                        </div>
+                        <br> grid_search = grid_search.fit(var_x_train, y_train)
+                        <br> best_parameters = grid_search.best_params_
+                        <br> best_accuracy = grid_search.best_score_
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col l6 caratter-text2 spazio2001">
+                        The GridSearch return best accuracy equal to 90.2%
+                    </div>
+                    <div class="col l6 center">
+                        <div class="spazio2001 graph center">
+                            <img src="foto/logit/gridser.png" width="100%" height="100%" alt="grid search"> <br>
+                        </div>
+                    </div>
+                </div>
+                <div class="caratter-text2">
+                    With this parameters we recreate the model with this results : <br> Accuracy of Training set : 92.05% <br> Accuracy of Test set : 89.58%<br>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="col hide-on-small-only l2">
+            <div class="posmenu posse">
+                <!--  <ul class="section table-of-contents">  -->
+                <ul class="my_menu">
+                    <li><a href="#intro">Introduction</a></li>
+                    <li><a href="#idgretl">Logit Gretl</a></li>
+                    <div class="row">
+                        <div class="col l1"></div>
+                        <div class="col l11">
+                            <li><a href="#idgrecap">Gretl CAP</a></li>
+                        </div>
+                    </div>
+                    <li><a href="#idpython">Logit Python</a></li>
+                    <div class="row">
+                        <div class="col l1"></div>
+                        <div class="col l11">
+
+                            <li><a href="#idpycm">CM & ACCURACY</a></li>
+                            <li><a href="#idpycap">Python CAP</a></li>
+                        </div>
+                    </div>
+                    <li><a href="#iddeep">Logit Deep Learning</a></li>
+                    <div class="row">
+                        <div class="col l1"></div>
+                        <div class="col l11">
+                            <li><a href="#iddlcm">CM & ACCURACY</a></li>
+                            <li><a href="#iddlcap">CAP </a></li>
+                            <li><a href="#iddlkf">K-Fold C.V.</a></li>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+<script src="js/materialize.js "></script>
+<script src="js/init.js "></script>
+
+</html>

@@ -1,0 +1,48 @@
+<html>
+
+<head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://aframe.io/releases/0.6.1/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+    <script src="https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.js"></script>
+    <script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v2.0.0/dist/aframe-physics-system.js"></script>
+
+
+    <style>
+        #rain {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity geometry="primitive: torus; radius: 1; radiusTubular: 0.5; arc: 180"></a-entity>
+        <a-box dynamic-body position="5 0.5 0" width="5" height="3" depth="1"></a-box>
+        <a-entity id="rain" particle-system="preset: rain; color: #24CAFF; particleCount: 5000"></a-entity>
+        <a-box id="two" position="-1 1.5 -4" rotation="0 45 0" color="green"></a-box>
+        <a-box position="-0 1.5 -3" rotation="0 45 0" color="white"></a-box>
+        <a-box position="-0 2.5 -3" rotation="0 45 0" color="white"></a-box>
+        <a-box id="one" position="1 1.5 -3" rotation="0 45 0" color="red"></a-box>
+        <a-entity geometry="primitive: circle; radius: 1" position="-5 5.25 -3" material="color:#f2cc47, side: double"></a-entity>
+        <!-- <a-circle position="-5 5.25 -3" radius="0.5" color="#f2cc47" light="type: point; intensity: 1"></a-circlephere>
+             <a-cylinder position="1 0.75 -3" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>
+        <a-plane position="0 0 -4" rotation="-180 0 0" width="4" height="4" color="#7BC8A4"></a-plane>
+                <a-entity id="ocean" ocean="density: 30; width: 50; depth: 50; speed: 4" material="color: #356496; opacity: 1.75; metalness: 0; roughness: 2" rotation="-90 0 0"></a-entity>
+         <a-sky color="#ECECEC"></a-sky>  -->
+        <a-entity id="ocean" ocean="density: 30; width: 50; depth: 50; speed: 6" material="color: #356496; opacity: 0.75; metalness: -1; roughness: 2" rotation="-90 0 0"></a-entity>
+        <a-entity id="sky" geometry="primitive: sphere; radius: 5000" material="shader: gradient; topColor: 233 255 253; bottomColor: 240 255 240" scale="-2 1 1"></a-entity>
+        <!-- <a-entity id="light" light="type: ambient; color: #FFFFFF"></a-entity>
+    -->
+    </a-scene>
+</body>
+<script>
+    $('#two').hover(function() {
+        $('#one').attr('color', 'black');
+    })
+</script>
+
+</html>
