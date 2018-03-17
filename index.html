@@ -129,8 +129,7 @@
                 <br>
                 <img src="foto/fullconnect.png" class="ml_graf" width="100%" height="300px" alt="schema cnn">
             </div>
-            <a href="#ml"> <button class="blog-btn-espandi" type="button" id="cnn-eng-espandi" onclick="espandiCnneng()"> Read more</button>
-            </a>
+            <a href="#ml" class="blog-btn-espandi" id="cnn-eng-espandi" onclick="espandiCnneng()"> Read more </a>
             <br> Insert image:
             <input type="file" class="immmagine" id="immmagine" accept="image/*" onchange="handleFiles(this.files)">
         </div>
@@ -140,10 +139,11 @@
             browser senza nessun collegamento con un server. <br>
 
             <div id="cnn-ita">
-                La Convolutional Neural Network è un metodo che viene utilizzato principalmente per classificare gli oggetti o le lettere inserite nelle immagini. La Convolution Neural Network è composta da diverse fasi : Convolution, Pooling, Flattening and Full Connection.<br>                La prima fase la convolution si usa per ridurre le dimensioni delle immagini per occupare minor spazio e rendere piu veloce il procedimento.<br> La formula matematica è la seguente: <img src="foto/formula_conv.png" width="20%" height="30px"
-                    alt="formula convolution"> <br> Si prende la matrice che rappresenta l'immagine e si prendono alcune matrici 3x3 (nel nostro caso mentre altri prendono matrici anche 5x5 o 7x7). Queste matrici si chiamono Feature Detector o Kernel e si
-                usano per ridurre le dimensioni delle immagini. Come nell'immagine sottostante, si prende all'interno della matrice input immagine una mini matrice 3x3 e la si moltiplica per la matrice 3x3 Feature Detector. Poi nella matrice così creata
-                si fa la somma dei valori ed il risultato si inserisce come elemento nella relativa posizione nella Feature Map. Le matrici 3x3 vanno estrapolate dalla input image da sinistra a destra e poi dall'alto in basso.
+                La Convolutional Neural Network è un metodo che viene utilizzato principalmente per classificare gli oggetti o le lettere inserite nelle immagini. La Convolution Neural Network è composta da diverse fasi : Convolution, Pooling, Flattening and Full Connection.<br>                La prima fase la convolution si usa per ridurre le dimensioni delle immagini per occupare minor spazio e rendere piu veloce il procedimento.
+                <br> La formula matematica è la seguente: <img src="foto/formula_conv.png" width="20%" height="30px" alt="formula convolution"> <br> Si prende la matrice che rappresenta l'immagine e si prendono alcune matrici 3x3 (nel nostro caso mentre
+                altri prendono matrici anche 5x5 o 7x7). Queste matrici si chiamono Feature Detector o Kernel e si usano per ridurre le dimensioni delle immagini. Come nell'immagine sottostante, si prende all'interno della matrice input immagine una mini
+                matrice 3x3 e la si moltiplica per la matrice 3x3 Feature Detector. Poi nella matrice così creata si fa la somma dei valori ed il risultato si inserisce come elemento nella relativa posizione nella Feature Map. Le matrici 3x3 vanno estrapolate
+                dalla input image da sinistra a destra e poi dall'alto in basso.
                 <img src="foto/convolutional.png" class="ml_graf" width="100%" height="200px" alt="create Feature map"> <br>
                 <div class="row">
                     <div class="col s12 m12 l6"> Questo procedimento si ripete per ogni Feature Map da creare, ricordo che devono essere molte per avere diversi layer da inserire nel Neural Network. Quindi devo avere diverse Feature Detector ognuna delle quali si usa per eliminare
@@ -171,9 +171,7 @@
                 la formula della funzione Softmax.<br>
                 <img src="foto/fullconnect.png" class="ml_graf" width="100%" height="300px" alt="schema cnn">
             </div>
-            <a href="#ml">
-                <button class="blog-btn-espandi" type="button" id="cnn-ita-espandi" onclick="espandiCnnita()"> Read more</button>
-            </a>
+            <a href="#ml" class="blog-btn-espandi" id="cnn-ita-espandi" onclick="espandiCnnita()"> Read more </a>
             <br> Inserisci immagine:
             <input type="file" class="immmagine" id="immmagine" accept="image/*" onchange="handleFiles(this.files)">
         </div>
@@ -274,23 +272,13 @@
             <img src="foto/bot.png" id="bot11" width="105px" height="275px" alt="bot">
         </div>
     </div>
-    <div class="container">
+
+    <!--
         <div class="row">
             <div class="col s12 m6 l2"></div>
             <div class="col s12 m6 l6">
                 <div class="mlnlp">
-                    <!--  <div class="row" id="bot">
-                        <div class="col-lg-12" id="bot1">
-
-                        </div>
-                    </div>
-                    <div class="row">
-
-                        <div id="output1" class="output1">
-                            <span id="input1"></span>
-        
-                        </div>
-                    </div> -->
+   
                 </div>
             </div>
             <div class="col s12 m6 l2"></div>
@@ -298,18 +286,9 @@
         <div class="row">
             <div class="col s12 m6 l3"></div>
             <div class="col s12 m6 l6">
-                <!--   <span class="insert1">Your question: </span> 
-
-                <input type="textarea" id="insert" class="input1" placeholder="Insert your question" style="color:black">
-
-                <a class="blog-btn-espandi" onclick="question(window.insert.value)">
-                    <i class="material-icons right">send</i>
-                </a>
-                <button class="blog-btn-espandi" id="close_button" type="button" style="margin-left:15px" onclick="closeChat()">Close ChatBots</button>
-            -->
             </div>
         </div>
-    </div>
+    -->
 
     <!-- blog -->
     <div class="blog-head" id="blog">
@@ -336,12 +315,20 @@
 
                             </div>
                             The Sigmoid Function is function that return us result 0 or 1 according a discriminating value that is generally 0.5 how in the image below :<br>
-                            <img src="foto/logit/sigmoid_graph.png" width="400px" height="200px" alt="logistic regression"> The Sigmoid Function formula :
-                            <img src="foto/logit/sigmoid.png" width="150px" height="99px" alt="logistic regression"><br>
+                            <div class="row">
+                                <div class="col s12 m12 l4">
+                                    <img src="foto/logit/sigmoid_graph.png" width="100%" height="200px" alt="logistic regression">
+                                </div>
+                                <div class="col l4">
+                                    The Sigmoid Function formula :
+                                </div>
+                                <div class="col l4">
+                                    <img src="foto/logit/sigmoid.png" width="100%" height="99px" alt="logistic regression"><br>
+                                </div>
+                            </div>
                             <br> To create a model minimizing the <b>cost function</b> (a cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between x and y) to find the best coefficients with
                             <b>Gradient Descent</b>(Gradient descent is an efficient optimization algorithm that attempts to find a minimum of a function)<br>
-                            <a href="file:///media/mecbar/DATA/develop/sito/progetto_banka.html" target="_blank"><button class="blog-btn-espandi" type="button" id="blog-logit"> Read more</button>
-                            </a>
+                            <a href="file:///media/mecbar/DATA/develop/sito/progetto_banka.html" target="_blank" class="blog-btn-espandi" id="blog-logit"> Read more </a>
                         </div>
                     </div>
 
@@ -408,8 +395,7 @@
                                                 an example. </p>
 
                                             <iframe id="vr-frame" src="vr/vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe>
-                                            <a href="#blog"><button class="blog-btn-espandi" type="button" id="blog-frame-espandi" onclick="espandiBlog2()"> Read more</button>
-                                         </a>
+                                            <a href="#frame-inizio" class="blog-btn-espandi" id="blog-frame-espandi" onclick="espandiBlog2()"> Read more </a>
                                             <div class="caratter-text" id="blog-btn-espandi2">
                                                 Now, the library available
                                                 <br> insert into html page the script :
@@ -480,7 +466,7 @@
                                         <p class="caratter-text">
                                             Now we talk about virtual box. First of all we download the installer file from www.virtualbox.org relative of the version of operating system. Download also the Virtual Box Extension Pack.<br> Install the Virtual
                                             Box previosly downloaded. Now start the Virtual Box and download the virtual machine file ready for the V.M. for example file with extension .ova</p>
-                                        <img src="foto/VM/vm5.png" class="spazio2001" width="100%" height="400px" alt="virtual box">
+                                        <img src="foto/VM/vm5.png" class="spazio2001" width="100%" height="380px" alt="virtual box">
                                         <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi1" onclick="espandiBlog1()"> Read more</button>
                                         <div class="caratter-text" id="blog-btn-espandi1">
                                             Into the microsoft site at the link highlighted in the image below select the system that you want virtualize and the Virtual Box platform.
@@ -560,28 +546,27 @@
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <div class="col s12 m10 l10" id="box-blog1">
-        <div class="row" id="blog-row">
-            <div class="col s12 m12 l4" id="change-blog">
-                <div class="row blog-second" id="blog-second">
-                    <div class="contenitore">
-                        <div class="row img-space" id="space1">
-                            <div class="col s1"></div>
-                            <div class="col s10">
-                                <div style="background-image:url('foto/index.png')" id="img1" class="blog-img-secondario" alt="">
+        <div class="col s12 m10 l10" id="box-blog1">
+            <div class="row" id="blog-row">
+                <div class="col s12 m12 l4" id="change-blog">
+                    <div class="row blog-second" id="blog-second">
+                        <div class="contenitore">
+                            <div class="row img-space" id="space1">
+                                <div class="col s1"></div>
+                                <div class="col s10">
+                                    <div style="background-image:url('foto/index.png')" id="img1" class="blog-img-secondario" alt="">
+                                    </div>
                                 </div>
+                                <div class="col s1"></div>
                             </div>
-                            <div class="col s1"></div>
-                        </div>
 
 
 
 
 
-                        <!-- <div id="box1-ita">
+                            <!-- <div id="box1-ita">
                             <h4 class="blog-titolo">Attivare una applicazione server Node.js com PM2 e Nginx su ubuntu 16.04 Lts</h4>
                             <div class="col s12 m12 l12" style="text-align: center">
                                 <h6> by Mecbar 13 luglio 2017 </h6>
@@ -614,148 +599,148 @@
 
                             </div>
                         </div>-->
-                        <div id="box1-eng">
-                            <h4 class="blog-titolo">Application server with Node.js, PM2 and Nginx on Linux Ubuntu 16.04 Lts</h4>
-                            <div class="col s12 m12 l12" style="text-align: center">
-                                <h6> by Mecbar 13 luglio 2017 </h6>
-                            </div>
-                            <div style="margin-top:10px">
-                                <p class="caratter-text">
-                                    For install NodeJs from Terminal insert :<br><em class="terminal">sudo apt-get install </em><br> <em class="terminal">sudo apt-get install build-essential</em> <br> If our application is ready install the process manager
-                                    pm2 with the command:<br><em class="terminal">sudo npm install -g pm2</em><br> and then start the aplication from Terminal <br><em class="terminal">pm2 start name_app.js  #from the directory of the app</em><br> verify
-                                    if the app is in execution in the browser insert the link <em>localhost:5500 </em> (port assigned into the app)<br>
-                                    <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog('zero')"> Read more</button>
-                                    <div class="caratter-text" id="blog-btn-espandi"><br> If the app is running set the automatic start of Pm2 at the ipl of the machine:<br>
-                                        <em class="terminal">sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u root --hp /home/root</em><br> Now setup the Http Server Nginx hw reverse proxy opening the following file with
-                                        an editor, here use Nano: seguente con l'editor nano:<br>
-                                        <em class="terminal">sudo nano /etc/nginx/sites-available/default</em><br>
-                                        <p class="caratter-text">insert the following text:<br> location / { <br> proxy_pass http://localhost:5500;<br> proxy_http_version 1.1;<br> proxy_set_header Upgrade $http_upgrade;<br> proxy_set_header Connection 'upgrade';
-                                            <br> proxy_set_header Host $host;<br> proxy_cache_bypass $http_upgrade;<br> }
-                                            <br> }
-                                            <br> if you want insert an other application add the following instruction: location / {}<br> when all test is written save the file with command ctrl+o and exit with ctrl+x <br> Now for verifycation the correct
-                                            operation shutdown the machine and restart it.
+                            <div id="box1-eng">
+                                <h4 class="blog-titolo">Application server with Node.js, PM2 and Nginx on Linux Ubuntu 16.04 Lts</h4>
+                                <div class="col s12 m12 l12" style="text-align: center">
+                                    <h6> by Mecbar 13 luglio 2017 </h6>
+                                </div>
+                                <div style="margin-top:10px">
+                                    <p class="caratter-text">
+                                        For install NodeJs from Terminal insert :<br><em class="terminal">sudo apt-get install </em><br> <em class="terminal">sudo apt-get install build-essential</em> <br> If our application is ready install the process
+                                        manager pm2 with the command:<br><em class="terminal">sudo npm install -g pm2</em><br> and then start the aplication from Terminal <br><em class="terminal">pm2 start name_app.js  #from the directory of the app</em><br>                                        verify if the app is in execution in the browser insert the link <em>localhost:5500 </em> (port assigned into the app)<br>
+                                        <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog('zero')"> Read more</button>
+                                        <div class="caratter-text" id="blog-btn-espandi"><br> If the app is running set the automatic start of Pm2 at the ipl of the machine:<br>
+                                            <em class="terminal">sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u root --hp /home/root</em><br> Now setup the Http Server Nginx hw reverse proxy opening the following file
+                                            with an editor, here use Nano: seguente con l'editor nano:<br>
+                                            <em class="terminal">sudo nano /etc/nginx/sites-available/default</em><br>
+                                            <p class="caratter-text">insert the following text:<br> location / { <br> proxy_pass http://localhost:5500;<br> proxy_http_version 1.1;<br> proxy_set_header Upgrade $http_upgrade;<br> proxy_set_header Connection 'upgrade';
+                                                <br> proxy_set_header Host $host;<br> proxy_cache_bypass $http_upgrade;<br> }
+                                                <br> }
+                                                <br> if you want insert an other application add the following instruction: location / {}<br> when all test is written save the file with command ctrl+o and exit with ctrl+x <br> Now for verifycation the
+                                                correct operation shutdown the machine and restart it.
 
+                                                <br>
+                                            </p>
+                                            <img src="foto/blog-pm2.png" width="100%" height="250px" alt="pm2 status">
+                                            <p class="caratter-text">
+                                                For verification correct automatic start of the process manager pm2 that runs the app insert from Terminal the command pm2 show name_app or pm2 show number_app <br> We see that the app run and it's active.
+                                                insert from Terminal : </p>
+                                            <em class="terminal">sudo pm2 show 0 </em>
+                                            <img src="foto/pm2show.png" width="100%" height="300px" alt="pm2 process attivi">
+                                            <p class="spazio1999"> We see that the app run and it's active. From the browser insert the link http://localhost:5500 we can open our app and it's work.<br> </p>
+                                            <img src="foto/homemecbar-foto.png" width="100%" height="300px" alt="app pronta ad uso">
                                             <br>
-                                        </p>
-                                        <img src="foto/blog-pm2.png" width="100%" height="250px" alt="pm2 status">
-                                        <p class="caratter-text">
-                                            For verification correct automatic start of the process manager pm2 that runs the app insert from Terminal the command pm2 show name_app or pm2 show number_app <br> We see that the app run and it's active. insert
-                                            from Terminal : </p>
-                                        <em class="terminal">sudo pm2 show 0 </em>
-                                        <img src="foto/pm2show.png" width="100%" height="300px" alt="pm2 process attivi">
-                                        <p class="spazio1999"> We see that the app run and it's active. From the browser insert the link http://localhost:5500 we can open our app and it's work.<br> </p>
-                                        <img src="foto/homemecbar-foto.png" width="100%" height="300px" alt="app pronta ad uso">
-                                        <br>
-                                    </div>
+                                        </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col s12 m12 l4" id="change-blog1">
-                <div class="row blog-second" id="blog-mini1">
-                    <div class="contenitore">
-                        <div class="row img-space" id="space2">
-                            <div id="img2" class="col s12 m12 l12 blog-img-secondario-django">
-                                <img src="foto/django-web-server.png" width="100%" height="180px">
-                            </div>
-                        </div>
-                        <div id="django-eng">
-                            <h5 class="blog-titolo">Create a web server with uWSGI & Django</h5>
-                            <div class="col s12" style="text-align: center">
-                                <h6> by Mecbar 2 settembre 2017 </h6>
-                            </div>
-                            <div style="margin-top:10px;">
-                                <p class="caratter-text"> For execute an web application with Django you can use the web server into Python or create an application server with Uwsgi. Here we see how to create an application server with Uwsgi. First of all install Uwsgi from Terminal:
-                                    <br> </p>
-                                <em class="terminal">pip install uwsgi </em><br>
-                                <p class="caratter-text">for test correct execution of Uwsgi create a file python test.py </p>
-
-                                <button class="blog-btn-espandi-mini1" type="button" id="blog-tasto-espandi-mini1" onclick="espandiBlog('uno')"> Read more</button>
-                                <div class="caratter-text" id="blog-btn-espandi-mini1">
-                                    <em class="terminal"># test.py<br> def application(env, start_response):<br> start_response('200 OK', [('Content-Type','text/html')])<br> return [b"Hello World"] # python3<br>
-                                            return ["Hello World"] # python2</em>
-                                    <p class="caratter-text>"> from Terminal to launch Uwsgi
-                                        <em class="terminal"> sudo uwsgi --http :8000 --wsgi-file_test.py</em><br>and into browser insert http://localhost:8000</p><br><em class="terminal"> sudo uwsgi --http :8000 --wsgi-file test.py</em><br>
-                                    <p class="caratter-text">
-                                        it's the result of the command python manage.py runserver. Now install Nginx and use an Unix socket for connect to the app</p><br>
-                                    <em class="terminal"> sudo apt-get install nginx</em><br> then start the service<br><em class="terminal"> sudo /etc/init.d/nginx start</em><br> Now go in the directory of the app and create a configuration file of Nginx
-                                    for the app with tha Nano editor <br>
-                                    <em class="terminal"> sudo nano app_nginx.conf</em>
-                                    <br> and insert
-                                    <br>
-                                    <p class="terminal2"># nginx.conf
-                                        <br> upstream django {<br> # connect to this socket<br> # server unix:///path app/name_app.sock; # for a file socket<br> server 127.0.0.1:8001; # for a web port socket<br> }<br> # the port your site will be served
-                                        on
-                                        <br> listen 8000;<br> # the domain name it will serve for server_name 127.0.0.1;<br> # substitute your machine's IP address or FQDN charset utf-8; # max upload size client_max_body_size 75M; # adjust to taste
-                                        <br># Django media
-                                        <br>location /media { alias /path_app/static/images; # your Django project's media files - amend as required } # si possono inserire nel file setting.py location /static { alias /percorso mia app/static; # your
-                                        Django project's
-                                        <br> static files - amend as required<br> } <br># Finally, send all non-media requests to the Django server.<br> location / {
-                                        <br>uwsgi_pass django;<br> include /etc/nginx/uwsgi_params; # the uwsgi_params file you installed<br> } <br>}</p><br> press ctrl+o for save and ctrl+x to exit. Now create the link between the file .conf created
-                                    with Nginx
-                                    <br>
-                                    <p class="terminal"> sudo ln -s ~/path_app/name_app_nginx.conf /etc/nginx/sites-enabled/ </p> <br> into file setting.py of the app insert STATIC_ROOT = os.path.join(BASE_DIR,"static/") for handle static files.
-                                    <br> Now restart Nginx <br><em class="terminal"> sudo /etc/init.d/nginx restart <br></em>[ ok ] Restarting nginx (via systemctl): nginx.service.<br>
-                                    <em class="terminal"> sudo systemctl status nginx.service </em><br>
-                                    <p class="terminal2">● nginx.service - A high performance web server and a reverse proxy server Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
-                                        <br> Active: active (running) since mer 2017-08-30 00:10:31 CEST; 4s ago <br>Process: 14530 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
-                                        <br>Process: 14830 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
-                                        <br>Process: 14827 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS) Main PID: 14831 (nginx) <br>CGroup: /system.slice/nginx.service ├─14831 nginx: master process
-                                        /usr/sbin/nginx -g daemon on; master_process on ├─14832 nginx: worker process ├─14833 nginx: worker process ├─14834 nginx: worker process └─14835 nginx: worker process ago 30 00:10:31 mecbar systemd[1]: Starting
-                                        A high performance web server and a reverse proxy server... ago 30 00:10:31 mecbar systemd[1]: Started A high performance web server and a reverse proxy server.
-                                    </p>
-                                    <br> copy uwsgi.params into the project directory. Now test the socket<br>
-                                    <em class="terminal">sudo uwsgi --socket :8001 --wsgi-file_test.py</em><br>we see the following message how response:<br>
-                                    <p class="terminal2">*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 00:35:30 2017] ***<br> compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC
-                                        2017
-                                        <br> nodename: xxxxxx<br> machine: x86_64<br> clock source: unix detected
-                                        <br> number of CPU cores: 4 <br>current working directory: /percorso app<br> detected binary path: /usr/local/bin/uwsgi<br> !!! no internal routing support, rebuild with pcre support !!!
-                                        <br> *** WARNING: you are running uWSGI without its master process manager ***
-                                        <br> your processes number limit is 31000<br> your memory page size is 4096 bytes<br> detected max file descriptor number: 1024<br> lock engine: pthread robust mutexes <br>thunder lock: disabled (you can enable
-                                        it with --thunder-lock)
-                                        <br> uwsgi socket 0 bound to TCP address :8001 fd 3<br> Python version: 2.7.12 (default, Nov 19 2016, 06:48:10) [GCC 5.4.0 20160609] <br>*** Python threads support is disabled. You can enable it with --enable-threads
-                                        ***
-                                    </p>
-                                    <br>.... if we insert into the browser http://localhost:8000 we see 'hello world' . For error or problem read the log of Nginx at the link /var/log/nginx/error.log) if error 13: Permission denied or other messagge insert
-                                    the following command:<br><em class="terminal"> sudo uwsgi --socket name_app.sock --wsgi-file_test.py --chmod-socket=666 <br> sudo uwsgi --socket mysite.sock --wsgi-file_test.py --chmod-socket=664 # (more sensible) </em><br>                                    Se tutto ok ci siamo e proviamo il socket con la nostra applicazione che per esempio la chiamiamo app <br><em class="terminal"> sudo uwsgi --socket app.sock --module app.wsgi –chmod-socket=666</em><br> N.B: se errore
-                                    <p class="terminal2">
-                                        502 bad gateway read the log /var/log/nginx → error.log if error 13 Permission denied folder project delete the file app.sock and try again <br>*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 19:41:56 2017] ***
-                                        compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC ..... *** uWSGI is running in multiple interpreter mode ***</p>
-                                    <br>into the browser http://localhost:8000 we have our app ready and run through Django, Uwsgi e Nginx. Config uWSGI for execute it with .ini file insert the data into a file and then run it<br>
-                                    <em class="terminal"> sudo nano app_uwsgi.ini </em><br>
-                                    <p class="terminal2"> # mysite_uwsgi.ini file<br> [uwsgi]<br> # Django-related settings<br> # the base directory (full path)<br> chdir = /path_app
-                                        <br> # Django's wsgi file
-                                        <br>module = app.wsgi <br># the virtualenv (full path)<br> home = /path/virtualenv<br> # process-related settings<br> # master master = true <br># maximum number of worker processes processes = 10
-                                        <br> # the socket (use the full path to be safe<br> socket = /path/app.sock # ... with appropriate permissions - may be needed<br> # chmod-socket = 664 # chmod-socket = 666 <br># clear environment on exit
-                                        <br> vacuum = true</p> <br>press ctrl+o to save then ctrl+x for exit and execute created file <br><em class="terminal"> sudo uwsgi --ini app_uwsgi.ini # the --ini option it means that is a file </em><br>
-                                    <p class="terminal2"> [uWSGI] getting INI configuration from app_uwsgi.ini *** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:49:26 2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu
-                                        SMP Fri Aug 11 14:07:24 UTC 2017...........</p>
-                                    <br> For the end of configuration set Emperor methd for handle more application on the same server (uid user id – gid group id) - create the directory uwsgi into the folder /etc<br>
-                                    <em class="terminal"> sudo mkdir /etc/uwsgi <br> sudo mkdir /etc/uwsgi/vassals</em><br>than a file ini with folder vassals <br><em class="terminal">sudo
-                                            ln -s /path/app_uwsgi.ini /etc/uwsgi/vassals/ <br>sudo uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data </em><br>
-                                    <p class="terminal2">*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:57:24 2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017 nodename:
-                                        xxxxxx machine: x86_64 clock source: unix detected number of CPU cores: 4 current working directory: /path_app detected binary path: /usr/local/bin/uwsgi !!! no internal routing support, rebuild with pcre support
-                                        !!! setgid() to 33 setuid() to 33 *** WARNING: you are running uWSGI without its master process manager *** your processes number limit is 31000 your memory page size is 4096 bytes detected max file descriptor number:
-                                        1024 *** starting uWSGI Emperor *** *** has_emperor mode detected (fd: 6) *** [uWSGI] getting INI configuration from app_uwsgi.ini *** .... - [emperor] vassal app_uwsgi.ini is now loyal.</p>
-                                    <br> Into the browser app is ready.<br> Now set the automatic start of the service Uwsgi with the systemctl of linux. <br> Create the file uwsgi.service
-                                    <br><em class="terminal"> sudo nano /etc/systemd/system/uwsgi.service </em> <br> and insert the following data<br>
-                                    <p class="terminal2"> [Unit]<br> Description=uWSGI Emperor
-                                        <br> After=syslog.target<br> [Service]<br> ExecStart=/usr/local/bin/sudo uwsgi --emperor /etc/uwsgi/vassals/ --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log <br># Requires systemd version 211
-                                        or newer
-                                        <br> RuntimeDirectory=uwsgi
-                                        <br>Restart=always<br> KillSignal=SIGQUIT<br> Type=notify StandardError=syslog<br> NotifyAccess=all
-                                        <br> [Install]<br> WantedBy=multi-user.target </p><br> ctrl+o for save and crl+x for exit. Start the service and test if it is active<br><em class="terminal"> sudo systemctl start uwsgi.service<br> sudo systemctl status uwsgi.service</em><br>
-                                    <br>
-                                    <img src="foto/uwsgiserv.png" width="100%" height="300px" alt="uwsgi service status">
-                                    <br> For test if service is automatic active at every restart run the system restart and just the system is ready check the status of service. if it's active we finished. That's all<br>
-
+                <div class="col s12 m12 l4" id="change-blog1">
+                    <div class="row blog-second" id="blog-mini1">
+                        <div class="contenitore">
+                            <div class="row img-space" id="space2">
+                                <div id="img2" class="col s12 m12 l12 blog-img-secondario-django">
+                                    <img src="foto/django-web-server.png" width="100%" height="180px">
                                 </div>
                             </div>
-                        </div>
+                            <div id="django-eng">
+                                <h5 class="blog-titolo">Create a web server with uWSGI & Django</h5>
+                                <div class="col s12" style="text-align: center">
+                                    <h6> by Mecbar 2 settembre 2017 </h6>
+                                </div>
+                                <div style="margin-top:10px;">
+                                    <p class="caratter-text"> For execute an web application with Django you can use the web server into Python or create an application server with Uwsgi. Here we see how to create an application server with Uwsgi. First of all install Uwsgi from
+                                        Terminal:
+                                        <br> </p>
+                                    <em class="terminal">pip install uwsgi </em><br>
+                                    <p class="caratter-text">for test correct execution of Uwsgi create a file python test.py </p>
 
-                        <!--
+                                    <button class="blog-btn-espandi-mini1" type="button" id="blog-tasto-espandi-mini1" onclick="espandiBlog('uno')"> Read more</button>
+                                    <div class="caratter-text" id="blog-btn-espandi-mini1">
+                                        <em class="terminal"># test.py<br> def application(env, start_response):<br> start_response('200 OK', [('Content-Type','text/html')])<br> return [b"Hello World"] # python3<br>
+                                            return ["Hello World"] # python2</em>
+                                        <p class="caratter-text>"> from Terminal to launch Uwsgi
+                                            <em class="terminal"> sudo uwsgi --http :8000 --wsgi-file_test.py</em><br>and into browser insert http://localhost:8000</p><br><em class="terminal"> sudo uwsgi --http :8000 --wsgi-file test.py</em><br>
+                                        <p class="caratter-text">
+                                            it's the result of the command python manage.py runserver. Now install Nginx and use an Unix socket for connect to the app</p><br>
+                                        <em class="terminal"> sudo apt-get install nginx</em><br> then start the service<br><em class="terminal"> sudo /etc/init.d/nginx start</em><br> Now go in the directory of the app and create a configuration file
+                                        of Nginx for the app with tha Nano editor <br>
+                                        <em class="terminal"> sudo nano app_nginx.conf</em>
+                                        <br> and insert
+                                        <br>
+                                        <p class="terminal2"># nginx.conf
+                                            <br> upstream django {<br> # connect to this socket<br> # server unix:///path app/name_app.sock; # for a file socket<br> server 127.0.0.1:8001; # for a web port socket<br> }<br> # the port your site will be
+                                            served on
+                                            <br> listen 8000;<br> # the domain name it will serve for server_name 127.0.0.1;<br> # substitute your machine's IP address or FQDN charset utf-8; # max upload size client_max_body_size 75M; # adjust to taste
+                                            <br># Django media
+                                            <br>location /media { alias /path_app/static/images; # your Django project's media files - amend as required } # si possono inserire nel file setting.py location /static { alias /percorso mia app/static; # your
+                                            Django project's
+                                            <br> static files - amend as required<br> } <br># Finally, send all non-media requests to the Django server.<br> location / {
+                                            <br>uwsgi_pass django;<br> include /etc/nginx/uwsgi_params; # the uwsgi_params file you installed<br> } <br>}</p><br> press ctrl+o for save and ctrl+x to exit. Now create the link between the file .conf created
+                                        with Nginx
+                                        <br>
+                                        <p class="terminal"> sudo ln -s ~/path_app/name_app_nginx.conf /etc/nginx/sites-enabled/ </p> <br> into file setting.py of the app insert STATIC_ROOT = os.path.join(BASE_DIR,"static/") for handle static files.
+                                        <br> Now restart Nginx <br><em class="terminal"> sudo /etc/init.d/nginx restart <br></em>[ ok ] Restarting nginx (via systemctl): nginx.service.<br>
+                                        <em class="terminal"> sudo systemctl status nginx.service </em><br>
+                                        <p class="terminal2">● nginx.service - A high performance web server and a reverse proxy server Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+                                            <br> Active: active (running) since mer 2017-08-30 00:10:31 CEST; 4s ago <br>Process: 14530 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+                                            <br>Process: 14830 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+                                            <br>Process: 14827 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS) Main PID: 14831 (nginx) <br>CGroup: /system.slice/nginx.service ├─14831 nginx: master process
+                                            /usr/sbin/nginx -g daemon on; master_process on ├─14832 nginx: worker process ├─14833 nginx: worker process ├─14834 nginx: worker process └─14835 nginx: worker process ago 30 00:10:31 mecbar systemd[1]: Starting
+                                            A high performance web server and a reverse proxy server... ago 30 00:10:31 mecbar systemd[1]: Started A high performance web server and a reverse proxy server.
+                                        </p>
+                                        <br> copy uwsgi.params into the project directory. Now test the socket<br>
+                                        <em class="terminal">sudo uwsgi --socket :8001 --wsgi-file_test.py</em><br>we see the following message how response:<br>
+                                        <p class="terminal2">*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 00:35:30 2017] ***<br> compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24
+                                            UTC 2017
+                                            <br> nodename: xxxxxx<br> machine: x86_64<br> clock source: unix detected
+                                            <br> number of CPU cores: 4 <br>current working directory: /percorso app<br> detected binary path: /usr/local/bin/uwsgi<br> !!! no internal routing support, rebuild with pcre support !!!
+                                            <br> *** WARNING: you are running uWSGI without its master process manager ***
+                                            <br> your processes number limit is 31000<br> your memory page size is 4096 bytes<br> detected max file descriptor number: 1024<br> lock engine: pthread robust mutexes <br>thunder lock: disabled (you can enable
+                                            it with --thunder-lock)
+                                            <br> uwsgi socket 0 bound to TCP address :8001 fd 3<br> Python version: 2.7.12 (default, Nov 19 2016, 06:48:10) [GCC 5.4.0 20160609] <br>*** Python threads support is disabled. You can enable it with --enable-threads
+                                            ***
+                                        </p>
+                                        <br>.... if we insert into the browser http://localhost:8000 we see 'hello world' . For error or problem read the log of Nginx at the link /var/log/nginx/error.log) if error 13: Permission denied or other messagge
+                                        insert the following command:<br><em class="terminal"> sudo uwsgi --socket name_app.sock --wsgi-file_test.py --chmod-socket=666 <br> sudo uwsgi --socket mysite.sock --wsgi-file_test.py --chmod-socket=664 # (more sensible) </em><br>                                        Se tutto ok ci siamo e proviamo il socket con la nostra applicazione che per esempio la chiamiamo app <br><em class="terminal"> sudo uwsgi --socket app.sock --module app.wsgi –chmod-socket=666</em><br> N.B: se errore
+                                        <p class="terminal2">
+                                            502 bad gateway read the log /var/log/nginx → error.log if error 13 Permission denied folder project delete the file app.sock and try again <br>*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 19:41:56 2017]
+                                            *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC ..... *** uWSGI is running in multiple interpreter mode ***</p>
+                                        <br>into the browser http://localhost:8000 we have our app ready and run through Django, Uwsgi e Nginx. Config uWSGI for execute it with .ini file insert the data into a file and then run it<br>
+                                        <em class="terminal"> sudo nano app_uwsgi.ini </em><br>
+                                        <p class="terminal2"> # mysite_uwsgi.ini file<br> [uwsgi]<br> # Django-related settings<br> # the base directory (full path)<br> chdir = /path_app
+                                            <br> # Django's wsgi file
+                                            <br>module = app.wsgi <br># the virtualenv (full path)<br> home = /path/virtualenv<br> # process-related settings<br> # master master = true <br># maximum number of worker processes processes = 10
+                                            <br> # the socket (use the full path to be safe<br> socket = /path/app.sock # ... with appropriate permissions - may be needed<br> # chmod-socket = 664 # chmod-socket = 666 <br># clear environment on exit
+                                            <br> vacuum = true</p> <br>press ctrl+o to save then ctrl+x for exit and execute created file <br><em class="terminal"> sudo uwsgi --ini app_uwsgi.ini # the --ini option it means that is a file </em><br>
+                                        <p class="terminal2"> [uWSGI] getting INI configuration from app_uwsgi.ini *** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:49:26 2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic
+                                            #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017...........</p>
+                                        <br> For the end of configuration set Emperor methd for handle more application on the same server (uid user id – gid group id) - create the directory uwsgi into the folder /etc<br>
+                                        <em class="terminal"> sudo mkdir /etc/uwsgi <br> sudo mkdir /etc/uwsgi/vassals</em><br>than a file ini with folder vassals <br><em class="terminal">sudo
+                                            ln -s /path/app_uwsgi.ini /etc/uwsgi/vassals/ <br>sudo uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data </em><br>
+                                        <p class="terminal2">*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:57:24 2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017
+                                            nodename: xxxxxx machine: x86_64 clock source: unix detected number of CPU cores: 4 current working directory: /path_app detected binary path: /usr/local/bin/uwsgi !!! no internal routing support, rebuild with
+                                            pcre support !!! setgid() to 33 setuid() to 33 *** WARNING: you are running uWSGI without its master process manager *** your processes number limit is 31000 your memory page size is 4096 bytes detected max
+                                            file descriptor number: 1024 *** starting uWSGI Emperor *** *** has_emperor mode detected (fd: 6) *** [uWSGI] getting INI configuration from app_uwsgi.ini *** .... - [emperor] vassal app_uwsgi.ini is now loyal.</p>
+                                        <br> Into the browser app is ready.<br> Now set the automatic start of the service Uwsgi with the systemctl of linux. <br> Create the file uwsgi.service
+                                        <br><em class="terminal"> sudo nano /etc/systemd/system/uwsgi.service </em> <br> and insert the following data<br>
+                                        <p class="terminal2"> [Unit]<br> Description=uWSGI Emperor
+                                            <br> After=syslog.target<br> [Service]<br> ExecStart=/usr/local/bin/sudo uwsgi --emperor /etc/uwsgi/vassals/ --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log <br># Requires systemd version
+                                            211 or newer
+                                            <br> RuntimeDirectory=uwsgi
+                                            <br>Restart=always<br> KillSignal=SIGQUIT<br> Type=notify StandardError=syslog<br> NotifyAccess=all
+                                            <br> [Install]<br> WantedBy=multi-user.target </p><br> ctrl+o for save and crl+x for exit. Start the service and test if it is active<br><em class="terminal"> sudo systemctl start uwsgi.service<br> sudo systemctl status uwsgi.service</em><br>
+                                        <br>
+                                        <img src="foto/uwsgiserv.png" width="100%" height="300px" alt="uwsgi service status">
+                                        <br> For test if service is automatic active at every restart run the system restart and just the system is ready check the status of service. if it's active we finished. That's all<br>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--
 <div id="django-it">
     <h5 class="blog-titolo">Creare web server con uWSGI & Django - Python</h5>
     <div class="col s12" style="text-align: center">
@@ -954,25 +939,25 @@
         </div>
     </div>
 </div> -->
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="col s12 m12 l4" id="change-blog2">
-                <div class="row blog-second" id="blog-mini2">
-                    <div class="contenitore">
-                        <div class="row img-space" id="space3">
-                            <div class="col s12 m4 l4">
-                                <img src="foto/linux.png" id="ngx1" width="100%" height="180px" alt="linux">
+                <div class="col s12 m12 l4" id="change-blog2">
+                    <div class="row blog-second" id="blog-mini2">
+                        <div class="contenitore">
+                            <div class="row img-space" id="space3">
+                                <div class="col s12 m4 l4">
+                                    <img src="foto/linux.png" id="ngx1" width="100%" height="180px" alt="linux">
+                                </div>
+                                <div class="col s12 m4 l4">
+                                    <img src="foto/nginx.png" id="ngx2" width="100%" height="180px" alt="nginx">
+                                </div>
+                                <div class="col s12 m4 l4">
+                                    <img src="foto/PM2.png" id="ngx3" width="100%" height="180px" alt="pm2">
+                                </div>
                             </div>
-                            <div class="col s12 m4 l4">
-                                <img src="foto/nginx.png" id="ngx2" width="100%" height="180px" alt="nginx">
-                            </div>
-                            <div class="col s12 m4 l4">
-                                <img src="foto/PM2.png" id="ngx3" width="100%" height="180px" alt="pm2">
-                            </div>
-                        </div>
-                        <!--       <div id="blog3-ita">
+                            <!--       <div id="blog3-ita">
                                         <h5 class="blog-titolo">Conosciamo meglio nginx pm2 firewall di linux</h5>
                                         <div class="col s12 m12 l12" style="text-align: center">
                                             <h6> by Mecbar 13 settembre 2017 </h6>
@@ -1075,126 +1060,125 @@
                                             </div>
                                         </div>
                                     </div> -->
-                        <div id="blog3-eng">
-                            <h5 class="blog-titolo">View Nginx PM2 and firewall of Linux</h5>
-                            <div class="col s12 m12 l12" style="text-align: center">
-                                <h6> by Mecbar 13 settembre 2017 </h6>
-                            </div>
-                            <div style="height:200px;margin-top:10px">
-                                <p class="caratter-text">In the previous post we have used Nginx and PM2. Now we see how use them on Linux Ubuntu 16.04 Lts. Nginx is a web server/reverse proxy with elevate performans and can be used also as server proxy for email on different
-                                    operating system. First of all install it with the command from Terminal</p>
-                                <em class="terminal">
+                            <div id="blog3-eng">
+                                <h5 class="blog-titolo">View Nginx PM2 and firewall of Linux</h5>
+                                <div class="col s12 m12 l12" style="text-align: center">
+                                    <h6> by Mecbar 13 settembre 2017 </h6>
+                                </div>
+                                <div style="height:200px;margin-top:10px">
+                                    <p class="caratter-text">In the previous post we have used Nginx and PM2. Now we see how use them on Linux Ubuntu 16.04 Lts. Nginx is a web server/reverse proxy with elevate performans and can be used also as server proxy for email on different
+                                        operating system. First of all install it with the command from Terminal</p>
+                                    <em class="terminal">
                                             sudo apt-get install nginx </em><br>
-                                <button class="blog-btn-espandi-mini2" type="button" id="blog-tasto-espandi-mini2" onclick="espandiBlog('due')"> Read more</button>
-                                <div class=caratter-text id="blog-btn-espandi-mini2">
-                                    then setup the automatic start of the service<br>
-                                    <em class="terminal"> sudo /etc/init.d/nginx start</em>
-                                    <br>
-                                    <em class="terminal">[ ok ] Starting nginx (via systemctl): nginx.service.</em>
-                                    <br>
-                                    <em class="terminal">sudo systemctl status nginx.service </em>
-                                    <img src="foto/nginxstatus.png" class="blog-images" width="100%" height="300px" alt="staus nginx service"> other command are service stop or restart sudo systemctl stop nginx.service sudo systemctl restart nginx.service
-                                    In the following scheme we see how Nginxinteracts with the other application and the web. From the browser the user call Nginx that transfer the request at Uwsgi/Django (back-end). Django create the answer and through
-                                    Uwsgi send it via Nginx at browser for the user.
+                                    <button class="blog-btn-espandi-mini2" type="button" id="blog-tasto-espandi-mini2" onclick="espandiBlog('due')"> Read more</button>
+                                    <div class=caratter-text id="blog-btn-espandi-mini2">
+                                        then setup the automatic start of the service<br>
+                                        <em class="terminal"> sudo /etc/init.d/nginx start</em>
+                                        <br>
+                                        <em class="terminal">[ ok ] Starting nginx (via systemctl): nginx.service.</em>
+                                        <br>
+                                        <em class="terminal">sudo systemctl status nginx.service </em>
+                                        <img src="foto/nginxstatus.png" class="blog-images" width="100%" height="300px" alt="staus nginx service"> other command are service stop or restart sudo systemctl stop nginx.service sudo systemctl restart nginx.service
+                                        In the following scheme we see how Nginxinteracts with the other application and the web. From the browser the user call Nginx that transfer the request at Uwsgi/Django (back-end). Django create the answer and through
+                                        Uwsgi send it via Nginx at browser for the user.
 
-                                    <section class="">
-                                        <div class="row">
-                                            <div class="col s3 m3 l3">
-                                                <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                        <section class="">
+                                            <div class="row">
+                                                <div class="col s3 m3 l3">
+                                                    <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s1 m1 l1">
+                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s2 m2 l2">
+                                                    <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s1 m1 l1">
+                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s2 m2 l2">
+                                                    <img class="blog-images" src="foto/uwsgi.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s1 m1 l1">
+                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s2 m2 l2">
+                                                    <img class="blog-images" src="foto/django.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
                                             </div>
-                                            <div class="col s1 m1 l1">
-                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s2 m2 l2">
-                                                <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s1 m1 l1">
-                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s2 m2 l2">
-                                                <img class="blog-images" src="foto/uwsgi.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s1 m1 l1">
-                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s2 m2 l2">
-                                                <img class="blog-images" src="foto/django.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                        </div>
-                                    </section>
-                                    In the image below the scheme with the web server NodeJs(Javascript) and the process manager PM2.
+                                        </section>
+                                        In the image below the scheme with the web server NodeJs(Javascript) and the process manager PM2.
 
-                                    <section class="">
-                                        <div class="row">
-                                            <div class="col s3 m3 l3">
-                                                <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                        <section class="">
+                                            <div class="row">
+                                                <div class="col s3 m3 l3">
+                                                    <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s1 m1 l1">
+                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s2 m2 l2">
+                                                    <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s1 m1 l1">
+                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s2 m2 l2">
+                                                    <img class="blog-images" src="foto/PM2-vert.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s1 m1 l1">
+                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
+                                                <div class="col s2 m2 l2">
+                                                    <img class="blog-images" src="foto/nodejs-vert.png" width="100%" height="300px" alt="internet utenti">
+                                                </div>
                                             </div>
-                                            <div class="col s1 m1 l1">
-                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s2 m2 l2">
-                                                <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s1 m1 l1">
-                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s2 m2 l2">
-                                                <img class="blog-images" src="foto/PM2-vert.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s1 m1 l1">
-                                                <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                            <div class="col s2 m2 l2">
-                                                <img class="blog-images" src="foto/nodejs-vert.png" width="100%" height="300px" alt="internet utenti">
-                                            </div>
-                                        </div>
 
-                                    </section>
-                                    For communicate with the operating system we need to open the firewall policy so Nginx can transfer request and answer between client and server.
-                                    <br> Some commands for Firewall of Linux are the followings:
-                                    <ul>
-                                        <li>sudo ufw status </li>
-                                        <li> sudo ufw enable # enable the firewall</li>
-                                        <li> sudo ufw disable # disable the firewall</li>
-                                        <li> sudo ufw allow port 80 # enable port for ex. the port 80 </li>
-                                        <li>sudo ufw allow 'Nginx http' # enable nginx for protocol http</li>
-                                    </ul> <br> In the example below we see the open port from Firewall.
-                                    <img class="blog-images" src="foto/firewall.png" width="100%" height="450px" alt="firewall"> In the previous post we see how use Nginx with Uwsgi and Django now instead we talk about PM2 for NodeJs. PM2 is a process
-                                    manager. It allows us to handle more web application on one server. With PM2 the application are always ready on the server for the request of the user In the previous post we have seen how to install and use it with
-                                    Nginx. Now we show some commands for PM2.<br>
+                                        </section>
+                                        For communicate with the operating system we need to open the firewall policy so Nginx can transfer request and answer between client and server.
+                                        <br> Some commands for Firewall of Linux are the followings:
+                                        <ul>
+                                            <li>sudo ufw status </li>
+                                            <li> sudo ufw enable # enable the firewall</li>
+                                            <li> sudo ufw disable # disable the firewall</li>
+                                            <li> sudo ufw allow port 80 # enable port for ex. the port 80 </li>
+                                            <li>sudo ufw allow 'Nginx http' # enable nginx for protocol http</li>
+                                        </ul> <br> In the example below we see the open port from Firewall.
+                                        <img class="blog-images" src="foto/firewall.png" width="100%" height="450px" alt="firewall"> In the previous post we see how use Nginx with Uwsgi and Django now instead we talk about PM2 for NodeJs. PM2 is a process
+                                        manager. It allows us to handle more web application on one server. With PM2 the application are always ready on the server for the request of the user In the previous post we have seen how to install and use it
+                                        with Nginx. Now we show some commands for PM2.<br>
 
-                                    <ul>
-                                        <li>sudo systemctl status pm2 #for show status of PM2</li>
-                                        <li> sudo systemctl stop pm2 # for stop run of PM2</li>
-                                        <li>sudo systemctl start pm2</li>
-                                        <li>sudo systemctl restart pm2</li>
-                                    </ul>
-                                    Below the command for see status of web application handles by Pm2.
-                                    <ul>
-                                        <li>sudo pm2 show n.ro application or name of application
-                                            <img class="blog-images" src="foto/pm2show.png" width="100%" height="450px" alt="pm2 show app">
-                                        </li>
-                                        <li>sudo pm2 monit</li>
-                                        <li> sudo pm2 list # application list handle by PM2</li>
-                                        <li>sudo pm2 start name_app # start the app</li>
-                                        <li> sudo pm2 restart name_app # restart the app</li>
-                                        <li> sudo pm2 stop name_app # stop run app</li>
-                                    </ul>
+                                        <ul>
+                                            <li>sudo systemctl status pm2 #for show status of PM2</li>
+                                            <li> sudo systemctl stop pm2 # for stop run of PM2</li>
+                                            <li>sudo systemctl start pm2</li>
+                                            <li>sudo systemctl restart pm2</li>
+                                        </ul>
+                                        Below the command for see status of web application handles by Pm2.
+                                        <ul>
+                                            <li>sudo pm2 show n.ro application or name of application
+                                                <img class="blog-images" src="foto/pm2show.png" width="100%" height="450px" alt="pm2 show app">
+                                            </li>
+                                            <li>sudo pm2 monit</li>
+                                            <li> sudo pm2 list # application list handle by PM2</li>
+                                            <li>sudo pm2 start name_app # start the app</li>
+                                            <li> sudo pm2 restart name_app # restart the app</li>
+                                            <li> sudo pm2 stop name_app # stop run app</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
+
+
+
                         </div>
-
-
-
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    </div>
-    </div>
-    </div>
-    <!-- VR  -->
+
+    <!-- VR  
     <section>
 
         <a-scene physics>
@@ -1203,7 +1187,7 @@
             <a-sky color="#ECECEC"></a-sky>
         </a-scene>
     </section>
-
+-->
     <div class="rowcenter" id="dev">
 
         Development case history

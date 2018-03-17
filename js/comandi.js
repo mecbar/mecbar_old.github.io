@@ -2,8 +2,8 @@ var dropCookie = true; // false disables the Cookie, allowing you to style the b
 var cookieDurata = 28; // numero di giorni prima che cookie expires 
 var cookieNome = 'MecCookie'; // 
 var cookieValue = 'on';
-var expires
-
+var expires;
+var bane;
 var zero = 'zero';
 var uno = 'uno';
 var due = 'due';
@@ -179,39 +179,59 @@ function topFunction() {
 
 
 function espandiCnneng() {
-    var btnChiudi = '<a href="#ml"><button class="blog-btn-chiudi1" type="button" id="cnneng2" onclick="chiudiCnneng()">Close</button></a>';
+    var btnChiudi = '<a href="#ml" class="blog-btn-chiudi1" id="cnneng2" onclick="chiudiCnneng()">Close </a>';
     $('#cnn-eng-espandi').after(btnChiudi);
     $('#cnneng2').css('display', 'block');
     $('#cnn-eng-espandi').remove();
     $('p').css('margin-bottom', '0px');
     $('#cnn-eng').css('display', 'block');
+    if ($(window).width() <= 600) {
+        $('.ml').css('height', '3300px');
+    } else {
+        $('.ml').css('height', '2200px');
+    }
 }
 
 function chiudiCnneng() {
-    var btnChiudi = '<a href="#ml"><button class="blog-btn-chiudi1" type="button" id="cnn-eng-espandi" onclick="espandiCnneng()">Read more</button></a>';
+    var btnChiudi = '<a href="#ml" class="blog-btn-chiudi1" id="cnn-eng-espandi" onclick="espandiCnneng()">Read more</a>';
     $('#cnneng2').after(btnChiudi);
     $('#cnn-eng-espandi').css('display', 'block');
     $('#cnneng2').remove();
     $('p').css('margin-bottom', '0px');
     $('#cnn-eng').css('display', 'none');
+    if ($(window).width() <= 600) {
+        $('.ml').css('height', '500px');
+    } else {
+        $('.ml').css('height', '420px');
+    }
 }
 
 function espandiCnnita() {
-    var btnChiudi = '<a href="#ml"><button class="blog-btn-chiudi1" type="button" id="cnnita2" onclick="chiudiCnnita()">Close</button></a>';
+    var btnChiudi = '<a href="#ml" class="blog-btn-chiudi1" id="cnnita2" onclick="chiudiCnnita()">Close</a>';
     $('#cnn-ita-espandi').after(btnChiudi);
     $('#cnnita2').css('display', 'block');
     $('#cnn-ita-espandi').remove();
     $('p').css('margin-bottom', '0px');
     $('#cnn-ita').css('display', 'block');
+    if ($(window).width() <= 600) {
+        $('.ml').css('height', '3450px');
+    } else {
+        $('.ml').css('height', '2200px');
+    }
 }
 
 function chiudiCnnita() {
-    var btnChiudi = '<a href="#ml"><button class="blog-btn-chiudi1" type="button" id="cnn-ita-espandi" onclick="espandiCnnita()">Read more</button></a>';
+    var btnChiudi = '<a href="#ml" class="blog-btn-chiudi1" id="cnn-ita-espandi" onclick="espandiCnnita()">Read more</a>';
     $('#cnnita2').after(btnChiudi);
     $('#cnn-ita-espandi').css('display', 'block');
     $('#cnnita2').remove();
     $('p').css('margin-bottom', '0px');
     $('#cnn-ita').css('display', 'none');
+    if ($(window).width() <= 600) {
+        $('.ml').css('height', '500px');
+    } else {
+        $('.ml').css('height', '420px');
+    }
 }
 
 var stato = null;
@@ -222,7 +242,7 @@ function espandiBlog(stato) {
         if ($(window).width() <= 992) {
             //make heaps of CSS changes 
             $('#change-blog').removeClass('blog-principale').addClass('blog-mobile0');
-            var btnChiudi = '<a href="#box-blog1"><button class="blog-btn-chiudi" type="button" id="blog-tasto-chiudi" onclick="chiudiBlog(zero)">Close</button></a>';
+            var btnChiudi = '<a href="#box-blog1" class="blog-btn-chiudi" id="blog-tasto-chiudi" onclick="chiudiBlog(zero)">Close</a>';
             $('#blog-btn-espandi').after(btnChiudi);
             $('#blog-btn-espandi').css('display', 'block');
             $('#blog-tasto-espandi').remove();
@@ -230,7 +250,7 @@ function espandiBlog(stato) {
             $('#vr-spazio').removeClass('blog-titolo2');
         } else {
 
-            var btnChiudi = '<a href="#box-blog1"><button class="blog-btn-chiudi" type="button" id="blog-tasto-chiudi" onclick="chiudiBlog(zero)">Close</button></a>';
+            var btnChiudi = '<a href="#box-blog1" class="blog-btn-chiudi" id="blog-tasto-chiudi" onclick="chiudiBlog(zero)">Close</a>';
             $('#blog-btn-espandi').after(btnChiudi);
             $('#blog-btn-espandi').css('display', 'block');
             $('#blog-tasto-espandi').remove();
@@ -245,31 +265,22 @@ function espandiBlog(stato) {
             $('.box-blog1').css('max-height', '3700px');
             $('#blog-espandi-mini11').remove();
             $('#blog-espandi-mini1').remove();
-            var btnEspandi1 = '<a href="#box-blog1"><button class="blog-btn-espandi-mini1" type="button" id="blog-espandi-mini11" onclick="espandiBlog(zerouno)"> Read more </button></a>';
+            var btnEspandi1 = '<a href="#box-blog1" class="blog-btn-espandi-mini1" id="blog-espandi-mini11" onclick="espandiBlog(zerouno)"> Read more </a>';
             $('#blog-btn-espandi-mini1').after(btnEspandi1);
             $('#blog-tasto-espandi-mini1').remove();
             $('#blog-espandi-mini22').remove();
             $('#blog-espandi-mini2').remove();
-            var btnEspandi2 = '<a href="#box-blog1"><button class="blog-btn-espandi-mini2" type="button" id="blog-espandi-mini22" onclick="espandiBlog(zerodue)"> Read more </button></a>';
+            var btnEspandi2 = '<a href="#box-blog1" class="blog-btn-espandi-mini2" id="blog-espandi-mini22" onclick="espandiBlog(zerodue)"> Read more </a>';
             $('#blog-btn-espandi-mini2').after(btnEspandi2);
             $('#blog-tasto-espandi-mini2').remove();
 
         }
     }
     if (stato == 'uno') {
-        /*   if ($(window).width() <= 380) {
-               //make heaps of CSS changes
-               $('#change-blog1').addClass('blog-mobile1');
-               var btnChiudi = '<a href="#box-blog1"><button class="blog-btn-chiudi-mini1" type="button" id="blog-tasto-chiudi" onclick="chiudiBlog(uno)">Close</button></a>';
-               $('#blog-btn-espandi-mini1').after(btnChiudi);
-               $('#blog-btn-espandi-mini1').css('display', 'block');
-               $('.blog-btn-espandi-mini1').remove();
-               $('#blog-mini1').removeClass('blog-second');
-           } else */
+
         if ($(window).width() <= 992) {
-            //make heaps of CSS changes 
             $('#change-blog1').addClass('blog-mobile1');
-            var btnChiudi = '<a href="#box-blog1"><button class="blog-btn-chiudi-mini1" type="button" id="blog-tasto-chiudi" onclick="chiudiBlog(uno)">Close</button></a>';
+            var btnChiudi = '<a href="#change-blog1" class="blog-btn-chiudi-mini1" id="blog-tasto-chiudi" onclick="chiudiBlog(uno)">Close</a>';
             $('#blog-btn-espandi-mini1').after(btnChiudi);
             $('#blog-btn-espandi-mini1').css('display', 'block');
             $('.blog-btn-espandi-mini1').remove();
@@ -277,7 +288,7 @@ function espandiBlog(stato) {
 
 
         } else {
-            var btnChiudi = '<a href="#box-blog1"><button class="blog-btn-chiudi-mini1" type="button" id="blog-tasto-chiudi" onclick="chiudiBlog(uno)">Close</button></a>';
+            var btnChiudi = '<a href="#box-blog1" class="blog-btn-chiudi-mini1" id="blog-tasto-chiudi" onclick="chiudiBlog(uno)">Close</a>';
             $('#blog-btn-espandi-mini1').after(btnChiudi);
             $('#blog-btn-espandi-mini1').css('display', 'block');
             $('.blog-btn-espandi-mini1').remove();
@@ -289,39 +300,31 @@ function espandiBlog(stato) {
             $('#img2').removeClass('blog-img-secondario').addClass('blog-img-max');
             $('#blog-mini1').removeClass('row blog-second').addClass('row blog-principal1');
             $('#box-blog1').addClass('box-blog1');
-            $('.box-blog1').css('max-height', '4950px');
+            $('.box-blog1').css('max-height', '4950px !important');
             $('#blog-espandi').remove();
-            var btnEspandi1 = '<a href="#box-blog1"><button class="blog-btn-espandi" type="button" id="blog-espandi" onclick="espandiBlog(unozero)"> Read more </button></a>';
+            var btnEspandi1 = '<a href="#box-blog1" class="blog-btn-espandi"  id="blog-espandi" onclick="espandiBlog(unozero)"> Read more </a>';
             $('#blog-btn-espandi').after(btnEspandi1);
             $('#blog-tasto-espandi').remove();
             $('#blog-espandi-mini2').remove();
             $('#blog-espandi-mini22').remove();
-            var btnEspandi2 = '<a href="#box-blog1"><button class="blog-btn-espandi-mini2" type="button" id="blog-espandi-mini2" onclick="espandiBlog(unodue)"> Read more </button></a>';
+            var btnEspandi2 = '<a href="#box-blog1" class="blog-btn-espandi-mini2"  id="blog-espandi-mini2" onclick="espandiBlog(unodue)"> Read more </a>';
             $('#blog-btn-espandi-mini2').after(btnEspandi2);
             $('#blog-tasto-espandi-mini2').remove();
         }
     }
 
     if (stato === 'due') {
-        /*  if ($(window).width() <= 380) {
-              //make heaps of CSS changes
-              $('#change-blog2').addClass('blog-mobile2');
-              var btnChiudi = '<a href="#box-blog1"><button class="blog-btn-chiudi-mini2" type="button" id="blog-tasto-chiudi-mini2" onclick="chiudiBlog(due)">Close</button></a>';
-              $('#blog-btn-espandi-mini2').after(btnChiudi);
-              $('#blog-btn-espandi-mini2').css('display', 'block');
-              $('.blog-btn-espandi-mini2').remove();
-              $('#blog-mini2').removeClass('blog-second');
-          }  else */
         if ($(window).width() <= 992) {
-            //make heaps of CSS changes
+
             $('#change-blog2').addClass('blog-mobile2');
-            var btnChiudi = '<a href="#box-blog1"><button class="blog-btn-chiudi-mini2" type="button" id="blog-tasto-chiudi-mini2" onclick="chiudiBlog(due)">Close</button></a>';
+            var btnChiudi = '<a href="#change-blog2" class="blog-btn-chiudi-mini2" id="blog-tasto-chiudi-mini2" onclick="chiudiBlog(due)">Close</a>';
             $('#blog-btn-espandi-mini2').after(btnChiudi);
             $('#blog-btn-espandi-mini2').css('display', 'block');
             $('.blog-btn-espandi-mini2').remove();
             $('#blog-mini2').removeClass('blog-second');
+
         } else {
-            var btnChiudi = '<a href="#box-blog1"><button class="blog-btn-chiudi-mini2" type="button" id="blog-tasto-chiudi-mini2" onclick="chiudiBlog(due)">Close</button></a>';
+            var btnChiudi = '<a href="#box-blog1" class="blog-btn-chiudi-mini2" id="blog-tasto-chiudi-mini2" onclick="chiudiBlog(due)">Close</a>';
             $('#blog-btn-espandi-mini2').after(btnChiudi);
             $('#blog-btn-espandi-mini2').css('display', 'block');
             $('.blog-btn-espandi-mini2').remove();
@@ -335,13 +338,13 @@ function espandiBlog(stato) {
             $('#box-blog1').addClass('box-blog1');
             $('.box-blog1').css('max-height', '3700px');
             $('#blog-espandi').remove();
-            var btnEspandi1 = '<a href="#box-blog1"><button class="blog-btn-espandi" type="button" id="blog-espandi" onclick="espandiBlog(duezero)"> Read more </button></a>';
+            var btnEspandi1 = '<a href="#box-blog1" class="blog-btn-espandi" id="blog-espandi" onclick="espandiBlog(duezero)"> Read more</a>';
             $('#blog-btn-espandi').after(btnEspandi1);
             $('#blog-tasto-espandi').remove();
             $('#blog-espandi-mini1').remove();
             $('#blog-espandi-mini11').remove();
             /* $('a').removeAttr('href'); */
-            var btnEspandi2 = '<a href="#box-blog1"><button class="blog-btn-espandi-mini1" type="button" id="blog-espandi-mini1" onclick="espandiBlog(dueuno)"> Read more </button></a>';
+            var btnEspandi2 = '<a href="#box-blog1" class="blog-btn-espandi-mini1" id="blog-espandi-mini1" onclick="espandiBlog(dueuno)"> Read more </a>';
             $('#blog-btn-espandi-mini1').after(btnEspandi2);
             $('#blog-tasto-espandi-mini1').remove();
         }
@@ -380,7 +383,7 @@ function chiudiBlog(stato) {
     if (stato == 'zero') {
 
         if ($(window).width() <= 992) {
-            var btnEspandi = '<button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog(zero)"> Read more</button>';
+            var btnEspandi = '<button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog(zero)"> Read more </button>';
             $('.blog-btn-chiudi').before(btnEspandi);
             $('.blog-btn-chiudi').remove();
             $('#blog-btn-espandi').css('display', 'none');
@@ -388,8 +391,8 @@ function chiudiBlog(stato) {
             $('#change-blog').removeClass('blog-mobile0');
             $('#blog-second').addClass('blog-second');
         } else {
-            var btnEspandi = '<button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog(zero)"> Read more</button>';
-            $('.blog-btn-chiudi').before(btnEspandi);
+            var btnEspandi1 = '<button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog(zero)"> Read more </button>';
+            $('#blog-btn-espandi').before(btnEspandi1);
             $('.blog-btn-chiudi').remove();
             $('#blog-btn-espandi').css('display', 'none');
 
@@ -416,8 +419,8 @@ function chiudiBlog(stato) {
         } else {
 
 
-            var btnEspandi = '<button class="blog-btn-espandi-mini1" type="button" id="blog-tasto-espandi-mini1" onclick="espandiBlog(uno)"> Read more</button>';
-            $('.blog-btn-chiudi-mini1').before(btnEspandi);
+            var btnEspandi1 = '<button class="blog-btn-espandi-mini1" type="button" id="blog-tasto-espandi-mini1" onclick="espandiBlog(uno)"> Read more</button>';
+            $('.blog-btn-chiudi-mini1').before(btnEspandi1);
             $('.blog-btn-chiudi-mini1').remove();
             $('#blog-btn-espandi-mini1').css('display', 'none');
             $('#blog-second').removeClass('row blog-secondo').addClass('row blog-second');
@@ -428,11 +431,11 @@ function chiudiBlog(stato) {
             $('#blog-mini2').removeClass('row blog-mini222').addClass('row blog-second');
             $('#blog-mini1').removeClass('row blog-principal1').addClass('row blog-second');
             $('#space2').removeClass('row img-space-max').addClass('row img-space');
-            $('#blog-espandi').remove();
+
         }
     }
 
-    if (stato = "due") {
+    if (stato == "due") {
         if ($(window).width() <= 992) {
             //make heaps of CSS changes
             var btnEspandi = '<button class="blog-btn-espandi-mini2" type="button" id="blog-tasto-espandi-mini2" onclick="espandiBlog(due)"> Read more</button>';
@@ -441,6 +444,8 @@ function chiudiBlog(stato) {
             $('#blog-btn-espandi-mini2').css('display', 'none');
             $('#change-blog2').removeClass('blog-mobile2');
             $('#blog-mini2').addClass('blog-second');
+            $('.blog-second').css('height', '900px');
+            $(window.location).attr('href', '#change-blog2');
         } else {
 
 
@@ -455,7 +460,7 @@ function chiudiBlog(stato) {
             $('#img3').removeClass('blog-img-max').addClass('blog-img-secondario');
             $('#blog-mini2').removeClass('row blog-principal2').addClass('row blog-second');
             $('#box-blog1').removeClass('box-blog1');
-            $('#blog-espandi').remove();
+
 
         }
     }
@@ -473,7 +478,7 @@ function espandiBlog1() {
 
     $('.spazioimg').addClass('blog-titolo2');
     $('.blog-titolo2').removeClass('spazioimg');
-    var btnChiudi = '<a href="#bloggo"><button class="blog-btn-chiudi1" type="button" id="blog-tasto-chiudi1" onclick="chiudiBlog1()">Close</button></a>';
+    var btnChiudi = '<a href="#bloggo" class="blog-btn-chiudi1" id="blog-tasto-chiudi1" onclick="chiudiBlog1()">Close</a>';
     $('#blog-btn-espandi1').after(btnChiudi);
     $('#blog-btn-espandi1').css('display', 'block');
     $('#blog-tasto-espandi1').remove();
@@ -489,7 +494,7 @@ function chiudiBlog1() {
     $('#vbox').attr('src', 'foto/virtualbox.jpg');
     $('.spazioimg').css('height', '350px');
     $('.spazioimg').css('width', '100%');
-    var btnEspandi = '<a href="#bloggo"><button class="blog-btn-espandi1" type="button" id="blog-tasto-espandi1" onclick="espandiBlog1()"> Read more</button></a>';
+    var btnEspandi = '<a href="#bloggo" class="blog-btn-espandi1" id="blog-tasto-espandi1" onclick="espandiBlog1()"> Read more</a>';
     $('#blog-tasto-chiudi1').before(btnEspandi);
     $('#blog-tasto-chiudi1').remove();
     $('#blog-btn-espandi1').css('display', 'none');
@@ -504,7 +509,7 @@ function espandiBlog2() {
     $('#vr-spazio').css('width', '80%');
     $('#vr-spazio').addClass('blog-titolo2');
     $('.blog-titolo2').removeClass('spazioimg');
-    var btnChiudi = '<a href="#blog"><button class="blog-btn-chiudi1" type="button" id="blog-tasto-chiudi2" onclick="chiudiBlog2()">Close</button></a>';
+    var btnChiudi = '<a href="#frame-inizio" class="blog-btn-chiudi1" id="blog-tasto-chiudi2" onclick="chiudiBlog2()">Close</a>';
     $('#blog-btn-espandi2').after(btnChiudi);
     $('#blog-btn-espandi2').css('display', 'block');
     $('#blog-frame-espandi').remove();
@@ -526,7 +531,7 @@ function chiudiBlog2() {
     $('#vr-spazio').attr('src', 'foto/vr-terra.png');
     $('#vr-spazio').css('height', '350px');
     $('#vr-spazio').css('width', '100%');
-    var btnEspandi = '<a href="#blog"><button class="blog-btn-espandi1" type="button" id="blog-frame-espandi" onclick="espandiBlog2()"> Read more</button></a>';
+    var btnEspandi = '<a href="#frame-inizio" class="blog-btn-espandi1" id="blog-frame-espandi" onclick="espandiBlog2()"> Read more</a>';
     $('#blog-tasto-chiudi2').before(btnEspandi);
     $('#blog-tasto-chiudi2').remove();
     $('#blog-btn-espandi2').css('display', 'none');
@@ -626,7 +631,8 @@ function removeMe() {
 
 
 window.onload = function() {
-    var name = window.cookieNome + '=' + window.cookieValue;
+    name = window.cookieNome + '=' + window.cookieValue;
+
     if (getCookie(window.cookieNome) !== name) {
 
         creaDiv();
@@ -636,21 +642,43 @@ window.onload = function() {
 
 
 $(document).ready(function() {
+    var bott;
+    if (window.width <= '992px') {
+        bott = document.getElementById('bot11').animate(
+            [
+                { transform: 'translateX(0)' },
+                { transform: 'translateX(+30%)' }
+            ], {
+                fill: 'forwards',
+                easing: 'cubic-bezier(0.42, 0, 0.58, 8)',
+                // easing: 'ease-in-out',
+                // easing: 'steps(9, end)',
+                direction: 'alternate',
+                duration: 9000,
+                iterations: Infinity
+            });
 
 
-    var bott = document.getElementById('bot11').animate(
-        [
-            { transform: 'translateX(0)' },
-            { transform: 'translateX(+80%)' }
-        ], {
-            fill: 'forwards',
-            easing: 'ease-in-out',
-            // easing: 'steps(9, end)',
-            duration: 9000,
-            iterations: Infinity
-        });
+    } else {
+        bott = document.getElementById('bot11').animate(
+            [
+                { transform: 'translateX(0)' },
+                { transform: 'translateX(+250%)' }
+            ], {
+                fill: 'forwards',
+                easing: 'cubic-bezier(0.42, 0, 0.58, 8)',
+                // easing: 'ease-in-out',
+                // easing: 'steps(9, end)',
+                direction: 'alternate',
+                duration: 9000,
+                iterations: Infinity
+            });
 
+
+
+    }
     bott.play();
+
 
     $('#chiudi_cnn1').hide();
     $('#cnn-eng').css('display', 'none');
@@ -785,8 +813,11 @@ $(document).ready(function() {
 
         } else {
             document.getElementById("tasto-su").style.display = "none";
-            if (checkCookie(window.cookieNome) !== window.cookieValue) {
-                document.getElementById("cookie-law").style.display = "none";
+            if (getCookie(window.cookieNome) !== name) {
+                var cook = document.getElementById("cookie-law")
+                if (cook) {
+                    $('#cookie-law').css('display', "none");
+                }
             }
         }
     }
