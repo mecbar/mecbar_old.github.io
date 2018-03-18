@@ -646,11 +646,11 @@ $(document).ready(function() {
     if (window.width <= '992px') {
         bott = document.getElementById('bot11').animate(
             [
-                { transform: 'translateX(0)' },
-                { transform: 'translateX(+30%)' }
+                { transform: 'translateY(0)' },
+                { transform: 'translateY(0)' }
             ], {
                 fill: 'forwards',
-                easing: 'cubic-bezier(0.42, 0, 0.58, 8)',
+                easing: 'cubic-bezier(0.42, 0, 0.48, 2)',
                 // easing: 'ease-in-out',
                 // easing: 'steps(9, end)',
                 direction: 'alternate',
