@@ -724,13 +724,13 @@ $(document).ready(function() {
                 borderLeftWidth: "15px"
             }, 1000)
             .animate({
-                width: "20px"
+                width: "10%"
             }, 1000)
             .animate({
                 height: '80px'
             }, 1000)
             .animate({
-                fontSize: "12px"
+                fontSize: "15px"
             }, 1000)
             .animate({
                 borderWidth: "0px"
@@ -775,11 +775,13 @@ $(document).ready(function() {
     $('#testo2').hide();
     $('#ita').hover(function() {
         chiudiCnneng();
+        chiudiCnnita();
         $('#testo1').hide();
         $('#testo2').show();
     });
     $('#ing').hover(function() {
         chiudiCnnita();
+        chiudiCnneng();
         $('#testo2').hide();
         $('#testo1').show();
     });
