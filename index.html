@@ -57,7 +57,9 @@
             <a href="#!" class="brand-logo">Mecbar</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
-                <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
                 <li><a href="#blog">Blog</a></li>
                 <li><a href="#dev">Development</a></li>
                 <li><a href="#linux">Linux</a></li>
@@ -179,23 +181,26 @@
         <br>
     </div>
     <div class="row" id="cnn1">
-        <div class="col s12 m8 l8" id="ipg">
+        <div class="col s12 m9 l9" id="ipg">
             <div id="re">
 
             </div>
             <div id="load">Loading model.... please wait ...</div>
             <div id="resu" class="classification">
             </div>
+            <div class="row">
+
+                <button class="class-btn-chiudi" style="left:20px" type="button" id="chiudi_cnn1" onclick="chiudi_cnn1()">close</button>
+            </div>
         </div>
 
-        <div class="col s19 m3 l3" id="immmage">
+        <div class="col s12 m3 l3" id="immmage">
 
             <canvas id="retina1" width="224" height="224"></canvas>
         </div>
-        <div class="col s3 m1 l1">
-            <button class="class-btn-chiudi" type="button" id="chiudi_cnn1" onclick="chiudi_cnn1()">close</button>
-        </div>
     </div>
+
+
     <!--
     <div class="ml1" id="ml2">
         <div class="titoloml">
@@ -315,26 +320,65 @@
 
                             </div>
                             The Sigmoid Function is function that return us result 0 or 1 according a discriminating value that is generally 0.5 how in the image below :<br>
-                            <div class="row">
+                            <div class="row" style="height:170px;margin-top:50px">
                                 <div class="col s12 m12 l4">
-                                    <img src="foto/logit/sigmoid_graph.png" width="100%" height="200px" alt="logistic regression">
+                                    <img src="foto/logit/sigmoid_graph.png" width="100%" height="100%" alt="logistic regression">
+                                </div>
+                                <div class="col l4 center">
+                                    <b class="spazio2001"> The Sigmoid Function formula:</b>
+                                    <br>
+                                    <br>
+                                    <img src="foto/logit/sigmoid.png" width="100%" height="50px" alt="logistic regression">
                                 </div>
                                 <div class="col l4">
-                                    The Sigmoid Function formula :
-                                </div>
-                                <div class="col l4">
-                                    <img src="foto/logit/sigmoid.png" width="100%" height="99px" alt="logistic regression"><br>
+
+                                    To create a model minimizing the <b>cost function</b> (a cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between x and y) to find the best coefficients with
+                                    <a href="gradient.html" target="_blank"><b>Gradient Descent</b></a> (Gradient descent is an efficient optimization algorithm that attempts to find a minimum of a function)<br>
+
                                 </div>
                             </div>
-                            <br> To create a model minimizing the <b>cost function</b> (a cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between x and y) to find the best coefficients with
-                            <b>Gradient Descent</b>(Gradient descent is an efficient optimization algorithm that attempts to find a minimum of a function)<br>
-                            <a href="progetto_banka.html" target="_blank" class="blog-btn-espandi" id="blog-logit"> Read more </a>
                         </div>
                     </div>
+                    <br>
+                    <a href="progetto_banka.html" target="_blank" class="blog-btn-espandi" id="blog-logit"> Read more </a>
 
                 </div>
             </div>
         </div>
+
+        <div id="gradient" class="logit">
+
+            <div class="row">
+                <div class="col s12 m12 l12">
+                    <div class="logistic-titolo center spazio2001"> The Backpropagation with Gradient Descent </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col s12 m12 l12 blocco">
+                    <b>Introduction </b>
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col s12 m12 l6 blocco">
+                    <br> Backpropagation is a backward propagation of errors and is a powerful tool of the deep learning. With the Gradient Descent the backpropagation reduce the cost function and the time of execution. We now talk about of calculate
+                    the Gradient Descent.
+                </div>
+
+                <div class="col s12 m12 l6">
+                    <div class="card-panel hoverable">
+                        <img src=" foto/gradient/gradient_graph.png" width="100%" height="300px" alt="the gradient graph">
+                        <br>
+                    </div>
+                </div>
+                <a href="gradient.html" target="_blank" class="blog-btn-espandi" id="blog-gradient"> Read more </a>
+                <br>
+                <br>
+            </div>
+
+
+        </div>
+
         <div class="frame">
             <div id="frame-inizio">
                 <div class="row">
@@ -707,7 +751,8 @@
                                         insert the following command:<br><em class="terminal"> sudo uwsgi --socket name_app.sock --wsgi-file_test.py --chmod-socket=666 <br> sudo uwsgi --socket mysite.sock --wsgi-file_test.py --chmod-socket=664 # (more sensible) </em><br>                                        Se tutto ok ci siamo e proviamo il socket con la nostra applicazione che per esempio la chiamiamo app <br><em class="terminal"> sudo uwsgi --socket app.sock --module app.wsgi –chmod-socket=666</em><br> N.B: se errore
                                         <p class="terminal2">
                                             502 bad gateway read the log /var/log/nginx → error.log if error 13 Permission denied folder project delete the file app.sock and try again <br>*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 19:41:56 2017]
-                                            *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC ..... *** uWSGI is running in multiple interpreter mode ***</p>
+                                            *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC ..... *** uWSGI is running in multiple interpreter mode ***
+                                        </p>
                                         <br>into the browser http://localhost:8000 we have our app ready and run through Django, Uwsgi e Nginx. Config uWSGI for execute it with .ini file insert the data into a file and then run it<br>
                                         <em class="terminal"> sudo nano app_uwsgi.ini </em><br>
                                         <p class="terminal2"> # mysite_uwsgi.ini file<br> [uwsgi]<br> # Django-related settings<br> # the base directory (full path)<br> chdir = /path_app
@@ -1196,7 +1241,7 @@
     <div>
         <ul class="collapsible" data-collapsible="accordion">
             <li>
-                <div class="collapsible-header"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Survey liking for your site</div>
+                <div class="collapsible-header"><i class="fa fa-question-circle-o" style="color:#2d29f6" aria-hidden="true"></i> Survey liking for your site</div>
                 <div class="collapsible-body">
 
                     <!-- QUESTIONARIO -->
@@ -1263,7 +1308,7 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header"><i class="fa fa-envelope" aria-hidden="true"></i> Request sign up to Mailing List</div>
+                <div class="collapsible-header"><i class="fa fa-envelope" style="color:#bf360c" aria-hidden="true"></i> Request sign up to Mailing List</div>
                 <div class="collapsible-body">
 
                     <!--     mail lis  -->
@@ -1291,7 +1336,7 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header"><i class="fa fa-file-code-o" aria-hidden="true"></i> Create new AngularJs project </div>
+                <div class="collapsible-header"><i class="fa fa-file-code-o" style="color:#803206" aria-hidden="true"></i> Create new AngularJs project </div>
                 <div class="collapsible-body">
 
                     <section id="codice">
@@ -1369,7 +1414,7 @@
                 </div>
             </li>
             <li>
-                <div class="collapsible-header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Example Form with AngularJs</div>
+                <div class="collapsible-header"><i class="fa fa-pencil-square-o" style="color:#bf0ca7" aria-hidden="true"></i> Example Form with AngularJs</div>
                 <div class="collapsible-body">
                     <!-- esempio angularls -->
                     <br>
@@ -1396,7 +1441,7 @@
                     </div>
             </li>
             <li>
-                <div class="collapsible-header"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Example view file from Server without refresh all page with Angularjs and Ajax</div>
+                <div class="collapsible-header"><i class="fa fa-pencil-square-o" style="color:#56d9f0c4" aria-hidden="true"></i> Example view file from Server without refresh all page with Angularjs and Ajax</div>
                 <div class="collapsible-body">
 
 
@@ -1535,7 +1580,7 @@
 
     <div id="botwin">
 
-        MecBot <button type="button" class="xbot" onclick="closeChat()">X</button><br> Here the ChatBot by Mecbar
+        MecBot <button type="button" class="xbot1" onclick="closeChat()">X</button><br> Here the ChatBot by Mecbar
         <div class="my_botto">
             <div class="my_botto1">
                 <div class="row" id="bot">
@@ -1559,7 +1604,8 @@
             </div>
         </div>
     </div>
-    <button onclick="callBot()" id="tasto-bot" title="Bot">Call Bot</button>
+    <!--  <button onclick="callBot()" id="tasto-bot" title="Bot">Call Bot</button>  -->
+    <button onclick="callBot()" id="tasto-ver" title="Bot">Call Bot</button>
     <button onclick="topFunction()" id="tasto-su" title="Go to top">Scroll-Top</button>
 </body>
 <footer class="page-footer" style="background-color:white;color:#a3333d">

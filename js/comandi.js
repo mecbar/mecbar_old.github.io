@@ -19,7 +19,7 @@ function closeChat() {
     // seleziono tutti gli id = ch1
     $('[id = ch1]').remove();
     $('#close_button').hide();
-    $('#tasto-bot').show();
+    $('#tasto-ver').show();
     $('#botwin').hide();
     $('#botwin').css('height', '300px');
 }
@@ -157,9 +157,9 @@ function handleFiles(file) {
 
 
 function callBot(par) {
-    $('#tasto-bot').hide();
+    $('#tasto-ver').hide();
     $('#botwin').removeClass('classBot');
-    $('#botwin').fadeIn(2000)
+    $('#botwin').fadeIn(2000);
     if (par) {
 
         $('#botwin').addClass('classBot');
@@ -687,7 +687,7 @@ $(document).ready(function() {
     $('#vr-ita').hide();
     $('#cnnsh').hide();
     $('#cnn1').hide();
-    $('#tasto-bot').show();
+    $('#tasto-ver').show();
     $('#botwin').hide();
 
     $('#close_button').hide();
@@ -713,7 +713,7 @@ $(document).ready(function() {
 
     if ($(window).width() <= 992) {
 
-        $("#tasto-bot")
+        $("#tasto-ver")
             .animate({
                 width: "75%"
             }, 1000)
@@ -724,10 +724,10 @@ $(document).ready(function() {
                 borderLeftWidth: "15px"
             }, 1000)
             .animate({
-                width: "70px"
+                width: "20px"
             }, 1000)
             .animate({
-                height: '50px'
+                height: '80px'
             }, 1000)
             .animate({
                 fontSize: "12px"
@@ -737,9 +737,9 @@ $(document).ready(function() {
 
             }, 1000);
     } else {
-        $("#tasto-bot")
+        $("#tasto-ver")
             .animate({
-                width: "75%"
+                width: "25%"
             }, 1000)
             .animate({
                 fontSize: "20px"
@@ -748,32 +748,38 @@ $(document).ready(function() {
                 borderLeftWidth: "15px"
             }, 1000)
             .animate({
-                width: "6%"
+                width: "3%"
             }, 1000)
             .animate({
-                height: '10%'
+                height: '20%'
             }, 1000)
             .animate({
-                fontSize: "15px"
+                fontSize: "18px"
+            }, 1000)
+            .animate({
+
             }, 1000)
             .animate({
                 borderWidth: "0px"
 
             }, 1000);
+
     }
 
 
-    // classify image
+
     $.ajaxSetup({ cache: true });
     $('#stop').hide();
     $('#load').hide();
     $('#resu').hide();
     $('#testo2').hide();
     $('#ita').hover(function() {
+        chiudiCnneng();
         $('#testo1').hide();
         $('#testo2').show();
     });
     $('#ing').hover(function() {
+        chiudiCnnita();
         $('#testo2').hide();
         $('#testo1').show();
     });
