@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Gradient Descent</title>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="logistic-titolo center spazio2001"> The Backpropagation with Gradient Descent </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12 blocco">
+            <b>Introduction </b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l2"></div>
+        <div class="col s12 m12 l8 blocco">
+            <br> Backpropagation is a backward propagation of errors and is a powerful tool of the deep learning. With the Gradient Descent the backpropagation reduce the cost function and the time of execution. We now talk about of calculate the Gradient
+            Descent.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12 blocco">
+            <b>Gradient Descent</b>
+        </div>
+
+        <div class="col s12 m12 l6 blocco">
+            With the Gradient Descent we want find the weights that minimize the errors, the cost function, through some iterations for search the minimum. There are 2 method, the <b>Batch Gradient Descent</b> and the <b>Stochastic Gradient Descent</b>.
+            The first, the Batch Gradient Descent, is a deterministic method that start always with the same data and produce the same outcome. It calculate the cost function of all the input data and then update the weights through the Backpropagation.
+            This process is very expensive in time and resources for load all data in memory for found the best cost function. The Stochastic Gradient Descent, shortened SGD, is a stochastic method because the outcome is not always the same. With SGD
+            calculate the cost function of 1 input data and then upgrade the weights. This for every input data. This method is faster because not need of very resources and its most used when we have very input data.
+            <br>The formula for calculate the cost function for every input data and for all the input data:
+            <img class="card-panel hoverable" src="foto/gradient/cost_function2.png" width="100%" height="350px" alt="the cost function">
+            <br>In the near image the graph of search of minimum cost function from 2 to 3 dimensional space.
+            <br> For calculate the Gradient we introduce the Computational Graph.
+        </div>
+
+
+        <div class="col s12 m12 l6">
+            <div class="card-panel hoverable">
+                <img src=" foto/gradient/gradient_graph.png" width="100%" height="300px" alt="the gradient graph">
+                <br>
+            </div>
+            <div class="card-panel hoverable">
+                <img src="foto/gradient/2d_search.png" width="100%" height="300px" alt="the 2d graph">
+                <br>
+            </div>
+            <div class="card-panel hoverable">
+                <img src="foto/gradient/3d_search.png" width="100%" height="100%" alt="the 3d graph">
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12 m12 l12 blocco">
+            <b>Computational Graph</b>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l6 card-panel hoverable">
+            <img src="foto/gradient/comp_graph.png" width="100%" height="350px" alt="the computational graph">
+
+        </div>
+        <div class="col s12 m12 l6 blocco">
+            The Computational Graph is a method for represent a process in some steps, a data flow graph, were represent the operation in the chart. Each step corresponds to a simple operation. There are some inputs and produces some output as a function. In the
+            image the Computational Graph. The calculation of the local gradient is influenced by the upstream gradient in every step into the Backward Pass process until the final cost function.<br> The gradient calculated come back to the
+            hidden layers and then upgrade the weights and the process restart with the Forward Pass.
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12 blocco">
+            <b>Example 1</b>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col l2"></div>
+        <div class="col s12 m12 l8">
+            <svg height="5" width="100%">
+  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgba(27, 7, 209, 0.863);stroke-width:3" />
+</svg>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l2"></div>
+        <div class="col s12 m12 l8 blocco">
+            The Computational Graph is used for FeedForward and for BackForward. Now a simple example of a Computational Graph that represent a function. We calculate the value of the function in black and the gradient in red with the rules show in the image.<br>            The function
+            <b>f(x,y,z) = f(x+y)z with  x = 3, y = -4, z = 7 and we insert w = (x + y) </b>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l2"></div>
+        <div class="col s12 m12 l8">
+
+            <img src="foto/gradient/gradient_descent.png" width="100%" height="350px" alt="gradient">
+            <svg height="5" width="100%">
+    <line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgba(27, 7, 209, 0.863);stroke-width:3" />
+</svg>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12 blocco">
+            <b>Local Gradient</b>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col s12 m12 l6 spazio2001">
+            <img src="foto/gradient/gradient.png" width="100%" height="350px" alt="gradient">
+
+        </div>
+
+        <div class="col s12 m12 l6 blocco">
+
+            In the graph we can see how calculate the gradients with the local gradient and the Chain Rule. The Chain Rule tells us how find the derivative of a composite function.
+            </br>The <b>MULTIPLY gate</b> return us the gradient with the following rule:<br> - the gradient of x is equal to upstream gradient multiply by y value in the Forward Pass <br>- the gradient of y is equal to upstream gradient multiply by x
+            value in the Forward Pass. <br> The <b>ADD gate</b> return us the same gradient value of upstream gradient to x and y gradient. <br> The<b> MAX gate</b> return us the gradient with the following rule: <br> - who has the greater value in Forward
+            Pass between x and y take the gradient equal to the upstream and the other take the value equal to zero.
+
+
+        </div>
+    </div>
+    <div class="row">
+        <svg height="5" width="100%">
+  <line x1="0" y1="0" x2="100%" y2="0"style="stroke:rgba(27, 7, 209, 0.863);stroke-width:3" />
+</svg>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l12 blocco">
+            <b>Example 2</b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l2"></div>
+        <div class="col s12 m12 l8 blocco spazio2001">
+            Now another example of Computational Graph for calculate the Forward Pass and the Backward Pass for a Neural Network. In graph the formula of this example is the Sigmoid function <img src="foto/gradient/sigmoid.png" width="150px" height="30px"
+                alt="sigmoid"> of X were X is equal of function of the regression y = (&beta; <span class="mat1"> 0</span> + &beta;<span class="mat1"> 1</span>x<span class="mat1"> 1</span> + &beta;<span class="mat1"> 2</span>x
+            <span class="mat1"> 2</span> + ... + &beta;
+            <span class="mat1"> n</span>x<span class="mat1"> n</span>) <br> In practice we represent a logistic regression how you can see in the project of the <a href="progetto_banka.html" target="_blank">Bank Marketing</a>. Here we have only 2 input
+            layer X1 and X2 but the process for calculate the Backpropagation is the same. In the graph in red the value of gradient from right to left that with the Backpropagation we update the weights of Neural Network.
+        </div>
+    </div>
+    <div class="row">
+        <div class="col l2"></div>
+        <div class="col s12 m12 l8">
+            <svg height="5" width="100%">
+  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgba(27, 7, 209, 0.863);stroke-width:2" />
+</svg>
+            <img src="foto/gradient/gradient_exa.png" width="100%" height="350px" alt="gradient example">
+            <svg height="5" width="100%">
+  <line x1="0" y1="0" x2="100%" y2="0" style="stroke:rgba(27, 7, 209, 0.863);stroke-width:3" />
+</svg>
+        </div>
+    </div>
+
+</body>
+
+</html>
