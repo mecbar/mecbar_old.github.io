@@ -239,7 +239,7 @@
         .classBot {
             height: 200px !important;
             width: 300px !important;
-            right: 40% !important;
+            right: 40%;
             background: linear-gradient(330deg, #050821, #2b37a5, #abab11) !important;
             background-size: 100% 100% !important;
             -webkit-animation: AnimationName 60s ease infinite !important;
@@ -1160,7 +1160,15 @@
                 overflow-x: hidden;
             }
             .logit {
-                padding: 0px;
+                padding: 0px!important;
+                margin-left: 0px!important;
+                margin-right: 0px!important;
+            }
+            .blocco {
+                padding-left: 10px!important;
+            }
+            .classBot {
+                right: 2% !important;
             }
             .ml {
                 height: 450px;
@@ -1384,8 +1392,8 @@
             font-size: 20px;
             padding-top: 20px !important;
             padding-bottom: 20px !important;
-            padding-left: 30px !important;
-            padding-right: 30px !important;
+            padding-left: 30px;
+            padding-right: 30px;
         }
         
         .graph {
@@ -1497,6 +1505,3 @@
             padding-right: 30px;
             border-radius: 35px;
         }
-        
-        *
-        /**
