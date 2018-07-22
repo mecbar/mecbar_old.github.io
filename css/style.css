@@ -13,7 +13,7 @@
         
         div {
             text-align: justify;
-            text-justify: inter-word;
+            text-justify: auto;
         }
         
         body {
@@ -22,7 +22,9 @@
         
         nav ul a,
         nav .brand-logo {
-            color: #a3333d;
+            /*  color: #a3333d; */
+            color: white;
+            font-size: 38px;
             font-family: 'Satisfy', cursive;
         }
         
@@ -144,8 +146,8 @@
             position: fixed;
         }
         
-        #tasto-ver::before,
-        #tasto-ver::after {
+        .tasto-ver::before,
+        .tasto-ver::after {
             content: '';
             width: 0;
             height: 0;
@@ -155,43 +157,90 @@
             z-index: 3;
         }
         
-        #tasto-ver::after {
+        .tasto-ver::after {
             right: -38px;
             border-width: 0 38px 25px 0;
-            border-color: transparent transparent rgb(245, 5, 5) transparent;
+            border-color: transparent transparent rgb(4, 8, 255) transparent;
             transform-origin: 0% 0%;
             transform: rotate(180deg) translateY(-700%);
         }
         
-        #tasto-ver::before {
+        .tasto-ver::before {
             right: -1px;
             top: 9px;
             border-width: 0 0 22px 39px;
-            border-color: transparent transparent rgb(245, 5, 5) transparent;
+            position: fixed;
+            border-color: transparent transparent rgb(4, 8, 255) transparent;
+        }
+
+
+        .chaTab::after {
+            right: -19px;
+            border-width: 0 21px 25px 0;
+            border-color: transparent transparent #000 transparent;
+        }
+        .chaTab::before, .chaTab::after {
+            content: '';
+            width: 0;
+            height: 0;
+            border-style: solid;
+            position: absolute;
+            top: 1px;
+        }
+        .bot-contenitore {
+        position: fixed;
+        top: 99px;
+        transition: 0.1s all ease-in;
+        z-index: 2;
+        width: 0;
+        height: 30px;
+        right: 0;
         }
         
-        #tasto-ver {
+        .tasto-ver {
+
+            font-size: 21px !important;
             writing-mode: tb-rl;
             white-space: nowrap;
             position: fixed;
             top: 30px;
-            width: 25px;
-            height: 120px;
             right: 0px;
+            width : auto !important;
             transition: all 0.1s ease-in;
             transform-origin: 0% 0%;
-            padding: 0 5px;
-            background: rgb(245, 5, 5);
+            padding-top: 20px;
+            height: 120px !important;
+            padding-right: 3px;
+            padding-left: 3px;
+            background: rgb(4, 8, 255);
             color: white;
-            border-top-left-radius: 5%;
-            border-top-right-radius: 5%;
-            border-bottom-left-radius: 5%;
-            border-bottom-right-radius: 5%;
-            display: block;
+            border-top-left-radius: 0%;
+            border-top-right-radius: 0%;
+            border-bottom-left-radius: 0%;
+            border-bottom-right-radius: 0%;
             cursor: pointer;
             vertical-align: middle;
         }
-        
+
+        .mecbar {
+            color: -moz-linear-gradient(144deg, rgba(196,0,0,1) 0%, rgba(0,0,0,1) 100%) !important; /* ff3.6+ */
+            color: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(196,0,0,1))) !important; /* safari4+,chrome */
+            color: -webkit-linear-gradient(144deg, rgba(196,0,0,1) 0%, rgba(0,0,0,1) 100%) !important; /* safari5.1+,chrome10+ */
+            color: -o-linear-gradient(144deg, rgba(196,0,0,1) 0%, rgba(0,0,0,1) 100%) !important; /* opera 11.10+ */
+            color: -ms-linear-gradient(144deg, rgba(196,0,0,1) 0%, rgba(0,0,0,1) 100%) !important; /* ie10+ */
+            color: linear-gradient(306deg, rgba(196,0,0,1) 0%, rgba(0,0,0,1) 100%) !important; /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#C40000',GradientType=1 ) ; /* ie6-9 */ 
+        }
+        .back-home {
+            background: -moz-linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 68%, rgba(0,0,0,1) 100%); /* ff3.6+ */
+            background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(32%, rgba(255,255,255,1)), color-stop(100%, rgba(0,0,0,1))); /* safari4+,chrome */
+            background: -webkit-linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 68%, rgba(0,0,0,1) 100%); /* safari5.1+,chrome10+ */
+            background: -o-linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 68%, rgba(0,0,0,1) 100%); /* opera 11.10+ */
+            background: -ms-linear-gradient(128deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 68%, rgba(0,0,0,1) 100%); /* ie10+ */
+            background: linear-gradient(322deg, rgba(0,0,0,1) 0%, rgba(255,255,255,1) 68%, rgba(0,0,0,1) 100%); /* w3c */
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#000000',GradientType=0 ); /* ie6-9 */ 
+        }
+
         #my_botto {
             height: 300px;
             overflow: auto;
@@ -1018,10 +1067,10 @@
             transition: all .5s cubic-bezier(.77, 0, .18, 1);
         }
         /*.blog-img-secondario:hover {
-    background-size: 105%;
-    overflow: hidden;
-}
-*/
+          background-size: 105%;
+          overflow: hidden;
+         }
+            */
         
         #ngx1:hover,
         #ngx2:hover,
@@ -1445,7 +1494,7 @@
             background-color: rgb(0, 0, 8);
             font-size: xx-large;
             margin-bottom: 40px;
-            margin-top: 15px;
+            margin-top: 0px;
         }
         
         .posmenu {

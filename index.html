@@ -5,7 +5,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
-
+    <link rel="icon" href="foto/favicon.ico" />
     <title>MecBar | Machine learning & javascript </title>
 
     <!-- CSS  -->
@@ -51,11 +51,12 @@
     <!-- nav bar fissa -->
     <!--   <v class="navbar-fixed"> -->
     <nav>
-        <li class="nav-wrapper white" id="head">
-            <!-- class="nav-wrapper white" id="head">
-           <div class="nav-wrapper white">  -->
-            <a href="#!" class="brand-logo">Mecbar</a>
+        <li class="nav-wrapper back-home" id="head">
+            <!-- class="nav-wrapper white" id="head">-->
+            <b href="#" class="brand-logo mecbar">Mecbar</b>
+
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
             <ul class="right hide-on-med-and-down">
                 <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
               -->
@@ -1236,7 +1237,7 @@
         </a-scene>
     </section>
 -->
-    <div class="rowcenter" id="dev">
+    <div class="rowcenter" id="dev" style="background-image: url(foto/comp.png);color:black; font-size:35px">
 
         Development case history
 
@@ -1536,7 +1537,89 @@
                 </div>
             </li>
 
+            <li>
+                <div class="collapsible-header">
+                    <i class="fa fa-terminal" aria-hidden="true"></i> Install on linux file tar.xz</div>
+                <div class="collapsible-body" style="background-color: #c410c4c4">
+                    First of all download the software :
 
+                    <br> for example we download the Nodejs binary file and extract the file. Then open Terminal from this directory.
+                    <br> Now in Terminal
+
+
+                    <div class="terminal">
+                        sudo cp -r {bin,include,lib,share} /usr/
+                        <br>
+                        <br>node -v
+                    </div>
+                    <br> NodeJs is ready.
+                </div>
+            </li>
+
+            <li>
+
+
+
+                <div class="collapsible-header"><i class="fa fa-terminal" aria-hidden="true"></i> Install sw on linux and create a icon to launch the program</div>
+                <div class="collapsible-body" style="background-color: #c410c4c4">
+                    First of all download the software :<br>from terminal <br>
+                    <div class=" terminal">
+                        - wget https://link .... <br> sudo tar -xzf name file downloaded -C /opt<br>
+                    </div>
+                    - create a link for launch the program <br>
+
+                    <div class="terminal">
+                        sudo ln -s /opt/directory/directory /usr/bin/name_file
+                    </div>
+                    - delete file downloaded from :
+                    <div class="terminal">
+                        rm name_file
+                    </div>
+                    Now create a link file in the Desktop to launch the Program
+
+                    <br>
+
+
+
+
+                </div>
+
+            </li>
+
+
+            <li>
+                <div class="collapsible-header">
+                    <i class="fa fa-terminal" aria-hidden="true"></i> Install sw on linux with AppImage</div>
+                <div class="collapsible-body" style="background-color:#ec981ac4">
+                    First of all download the software :
+                    <br>from terminal go to directory were file downloaded and execute the command
+                    <br>
+                    <div class="terminal" style="width:300px">
+                        chmod a+x name_of_file.AppImage
+                    </div>
+                    then you can execute the file downloaded for install the program
+                    <br>
+                </div>
+
+            </li>
+            <li>
+                <div class="collapsible-header">
+                    <i class="fa fa-terminal" aria-hidden="true"></i> Install sw on linux file .sh </div>
+                <div class="collapsible-body" style="background-color:#ec981ac4">
+                    First of all download the software :
+                    <br>from terminal go to directory were file downloaded and execute the command
+                    <br>
+                    <div class="terminal" style="width:300px">
+                        chmod +x name_of_file.sh
+                    </div>
+                    then you can execute the file downloaded for install the program  
+                    <br>
+                    <div class="terminal" style="width:300px">
+                        ./name_of_file.sh
+                    </div>
+                </div>
+
+            </li>
             <li>
                 <div class="collapsible-header"><i class="fa fa-terminal" aria-hidden="true"></i> Kill process on linux </div>
                 <div class="collapsible-body">
@@ -1608,7 +1691,10 @@
         </div>
     </div>
     <!--  <button onclick="callBot()" id="tasto-bot" title="Bot">Call Bot</button>  -->
-    <button onclick="callBot()" id="tasto-ver" title="Bot">Call Bot</button>
+    <div class="bot-contenitore">
+   <!-- <button onclick="callBot()" id="tasto-ver" classe="chaTab" title="Bot">Call Bot</button> -->
+    <div onclick="callBot()" id="tasto-ver" class="tasto-ver"  title="Bot">Call Bot</div>
+    </div>
     <button onclick="topFunction()" id="tasto-su" title="Go to top">Scroll-Top</button>
 </body>
 <footer class="page-footer" style="background-color:white;color:#a3333d">
@@ -1628,9 +1714,9 @@
 
 
 <!--  Scripts-->
-<script src=" https://code.jquery.com/jquery-2.1.1.min.js "></script>
-<script src="js/materialize.js "></script>
-<script src="js/init.js "></script>
+<script src=" https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="js/materialize.js"></script>
+<script src="js/init.js"></script>
 
 <!-- google analytics -->
 <script>

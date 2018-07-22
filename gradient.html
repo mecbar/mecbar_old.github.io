@@ -42,20 +42,28 @@
         </div>
 
         <div class="col s12 m12 l6 blocco">
-            With the Gradient Descent we want find the weights that minimize the errors, the cost function, through some iterations for search the minimum. There are 2 method, the <b>Batch Gradient Descent</b> and the <b>Stochastic Gradient Descent</b>.
-            The first, the Batch Gradient Descent, is a deterministic method that start always with the same data and produce the same outcome. It calculate the cost function of all the input data and then update the weights through the Backpropagation.
-            This process is very expensive in time and resources for load all data in memory for found the best cost function. The Stochastic Gradient Descent, shortened SGD, is a stochastic method because the outcome is not always the same. With SGD
-            calculate the cost function of 1 input data and then upgrade the weights. This for every input data. This method is faster because not need of very resources and its most used when we have very input data.
-            <br>The formula for calculate the cost function for every input data and for all the input data:
-            <img class="card-panel hoverable" src="foto/gradient/cost_function2.png" width="100%" height="350px" alt="the cost function">
-            <br>In the near image the graph of search of minimum cost function from 2 to 3 dimensional space.
-            <br> For calculate the Gradient we introduce the Computational Graph.
+            With the Gradient Descent we want find the weights that minimize the errors, the cost function, through some iterations for search the minimum. There are some method, we see the principal, the<b> Batch Gradient Descent</b>, the<b> Stochastic Gradient Descent</b>            and <b>Mini-Batch Gradient Descent</b>. The first, the Batch Gradient Descent, is a deterministic method that start always with the same data and produce the same outcome. It calculate the cost function of all the input data and then update
+            the weights through the Backpropagation. This process is very expensive in time and resources for load all data in memory, especially as data gets big, for found the best cost function. The Stochastic Gradient Descent, shortened SGD, is a
+            stochastic method because the outcome is not always the same. With SGD calculate the cost function of 1 input data and then upgrade the weights. This for every input data. This method is faster because not need of very resources and its most
+            used when we have very input data.
+            <br> The Mini-Batch Gradient Descent is recent and its balance between the first 2 method. We get derivative for a ”small” set of points, tipical mini batch size is 16 or 32, then update the weights and backpropagate it.
+            <br> An Epoch refers to a single forward pass through all of the training data:<br> - in <b> Batch Gradient Descent</b> there is 1 step for epoch <br> - in <b> Stochastic Gradient Descent</b> there are n steps for epoch were n is the training
+            set size<br> - in <b>Mini-Batch
+            Gradient Descent</b> there are n steps for epoch were n is equal to training set size/batch-size(16 or 32)<br> Naturally <b>epoch</b> is another important parameter for Artificial Neural Network.<br>
+            <img src="foto/gradient/steps.png" class="card-panel hoverable" width="100%" height="300px" alt="the epoch">
+
+            <br> For prevent overfitting there are some tecnics call Optimizer. One of this is DROPOUT and most popular are ADAM and RMSPROP. The optimizer are variants to update the weights to give a better performance of Neural Network. RMSProp is a
+            adaptive learning rate method is a variant of Adagrad method for upgrade the weights Its modulates the learning rate of each weight in base of their gradient value equalizing the effect.
+            <br> Adam is a new method and most utilised. Its a variant of RMSProp. With Dropout we avoid overfitting reducing the number of nodes setting to 0 the value of nodes selected randomly. So the hidden layers are in lower number respect the input
+            layers based to dropout parameter inserted into the Neural Network.
+            <br>
+            <img src="foto/gradient/dropout.png" class="card-panel hoverable" width="100%" height="300px" alt="the dropout graph">
         </div>
 
 
-        <div class="col s12 m12 l6">
+        <div class="col s12 m12 l6 blocco">
             <div class="card-panel hoverable">
-                <img src=" foto/gradient/gradient_graph.png" width="100%" height="300px" alt="the gradient graph">
+                <img src="foto/gradient/gradient_graph.png" width="100%" height="300px" alt="the gradient graph">
                 <br>
             </div>
             <div class="card-panel hoverable">
@@ -65,9 +73,46 @@
             <div class="card-panel hoverable">
                 <img src="foto/gradient/3d_search.png" width="100%" height="100%" alt="the 3d graph">
             </div>
+
+            <br>In the above image the graph of search of minimum cost function from 2 to 3 dimensional space.
+
+
+            <br>The formula for calculate the cost function for every input data and for all the input data:<br>
+            <br>
+            <img class="card-panel hoverable" src="foto/gradient/cost_function2.png" width="100%" height="350px" alt="the cost function">
+
         </div>
     </div>
 
+
+    <div class="row">
+        <div class="col s12 m12 l12 blocco">
+            <b>Example of calculation of the cost function </b>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col s12 m12 l6">
+            <div class="card-panel hoverable" style="height:400px">
+                <img src="foto/gradient/calculate_c.png" width="100%" height="100%" alt="the cost function">
+            </div>
+            <div class="card-panel hoverable" style="height:400px">
+                <img src="foto/gradient/cf_sgd.png" width="100%" height="100%" alt="the cost function">
+
+            </div>
+        </div>
+        <div class="col s12 m12 l6 blocco">
+            In this section we calculate the cost function of a simple linear regression function <code> Y = aX + b </code> with the Adjusted R-Squared method.<br> The Adjusted R-Squared is a method for calculate the error of the predictions value of
+            a regression compared to the actuel value. Its Adjusted because the squared value is always positive so its divided for 2.<br> In this example the value of coefficients with a minimum cost function is <code>a = 1 and b = 1 </code> and the
+            model for the regression is
+            <code> y = x + 1 </code>. <br> In this example we simulated three cases with the coefficients a and b (1,1), (2,1) and (2,2). The results is in the column P1, P2 and P3. Then we calculate their cost function in column C1, C2 and C3. Doing
+            the sum we have the total cost function and we take the coefficients with the minimum cost function. if we use the Backpropagation we take a part of the errors to select the Learning Rate that is a parameter very important of the Machine Learning.
+            We select a very small Learning Rate (max 0.05) and update the weights.<br> Here in the schema we show the difference between the Batch Gradient Descent and the Stochastic Gradient Descent. In the SGD after calculate even cost function we
+            update the weights while in the Batch we update the weights only after we calculate the total cost function. In Mini-Batch Gradient Descent we divide the training data into block with the batch size dimension. After we calcolate the cost function
+            of one block and upgrade the weights.<br>
+
+
+        </div>
+    </div>
 
     <div class="row">
         <div class="col s12 m12 l12 blocco">
@@ -77,13 +122,12 @@
 
     <div class="row">
         <div class="col s12 m12 l6 card-panel hoverable">
-            <img src="foto/gradient/comp_graph.png" width="100%" height="350px" alt="the computational graph">
+            <img src="foto/gradient/comp_graph.png" width="100%" height="380px" alt="the computational graph">
 
         </div>
         <div class="col s12 m12 l6 blocco">
-            The Computational Graph is a method for represent a process in some steps, a data flow graph, were represent the operation in the chart. Each step corresponds to a simple operation. There are some inputs and produces some output as a function. In the
-            image the Computational Graph. The calculation of the local gradient is influenced by the upstream gradient in every step into the Backward Pass process until the final cost function.<br> The gradient calculated come back to the
-            hidden layers and then upgrade the weights and the process restart with the Forward Pass.
+            For calculate the Gradient we introduce the Computational Graph. The Computational Graph is a method for represent a process in some steps, a data flow graph, were represent the operation in the chart. Each step corresponds to a simple operation. There
+            are some inputs and produces some output as a function. In the image the Computational Graph. The calculation of the local gradient is influenced by the upstream gradient in every step into the Backward Pass process until the final cost function.<br>            The gradient calculated come back to the hidden layers and then upgrade the weights and the process restart with the Forward Pass.
         </div>
     </div>
 
@@ -142,6 +186,27 @@
 
         </div>
     </div>
+
+    <div class="row">
+        <div class="col s12 m12 l12 blocco">
+            <b>Upgrade the Weights</b>
+        </div>
+        <div class="col l2"></div>
+        <div class="col s12 m12 l8 spazio2001">
+            Now we have calculate the gradient and in this example we upgrade the weights with the following formula: <br>
+            <code> w_new = w_old - &alpha; * derivative</code>
+            <br> were w_old is the old weights, &alpha; is Learning Rate and derivative is the partial derivative(gradient) of every input layers
+            <br> w_old are w1_old = 2, w2_old = 3, w3_old = 1 and learning_rate = 0.05<br>
+            <code>
+    w1_new = 2 - (0.05*7) <br>
+    w2_new = 3 - (0.05*7)  <br>
+    w3_new = 2 - (0.05*-1) <br>
+
+    Now we put the new weigths in another iteration while we fit our model. 
+</code>
+        </div>
+    </div>
+
     <div class="row">
         <svg height="5" width="100%">
   <line x1="0" y1="0" x2="100%" y2="0"style="stroke:rgba(27, 7, 209, 0.863);stroke-width:3" />
@@ -175,6 +240,9 @@
         </div>
     </div>
 
+
 </body>
+
+</html>
 
 </html>
