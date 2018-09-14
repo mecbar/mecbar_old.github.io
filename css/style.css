@@ -50,6 +50,11 @@
             margin-bottom: 15px;
         }
         
+        .testoml {
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
         .classification {
             height: 40px;
             font-size: 20px;
@@ -209,7 +214,7 @@
             transition: all 0.1s ease-in;
             transform-origin: 0% 0%;
             padding-top: 20px;
-            height: 120px !important;
+            height: 121px !important;
             padding-right: 3px;
             padding-left: 3px;
             background: rgb(4, 8, 255);
