@@ -1631,6 +1631,35 @@
                 </div>
                 </div>
             </li>
+            <li>
+                <div class="collapsible-header"><i class="fa fa-terminal" aria-hidden="true"></i> Change owner folder in linux </div>
+                <div class="collapsible-body">
+                     in Terminal insert the command below --> Attention  this command is dangerous if you insert an error folder <--<br>
+
+                    <span class="terminal">sudo chown -R username /path-to-folder </span>
+
+
+                </div>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header"><i class="fa fa-terminal" aria-hidden="true"></i> Change permission folder/file in linux </div>
+                <div class="collapsible-body">
+                     in Terminal insert the command below --> Attention  this command is dangerous if you insert an error folder <--<br>
+
+                    <span class="terminal">sudo chmod -R +x /path-to-folder <br>
+                                           sudo chmod  755  /path-to-folder/nome_file </span>
+                                           <legend> -R for Recursivity (all folfer or file) <br>
+                                                    -x --> add executable for all owner,group and others <br>
+                                                     755 --> 7 read,write, execute  --> owner <br>
+                                                             5 read,execute  --> Group<br>
+                                                             5 read,execute  --> Other<br>
+                                                             ls -l nome_file  --> for view permission of file
+                                                            </legend>
+
+                </div>
+                </div>
+            </li>
         </ul>
 
 
