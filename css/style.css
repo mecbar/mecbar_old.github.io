@@ -44,6 +44,13 @@
             font-size: 25px;
             text-align: left;
         }
+
+        .titoloblockchain {
+            font-family: Garamond;
+            font-size: 20px;
+            color: blue;
+            font-style: italic;
+        }
         
         .titolocnn {
             font-size: 18px;
@@ -52,7 +59,8 @@
         
         .testoml {
             font-size: 20px;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            line-height: 23px;
         }
         
         .classification {
@@ -94,6 +102,32 @@
             -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
             -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
             box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+        }
+    
+            .blockchain {
+            font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+            letter-spacing: .01rem !important;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 21px !important;
+            line-height: 1.57em !important;
+            letter-spacing: -.003em !important;
+    
+                padding-left: 5% !important;
+                padding-right: 10% !important;
+                line-height: 27px;
+                margin-top: 20px;
+                margin-left: 15px;
+                margin-right: 15px;
+                border-radius: 5px;
+                /* box-shadow: 1px 5px 15px 0px black; */
+                color: white;
+                background-color: black;
+                margin-bottom: 50px !important;
+                position: relative;
+                -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+                -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+                box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
         }
         
         .ml4 {
@@ -990,6 +1024,23 @@
             background-color: rgb(67, 28, 110);
             border-radius: 5px;
         }
+        .terminal3 {
+            padding-bottom: 15px;
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-bottom: 32px;
+            margin-top: 25px;
+            color: white;
+            line-height: 10px;
+            background-color: black;
+            border-radius: 5px;
+            width: 90%;
+        }
+        .terminal3 p {
+            line-height: 2rem;
+            padding-bottom: 15px;
+        }
         
         .blog-mini1 {
             height: 700px;
@@ -1165,6 +1216,33 @@
         .blog-btn-chiudi-mini2,
         .blog-btn-chiudi1,
         .blog-btn-chiudi {
+            max-width: 100px;
+            margin-top: 7px;
+            margin-bottom: 7px;
+            padding-left: 5px;
+            padding-right: 5px;
+            color: white;
+            text-align: center;
+            background-color: #0277bd;
+            font-size: 1rem;
+            position: relative;
+            cursor: pointer;
+            display: inline-block;
+            overflow: hidden;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            vertical-align: middle;
+            z-index: 1;
+            transition: .3s ease-out;
+            border-radius: 19px;
+            border: solid 1px grey;
+        }
+        
+        .bot-btn-chiudi,
+        .bot-btn-espandi {
             max-width: 180px;
             margin-top: 7px;
             margin-bottom: 7px;
@@ -1317,11 +1395,18 @@
             #ngx3 {
                 height: 50px;
             }
+            .tasto-ver{
+                width: 32px !important;
+            }
             #tasto-ver::before {
                 border-width: 0 0 22px 34px;
             }
             #tasto-ver::after {
                 border-width: 0 35px 18px 0;
+                top: 43px;
+            }
+            .blog-btn-chiudi, .blog-btn-espandi {
+                margin-left: 10px;
             }
         }
         
@@ -1507,7 +1592,7 @@
         .logistic-titolo {
             color: rgb(17, 238, 17);
             background-color: rgb(0, 0, 8);
-            font-size: xx-large;
+            font-size: 25px;
             margin-bottom: 40px;
             margin-top: 0px;
         }
@@ -1569,3 +1654,325 @@
             padding-right: 30px;
             border-radius: 35px;
         }
+
+        .block3 {
+            margin-top: 0px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+.block2 {
+    padding-top: 70px;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 120px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    white-space: nowrap;
+    color:#7e0606f6;
+    font-size: 40px;
+    text-align: center;
+} 
+
+
+.tabs {
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden;
+    height: 48px;
+    width: 100%;
+    background-color: #fff;
+    margin: 0 auto;
+    white-space: nowrap;
+}
+
+.tabs.tabs-transparent {
+    background-color: transparent;
+}
+
+.tabs.tabs-transparent .tab a,
+.tabs.tabs-transparent .tab.disabled a,
+.tabs.tabs-transparent .tab.disabled a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tabs.tabs-transparent .tab a:hover {
+    color :#131212;
+}
+.tabs.tabs-transparent .tab a.active {
+    color: #fff;
+}
+
+.tabs.tabs-transparent .indicator {
+    background-color: #fff;
+}
+
+.tabs.tabs-fixed-width {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.tabs.tabs-fixed-width .tab {
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.tabs .tab {
+    display: inline-block;
+    text-align: center;
+    line-height: 48px;
+    height: 48px;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.tabs .tab a {
+    color: rgba(15, 12, 202, 0.87);
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0 24px;
+    font-size: 17px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: color .28s ease;
+}
+
+.tabs .tab a:hover,
+.tabs .tab a.active {
+    background-color: transparent;
+    color: #d41016;
+}
+
+.tabs .tab.disabled a,
+.tabs .tab.disabled a:hover {
+    color: rgba(228, 17, 24, 0.7);
+    cursor: default;
+}
+
+.tabs .indicator {
+    position: absolute;
+    bottom: 0;
+    height: 2px;
+    background-color: #f6b2b5;
+    will-change: left, right;
+}
+
+#swipe12, #swipe22, #swipe32, #swipe42 ,#swipe52 {
+    display : none;
+}
+
+#hyper1, #hyper2, #hyper3, #hyper4 ,#hyper5 {
+    display : none;
+}
+
+#win1, #win2,#win3, #win4, #win5, #win6 {
+    display : none;
+    position: relative;
+    /*top:600px; */
+    margin-top:20px;
+    padding-top: 20px;
+    padding-left: 20px;
+    width: 900px;
+    height: 500px;
+    left:100px;
+    border-radius: 10px;
+    background-color:black;
+    color: whitesmoke;
+}
+
+.terminal3 b, #win1 p,#win1 p, #win2 p,#win3 p, #win4 p , #win5 p, #win6 p {
+line-height: 20px;
+font-size: 20px;
+}
+
+
+.openWin {
+    max-width: 180px;
+    /*margin-top: 17px;
+    margin-bottom: 7px;
+    */
+    padding: 5px;
+    margin-left:90px;
+    color: black;
+    text-align: center;
+    background-color: white;
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    transition: .3s ease-out;
+    border-radius: 19px;
+    border: solid 1px grey;
+    }
+
+
+.closeWin {
+    max-width: 180px;
+    margin-top: 50px;
+    margin-bottom: 7px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color: black;
+    text-align: center;
+    background-color: white;
+    font-size: 1rem;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    transition: .3s ease-out;
+    border-radius: 19px;
+    border: solid 1px grey;
+    }
+
+.closeWin:hover, .openWin:hover {
+    background-color: #000;
+    color: white;
+}
+.back2 {
+background: -moz-linear-gradient(-45deg, rgba(255,175,75,1) 0%, rgba(255,165,52,1) 35%, rgba(255,155,29,0.55) 70%, rgba(255,146,10,0.55) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, rgba(255,175,75,1) 0%,rgba(255,165,52,1) 35%,rgba(255,155,29,0.55) 70%,rgba(255,146,10,0.55) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, rgba(255,175,75,1) 0%,rgba(255,165,52,1) 35%,rgba(255,155,29,0.55) 70%,rgba(255,146,10,0.55) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffaf4b', endColorstr='#8cff920a',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+.back3 {
+    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#153c69+0,1b5e95+36,16548a+55,2585cf+100 */
+background: rgb(21,60,105); /* Old browsers */
+background: -moz-linear-gradient(45deg, rgba(21,60,105,1) 0%, rgba(27,94,149,1) 36%, rgba(22,84,138,1) 55%, rgba(37,133,207,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(45deg, rgba(21,60,105,1) 0%,rgba(27,94,149,1) 36%,rgba(22,84,138,1) 55%,rgba(37,133,207,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(45deg, rgba(21,60,105,1) 0%,rgba(27,94,149,1) 36%,rgba(22,84,138,1) 55%,rgba(37,133,207,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#153c69', endColorstr='#2585cf',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.back4 {
+background: rgb(206,220,231);
+background: -moz-radial-gradient(center, ellipse cover, rgba(206,220,231,1) 0%, rgba(206,220,231,1) 2%, rgba(206,220,231,1) 19%, rgba(89,106,114,1) 30%, rgba(206,220,231,1) 54%, rgba(89,106,114,1) 73%, rgba(89,106,114,1) 83%);
+background: -webkit-radial-gradient(center, ellipse cover, rgba(206,220,231,1) 0%,rgba(206,220,231,1) 2%,rgba(206,220,231,1) 19%,rgba(89,106,114,1) 30%,rgba(206,220,231,1) 54%,rgba(89,106,114,1) 73%,rgba(89,106,114,1) 83%);
+background: radial-gradient(ellipse at center, rgba(206,220,231,1) 0%,rgba(206,220,231,1) 2%,rgba(206,220,231,1) 19%,rgba(89,106,114,1) 30%,rgba(206,220,231,1) 54%,rgba(89,106,114,1) 73%,rgba(89,106,114,1) 83%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cedce7', endColorstr='#596a72',GradientType=1 );
+}
+
+.blk-border {
+    border-bottom-width: 2px;
+    border-color: #000;
+    border-top-width: 1px;
+    border-bottom-style: solid;
+    border-top-style: solid;
+}
+
+.blk-border2 {
+    border-bottom-width: 2px;
+    border-color: #000;
+    border-left-width: 2px;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+.blk-borderw {
+    border-bottom-width: 2px;
+    border-color: white;
+    border-left-width: 2px;
+    border-bottom-style: solid;
+    border-left-style: solid;
+}
+
+
+.box-b6 {
+    /* max-height: 3200px;  */
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: white;
+    background-color:black;
+    margin-bottom: 20px !important;
+    position: relative;
+    overflow: hidden;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+}
+
+img.test {
+    /*clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);*/
+    clip-path: polygon(8.39% 0.00%, 100% 50%, 96.13% 104.39%, -8.39% 108.54%);
+    shape-outside: polygon(98.27% 34.49%, 101.45% 103.15%, 0.25% 103.5%, -1.63% -0.5%);
+    float: left;
+    margin:8px;
+
+}
+
+img.hyper_foto {
+    clip-path: polygon(38.75% 3.11%, 69.5% 12.67%, 63.00% 72.44%, 5.75% 53.56%);
+  /*  clip-path: circle(76px at 49.75% 36.72%);*/
+  shape-outside: polygon(22% -3.56%, 81.25% 4.66%, 74.00% 79.99%, 5.75% 53.56%);
+    float: left;
+}
+
+img.org1 {
+    shape-outside: polygon(-0.2% -0.56%, 102.07% 0.16%, 101.92% 98.99%, 0.26% 97.56%);
+    float: left;
+    margin-top:20px;
+    margin-right:20px;
+    margin-left: -40px;
+}
+img.org2 {
+    shape-outside: polygon(8.12% 0.34%, 10% 101.02%, 0.06% 99.85%, 0.38% 42.45%);
+float: right;
+margin-left: 18px;
+margin-top: 18px;
+margin-right: -80px;
+}
+
+img.msp {
+    shape-outside: polygon(1.17% 1.16%, 25.25% 105.64%, 0.06% 99.85%, 5.59% 18.54%);
+float: right;
+margin-left: 18px;
+margin-top: 18px;
+margin-right: -80px;
+}
+
+img.solidity {
+    shape-outside: polygon(67.04% -2.15%, 100.84% 24.75%, 92.18% 52.61%, 99.58% 100.64%);
+
+float: left;
+}
+img.ethereum {
+    shape-outside: polygon(28.33% 17.27%, 95.92% 60.5%, 26.01% 89.16%, 5.08% 43.56%);
+}
+img.consensus {
+    shape-outside: polygon(67.04% -2.15%, 100.84% 24.75%, 92.18% 52.61%, 99.58% 100.64%);
+    float: left;
+    margin-left: -80px;
+}
+img.org3 {
+shape-outside:polygon(16.49% -2.44%, 1.71% 83.07%, 18.11% 103.16%, 2.45% 15.27%);
+float: right;
+margin-left: 70px;
+margin-right: -90px;
+}

@@ -15,6 +15,8 @@ var dueuno = 'dueuno';
 var duezero = 'duezero';
 var count_bot = 1;
 
+
+
 function closeChat() {
     // seleziono tutti gli id = ch1
     $('[id = ch1]').remove();
@@ -188,7 +190,7 @@ function espandiCnneng() {
     if ($(window).width() <= 600) {
         $('.ml').css('height', '3300px');
     } else {
-        $('.ml').css('height', '2650px');
+        $('.ml').css('height', '2300px');
     }
 }
 
@@ -216,7 +218,7 @@ function espandiCnnita() {
     if ($(window).width() <= 600) {
         $('.ml').css('height', '3450px');
     } else {
-        $('.ml').css('height', '2650px');
+        $('.ml').css('height', '2300px');
     }
 }
 
@@ -769,6 +771,7 @@ $(document).ready(function() {
 
 
     $.ajaxSetup({ cache: true });
+
     $('#stop').hide();
     $('#load').hide();
     $('#resu').hide();
@@ -838,7 +841,7 @@ $(document).ready(function() {
 
     // animazione per spostare video tra div
 
-    $(document).on('click', 'a[href^="#"]', function(event) {
+    $(document).on('click', 'a[href^="#A"]', function(event) {
         event.preventDefault();
 
         $('html, body').animate({
@@ -848,3 +851,80 @@ $(document).ready(function() {
 
     });
 });
+
+function espandiSwape1() {
+    var btnChiudi = ' <a href="#swipe-1" class="blog-btn-espandi" id="swipe1-chiudi" onclick="chiudiSwape1()"> Close </a>';
+    $('#swipe1-espandi').after(btnChiudi);
+    $('#swipe11').css('display', 'block');
+    $('#swipe1-espandi').remove();
+    $('p').css('margin-bottom', '0px');
+    //$('#cnn-eng').css('display', 'block');
+   /* if ($(window).width() <= 600) {
+        $('.ml').css('height', '3300px');
+    } else {
+        $('.ml').css('height', '2650px');
+    }
+*/
+}
+
+
+function espandiSection(a,b) {
+    //a = href - b=class - c=id 
+    var aa = '#'+ a + '-espandi';
+    var ab = '#'+a + '2';
+    var c = a + '-chiudi';
+    var btnChiudi = '<a href="#block3'  + '" class="' + b +'" id="'+ c  +'" onclick="chiudiSection('+ "'" + a + "'" +',' + "'"+ b + "'"  + ')">Close</a>';
+   // $('#swipe1-espandi').after(btnChiudi);
+    $(aa).after(btnChiudi);
+    $(ab).css('display', 'block');
+    $(aa).remove();
+    $('p').css('margin-bottom', '0px');
+}
+
+
+function chiudiSwape1() {
+    var btnChiudi = ' <a href="#swipe-1" class="blog-btn-espandi" id="swipe1-espandi" onclick="espandiSwape1()"> Read more </a>';
+    $('#swipe1-chiudi').after(btnChiudi);
+    $('#swipe11').css('display', 'none');
+    $('#swipe1-chiudi').remove();
+    $('p').css('margin-bottom', '0px');
+    //$('#cnn-eng').css('display', 'block');
+   /* if ($(window).width() <= 600) {
+        $('.ml').css('height', '3300px');
+    } else {
+        $('.ml').css('height', '2650px');
+    }
+*/
+}
+
+
+
+function chiudiSection(a,b) {
+    //a = href - b=class - c=id 
+
+    var c = a + '-espandi'; 
+    var btnChiudi = '<a  href="#block3"' + 'class="' + b +'" id="' + c +'" onclick="espandiSection('+"'"  + a + "'" + ',' +"'" + b  + "'"+ ')">Read more</a>';
+    console.log(btnChiudi);
+    var aa = '#' + a + '-chiudi';
+    var ab = '#' + a + '2';
+    $(aa).after(btnChiudi);
+    $(ab).css('display', 'none');
+    $(aa).remove();
+    $('p').css('margin-bottom', '0px');
+
+}
+
+
+function viewLog(id) {
+    var selectorid = '#' + id;
+    console.log(id);
+    if (id == 'win3') {
+       $('#win3').css('height','2350px');
+    } 
+    $(selectorid).show() ;
+}
+
+function closeWin(id) {
+    var selectorid = '#' + id;
+   $(selectorid).hide() ;
+}
