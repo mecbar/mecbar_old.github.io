@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <!--  <meta Content-Type: text/html; charset="utf-8">
+    <meta Content-Type: multipart/form-data; boundary="something">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  -->
+    <title>blockchain</title>
+    <style>
+        body {
+            color: #808080;
+            font-family: Monospace;
+            font-size: 13px;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 0px;
+            overflow: hidden;
+        }
+        
+        #info {
+            position: absolute;
+            top: 0px;
+            width: 100%;
+            font-size: 20px;
+            padding: 5px;
+        }
+        
+        a {
+            color: #0080ff;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+        var terr;
+    </script>
+    <div id="container">
+    </div>
+
+    <script src="OrbitControls.js"></script>
+    <script src="three.js-master/build/three.js"></script>
+
+    <script src="three.js-master/examples/js/renderers/Projector.js"></script>
+    <script src="three.js-master/examples/js/renderers/CanvasRenderer.js"></script>
+
+    <script src="stats.min.js"></script>
+
+    <script>
+        var camera;
+        var scene;
+        var test;
+               var mouseX = -260,
+            mouseY = -190;
+        var windowHalfX = window.innerWidth / 2;
+        var windowHalfY = window.innerHeight / 2;
+        init();
+        animate();
+
+        function init() {
+            var container = document.getElementById('container');
+            camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 1, 2000);
+            camera.position.z = 500;
+            scene = new THREE.Scene();
+          //scene.background = new THREE.Color(0x000000);  nero
+            scene.background = new THREE.Color(0xffffff);  
+
+            var blk1 = new THREE.TextureLoader();
+            blk1.load('3.png', function(texture) {
+                var geometry1 = new THREE.BoxBufferGeometry( 150.0, 150.0, 150.0 );
+              //  var geometry1 = new THREE.SphereGeometry(15, 30, 20); //primo parametro radius - 2° x - 3° y
+                var material1 = new THREE.MeshBasicMaterial({
+                    map: texture,
+                    overdraw: 0.5
+                });
+                var mesh1 = new THREE.Mesh(geometry1, material1);
+                mesh1.position.set(-400, -120, 15);
+                scene.add(mesh1);
+            });
+
+            var blk2 = new THREE.TextureLoader();
+            blk2.load('6.png', function(texture) {
+                var geometry2 = new THREE.BoxBufferGeometry( 150.0, 150.0, 150.0 );
+                var material2 = new THREE.MeshBasicMaterial({
+                    map: texture,
+                    overdraw: 0.5
+                });
+                mesh2 = new THREE.Mesh(geometry2, material2);
+                mesh2.position.set(-250, 120, 15);
+                scene.add(mesh2);
+            });
+
+
+            var blk3 = new THREE.TextureLoader();
+            blk3.load('5.png', function(texture) {
+                var geometry3 = new THREE.BoxBufferGeometry( 150.0, 150.0, 150.0 );
+                var material3 = new THREE.MeshBasicMaterial({
+                    map: texture,
+                    overdraw: 0.5
+                });
+             var  mesh3 = new THREE.Mesh(geometry3, material3);
+                mesh3.position.set(-100, -120, 15);
+                scene.add(mesh3);
+            });
+
+            var blk4 = new THREE.TextureLoader();
+            blk4.load('3.png', function(texture) {
+                var geometry4 = new THREE.BoxBufferGeometry( 150.0, 150.0, 150.0 );
+                var material4 = new THREE.MeshBasicMaterial({
+                    map: texture,
+                    overdraw: 0.5
+                });
+             var  mesh4 = new THREE.Mesh(geometry4, material4);
+                mesh4.position.set(50, 120, 15);
+                scene.add(mesh4);
+            });
+            var blk5 = new THREE.TextureLoader();
+            blk5.load('3.png', function(texture) {
+                var geometry5 = new THREE.BoxBufferGeometry( 150.0, 150.0, 150.0 );
+                var material5 = new THREE.MeshBasicMaterial({
+                    map: texture,
+                    overdraw: 0.5
+                });
+             var  mesh5 = new THREE.Mesh(geometry5, material5);
+                mesh5.position.set(200, -120, 15);
+                scene.add(mesh5);
+            });
+
+            var blk6 = new THREE.TextureLoader();
+            blk6.load('6.png', function(texture) {
+                var geometry6 = new THREE.BoxBufferGeometry( 150.0, 150.0, 150.0 );
+                var material6 = new THREE.MeshBasicMaterial({
+                    map: texture,
+                    overdraw: 0.5
+                });
+             var  mesh6 = new THREE.Mesh(geometry6, material6);
+                mesh6.position.set(350, 120, 15);
+                scene.add(mesh6);
+            });
+
+            var blk7 = new THREE.TextureLoader();
+            blk7.load('6.png', function(texture) {
+                var geometry7 = new THREE.BoxBufferGeometry( 120.0, 120.0, 120.0 );
+                var material7 = new THREE.MeshBasicMaterial({
+                    map: texture,
+                    overdraw: 0.5
+                });
+             var  mesh7 = new THREE.Mesh(geometry7, material7);
+                mesh7.position.set(500, -120, 15);
+                scene.add(mesh7);
+            });
+
+   //linea
+            var material41 = new THREE.LineBasicMaterial({
+            color: 0x101010
+            });
+            var geometry41 = new THREE.Geometry();
+            geometry41.vertices.push(new THREE.Vector3(-400, -43, 5));
+            geometry41.vertices.push(new THREE.Vector3(-250, 72, 5));
+            var line41 = new THREE.Line(geometry41, material41);
+            scene.add(line41);
+
+            var material42 = new THREE.LineBasicMaterial({
+                color: 0x101010
+            });
+            var geometry42 = new THREE.Geometry();
+            geometry42.vertices.push(new THREE.Vector3(-100, -43, 5));
+            geometry42.vertices.push(new THREE.Vector3( 50, 72, 5));
+            var line42 = new THREE.Line(geometry42, material42);
+            scene.add(line42);
+
+  //linea2
+            var material43 = new THREE.LineBasicMaterial({
+              color: 0x101010
+            });
+            var geometry43 = new THREE.Geometry();
+            geometry43.vertices.push(new THREE.Vector3(-250, 72, 5));
+            geometry43.vertices.push(new THREE.Vector3(-100, -43, 5));
+            var line43 = new THREE.Line(geometry43, material43);
+            scene.add(line43);
+
+            var material44 = new THREE.LineBasicMaterial({
+                color: 0x101010
+              });
+              var geometry44 = new THREE.Geometry();
+              geometry44.vertices.push(new THREE.Vector3(50, 72, 5));
+              geometry44.vertices.push(new THREE.Vector3(200, -43, 5));
+              var line44 = new THREE.Line(geometry44, material44);
+              scene.add(line44);
+
+              var material45 = new THREE.LineBasicMaterial({
+                color: 0x101010
+              });
+              var geometry45 = new THREE.Geometry();
+              geometry45.vertices.push(new THREE.Vector3(200, -43, 5));
+              geometry45.vertices.push(new THREE.Vector3(350, 72, 5));
+              var line45 = new THREE.Line(geometry45, material45);
+              scene.add(line45);
+
+
+              var material46 = new THREE.LineBasicMaterial({
+                color: 0x101010
+              });
+              var geometry46 = new THREE.Geometry();
+              geometry46.vertices.push(new THREE.Vector3(350, 72, 5));
+              geometry46.vertices.push(new THREE.Vector3(500, -55, 5));
+              var line46 = new THREE.Line(geometry46, material46);
+              scene.add(line46);
+
+
+            // earth
+           var materiale = new THREE.MeshBasicMaterial({
+                color: 0xA90329
+            });
+            var titolo = new THREE.FontLoader();
+
+            titolo.load('three.js-master/examples/fonts/helvetiker_regular.typeface.json', function(font) {
+                //helvetiker_regular.typeface.json
+
+                var textGeo = new THREE.TextGeometry("Blockchain", {
+                    font: font,
+                    size: 90,
+                    height: 1,
+                    curveSegments: 5,
+                    bevelThickness: 1,
+                    bevelSize: 1,
+                    bevelEnabled: true
+                });
+
+                meshti = new THREE.Mesh(textGeo, materiale);
+                meshti.position.set(-1100, 100, 15);
+                // document.addEventListener('mousemove', onDocumentMouseMove, false);
+            
+                scene.add(meshti);
+            });
+
+            var materiale2 = new THREE.MeshBasicMaterial({
+                color: 0x101010
+            });
+            var titolo2 = new THREE.FontLoader();
+
+            titolo2.load('three.js-master/examples/fonts/helvetiker_regular.typeface.json', function(font) {
+                //helvetiker_regular.typeface.json
+
+                var textGeo2 = new THREE.TextGeometry("Smart Contract", {
+                    font: font,
+                    size: 40,
+                    height: 1,
+                    curveSegments: 5,
+                    bevelThickness: 1,
+                    bevelSize: 1,
+                    bevelEnabled: true
+                });
+
+                meshti2 = new THREE.Mesh(textGeo2, materiale2);
+                meshti2.position.set(700, -100, 15);
+                // document.addEventListener('mousemove', onDocumentMouseMove, false);
+            
+                scene.add(meshti2);
+            });
+
+
+
+            // shadow
+
+            renderer = new THREE.CanvasRenderer();
+            renderer.setPixelRatio(window.devicePixelRatio);
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            container.appendChild(renderer.domElement);
+
+        }
+        
+        var controls = new OrbitControls( camera , renderer.domElement  );
+
+        //controls.update() must be called after any manual changes to the camera's transform
+        //camera.position.set( 0, 20, 100 );
+        controls.update();
+
+                function onDocumentMouseMove(event) {
+                    mouseX = (event.clientX - windowHalfX);
+                    mouseY = (event.clientY - windowHalfY);
+                }
+        
+        function animate() {
+            requestAnimationFrame(animate);
+        
+            render();
+        }
+
+
+        function render() {
+            /*   camera.position.x += (mouseX - camera.position.x) * 0.05;
+               camera.position.y += (-mouseY - camera.position.y) * 0.05;
+
+               camera.lookAt(test.position);
+          
+             test.rotation.y = 0.5;
+            test.position.x = (mouseX - 3.1);
+            test.position.y = (-mouseY - 5.1);
+            test.position.z += (0.005);
+            //  test.lookAt(test.position);
+*/
+            //mesh2.rotation.y += 0.05;
+           // mesh.rotation.y += 0.05;
+          //  scene.rotation.y += 0.005;
+            renderer.render(scene, camera);
+
+        }
+    </script>
+
+</body>
+
+</html>
