@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -33,9 +33,9 @@
     <script src="js/comandi.js"></script>
     <script src="js/myConv.js"></script>
     <script src="js/lstm.js"></script>
-    <!-- sumome  link social -->
+    <!-- sumome  link social 
     <script src="//load.sumome.com/" data-sumo-site-id="98711fc4997a561007230296cfc67bf8fe083e4799bea5270763985560b583ec" async="async"></script>
-    <!-- font x icone social + email -->
+     font x icone social + email -->
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <!-- facebook open graph -->
     <meta property="og:url" content="https://www.mecbar.com" />
@@ -45,7 +45,25 @@
 
 
 </head>
-
+<style>
+img {
+   opacity: 1;
+   transition: opacity 0.3s;
+}
+img[data-src] {
+   opacity: 0;
+}
+</style>
+<script>
+$( document ).ready(function() {
+   [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+         img.setAttribute('src', img.getAttribute('data-src'));
+         img.onload = function() {
+            img.removeAttribute('data-src');
+         };
+   });
+});
+</script>
 <body>
     
     <nav>
@@ -108,11 +126,13 @@
       It is a database of transactions structured in block.
       Every block contains the transactions performed into a interval of time set by the administrator of blockchain.
       One blockchain contains lot of blocks. One block contains a lot of transactions.
-      <img src="foto/geth1.png" class="test">  This is the chain of blocks.
+      <img data-src="foto/geth1.png" class="test">  This is the chain of blocks.
       Every block is chained with the previous and the next block with a cryptographic key.
       The blockchain is a network of nodes that have all the blocks in syncronous mode in real time.
       For this we talk about of a database decentralized, distribuitedand and encrypted.
-      <div id="bl11" class="row">
+      
+      <div class="row">
+      <div id="bl11" class="col l3">
     
       The essential characteristics are :<br>
       - immutability<br>
@@ -121,8 +141,11 @@
       - decentralized ledger.<br>
     
      </div>
+     <div class="col l5">
+        <img data-src="foto/wordcloud1.png" class="test1">
       </div>
-  
+      </div>
+      </div>
       <div class="row" id="swipe12">
       The data inserted are immutable after that the block over the data are inserted is mined.<br>
       The transparency is the possibility that all the user can view all themselves data anytime.<br>
@@ -494,7 +517,7 @@
         This is the defination from ethereum.org "
         Ethereum is a decentralized platform that runs smart contracts: applications that run exactly as programmed without any possibility of downtime, censorship, fraud or third-party interference.
 These apps run on a custom built blockchain, an enormously powerful shared global infrastructure that can move value around and represent the ownership of property.
-<img src="foto/ETHEREUM.png" class="ethereum" width="300px" height="120px" style="float:right">
+<img data-src="foto/ETHEREUM.png" class="ethereum" width="300px" height="120px" style="float:right">
 This enables developers to create markets, store registries of debts or promises, move funds in accordance with instructions given long in the past (like a will or a futures contract) and many other things that have not been invented yet, all without a middleman or counterparty risk.
 
 The project was bootstrapped via an ether presale in August 2014 by fans all around the world. It is developed by the Ethereum Foundation,  a Swiss non-profit, with
@@ -528,7 +551,7 @@ The project was bootstrapped via an ether presale in August 2014 by fans all aro
         
    
 Hyperledger is a project of open source blockchain started by the Linux Fondation for a tecnology development for business and commercial use.
-<img src="foto/hyper.png"  class="hyper_foto">   
+<img data-src="foto/hyper.png"  class="hyper_foto">   
 The Hyperledger project is composed from any Distribuited Ledger Tecnology, DLT, Framework and any tools. Here we talk about the DLT framework Hyperledger Fabric with the tool Hyperledger Composer. 
 The DLT is a decentralized system for exchange of VALUE.<br>
 
@@ -552,7 +575,7 @@ No miner is requested because transaction validations is done by administrator o
 There aren't cryptocurrency and the network is programmable. The Chaincode automates the business process and the transactions executation.<br>
 We use Composer for creation and management of business network application,  BNA, and javascript 
 for coding transactions.<br>
-<img src="foto/Blk_network.png" class="org2">
+<img data-src="foto/Blk_network.png" class="org2">
 It offer tools for architects, development, administration and operations for business analyst.<br>
 Offer an object oriented language for defining the domain model of bna and support javascript applications. <br>
 In the web browser storage composer offer a playground application how simulate and test your BNA.<br>
@@ -562,7 +585,7 @@ Another important tool is the Composer Rest Server that permit the connession be
 We can operate with Javascript for CRUD operation on assets, transactions and events, too.<br>
 We can create a Consortium creating a channel with two or more organization and more than peer.<br>
 Every organization has one Membership Service Provider (MSP) that manage the roles and access restrictions.
-<img src="foto/org1.png" class="org1" width="550px" height="300px" alt="org1">
+<img data-src="foto/org1.png" class="org1" width="550px" height="300px" alt="org1">
 MSP of every organization can manage autority for their member, create and revoke the identities.
 Every Peer has a local MSP for manage local identity and every network has at least one MSP. The great organization have more
 MSP for example a Org1-MSP-National, Org1-MSP-International, Org1-MSP-Distribution ecc... <br>
@@ -570,14 +593,14 @@ In the Multi-organization channel there is a MSP for the channel consisting in t
 In the image below an example of a channel composed by Org1, Org2, Org3 and Org4. How you can see not all the peer partecipape of channel
 . The MSP of every Organization allow the peer to partecipate and role of every peer through the Identity.
 In the image below you can see the channel with the MSP. <br>
-<img src="foto/Blk_msp.png" class="msp" width="400px" height="350px" alt="msp" > 
+<img data-src="foto/Blk_msp.png" class="msp" width="400px" height="350px" alt="msp" > 
 The Identity is managed by way of certificates by Fabric CA a built-in certificate autority that create, update and delete the identities.
 How you can see in the Graph the file ca.org1.exemple.com contains tha CA autority and MSP.
 Into the Organization all node are not equal, there is a node Orderers, a node Peer and node Client.
 The node Peers is connect with the channel. There is a Peer Anchor and a node Peer Endorser.
 The endorser policy identifies the node Endorser that for every trnsactions verify if it is ok. after this verification
 the transaction is executed in the blockchain.<br>
-<img src="foto/consensus.png" class="consensus" width="500px" height="450px" alt="consensus process">
+<img data-src="foto/consensus.png" class="consensus" width="500px" height="450px" alt="consensus process">
 This is the Consensus process, it is composed in three phases. In the first, the proposal, the client asks execution 
 of transaction to Endorser peer, it asks the test of transaction to test peers defined into the endorsement policy. This peers
 return the result of test to endorser and if the result are ok the process go on. In the second phase, the packaging, the endorser create the package 
@@ -589,7 +612,7 @@ that then answer to endorser the result ot test. If all is allright the endorser
 The Anchor peer receive request from client and data from orderers after align all peers of the organization.
 The Orderer peer ensure consistency of ledger data across nodes and order of transactions.
 <br>
-<img src="foto/channelab.png" class="org3" width="400px" height="350px" alt="org" >
+<img data-src="foto/channelab.png" class="org3" width="400px" height="350px" alt="org" >
 The scalability of model is insured, every organization can avoid all peers that she want.Any peer of an organization can take part
 to other organization if permit granted by the network administrator. How you can see in next graph a Organization can 
 take part to different channel. 
@@ -918,7 +941,7 @@ event primeEvent {<br>
                 It's a statically typed language similar to object oriented languages.
                 It was influenced by C++, Python and JavaScript and is designed to insert the smart contracts 
                 into Ethereum Virtual Machine (EVM) and executed on the Ethereum blockchain network.
-                <img src="foto/solidity.png" class="solidity" width="170px" height="90px">
+                <img data-src="foto/solidity.png" class="solidity" width="170px" height="90px">
                 The best way to try the Solidity language is Remix a web browser storage at the following
                 link <a href="https://remix.ethereum.org" target="_blank">https://remix.ethereum.org</a>.
                 Into the Remix application you can compile, run and debug your solidity program before you insert 
@@ -1471,7 +1494,7 @@ function a() payable b {<br>
             Machine learning
         </div>
         <div class="titolocnn">
-            Deep Learning <span style="margin-left:600px"><img src="foto/ita.png" id="ita" class="flag"><img src="foto/ing.png" id="ing" style="margin-left:30px" class="flag"></span>
+            Deep Learning <span style="margin-left:600px"><img data-src="foto/ita.png" id="ita" class="flag"><img data-src="foto/ing.png" id="ing" style="margin-left:30px" class="flag"></span>
         </div>
         <div class="titolocnn">
             Convolutional Neural Network - CNN
@@ -1482,24 +1505,24 @@ function a() payable b {<br>
 
             <div id="cnn-eng">
                 The Convolutional Neural Network is a tools of Deep Learning and it's used for classification of the object inserted into the image. La Convolution Neural Network is composed of the followings phases: Convolution, Pooling, Flattening and Full Connection.<br>                The first, the convolution, is used for minimize the dimension of the image and for higher the process.<br> The matemathical formula is the following:
-                <img src="foto/formula_conv.png" width="20%" height="30px" alt="formula convolution">
+                <img data-src="foto/formula_conv.png" width="20%" height="30px" alt="formula convolution">
                 <br> At first, you take the matrix of input image and some matrix of 3x3 (5x5 or 7x7 with other methods). This matrix is called Feature Detector or Kernel and is used for reduce dimension of image in bytes. For example in the below image,
                 we extract into the input image matrix a mini matrix of 3x3 element, which we multiply with the element of the Feature Detector matrix. Then, in this new matrix, we must sum the its values and put the result into the relative cell of the
                 Feature Map. The matrixs of 3x3 must be extrapolated from input matrix from left to right and then from high to low.
 
-                <img src="foto/convolutional.png" class="ml_graf" width="100%" height="200px" alt="create Feature map"> <br>
+                <img data-src="foto/convolutional.png" class="ml_graf" width="100%" height="200px" alt="create Feature map"> <br>
                 <div class="row">
                     <div class="col s12 m12 l6">
                         Run this process for any the Feature Map to create. I remember you that it must be numerous to have a lot of layer inserted into the Neural Network. So, there are some different Feature Detector used for remove some features at the insert image. For example,
                         I can insert a Feature Detector for remove the color. In the image below there is the scheme of Features Maps create.
                     </div>
                     <div class="col s12 m12 l6">
-                        <img src="foto/features_maps.png" class="ml_graf" width="100%" height="200px" alt="Feature map"> <br>
+                        <img data-src="foto/features_maps.png" class="ml_graf" width="100%" height="200px" alt="Feature map"> <br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12 m12 l4">
-                        <img src="foto/rectifier.png" class="ml_graf" width="100%" height="150px" alt="Feature map"> <br>
+                        <img data-src="foto/rectifier.png" class="ml_graf" width="100%" height="150px" alt="Feature map"> <br>
                     </div>
                     <div class="col s12 m12 l8">
                         To have a non Linear representation, we must use an activation function for the Deep Learning. Most function used is the Rectfier, which is called ReLU Rectified Linear Unit. Obviously, There are other activation function, as the Sigmoid Function, or
@@ -1511,11 +1534,11 @@ function a() payable b {<br>
                 <br> In the Pooling phase we obtain the Pooled Features Map, in which we reducing yet data dimentions that are representative of image.
                 <br>Then we have the Flattening phase, in which for every we create a vector where we insert the values present into the map. This vectors are the input layer.
                 <br>
-                <img src="foto/pooling.png" class="ml_graf" width="100%" height="300px" alt="Feature map"><br> The last phase is the Full Connection where the vectors are inserted into the our Neural Network with the hidden layer.<br> The Neural Network
+                <img data-src="foto/pooling.png" class="ml_graf" width="100%" height="300px" alt="Feature map"><br> The last phase is the Full Connection where the vectors are inserted into the our Neural Network with the hidden layer.<br> The Neural Network
                 return us the n output(y1, y2, yn) and, throught the Softmax Function, the y output with the greater probabily will be the final result.<br> In the following image, there is the scheme of the process just described and the Softmax Function
                 formula.
                 <br>
-                <img src="foto/fullconnect.png" class="ml_graf" width="100%" height="300px" alt="schema cnn">
+                <img data-src="foto/fullconnect.png" class="ml_graf" width="100%" height="300px" alt="schema cnn">
             </div>
             <a href="#ml" class="blog-btn-espandi" id="cnn-eng-espandi" onclick="espandiCnneng()"> Read more </a>
             <br>
@@ -1529,22 +1552,22 @@ function a() payable b {<br>
 
             <div id="cnn-ita">
                 La Convolutional Neural Network è un metodo che viene utilizzato principalmente per classificare gli oggetti o le lettere inserite nelle immagini. La Convolution Neural Network è composta da diverse fasi : Convolution, Pooling, Flattening and Full Connection.<br>                La prima fase la convolution si usa per ridurre le dimensioni delle immagini per occupare minor spazio e rendere piu veloce il procedimento.
-                <br> La formula matematica è la seguente: <img src="foto/formula_conv.png" width="20%" height="30px" alt="formula convolution"> <br> Si prende la matrice che rappresenta l'immagine e si prendono alcune matrici 3x3 (nel nostro caso mentre
+                <br> La formula matematica è la seguente: <img data-src="foto/formula_conv.png" width="20%" height="30px" alt="formula convolution"> <br> Si prende la matrice che rappresenta l'immagine e si prendono alcune matrici 3x3 (nel nostro caso mentre
                 altri prendono matrici anche 5x5 o 7x7). Queste matrici si chiamono Feature Detector o Kernel e si usano per ridurre le dimensioni delle immagini. Come nell'immagine sottostante, si prende all'interno della matrice input immagine una mini
                 matrice 3x3 e la si moltiplica per la matrice 3x3 Feature Detector. Poi nella matrice così creata si fa la somma dei valori ed il risultato si inserisce come elemento nella relativa posizione nella Feature Map. Le matrici 3x3 vanno estrapolate
                 dalla input image da sinistra a destra e poi dall'alto in basso.
-                <img src="foto/convolutional.png" class="ml_graf" width="100%" height="200px" alt="create Feature map"> <br>
+                <img data-src="foto/convolutional.png" class="ml_graf" width="100%" height="200px" alt="create Feature map"> <br>
                 <div class="row">
                     <div class="col s12 m12 l6"> Questo procedimento si ripete per ogni Feature Map da creare, ricordo che devono essere molte per avere diversi layer da inserire nel Neural Network. Quindi devo avere diverse Feature Detector ognuna delle quali si usa per eliminare
                         delle caratteristiche alle immagini. Ad esempio, posso utilizzare un Feature Detector per eliminare il colore. Sotto mostro lo schema delle Features Maps create di cui poi estrapoleremo i nostri layer.
                     </div>
                     <div class="col s12 m12 l6">
-                        <img src="foto/features_maps.png" class="ml_graf" width="100%" height="200px" alt="Feature map"> <br>
+                        <img data-src="foto/features_maps.png" class="ml_graf" width="100%" height="200px" alt="Feature map"> <br>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col s12 m12 l4">
-                        <img src="foto/rectifier.png" class="ml_graf" width="100%" height="150px" alt="Feature map"> <br>
+                        <img data-src="foto/rectifier.png" class="ml_graf" width="100%" height="150px" alt="Feature map"> <br>
                     </div>
                     <div class="col s12 m12 l8">
                         Per passare ad un ambiente non lineare, bisogna utilizzare una activation function nel Deep Learning. La più indicata è la Rectfier chiamata ReLU Rectified Linear Unit. Naturalmente ci sono altre activation function, come la Sigmoid Function, o varianti
@@ -1556,9 +1579,9 @@ function a() payable b {<br>
                 le diverse matrici acquisite ed i relativi risultati.<br> Nella fase di Pooling otteniamo la Pooled Featured Map, in cui riduciamo ancora le dimensioni dei dati che rappresentano l'immagine. <br> La fase successiva è la Flattening in cui
                 per ogni Pooled Features Map si crea un vettore in cui inserire i valori presenti nella map. I vettori creati saranno gli input layer.
                 <br>
-                <img src="foto/pooling.png" class="ml_graf" width="100%" height="300px" alt="Feature map"><br> L'ultima fase è la full connection in cui i vettori creati in precedenza vengono inseriti nel nostro Neural Network insieme agli hidden layer.<br>                Il Neural Network ci restituirà n output(y1, y2, yn) e, tramite la funzione Softmax, l'output y con la maggiore probabilità sarà il nostro risultato finale.<br> Nell'immagine seguente, c'è lo schema del procedimento appena descritto e
+                <img data-src="foto/pooling.png" class="ml_graf" width="100%" height="300px" alt="Feature map"><br> L'ultima fase è la full connection in cui i vettori creati in precedenza vengono inseriti nel nostro Neural Network insieme agli hidden layer.<br>                Il Neural Network ci restituirà n output(y1, y2, yn) e, tramite la funzione Softmax, l'output y con la maggiore probabilità sarà il nostro risultato finale.<br> Nell'immagine seguente, c'è lo schema del procedimento appena descritto e
                 la formula della funzione Softmax.<br>
-                <img src="foto/fullconnect.png" class="ml_graf" width="100%" height="300px" alt="schema cnn">
+                <img data-src="foto/fullconnect.png" class="ml_graf" width="100%" height="300px" alt="schema cnn">
             </div>
             <a href="#ml" class="blog-btn-espandi" id="cnn-ita-espandi" onclick="espandiCnnita()"> Read more </a>
             <br>
@@ -1598,7 +1621,7 @@ function a() payable b {<br>
             Deep Learning
         </div>
         <div class="titolocnn">
-            Recurrent Neural Network - LSTM <span style="margin-left:600px"><img src="foto/ita.png" id="ita2" class="flag"><img src="foto/ing.png" id="ing2" style="margin-left:30px" class="flag"></span>
+            Recurrent Neural Network - LSTM <span style="margin-left:600px"><img data-src="foto/ita.png" id="ita2" class="flag"><img data-src="foto/ing.png" id="ing2" style="margin-left:30px" class="flag"></span>
         </div>
         <div class="testoml" id="testo1">
         </div>
@@ -1615,7 +1638,7 @@ function a() payable b {<br>
             Machine learning
         </div>
         <div class="titolocnn">
-            Deep Learning <span style="margin-left:600px"><img src="foto/ita.png" id="ita2" class="flag"><img src="foto/ing.png" id="ing2" style="margin-left:30px" class="flag"></span>
+            Deep Learning <span style="margin-left:600px"><img data-src="foto/ita.png" id="ita2" class="flag"><img data-src="foto/ing.png" id="ing2" style="margin-left:30px" class="flag"></span>
         </div>
         <div class="titolocnn">
             Convolutional Neural Network - CNN
@@ -1652,18 +1675,18 @@ function a() payable b {<br>
             Machine learning
         </div>
         <div class="titolocnn">
-            ChatBots <span style="margin-left:600px"><img src="foto/ita.png" id="itachat" class="flag"><img src="foto/ing.png" id="ingchat" style="margin-left:30px" class="flag"></span>
+            ChatBots <span style="margin-left:600px"><img data-src="foto/ita.png" id="itachat" class="flag"><img data-src="foto/ing.png" id="ingchat" style="margin-left:30px" class="flag"></span>
         </div>
         <div class="testoml" id="testochati">
             Ora analizziamo un altro strumento della Intelligenza Artificiale, la ChatBots, programma creato tramite machine learning che permette di far comunicare gli umani con un computer.
             <br> Se vuoi provare la ChatBots inserisci una domanda con le seguenti keyword (django, python, javascript, pm2, nodejs, uwsgi, hello, hi)<br>
-            <img src="foto/bot.png" id="bot10" width="105px" height="275px" alt="bot">
+            <img data-src="foto/bot.png" id="bot10" width="105px" height="275px" alt="bot">
 
         </div>
         <div class="testoml" id="testochate">
             Now, we showing you another tool of Artificial Intelligence, the ChatBots, which is a program create by machine learning for chat humans with an algorithm.<br> If you would testing the ChatBots you can ask a question inserting, for example,
             the keyword as django, python, javascript, pm2, nodejs, uwsgi, hello or hi<br>
-            <img src="foto/bot.png" id="bot11" width="105px" height="275px" alt="bot">
+            <img data-src="foto/bot.png" id="bot11" width="105px" height="275px" alt="bot">
         </div>
     </div>
 
@@ -1711,13 +1734,13 @@ function a() payable b {<br>
                             The Sigmoid Function is function that return us result 0 or 1 according a discriminating value that is generally 0.5 how in the image below :<br>
                             <div class="row" style="height:170px;margin-top:50px">
                                 <div class="col s12 m12 l4">
-                                    <img src="foto/logit/sigmoid_graph.png" width="100%" height="100%" alt="logistic regression">
+                                    <img data-src="foto/logit/sigmoid_graph.png" width="100%" height="100%" alt="logistic regression">
                                 </div>
                                 <div class="col l4 center">
                                     <b class="spazio2001"> The Sigmoid Function formula:</b>
                                     <br>
                                     <br>
-                                    <img src="foto/logit/sigmoid.png" width="100%" height="50px" alt="logistic regression">
+                                    <img data-src="foto/logit/sigmoid.png" width="100%" height="50px" alt="logistic regression">
                                 </div>
                                 <div class="col l4">
 
@@ -1756,7 +1779,7 @@ function a() payable b {<br>
 
                 <div class="col s12 m12 l6">
                     <div class="card-panel hoverable">
-                        <img src=" foto/gradient/gradient_graph.png" width="100%" height="300px" alt="the gradient graph">
+                        <img data-src=" foto/gradient/gradient_graph.png" width="100%" height="300px" alt="the gradient graph">
                         <br>
                     </div>
                 </div>
@@ -1821,7 +1844,7 @@ function a() payable b {<br>
                                 <div id="vr-eng">
                                     <h3 class="blog-titolo" style="padding-top:20px">The virtual reality </h3>
                                     <div class="col s12 m12 l3" id="vr-testa">
-                                        <img src="foto/vr-terra.png" id="vr-spazio" class="spazioimg" width="100%" height="250px" alt="images virtual box">
+                                        <img data-src="foto/vr-terra.png" id="vr-spazio" class="spazioimg" width="100%" height="250px" alt="images virtual box">
                                     </div>
                                     <div class="col m12 l9" id="vr-coda">
                                         <div classe="blog-img-principale">
@@ -1844,8 +1867,8 @@ function a() payable b {<br>
                                                     https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.js
                                                 </p>
                                                 If you want use images already available, you must insert the following code :
-                                                <img src="vr/vr1.png" width="100%" height="100px" alt="comandi vr"> We can also include 360 degree photos. Below there is an example:
-                                                <iframe id="vr-foto" src="vr/foto-vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe> Furthermore, with the javascript library Three.Js we can create any object.
+                                                <img data-src="vr/vr1.png" width="100%" height="100px" alt="comandi vr"> We can also include 360 degree photos. Below there is an example:
+                                                <iframe id="vr-foto" data-src="vr/foto-vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe> Furthermore, with the javascript library Three.Js we can create any object.
                                                 The frame below, for example, is been created with Three.js and it moves with the scroll of the mouse. Click on the following button for change the images into the frame.
 
 
@@ -1865,7 +1888,7 @@ function a() payable b {<br>
                                                 html code used.
 
 
-                                                <img src="three/torus.png" width="100%" height="500px" alt="javascript command">
+                                                <img data-src="three/torus.png" width="100%" height="500px" alt="javascript command">
                                                 <br> This is the result of the same code in javascript.
                                                 <br>
                                                 <div id="terra1"></div>
@@ -1894,41 +1917,41 @@ function a() payable b {<br>
                                 <div id="vm-eng"></div>
                                 <h4 class="blog-titolo" style="padding-top:20px">Create a virtual machine with Virtual Box</h4>
                                 <div class="col s12 m12 l3" id="vm-testa">
-                                    <img src="foto/virtualbox.jpg" class="spazioimg" id="vbox" width="100%" height="350px" alt="images virtual box">
+                                    <img data-src="foto/virtualbox.jpg" class="spazioimg" id="vbox" width="100%" height="350px" alt="images virtual box">
                                 </div>
                                 <div class="col m12 l9" id="vm-coda">
                                     <div classe="blog-img-principale">
                                         <p class="caratter-text">
                                             Now we talk about virtual box. First of all we download the installer file from www.virtualbox.org relative of the version of operating system. Download also the Virtual Box Extension Pack.<br> Install the Virtual
                                             Box previosly downloaded. Now start the Virtual Box and download the virtual machine file ready for the V.M. for example file with extension .ova</p>
-                                        <img src="foto/VM/vm5.png" class="spazio2001" width="100%" height="380px" alt="virtual box">
+                                        <img data-src="foto/VM/vm5.png" class="spazio2001" width="100%" height="380px" alt="virtual box">
                                         <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi1" onclick="espandiBlog1()"> Read more</button>
                                         <div class="caratter-text" id="blog-btn-espandi1">
                                             Into the microsoft site at the link highlighted in the image below select the system that you want virtualize and the Virtual Box platform.
-                                            <img src="foto/VM/vm-micro.PNG" class="spazio2001" width="100%" height="400px" alt="vm microsoft">
+                                            <img data-src="foto/VM/vm-micro.PNG" class="spazio2001" width="100%" height="400px" alt="vm microsoft">
                                             <p class="caratter-text">
                                                 Download the zip file, extract the file .ova and with a double click launch the automatic installation of the V.M. In the example below we create a V.M. with Windows7 and Internet Explorer 8.
                                             </p>
                                             Select import and confirm for terminate the installation.
-                                            <img src="foto/VM/vm-inst.PNG" class="spazio2001" width="100%" height="100px" alt="vm installazione w7 microsoft"> When the installation terminated the V.M. will open and you will choose the net(you could always
+                                            <img data-src="foto/VM/vm-inst.PNG" class="spazio2001" width="100%" height="100px" alt="vm installazione w7 microsoft"> When the installation terminated the V.M. will open and you will choose the net(you could always
                                             change the parameter).
-                                            <img src="foto/VM/vm-ova.PNG" class="spazio2001" width="100%" height="400px" alt="vm ova install windows seven">
+                                            <img data-src="foto/VM/vm-ova.PNG" class="spazio2001" width="100%" height="400px" alt="vm ova install windows seven">
                                             <p class="caratter-text"> In the image below the screenshot of the V.M. installed..</p>
                                             <p class="caratter-text">
                                                 Remember to take note of the user and password that you'll have to enter every time you will open the V.M.
                                             </p>
-                                            <img src="foto/VM/vm-w7.PNG" class="spazio2001" width="100%" height="500px" alt="vm windows 7 home page">
+                                            <img data-src="foto/VM/vm-w7.PNG" class="spazio2001" width="100%" height="500px" alt="vm windows 7 home page">
                                             <p class="caratter-text">Now in the start button of the V.M. you launch the restart and wait the install of any updates.
                                             </p>
-                                            <img src="foto/VM/vm-ie8.PNG" class="spazio2001" width="100%" height="500px" alt="vm w seven IE8">
+                                            <img data-src="foto/VM/vm-ie8.PNG" class="spazio2001" width="100%" height="500px" alt="vm w seven IE8">
                                             <p class="caratter-text">The image of Windows7 in valdate for 90 days but you can save the image with the snapshot function. That function is helpful for create a copy before take the updates for eventually restore the V.M.
                                             </p>
-                                            <img src="foto/VM/vm-istantanea.PNG" class="spazio2001" width="100%" height="500px" alt="vm microsoft">
+                                            <img data-src="foto/VM/vm-istantanea.PNG" class="spazio2001" width="100%" height="500px" alt="vm microsoft">
                                             <p class="caratter-text"> For customize your V.M. modify the setup parameterin the setting menu. For use USB port or setup parameter of the Net it's necessary install the Extension Pack previosly downloaded. </p>
-                                            <img src="foto/VM/vm-rete.PNG" class="spazio2001" width="100%" height="500px" alt="vm impostazioni">
+                                            <img data-src="foto/VM/vm-rete.PNG" class="spazio2001" width="100%" height="500px" alt="vm impostazioni">
                                             <p class="caratter-text"> If you want you can install more V.M. for example a Linux machine.
                                             </p>
-                                            <img src="foto/VM/vm6.png" class="spazio2001" width="100%" height="500px" alt="vm sistema linux">
+                                            <img data-src="foto/VM/vm6.png" class="spazio2001" width="100%" height="500px" alt="vm sistema linux">
                                         </div>
                                     </div>
                                 </div>
@@ -2056,14 +2079,14 @@ function a() payable b {<br>
 
                                                 <br>
                                             </p>
-                                            <img src="foto/blog-pm2.png" width="100%" height="250px" alt="pm2 status">
+                                            <img data-src="foto/blog-pm2.png" width="100%" height="250px" alt="pm2 status">
                                             <p class="caratter-text">
                                                 For verification correct automatic start of the process manager pm2 that runs the app insert from Terminal the command pm2 show name_app or pm2 show number_app <br> We see that the app run and it's active.
                                                 insert from Terminal : </p>
                                             <em class="terminal">sudo pm2 show 0 </em>
-                                            <img src="foto/pm2show.png" width="100%" height="300px" alt="pm2 process attivi">
+                                            <img data-src="foto/pm2show.png" width="100%" height="300px" alt="pm2 process attivi">
                                             <p class="spazio1999"> We see that the app run and it's active. From the browser insert the link http://localhost:5500 we can open our app and it's work.<br> </p>
-                                            <img src="foto/homemecbar-foto.png" width="100%" height="300px" alt="app pronta ad uso">
+                                            <img data-src="foto/homemecbar-foto.png" width="100%" height="300px" alt="app pronta ad uso">
                                             <br>
                                         </div>
                                 </div>
@@ -2077,7 +2100,7 @@ function a() payable b {<br>
                         <div class="contenitore">
                             <div class="row img-space" id="space2">
                                 <div id="img2" class="col s12 m12 l12 blog-img-secondario-django">
-                                    <img src="foto/django-web-server.png" width="100%" height="180px">
+                                    <img data-src="foto/django-web-server.png" width="100%" height="180px">
                                 </div>
                             </div>
                             <div id="django-eng">
@@ -2169,7 +2192,7 @@ function a() payable b {<br>
                                             <br>Restart=always<br> KillSignal=SIGQUIT<br> Type=notify StandardError=syslog<br> NotifyAccess=all
                                             <br> [Install]<br> WantedBy=multi-user.target </p><br> ctrl+o for save and crl+x for exit. Start the service and test if it is active<br><em class="terminal"> sudo systemctl start uwsgi.service<br> sudo systemctl status uwsgi.service</em><br>
                                         <br>
-                                        <img src="foto/uwsgiserv.png" width="100%" height="300px" alt="uwsgi service status">
+                                        <img data-src="foto/uwsgiserv.png" width="100%" height="300px" alt="uwsgi service status">
                                         <br> For test if service is automatic active at every restart run the system restart and just the system is ready check the status of service. if it's active we finished. That's all<br>
 
                                     </div>
@@ -2384,13 +2407,13 @@ function a() payable b {<br>
                         <div class="contenitore">
                             <div class="row img-space" id="space3">
                                 <div class="col s12 m4 l4">
-                                    <img src="foto/linux.png" id="ngx1" width="100%" height="180px" alt="linux">
+                                    <img data-src="foto/linux.png" id="ngx1" width="100%" height="180px" alt="linux">
                                 </div>
                                 <div class="col s12 m4 l4">
-                                    <img src="foto/nginx.png" id="ngx2" width="100%" height="180px" alt="nginx">
+                                    <img data-src="foto/nginx.png" id="ngx2" width="100%" height="180px" alt="nginx">
                                 </div>
                                 <div class="col s12 m4 l4">
-                                    <img src="foto/PM2.png" id="ngx3" width="100%" height="180px" alt="pm2">
+                                    <img data-src="foto/PM2.png" id="ngx3" width="100%" height="180px" alt="pm2">
                                 </div>
                             </div>
                             <!--       <div id="blog3-ita">
@@ -2514,32 +2537,32 @@ function a() payable b {<br>
                                         <em class="terminal">[ ok ] Starting nginx (via systemctl): nginx.service.</em>
                                         <br>
                                         <em class="terminal">sudo systemctl status nginx.service </em>
-                                        <img src="foto/nginxstatus.png" class="blog-images" width="100%" height="300px" alt="staus nginx service"> other command are service stop or restart sudo systemctl stop nginx.service sudo systemctl restart nginx.service
+                                        <img data-src="foto/nginxstatus.png" class="blog-images" width="100%" height="300px" alt="staus nginx service"> other command are service stop or restart sudo systemctl stop nginx.service sudo systemctl restart nginx.service
                                         In the following scheme we see how Nginxinteracts with the other application and the web. From the browser the user call Nginx that transfer the request at Uwsgi/Django (back-end). Django create the answer and through
                                         Uwsgi send it via Nginx at browser for the user.
 
                                         <section class="">
                                             <div class="row">
                                                 <div class="col s3 m3 l3">
-                                                    <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s1 m1 l1">
-                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s2 m2 l2">
-                                                    <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s1 m1 l1">
-                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s2 m2 l2">
-                                                    <img class="blog-images" src="foto/uwsgi.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/uwsgi.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s1 m1 l1">
-                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s2 m2 l2">
-                                                    <img class="blog-images" src="foto/django.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/django.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                             </div>
                                         </section>
@@ -2548,25 +2571,25 @@ function a() payable b {<br>
                                         <section class="">
                                             <div class="row">
                                                 <div class="col s3 m3 l3">
-                                                    <img class="blog-images" src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s1 m1 l1">
-                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s2 m2 l2">
-                                                    <img class="blog-images" src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s1 m1 l1">
-                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s2 m2 l2">
-                                                    <img class="blog-images" src="foto/PM2-vert.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/PM2-vert.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s1 m1 l1">
-                                                    <img class="blog-images" src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                                 <div class="col s2 m2 l2">
-                                                    <img class="blog-images" src="foto/nodejs-vert.png" width="100%" height="300px" alt="internet utenti">
+                                                    <img class="blog-images" data-src="foto/nodejs-vert.png" width="100%" height="300px" alt="internet utenti">
                                                 </div>
                                             </div>
 
@@ -2580,7 +2603,7 @@ function a() payable b {<br>
                                             <li> sudo ufw allow port 80 # enable port for ex. the port 80 </li>
                                             <li>sudo ufw allow 'Nginx http' # enable nginx for protocol http</li>
                                         </ul> <br> In the example below we see the open port from Firewall.
-                                        <img class="blog-images" src="foto/firewall.png" width="100%" height="450px" alt="firewall"> In the previous post we see how use Nginx with Uwsgi and Django now instead we talk about PM2 for NodeJs. PM2 is a process
+                                        <img class="blog-images" data-src="foto/firewall.png" width="100%" height="450px" alt="firewall"> In the previous post we see how use Nginx with Uwsgi and Django now instead we talk about PM2 for NodeJs. PM2 is a process
                                         manager. It allows us to handle more web application on one server. With PM2 the application are always ready on the server for the request of the user In the previous post we have seen how to install and use it
                                         with Nginx. Now we show some commands for PM2.<br>
 
@@ -2593,7 +2616,7 @@ function a() payable b {<br>
                                         Below the command for see status of web application handles by Pm2.
                                         <ul>
                                             <li>sudo pm2 show n.ro application or name of application
-                                                <img class="blog-images" src="foto/pm2show.png" width="100%" height="450px" alt="pm2 show app">
+                                                <img class="blog-images" data-src="foto/pm2show.png" width="100%" height="450px" alt="pm2 show app">
                                             </li>
                                             <li>sudo pm2 monit</li>
                                             <li> sudo pm2 list # application list handle by PM2</li>
@@ -2624,7 +2647,7 @@ function a() payable b {<br>
         </a-scene>
     </section>
 -->
-    <div class="rowcenter" id="Adev" style="background-image: url(foto/comp.png);color:black; font-size:35px">
+    <div class="rowcenter" id="Adev" style="background-image: url(foto/comp.png);color: white; font-size:45px">
 
         Development case history
 
@@ -2865,12 +2888,12 @@ function a() payable b {<br>
                         <div class="row center">
                             <br>
                             <p class="text"> Code html for view the data that ng-controller load from server to browser and the directive ng-repeat create the table with pattern MVC </p>
-                            <img src="foto/es_angular_elenco.jpg" width="90%" height="400px">
+                            <img data-src="foto/es_angular_elenco.jpg" width="90%" height="400px">
                         </div>
 
                         <div class="row center">
                             <p class="text"> Code Javascript for load file nation.json into the browser ( $scope.nations ) </p>
-                            <img src="foto/es_angular_script.jpg" width="90%" height="400px">
+                            <img data-src="foto/es_angular_script.jpg" width="90%" height="400px">
                         </div>
 
                     </div>
@@ -2886,7 +2909,7 @@ function a() payable b {<br>
                                 <div class="row center">
                                     <h5 class="header col s12 light white-text">Mecbar parallax background model</h5>
                                 </div>
-                                <div class="parallax"><img src="back2012.jpg" alt="Unsplashed background img 3"></div>
+                                <div class="parallax"><img data-src="back2012.jpg" alt="Unsplashed background img 3"></div>
                             </div>
                         </div>
                     </div>
@@ -3062,7 +3085,7 @@ function a() payable b {<br>
             </div>
 
             <div class="row center" style="margin-top:170px;margin-bottom:150px">
-                <a href=mailto:info@mecbar.com class="social-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
+                <a href=mailto:arkanoidi25@gmail.com class="social-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i>
   </a>
                 <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fmecbar.com%2F" class="social-icon" target="_blank"> <i class="fa fa-facebook" aria-hidden="true"></i>
                 </a>
@@ -3123,7 +3146,7 @@ function a() payable b {<br>
     </div>
     <div class="footer-copyright">
         <div class="container center">
-            <a style="color:#aa111e">MMXVII Mecbar</a>
+            <a style="color:#aa111e"> &copy 2017-2027  Mecbar</a>
         </div>
     </div>
 </footer>
@@ -3175,4 +3198,4 @@ function a() payable b {<br>
 </script>
 
 
-</html>
+</html>    
