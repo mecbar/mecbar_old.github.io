@@ -3449,6 +3449,7 @@ nav ul a span.badge {
     margin-left: 4px;
     line-height: 22px;
     height: 22px;
+     list-style-type: none;  /* puntini delle liste ::marker  */
 }
 
 .collection-item span.badge {
@@ -4170,6 +4171,7 @@ nav i.material-icons {
 nav .nav-wrapper {
     position: relative;
     height: 100%;
+    list-style-type: none;  /* puntini delle liste ::marker  */
 }
 
 @media only screen and (min-width: 993px) {
@@ -4254,6 +4256,7 @@ nav ul li {
     transition: background-color .3s;
     float: left;
     padding: 0;
+    list-style-type: none;  /* puntini delle liste ::marker  */
 }
 
 nav ul li.active {
@@ -4267,7 +4270,10 @@ nav ul a {
     display: block;
     padding: 0 15px;
     cursor: pointer;
+    list-style-type: none;  /* puntini delle liste ::marker  */
 }
+
+
 
 nav ul a.btn,
 nav ul a.btn-large,
