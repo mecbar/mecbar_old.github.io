@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
     <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
-    <title>MecBar | Machine learning </title>
+    <title>MecBar | The Mec Evolution </title>
     <link rel="icon" href="foto/favicon.ico"/>
     <!-- CSS  -->
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -68,15 +68,16 @@ $( document ).ready(function() {
     
     <nav>
         <li class="nav-wrapper back-home" id="head">
-            <a href="#" class="brand-logo mecbar">Mecbar</a>
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
             <ul class="right hide-on-med-and-down">
                 <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
               -->
-
+                <li><a href="http://www.mecbar.com/">Home</a></li>
                 <li><a href="#Ablog">Blog</a></li>
-                <li><a href="#Adev">Development</a></li>
+                <li><a href="#Ablock">Blockchain</a></li>
+                <li><a href="#Amachine">Machine Learning</a></li>
                 <li><a href="#Alinux">Linux</a></li>
                 <li><a href="#Aus">Contatti</a></li>
                 <li>
@@ -87,8 +88,10 @@ $( document ).ready(function() {
                 </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
+                <li><a href="http://www.mecbar.com/">Home</a></li>
                 <li><a href="#Ablog">Blog</a></li>
-                <li><a href="#Adev">Development</a></li>
+                <li><a href="#Ablock">Blockchain</a></li>
+                <li><a href="#Amachine">Machine Learning</a></li>
                 <li><a href="#Alinux">Linux</a></li>
                 <li><a href="#Aus">Contatti</a></li>
             </ul>
@@ -1710,6 +1713,31 @@ function a() payable b {<br>
     <!-- blog -->
     <div class="blog-head" id="Ablog">
         <div class="rowcenter"> Mecbar blog </div>
+           <div class="logit">
+            <div id="block1" style="height:350px;background-color:white);font-size:20px;width: 100%;">
+        
+              <div style="margin: 3px;">
+                <p class="center" style="font-size:30px; color: darkorange;">LINUX   Task Scheduler with Crontab</p>
+
+                In questo esempio vi dimostriamo come schedulare in automatico su di un computer con sistema 
+                operativo linux un programma scritto in Python su di un ambiente virtuale creato con Anaconda.<br>
+                Per prima cosa creiamo lo script in linux che verrà lanciato poi da Crontab.<br>
+                <br>
+        
+                In un editor inserire i comandi da eseguire per lanciare il programma:
+                <br>
+          
+            
+                <a href="scheduler.html" target="_self" class="blog-btn-espandi"> Read more </a>
+                <br>
+                </div>
+            </div>
+           </div>
+
+         
+
+
+
         <div class="logit">
             <div class="row">
                 <div class="col s12 m12 l12">
@@ -1745,14 +1773,14 @@ function a() payable b {<br>
                                 <div class="col l4">
 
                                     To create a model minimizing the <b>cost function</b> (a cost function is a measure of how wrong the model is in terms of its ability to estimate the relationship between x and y) to find the best coefficients with
-                                    <a href="gradient.html" target="_blank"><b>Gradient Descent</b></a> (Gradient descent is an efficient optimization algorithm that attempts to find a minimum of a function)<br>
+                                    <a href="gradient.html" target="_self"><b>Gradient Descent</b></a> (Gradient descent is an efficient optimization algorithm that attempts to find a minimum of a function)<br>
 
                                 </div>
                             </div>
                         </div>
                     </div>
                     <br>
-                    <a href="progetto_banka.html" target="_blank" class="blog-btn-espandi" id="blog-logit"> Read more </a>
+                    <a href="progetto_banka.html" target="_self" class="blog-btn-espandi" id="blog-logit"> Read more </a>
 
                 </div>
             </div>
@@ -1783,7 +1811,7 @@ function a() payable b {<br>
                         <br>
                     </div>
                 </div>
-                <a href="gradient.html" target="_blank" class="blog-btn-espandi" id="blog-gradient"> Read more </a>
+                <a href="gradient.html" target="_self" class="blog-btn-espandi" id="blog-gradient"> Read more </a>
                 <br>
                 <br>
             </div>
@@ -2066,7 +2094,7 @@ function a() payable b {<br>
                                     <p class="caratter-text">
                                         For install NodeJs from Terminal insert :<br><em class="terminal">sudo apt-get install </em><br> <em class="terminal">sudo apt-get install build-essential</em> <br> If our application is ready install the process
                                         manager pm2 with the command:<br><em class="terminal">sudo npm install -g pm2</em><br> and then start the aplication from Terminal <br><em class="terminal">pm2 start name_app.js  #from the directory of the app</em><br>                                        verify if the app is in execution in the browser insert the link <em>localhost:5500 </em> (port assigned into the app)<br>
-                                        <button class="blog-btn-espandi" type="button" id="blog-tasto-espandi" onclick="espandiBlog('zero')"> Read more</button>
+                                        <a href="nodejs.html"><button class="blog-btn-espandi" type="button" id="blog-tasto-espandi"> Read more</button></a>
                                         <div class="caratter-text" id="blog-btn-espandi"><br> If the app is running set the automatic start of Pm2 at the ipl of the machine:<br>
                                             <em class="terminal">sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u root --hp /home/root</em><br> Now setup the Http Server Nginx hw reverse proxy opening the following file
                                             with an editor, here use Nano: seguente con l'editor nano:<br>
@@ -2115,7 +2143,7 @@ function a() payable b {<br>
                                     <em class="terminal">pip install uwsgi </em><br>
                                     <p class="caratter-text">for test correct execution of Uwsgi create a file python test.py </p>
 
-                                    <button class="blog-btn-espandi-mini1" type="button" id="blog-tasto-espandi-mini1" onclick="espandiBlog('uno')"> Read more</button>
+                                    <a href="django.html"><button class="blog-btn-espandi-mini1" type="button" id="blog-tasto-espandi-mini1""> Read more</button></a>
                                     <div class="caratter-text" id="blog-btn-espandi-mini1">
                                         <em class="terminal"># test.py<br> def application(env, start_response):<br> start_response('200 OK', [('Content-Type','text/html')])<br> return [b"Hello World"] # python3<br>
                                             return ["Hello World"] # python2</em>
@@ -2529,7 +2557,7 @@ function a() payable b {<br>
                                         operating system. First of all install it with the command from Terminal</p>
                                     <em class="terminal">
                                             sudo apt-get install nginx </em><br>
-                                    <button class="blog-btn-espandi-mini2" type="button" id="blog-tasto-espandi-mini2" onclick="espandiBlog('due')"> Read more</button>
+                                    <a href="ngnx.html"><button class="blog-btn-espandi-mini2" type="button" id="blog-tasto-espandi-mini2"> Read more</button></a>
                                     <div class=caratter-text id="blog-btn-espandi-mini2">
                                         then setup the automatic start of the service<br>
                                         <em class="terminal"> sudo /etc/init.d/nginx start</em>
@@ -3198,4 +3226,4 @@ function a() payable b {<br>
 </script>
 
 
-</html>    
+</html>

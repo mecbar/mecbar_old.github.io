@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>NodeJS</title>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     
+</head>
+<style>
+    img {
+       opacity: 1;
+       transition: opacity 0.3s;
+    }
+    img[data-src] {
+       opacity: 0;
+    }
+    </style>
+    <script>
+    $( document ).ready(function() {
+       [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+             img.setAttribute('src', img.getAttribute('data-src'));
+             img.onload = function() {
+                img.removeAttribute('data-src');
+             };
+       });
+    });
+    </script>
+<body>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+            </ul>
+            </li>
+    </nav>
+    <br><br>
+    <div style="height:5500px;margin:30px">
+        <div id="img2" class="col s12 m12 l12 blog-img-secondario-django">
+            <img data-src="foto/django-web-server.png" width="100%" height="180px">
+        </div>
+
+    <div id="django-eng">
+        <h5 class="blog-titolo">Create a web server with uWSGI & Django</h5>
+        <div class="col s12" style="text-align: center">
+            <h6> by Mecbar 2 settembre 2017 </h6>
+        </div>
+        <br>
+        <br>
+        <div style="margin-top:10px;">
+            <p class="caratter-text"> For execute an web application with Django you can use the web server into Python or create an application server with Uwsgi. Here we see how to create an application server with Uwsgi. First of all install Uwsgi from
+                Terminal:
+                <br> </p>
+            <em class="terminal">pip install uwsgi </em><br>
+            <p class="caratter-text">for test correct execution of Uwsgi create a file python test.py </p>
+
+          
+            <div class="caratter-text" id="blog-btn-espandi-mini1">
+                <em class="terminal"># test.py<br> def application(env, start_response):<br> start_response('200 OK', [('Content-Type','text/html')])<br> return [b"Hello World"] # python3<br>
+                    return ["Hello World"] # python2</em>
+                <p class="caratter-text>"> from Terminal to launch Uwsgi
+                    <br>
+                    <em class="terminal"> sudo uwsgi --http :8000 --wsgi-file_test.py</em><br>and into browser insert http://localhost:8000</p>
+                    <em class="terminal"> sudo uwsgi --http :8000 --wsgi-file test.py</em><br>
+                   <br>
+               
+                    <p class="caratter-text">
+                    it's the result of the command python manage.py runserver. Now install Nginx and use an Unix socket for connect to the app</p><br>
+                <em class="terminal"> sudo apt-get install nginx</em><br> then start the service<br><em class="terminal"> sudo /etc/init.d/nginx start</em><br> Now go in the directory of the app and create a configuration file
+                of Nginx for the app with tha Nano editor <br>
+                <em class="terminal"> sudo nano app_nginx.conf</em>
+                <br> and insert
+                <br>
+                <p class="terminal2"># nginx.conf
+                    <br> upstream django {<br> # connect to this socket<br> # server unix:///path app/name_app.sock; # for a file socket<br> server 127.0.0.1:8001; # for a web port socket<br> }<br> # the port your site will be
+                    served on
+                    <br> listen 8000;<br> # the domain name it will serve for server_name 127.0.0.1;<br> # substitute your machine's IP address or FQDN charset utf-8; # max upload size client_max_body_size 75M; # adjust to taste
+                    <br># Django media
+                    <br>location /media { alias /path_app/static/images; # your Django project's media files - amend as required } # si possono inserire nel file setting.py location /static { alias /percorso mia app/static; # your
+                    Django project's
+                    <br> static files - amend as required<br> } <br># Finally, send all non-media requests to the Django server.<br> location / {
+                    <br>uwsgi_pass django;<br> include /etc/nginx/uwsgi_params; # the uwsgi_params file you installed<br> } <br>}</p><br> press ctrl+o for save and ctrl+x to exit. Now create the link between the file .conf created
+                with Nginx
+                <br>
+                <p class="terminal"> sudo ln -s ~/path_app/name_app_nginx.conf /etc/nginx/sites-enabled/ </p> <br> into file setting.py of the app insert STATIC_ROOT = os.path.join(BASE_DIR,"static/") for handle static files.
+                <br> Now restart Nginx <br><em class="terminal"> sudo /etc/init.d/nginx restart <br></em>[ ok ] Restarting nginx (via systemctl): nginx.service.<br>
+                <em class="terminal"> sudo systemctl status nginx.service </em><br>
+                <p class="terminal2">● nginx.service - A high performance web server and a reverse proxy server Loaded: loaded (/lib/systemd/system/nginx.service; enabled; vendor preset: enabled)
+                    <br> Active: active (running) since mer 2017-08-30 00:10:31 CEST; 4s ago <br>Process: 14530 ExecStop=/sbin/start-stop-daemon --quiet --stop --retry QUIT/5 --pidfile /run/nginx.pid (code=exited, status=0/SUCCESS)
+                    <br>Process: 14830 ExecStart=/usr/sbin/nginx -g daemon on; master_process on; (code=exited, status=0/SUCCESS)
+                    <br>Process: 14827 ExecStartPre=/usr/sbin/nginx -t -q -g daemon on; master_process on; (code=exited, status=0/SUCCESS) Main PID: 14831 (nginx) <br>CGroup: /system.slice/nginx.service ├─14831 nginx: master process
+                    /usr/sbin/nginx -g daemon on; master_process on ├─14832 nginx: worker process ├─14833 nginx: worker process ├─14834 nginx: worker process └─14835 nginx: worker process ago 30 00:10:31 mecbar systemd[1]: Starting
+                    A high performance web server and a reverse proxy server... ago 30 00:10:31 mecbar systemd[1]: Started A high performance web server and a reverse proxy server.
+                </p>
+                <br> copy uwsgi.params into the project directory. Now test the socket<br>
+                <em class="terminal">sudo uwsgi --socket :8001 --wsgi-file_test.py</em><br>we see the following message how response:<br>
+                <p class="terminal2">*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 00:35:30 2017] ***<br> compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24
+                    UTC 2017
+                    <br> nodename: xxxxxx<br> machine: x86_64<br> clock source: unix detected
+                    <br> number of CPU cores: 4 <br>current working directory: /percorso app<br> detected binary path: /usr/local/bin/uwsgi<br> !!! no internal routing support, rebuild with pcre support !!!
+                    <br> *** WARNING: you are running uWSGI without its master process manager ***
+                    <br> your processes number limit is 31000<br> your memory page size is 4096 bytes<br> detected max file descriptor number: 1024<br> lock engine: pthread robust mutexes <br>thunder lock: disabled (you can enable
+                    it with --thunder-lock)
+                    <br> uwsgi socket 0 bound to TCP address :8001 fd 3<br> Python version: 2.7.12 (default, Nov 19 2016, 06:48:10) [GCC 5.4.0 20160609] <br>*** Python threads support is disabled. You can enable it with --enable-threads
+                    ***
+                </p>
+                <br>.... if we insert into the browser http://localhost:8000 we see 'hello world' . For error or problem read the log of Nginx at the link /var/log/nginx/error.log) if error 13: Permission denied or other messagge
+                insert the following command:<br><em class="terminal"> sudo uwsgi --socket name_app.sock --wsgi-file_test.py --chmod-socket=666 <br> sudo uwsgi --socket mysite.sock --wsgi-file_test.py --chmod-socket=664 # (more sensible) </em><br>                                        Se tutto ok ci siamo e proviamo il socket con la nostra applicazione che per esempio la chiamiamo app <br><em class="terminal"> sudo uwsgi --socket app.sock --module app.wsgi –chmod-socket=666</em><br> N.B: se errore
+                <p class="terminal2">
+                    502 bad gateway read the log /var/log/nginx → error.log if error 13 Permission denied folder project delete the file app.sock and try again <br>*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 19:41:56 2017]
+                    *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14<br> os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC ..... *** uWSGI is running in multiple interpreter mode ***
+                </p>
+                <br>into the browser http://localhost:8000 we have our app ready and run through Django, Uwsgi e Nginx. Config uWSGI for execute it with .ini file insert the data into a file and then run it<br>
+                <em class="terminal"> sudo nano app_uwsgi.ini </em><br>
+                <p class="terminal2"> # mysite_uwsgi.ini file<br> [uwsgi]<br> # Django-related settings<br> # the base directory (full path)<br> chdir = /path_app
+                    <br> # Django's wsgi file
+                    <br>module = app.wsgi <br># the virtualenv (full path)<br> home = /path/virtualenv<br> # process-related settings<br> # master master = true <br># maximum number of worker processes processes = 10
+                    <br> # the socket (use the full path to be safe<br> socket = /path/app.sock # ... with appropriate permissions - may be needed<br> # chmod-socket = 664 # chmod-socket = 666 <br># clear environment on exit
+                    <br> vacuum = true</p> <br>press ctrl+o to save then ctrl+x for exit and execute created file <br><em class="terminal"> sudo uwsgi --ini app_uwsgi.ini # the --ini option it means that is a file </em><br>
+                <p class="terminal2"> [uWSGI] getting INI configuration from app_uwsgi.ini *** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:49:26 2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic
+                    #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017...........</p>
+                <br> For the end of configuration set Emperor methd for handle more application on the same server (uid user id – gid group id) - create the directory uwsgi into the folder /etc<br>
+                <em class="terminal"> sudo mkdir /etc/uwsgi <br> sudo mkdir /etc/uwsgi/vassals</em><br>than a file ini with folder vassals <br><em class="terminal">sudo
+                    ln -s /path/app_uwsgi.ini /etc/uwsgi/vassals/ <br>sudo uwsgi --emperor /etc/uwsgi/vassals --uid www-data --gid www-data </em><br>
+                <p class="terminal2">*** Starting uWSGI 2.0.15 (64bit) on [Wed Aug 30 20:57:24 2017] *** compiled with version: 5.4.0 20160609 on 29 August 2017 23:10:14 os: Linux-4.10.0-33-generic #37~16.04.1-Ubuntu SMP Fri Aug 11 14:07:24 UTC 2017
+                    nodename: xxxxxx machine: x86_64 clock source: unix detected number of CPU cores: 4 current working directory: /path_app detected binary path: /usr/local/bin/uwsgi !!! no internal routing support, rebuild with
+                    pcre support !!! setgid() to 33 setuid() to 33 *** WARNING: you are running uWSGI without its master process manager *** your processes number limit is 31000 your memory page size is 4096 bytes detected max
+                    file descriptor number: 1024 *** starting uWSGI Emperor *** *** has_emperor mode detected (fd: 6) *** [uWSGI] getting INI configuration from app_uwsgi.ini *** .... - [emperor] vassal app_uwsgi.ini is now loyal.</p>
+                <br> Into the browser app is ready.<br> Now set the automatic start of the service Uwsgi with the systemctl of linux. <br> Create the file uwsgi.service
+                <br><em class="terminal"> sudo nano /etc/systemd/system/uwsgi.service </em> <br> and insert the following data<br>
+                <p class="terminal2"> [Unit]<br> Description=uWSGI Emperor
+                    <br> After=syslog.target<br> [Service]<br> ExecStart=/usr/local/bin/sudo uwsgi --emperor /etc/uwsgi/vassals/ --uid www-data --gid www-data --daemonize /var/log/uwsgi-emperor.log <br># Requires systemd version
+                    211 or newer
+                    <br> RuntimeDirectory=uwsgi
+                    <br>Restart=always<br> KillSignal=SIGQUIT<br> Type=notify StandardError=syslog<br> NotifyAccess=all
+                    <br> [Install]<br> WantedBy=multi-user.target </p><br> ctrl+o for save and crl+x for exit. Start the service and test if it is active<br><em class="terminal"> sudo systemctl start uwsgi.service<br> sudo systemctl status uwsgi.service</em><br>
+                <br>
+                <img data-src="foto/uwsgiserv.png" width="100%" height="500px" alt="uwsgi service status">
+                <br><br><br>
+                 For test if service is automatic active at every restart run the system restart and just the system is ready check the status of service. if it's active we finished.
+                 <br><br>
+                 That's all<br>
+                 
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        $('#blog-btn-espandi-mini1').show()
+    </script>
+
+</body>
+</html>

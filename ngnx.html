@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>NodeJS</title>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     
+</head>
+<style>
+    img {
+       opacity: 1;
+       transition: opacity 0.3s;
+    }
+    img[data-src] {
+       opacity: 0;
+    }
+    </style>
+    <script>
+    $( document ).ready(function() {
+       [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+             img.setAttribute('src', img.getAttribute('data-src'));
+             img.onload = function() {
+                img.removeAttribute('data-src');
+             };
+       });
+    });
+    </script>
+<body>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+            </ul>
+            </li>
+    </nav>
+    <br><br>
+    <div style="height:4000px;margin:30px">
+      <div class="row">
+        <div class="col s12 m4 l4">
+            <img data-src="foto/linux.png" id="ngx1" width="100%" height="180px" alt="linux">
+        </div>
+        <div class="col s12 m4 l4">
+            <img data-src="foto/nginx.png" id="ngx2" width="100%" height="180px" alt="nginx">
+        </div>
+        <div class="col s12 m4 l4">
+            <img data-src="foto/PM2.png" id="ngx3" width="100%" height="180px" alt="pm2">
+        </div>
+      </div>
+      <br>
+      <br>
+        <div id="blog3-eng">
+            <h5 class="blog-titolo">View Nginx PM2 and firewall of Linux</h5>
+           
+        
+            <div class="col s12 m12 l12" style="text-align: center">
+                <h6> by Mecbar 13 settembre 2017 </h6>
+            </div>
+            <br><br>
+            <div style="height:200px;margin-top:10px">
+                <p class="caratter-text">In the previous post we have used Nginx and PM2. Now we see how use them on Linux Ubuntu 16.04 Lts. Nginx is a web server/reverse proxy with elevate performans and can be used also as server proxy for email on different
+                    operating system. First of all install it with the command from Terminal</p>
+                <em class="terminal">
+                        sudo apt-get install nginx </em><br>
+             
+                <div class=caratter-text id="blog-btn-espandi-mini2">
+                    then setup the automatic start of the service<br>
+                    <em class="terminal"> sudo /etc/init.d/nginx start</em>
+                    <br>
+                    <em class="terminal">[ ok ] Starting nginx (via systemctl): nginx.service.</em>
+                    <br>
+                    <em class="terminal">sudo systemctl status nginx.service </em>
+                    <br>
+                    <br>
+                    <img data-src="foto/nginxstatus.png" class="blog-images" width="100%" height="300px" alt="staus nginx service"> other command are service stop or restart sudo systemctl stop nginx.service sudo systemctl restart nginx.service
+                    In the following scheme we see how Nginxinteracts with the other application and the web. From the browser the user call Nginx that transfer the request at Uwsgi/Django (back-end). Django create the answer and through
+                    Uwsgi send it via Nginx at browser for the user.
+                    <br>
+                    <section class="">
+                        <div class="row">
+                            <div class="col s3 m3 l3">
+                                <img class="blog-images" data-src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s1 m1 l1">
+                                <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s2 m2 l2">
+                                <img class="blog-images" data-src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s1 m1 l1">
+                                <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s2 m2 l2">
+                                <img class="blog-images" data-src="foto/uwsgi.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s1 m1 l1">
+                                <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s2 m2 l2">
+                                <img class="blog-images" data-src="foto/django.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                        </div>
+                    </section>
+                    <br>  <br>
+                    In the image below the scheme with the web server NodeJs(Javascript) and the process manager PM2.
+                    <br>  <br>
+                    <section class="">
+                        <div class="row">
+                            <div class="col s3 m3 l3">
+                                <img class="blog-images" data-src="foto/browsers.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s1 m1 l1">
+                                <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s2 m2 l2">
+                                <img class="blog-images" data-src="foto/nginx.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s1 m1 l1">
+                                <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s2 m2 l2">
+                                <img class="blog-images" data-src="foto/PM2-vert.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s1 m1 l1">
+                                <img class="blog-images" data-src="foto/frecce.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                            <div class="col s2 m2 l2">
+                                <img class="blog-images" data-src="foto/nodejs-vert.png" width="100%" height="300px" alt="internet utenti">
+                            </div>
+                        </div>
+
+                    </section>
+                    <br>  <br>  <br>
+                    For communicate with the operating system we need to open the firewall policy so Nginx can transfer request and answer between client and server.
+                    <br> Some commands for Firewall of Linux are the followings:
+                    <br>  <br>
+                    <ul>
+                        <li> <em class="terminal">sudo ufw status </em></li>
+                        <li>  <em class="terminal">sudo ufw enable # enable the firewall</em></li>
+                        <li>  <em class="terminal">sudo ufw disable # disable the firewall</em></li>
+                        <li>  <em class="terminal">sudo ufw allow port 80 # enable port for ex. the port 80 </em></li>
+                        <li>  <em class="terminal">sudo ufw allow 'Nginx http' # enable nginx for protocol http </em></li>
+                    </ul> <br> In the example below we see the open port from Firewall.
+                    <br>  <br>
+                    <img class="blog-images" data-src="foto/firewall.png" width="100%" height="450px" alt="firewall">
+                    <br>  <br>
+                    In the previous post we see how use Nginx with Uwsgi and Django now instead we talk about PM2 for NodeJs. PM2 is a process
+                    manager. It allows us to handle more web application on one server. With PM2 the application are always ready on the server for the request of the user In the previous post we have seen how to install and use it
+                    with Nginx. Now we show some commands for PM2.<br>
+                    <br>  <br>
+                    <ul>
+                        <li> <em class="terminal">sudo systemctl status pm2 #for show status of PM2</em></li>
+                        <li> <em class="terminal">sudo systemctl stop pm2 # for stop run of PM2</em></li>
+                        <li> <em class="terminal">sudo systemctl start pm2</em></li>
+                        <li> <em class="terminal">sudo systemctl restart pm2</em></li>
+                    </ul>
+                    <br>  <br>
+                    Below the command for see status of web application handles by Pm2.
+                    <br>  <br>
+
+                    <em class="terminal">sudo pm2 show n.ro application or name of application</em></p>
+                    <br><br>
+                    <ul>
+                        <li>
+                            <img class="blog-images" data-src="foto/pm2show.png" width="100%" height="450px" alt="pm2 show app">
+                        </li>
+                        <br> 
+                        Other command:
+                        <br>
+                        <br>
+                        <li> <em class="terminal">sudo pm2 monit</em></li>
+                        <li>  <em class="terminal">sudo pm2 list # application list handle by PM2</em></li>
+                        <li> <em class="terminal">sudo pm2 start name_app # start the app</em></li>
+                        <li> <em class="terminal"> sudo pm2 restart name_app # restart the app </em></li>
+                        <li>  <em class="terminal">sudo pm2 stop name_app # stop run app </em></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+<script>
+    $('#blog-btn-espandi-mini2').show()
+</script>
+</body>
+</html>

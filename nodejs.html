@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>NodeJS</title>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+     
+</head>
+<style>
+    img {
+       opacity: 1;
+       transition: opacity 0.3s;
+    }
+    img[data-src] {
+       opacity: 0;
+    }
+    </style>
+    <script>
+    $( document ).ready(function() {
+       [].forEach.call(document.querySelectorAll('img[data-src]'), function(img) {
+             img.setAttribute('src', img.getAttribute('data-src'));
+             img.onload = function() {
+                img.removeAttribute('data-src');
+             };
+       });
+    });
+    </script>
+<body>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+            </ul>
+            </li>
+    </nav>
+    <br><br>
+    <div style="height:6000px;margin:30px">
+    <div class="col s10">
+        <div style="background-image:url('foto/index.png')" id="img1" class="blog-img-secondario1" alt="">
+    </div>
+    <div id="box1-eng">
+        <h4 class="blog-titolo">Application server with Node.js, PM2 and Nginx on Linux Ubuntu 16.04 Lts</h4>
+        <div class="col s12 m12 l12" style="text-align: center">
+            <h6> by Mecbar 13 luglio 2017 </h6>
+        </div>
+        <div style="margin-top:10px">
+            <br><br>
+            <p class="caratter-text">
+                For install NodeJs from Terminal insert :<br><em class="terminal">sudo apt-get install </em><br> <em class="terminal">sudo apt-get install build-essential</em> <br> If our application is ready install the process
+                manager pm2 with the command:<br><em class="terminal">sudo npm install -g pm2</em><br> and then start the aplication from Terminal <br><em class="terminal">pm2 start name_app.js  #from the directory of the app</em><br>                                        verify if the app is in execution in the browser insert the link <em>localhost:5500 </em> (port assigned into the app)<br>
+                <br>
+                <div class="caratter-text" id="blog-btn-espandi"><br> If the app is running set the automatic start of Pm2 at the ipl of the machine:<br>
+                    <em class="terminal">sudo env PATH=$PATH:/usr/bin /usr/lib/node_modules/pm2/bin/pm2 startup systemd -u root --hp /home/root</em><br> Now setup the Http Server Nginx hw reverse proxy opening the following file
+                    with an editor, here use Nano: seguente con l'editor nano:<br>
+                    <em class="terminal">sudo nano /etc/nginx/sites-available/default</em><br>
+                    <p class="caratter-text">insert the following text:<br> location / { <br> proxy_pass http://localhost:5500;<br> proxy_http_version 1.1;<br> proxy_set_header Upgrade $http_upgrade;<br> proxy_set_header Connection 'upgrade';
+                        <br> proxy_set_header Host $host;<br> proxy_cache_bypass $http_upgrade;<br> }
+                        <br> }
+                        <br> if you want insert an other application add the following instruction: location / {}<br> when all test is written save the file with command ctrl+o and exit with ctrl+x <br> Now for verifycation the
+                        correct operation shutdown the machine and restart it.
+
+                        <br>
+                    </p>
+                    <br>
+                    <br>
+                    <img data-src="foto/blog-pm2.png" width="100%" height="450px" alt="pm2 status">
+                    <br><br>
+                    <p class="caratter-text">
+                        For verification correct automatic start of the process manager pm2 that runs the app insert from Terminal the command pm2 show name_app or pm2 show number_app <br> We see that the app run and it's active.
+                        insert from Terminal : </p><br>
+                    <em class="terminal">sudo pm2 show 0 </em><br><br>
+                    <img data-src="foto/pm2show.png" width="100%" height="850px" alt="pm2 process attivi">
+                    <br><br>
+                    <p class="spazio1999"> We see that the app run and it's active. From the browser insert the link http://localhost:5500 we can open our app and it's work.<br> </p>
+                    <br><br>
+                    <img data-src="foto/homemecbar-foto.png" width="100%" height="850px" alt="app pronta ad uso">
+                    <br><br>
+                </div>
+        </div>
+    </div>
+    </div>
+
+    <script>
+        $('#blog-btn-espandi').show()
+    </script>
+    <script>
+        
+    $('#img1').hover(function() {
+
+$(this).css('background-image', 'url(foto/PM2.png)');
+
+}, function() {
+$(this).css('background-image', 'url(foto/index.png)');
+});
+    </script>
+</body>
+</html>
