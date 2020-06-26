@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+   
+    <!-- sumome  link social 
+    <script src="//load.sumome.com/" data-sumo-site-id="98711fc4997a561007230296cfc67bf8fe083e4799bea5270763985560b583ec" async="async"></script>
+     font x icone social + email -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- facebook open graph -->
+    <meta property="og:url" content="https://www.mecbar.com" />
+    <meta property="og:title" content="MecBar the webt for you" />
+    <meta property="og:image" content="https://www.mecbar.com/mecface.jpg" />
+    <meta property="og:description" content="MecBar for you" />
+
+
+</head>
+<style>
+  .img1 {
+    /*margin:max(5px);*/
+    margin-bottom: 50px;
+    margin-top: 20px;
+    box-shadow: 1px 5px 15px 0px rgb(51, 48, 48);
+  }
+
+</style>
+<script>
+    window.onload = function () {
+        console.log('carico piano cartesiano');
+        
+        var c = document.getElementById('canvas');
+        var ctx = c.getContext('2d');
+        // Center
+        ctx.translate(200, 200);
+        
+        // Add linee - con moveTo ci si posiziona inizio linea poi lineTo crea linea
+        ctx.beginPath();
+        ctx.moveTo(-200,0);
+        ctx.lineTo(200,0);
+        ctx.stroke();
+        ctx.moveTo(0,-200);
+        ctx.lineTo(0, 200);
+        ctx.stroke();     
+        ctx.moveTo(100,-150);
+        ctx.lineTo(-100, 150);
+        ctx.stroke(); 
+        ctx.moveTo(30,-90);
+        ctx.lineTo(0, 0);
+        ctx.stroke();
+        
+        ctx.font = "15px Arial";
+        ctx.fillText("x",180, -10);
+        ctx.fillText("y",10, 180);
+        
+        ctx.fillText("x",-200, -10);
+        ctx.fillText("y",10, -180);  
+        ctx.fillText("1 3 ",20, -90);
+        ctx.fillText("EIGENVECTOR",110, -150);
+        ctx.fillText("EIGENVALUE = 2",100, -100);
+        ctx.fillStyle='white'
+        ctx.font = "20px Arial";
+        ctx.fillText("Figura 1",-200, 200);
+        
+        function drawCartesianPoint(ctx, x, y) {
+            ctx.fillRect(x, -(y), 4, 4); 
+        }
+        
+        // And for text:
+        function drawCartesianText(ctx, x, y, text) {
+            ctx.fillText(text , x, -(y));  
+        }
+        
+        // Draw corrext:
+        //drawCartesianPoint(ctx, -100, -100);
+        //drawCartesianText(ctx, -100, -100, '(-100, -100) correct');        
+    
+    var f = document.getElementById('canvas2');
+        var ctx = f.getContext('2d');
+        // Center
+        ctx.translate(200, 200);
+        
+        // Add linee - con moveTo ci si posiziona inizio linea poi lineTo crea linea
+        ctx.beginPath();
+        ctx.strokeStyle = "#000000";
+        ctx.moveTo(-200,0);
+        ctx.lineTo(200,0);
+        ctx.strokeStyle = "#000000";
+        //ctx.stroke();
+        ctx.moveTo(0,-200);
+        ctx.lineTo(0, 200);
+        //ctx.stroke();     
+        ctx.moveTo(100,-150);
+        ctx.lineTo(-100, 150);
+        ctx.stroke(); 
+        ctx.beginPath();
+        ctx.moveTo(100,-100);
+        ctx.lineTo(0, 0);
+        ctx.strokeStyle = "#FF0000";
+        ctx.stroke();
+        ctx.beginPath();  //mettere prima di cambiare colore
+        ctx.moveTo(95,-110);
+        ctx.lineTo(0, 0);
+        ctx.strokeStyle = "#00cc00";
+        ctx.stroke();
+        ctx.beginPath();  //mettere prima di cambiare colore
+        ctx.moveTo(90,-140);
+        ctx.lineTo(0, 0);
+        ctx.strokeStyle = "blue";
+        ctx.stroke();
+
+        ctx.font = "15px Arial";
+        ctx.fillText("dx",180, -10);
+        ctx.fillText("sx",10, 180);
+        
+        ctx.fillText("dx",-200, -10);
+        ctx.fillText("sx",10, -180);  
+        ctx.fillStyle ="#FF0000" ;
+        ctx.fillText("500 500 ",100, -90);
+        ctx.fillStyle ="#00cc00" ;
+        ctx.fillText("475 525 ",100, -110);
+        ctx.fillStyle ="blue" ;
+        ctx.fillText("453.75 546.25",100, -140);
+        ctx.fillText("EIGENVECTOR",300, -150);
+        ctx.fillText("EIGENVALUE = 2",300, -100);
+        ctx.fillStyle='white'
+        ctx.font = "20px Arial";
+        ctx.fillText("Figura 2",-200, 200);
+
+        var g = document.getElementById('canvas3');
+        var ctx = g.getContext('2d');
+        // Center
+        ctx.translate(200, 200);
+        
+        // Add linee - con moveTo ci si posiziona inizio linea poi lineTo crea linea
+
+
+        function setCentro(ctx,color,dim){
+            ctx.beginPath();
+            ctx.strokeStyle = color;
+            ctx.lineWidth= dim;
+            ctx.moveTo(-200,0);
+            ctx.lineTo(200,0);
+            ctx.stroke();
+            ctx.moveTo(0,-200);
+            ctx.lineTo(0, 200);
+            ctx.stroke();     
+            ctx.closePath();
+     }
+
+        function drawCartesianLineV(ctx, x, y,z) {
+            yy = y
+            if (x >200) {
+                x=200
+               y= 60
+            }
+            ctx.beginPath();
+            ctx.lineWidth= 1;
+            ctx.strokeStyle = "red";
+            ctx.moveTo(x,-y);
+            ctx.lineTo(z, yy);
+            ctx.stroke();  
+            ctx.closePath();   
+        }
+   
+        
+        function drawCartesianLine(ctx, x, y,color) {
+            ctx.beginPath();
+            ctx.lineWidth= 1;
+            ctx.strokeStyle = color;
+            ctx.moveTo(-x,-y);
+            ctx.lineTo(-x, y);
+            ctx.stroke();   
+            ctx.closePath();  
+        }
+        function drawCartesianLineO(ctx, x, y,color) {
+            ctx.beginPath();
+            ctx.lineWidth= 1;
+            ctx.strokeStyle = color;
+            ctx.moveTo(x,y);
+            ctx.lineTo(-x, y);
+            ctx.stroke();  
+            ctx.closePath();   
+        }
+
+       
+
+       function drawVettore(ctx,x,y,color) {
+            ctx.beginPath();
+            ctx.lineWidth= 3;
+            ctx.strokeStyle = color;
+            ctx.moveTo(x,-y);
+            ctx.lineTo(0,0);
+           // ctx.closePath(); 
+            ctx.stroke();   
+           // ctx.fill(); 
+       }
+    
+    function inizio() {
+        //verticali da -200 a 0
+        for (i = 200; i >=(-200) ; i-= 20) {
+            drawCartesianLine(ctx,i,200,'black')
+      } 
+  
+      
+      for (i = 200; i >=(-200) ; i-= 20) {
+            drawCartesianLineO(ctx,200,i,'black')
+      } 
+      ctx.fillStyle='white'
+      ctx.font = "20px Arial";
+      ctx.fillText("Figura 3",-200, 220);
+    };
+
+
+
+   function trasformazione() {
+    for (i = 200; i >=(-200) ; i-= 20) {
+            drawCartesianLine(ctx,i,200,'#fbf4fb')
+      } 
+    for (i = 200; i >=(-200) ; i-= 20) {
+            drawCartesianLineO(ctx,200,i,'#fbf4fb')
+      } 
+
+    for (i = 260; i >(-200) ; i-= 60) {
+            drawCartesianLineV(ctx,i,200,i-160)
+      } 
+    for (i = 200; i >=(-200) ; i-= 40) {
+            drawCartesianLineO(ctx,200,i,'red')
+
+   }
+  }
+   
+  function clear(){
+    ctx.beginPath();
+    ctx.fillStyle = 'white';
+    ctx.clearRect(-200, -200, 500, 500);
+    ctx.beginPath();
+  }
+
+   function vettore(ctx,color){
+    ctx.beginPath();
+    ctx.fillStyle = color;
+    ctx.font = "25px Arial";
+    ctx.fillText("v = [1,2]" ,22, -45);
+    ctx.fillText("w = [3,0]", 65,  20); 
+    ctx.closePath();   
+     } 
+
+    //inizio();
+
+     var set;
+      function avvia() {
+            clear()
+           inizio()
+           setCentro(ctx,'black',1)
+           // trasformazione()
+           // drawVettore(ctx,19,-40,'red')
+          //  drawVettore(ctx,60,0,'bleu')
+          //  vettore(ctx,'brown')
+          //  clear()
+          //setTimeout(function(){  clear() }, 1000);
+         // setTimeout(function(){  inizio() }, 1000);
+           setTimeout(function(){  trasformazione()}, 1000);
+           setTimeout(function(){  drawVettore(ctx,19,40,'orange') }, 1000);
+           setTimeout(function(){   drawVettore(ctx,60,0,'blue') }, 1000);
+           setTimeout(function(){  vettore(ctx,'white') }, 2000);
+    
+      }
+  
+    setInterval(function(){ avvia() }, 5000);
+        
+ 
+    }
+    </script>
+    <body>
+    <nav style="height: 0px;color: black !important;">
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar"><span  style="color: black !important">Mecbar</span></a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+                <li><a href="http://www.mecbar.com/"><span  style="color: black !important">Home</span></a></li>
+                <li><a href="#Ablog"><span  style="color: black !important">Blog</span></a></li>
+                <li><a href="#block3"><span  style="color: black !important">Blockchain</span></a></li>
+                <li><a href="#ml"><span  style="color: black !important">Machine Learning</span></a></li>
+                <li><a href="#Alinux"><span  style="color: black !important">Linux</span></a></li>
+                <li><a href="#Aus"><span  style="color: black !important">Contatti</span></a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+              <li><a href="http://www.mecbar.com/"><span  style="color: black !important">Home</span></a></li>
+              <li><a href="#Ablog"><span  style="color: black !important">Blog</span></a></li>
+              <li><a href="#block3"><span  style="color: black !important">Blockchain</span></a></li>
+              <li><a href="#ml"><span  style="color: black !important">Machine Learning</span></a></li>
+              <li><a href="#Alinux"><span  style="color: black !important">Linux</span></a></li>
+              <li><a href="#Aus"><span  style="color: black !important">Contatti</span></a></li>
+            </ul>
+            </li>
+    </nav>
+    <style>
+    .logo {
+      display: block;
+      width: 100%;
+      height: 400px;
+      background-image: url(foto/test.svg);
+      background-size: 100% 400px;
+    }
+    </style>
+
+    <div class="logo">
+    <div class="titoloblockchain" style="padding-top: 115px;text-align: center;font-size: 50px;color: black;">
+  Algebra Lineare - spazio vettoriale
+    </div>
+    </div>
+
+<div class="row testo">
+<div class="col l12 m12 s12">
+  L'algebra lineare è la branca della matematica che si occupa dello studio dei vettori,
+  spazi vettoriali(piano cartesiano), trasformazioni lineari e sistemi di equazioni lineari.<br>
+    Vediamo ora come eseguire le moltiplicazione tra vettori o tra matrici e vettori che sono la base 
+    per eseguire le operazioni per i tensor oppure per operazioni nei circuiti quantistici.<br>
+    Sotto vediamo 2 diversi esempi, il primo di moltiplicazione tra vettori ed il secondo di moltiplicazione
+    tra matrice e vettore.<br><br>   
+    <img src="foto/vettmolt.png" width="900px" height="200px">
+    <br>
+    Nella parte finale una moltiplicazione binaria come si hanno nella computazione quantistica per determinare i valori
+    dei qubit.<br><br>
+
+    <img src="foto/matricimolt.png" width="700px" height="200px">
+    <br>
+    Ora nell'immagine sottostante passiamo ad analizzare un esempio di calcolo di un Tensor.<br><br>
+    <div class="col l6 m6 s12">
+    <img src="foto/tensorA.png" width="100%" height="200px"> 
+    </div>
+    <div class="col l6 m6 s12">
+      <img src="foto/tensor.png" width="100%" height="200px"> 
+    </div>
+    <br>
+    Mentre l'immagine seguente mostra come calcolare il valore dei qubit, 2 nel primo caso e 3 qubit nel secondo caso.<br><br>
+    
+    <img src="foto/ket.png" width="700px" height="300px"> 
+<br>
+  Vediamo come vengono applicati i gates nei qubit sia nel procedimento che a livelli di calcoli algebrici.
+  Se su di un qubit dobbiamo applicare più gates prima moltiplichiamo i loro valori algebrici tra loro ed il risultato viene poi 
+  moltiplicato per il valore del qubit.<br>
+  In questo esempio applichiamo al qubit |0⟩ il gate X ed Y.<br>
+  Nella figura 1 di sx vengono indicati i relativi valori del gate X ed Y.<br>
+  Mentre nella figura 2 a dx viene calcolato il valore della moltiplicazione dei 2 gates 
+  che poi si applichera al qubit.<br>
+  <div class="col l6 m6 s12">
+    <br><span class="figura">Figura 1 </span><br>
+    <img src="foto/xy.png" width="70%" height="100px"><br>
+    </div>
+    <div class="col l6 m6 s12">
+      <br><span class="figura">Figura 2 </span><br>
+      <img src="foto/xy2.png" width="70%" height="100px"><br>
+    </div>
+    <br>
+    Infine nella figura 3 sottostante vediamo il risultato finale dell'operazione eseguita sul qubit |0⟩.<br>
+    <br>
+    <span class="figura">Figura 3 </span><br>
+    <img src="foto/xy0.png" width="350px" height="100px"><br>
+
+
+</div>
+  </div>
+
+  <div class="row">
+    <div class="col l6 m6 s12 titoloblockchain" style="padding: 30px;">
+
+      Qui vediamo un esempio di risoluzione di equazioni lineari con le matrici e presentato nel piano cartesiano.<br>
+      Date le seguenti 2 equazioni lineari:<br>
+      3x - 2y = 1<br>
+      -x  + 4y = 3<br>
+      <br> Traduciamo le equazioni in una matrice come nell'immagine sottostante:<br>
+      <img src="foto/matrice1.png" width="200px" height="100px">
+      <br>
+      Il vettore (1,3) è il risultato, come vediamo anche nel piano cartesiano dell'immagine 
+      a lato(figura 1), l'obiettivo è trovare i valori del vettore (x,y) che generano il risultato (1,3).<br>
+      Sfruttando la proprietà delle matrici quadrate e moltiplicando la matrice inversa per il vettore del
+      risultato (1,3) otteniamo il vettore v = (1,1) che sono i valori x, y.<br>
+      Utilizzando la Markov matrices possiamo risolvere delle equazioni lineari per determinare 
+      i valori di 2 incognite in una sequenza temporale continua. <br>
+      Su di un campione di 1000 elettori in un sistema bipartitico seguiamo il trend dei flussi elettorali settimanali 
+      dove il 10% degli elettori di sx passano a dx ed il 5% passano da dx a sx.<br>
+      Costruiamo le equazioni lineari partendo da 2 campioni di 500 elettori per ogni schieramento
+      <br> <br>sx   .9x  + .05y = 500 <br>dx  .1x  +  .95y = 500 <br><br>
+      Costruiamo la matrice iniziale con x = 500 e y = 500 da notare che la caratteristica della
+      matrice di Markov è che la somma dei coefficienti sia di x che di y è uguale a 1.<br>
+      Quindi abbiamo <br><br>.9(500) + .05(500) = 475 <br> .1(500) + .95(500) = 525 <br><br>possiamo rappresentare 
+      le 2 equazioni nel piano cartesiano con il vettore EIGENVECTOR con il relativo EIGENVALUE.<br>
+      Sostituendo la x con 475 e la y con 525 otteniamo i nuovi valori :<br><br>
+      .9(475) + .05(525) = 453.75<br>
+      .1(475) + .95(525) = 546.25 <br><br>
+      e cosi per ogni nuova sequenza(figura 2).
+      Proseguendo nelle iterazioni si arriverà al punto in cui cambiando i valori di x ed y 
+      i risultati non cambiano ciò significa che abbiamo raggiunto l'Eigenvector. <br>
+      
+      Nella Linear transformation la i hat e j hat di tutti i vettori ruotano ed escono dal proprio span solo il
+      vettore EIGENVECTOR non si sposta e rimane nella stessa posizione e lo scalare EIGENVALUE è il valore di stretched durante la trasformazione.
+
+    </div>
+
+
+    <div class="col l6 m6 s12 cartesio"> 
+  <canvas id="canvas" width="500" height="500">
+  </canvas>
+  <br><br>
+  <canvas id="canvas2" width="500" height="500">
+  </canvas>
+ 
+    <canvas id="canvas3" width="500" height="500">
+  </canvas>
+ </div>
+
+  </div>
+
+  <div class="row testo">
+Ora facciamo un esempio per trovare un eigenvector ed il relativo eigenvalue tramite l'algoritmo HHL 
+di Quantum computing su Qiskit prima con la simulazione e poi su di un computer quantistico reale.
+Per prima cosa definisco le 3 equazioni lineari dalle quali poi estraiamo la matrice ed il valore.<br>
+Quindi dalle 3 seguenti equazioni :<br><br>
+    -x + 3y + z = 3.54515<br>
+    2x + 3y + z = 5.59135<br>
+    3x + 2y + z = 5.19768<br>
+    <br>
+    le scomponiamo in una matrice e 2 vettori.<br> 
+    <img src="foto/algebra3.png" width="300px" height="100px"><br>
+    <div class="row">
+      <div class="col l4 m12 s12">
+    estraiamo la matrice M <br>
+    <img src="foto/algebra4.png" width="200px" height="50px">
+      </div>
+      <div class="col l4 m12 s12">
+     vettore v (incognite da ricercare) <br>
+    <img src="foto/algebra5.png" width="150px" height="50px">
+      </div>
+      <div class="col l4 m12 s12">
+    ed il vettore b (risultato equazioni) <br>
+    <img src="foto/algebra6.png" width="200px" height="50px"><br>
+    
+      </div>
+    </div>
+     tale che Mv = b 
+    <br>
+    <br>
+    <div class="titoloblockchain">
+      Programma per calcolare Eigenvector con algoritmo HHL computer quantistico - simulazione
+    </div>
+    <br>
+    <div class="blk-border box-b6" style="padding: 30px;font-size:25px;background-color: white;color: #000;">
+    import qiskit<br>
+    from qiskit.aqua import run_algorithm<br>
+    #from qiskit.aqua  import LinearSystemInput<br>
+    from qiskit.quantum_info import state_fidelity<br>
+    from qiskit.aqua.algorithms import ExactLSsolver<br>
+    import numpy as np<br>
+    parametri= {<br>
+    <span class="indent">  'problem': {</span><br>
+      <span class="indent">   'name': 'linear_system'</span><br>
+      },<br>
+      'algorithm': {<br>
+        <span class="indent">    'name': 'HHL'</span><br>
+      },<br>
+      'eigs': {<br>
+        <span class="indent">   'expansion_mode': 'suzuki',</span><br>
+          <span class="indent">   'expansion_order': 1,</span><br>
+            <span class="indent">   'name': 'EigsQPE',</span><br>
+              <span class="indent">   'num_ancillae': 3,</span><br>
+                <span class="indent">  'num_time_slices': 1</span><br>
+      },<br>
+      'reciprocal': {<br>
+        <span class="indent">   'name': 'Lookup'</span><br>
+      },<br>
+      'backend': {<br>
+        <span class="indent">   'provider': 'qiskit.BasicAer',</span><br>
+          <span class="indent"> 'name': 'statevector_simulator'</span><br>
+      }<br>
+  }<br>
+  <br>
+  def fidelity(hhl, ref):<br>
+  <span class="indent">   solutionHHL = hhl / np.linalg.norm(hhl)</span><br>
+    <span class="indent">   solutionCl = ref / np.linalg.norm(ref)</span><br>
+      <span class="indent">   fidelity = state_fidelity(solutionHHL, solutionCl)</span><br>
+        <span class="indent">   print("fidelity %f" % fidelity)</span><br>
+
+
+    <br>
+    #parametri input<br> 
+matrix = [[-1, 3,1], [2,3, 1],[3,2,1]]<br>
+vector = [3.54, 5.59,5.20]<br>
+parametri['input'] = {<br>
+  <span class="indent">     'name': 'LinearSystemInput',</span><br>
+  <span class="indent">     'matrix': matrix,</span><br>
+  <span class="indent">     'vector': vector</span><br>
+}<br>
+<br>
+
+result = run_algorithm(params)<br>
+print("soluzione circuito algoritmo HHL :", np.round(result['solution'], 2))<br>
+resultCl = ExactLSsolver(matrix, vector).run()<br>
+print("Soluzione classica :", np.round(resultCl['solution'], 2))<br>
+fidelity(result['solution'], resultCl['solution'])<br>
+<br>
+    </div>
+<br>
+<div class="box-b6">
+Soluzione circuito algoritmo HHL : [0.81-0.j 0.9 -0.j 1.25-0.j]<br>
+Soluzione classica :   [0.68 1.07 1.  ]<br>
+fidelity : 0.967365<br>
+</div>
+<br>
+
+<div class="box-b6 blk-border" style="background-color: gainsboro;color: mediumblue;">
+ed il relativo eigenvalue è 5,19768  tale che  Mv = λb<br>
+
+Il circuito ha impiegato 9 qubits, 156 gates di cui 82 CNOT gates.
+<br>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+
+
+
+
+    </body>
+
+</html>
