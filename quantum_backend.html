@@ -1,0 +1,339 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+   
+    <!-- sumome  link social 
+    <script src="//load.sumome.com/" data-sumo-site-id="98711fc4997a561007230296cfc67bf8fe083e4799bea5270763985560b583ec" async="async"></script>
+     font x icone social + email -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- facebook open graph -->
+    <meta property="og:url" content="https://www.mecbar.com" />
+    <meta property="og:title" content="MecBar the webt for you" />
+    <meta property="og:image" content="https://www.mecbar.com/mecface.jpg" />
+    <meta property="og:description" content="MecBar for you" />
+
+
+</head>
+<style></style>
+<script>
+    window.onload = function () {
+        console.log('carico piano cartesiano');
+        function drawCartesianLine(ctx, x, y,color) {
+            ctx.beginPath();
+            ctx.lineWidth= 3;
+            ctx.strokeStyle = color;
+            ctx.moveTo(x,y);
+            ctx.lineTo(50, 350);
+            ctx.stroke();   
+            ctx.closePath();  
+        }
+  
+    
+        var c = document.getElementById('canvas');
+        var ctx = c.getContext('2d');
+    
+      drawCartesianLine(ctx,400,350,'blue')
+      drawCartesianLine(ctx,50,50,'blue')
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(0, 142,149,0.5)';
+
+      ctx.font = "25px Arial";
+      ctx.fillText("Qubit" , 500,30 )
+        ctx.fillStyle = 'rgba(0, 0,0,0.5)';
+        ctx.fillText("∣0⟩",350, 340);
+        ctx.fillText("∣1⟩",60, 80);
+       ctx.fillText("α∣0⟩+β∣1⟩" , 210,130 )
+       ctx.fillText("dove α = 0,6 e β = 0,8" , 210,170 )
+       ctx.fillText("vettore v = (α, β)  α amplitude di ∣0⟩ e β amplitude di ∣1⟩" , 500,350 )
+       ctx.stroke();
+       ctx.closePath();
+
+
+      drawCartesianLine(ctx,200,130,'red')
+
+    }
+
+</script>
+        <body>
+    <nav style="height: 0px;color: black !important;">
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+                <li><a href="http://www.mecbar.com/">Home</a></li>
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#block3">Blockchain</a></li>
+                <li><a href="#ml">Machine Learning</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="http://www.mecbar.com/">Home</a></li>
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#block3">Blockchain</a></li>
+                <li><a href="#ml">Machine Learning</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+            </ul>
+            </li>
+    </nav>
+<style>
+.tes1 {
+    
+    background-color: black;
+    width: 100%;
+    height: 200px;
+    line-height: 35px;
+ font-size: 35px;
+ font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+ padding-top: 100px;
+ color: rgb(255, 255, 255);
+text-align: center;
+}
+.tes2 {
+    border-bottom-right-radius: 50%;
+    width: 50%;
+    height: 150px;
+  
+    background-color:  black;
+    float: left;
+
+}
+
+.tes3 {
+    width: 50%;
+    height: 150px;
+    background-color:black;
+    float: right;
+ 
+}
+.tes4 {
+    border-top-left-radius: 50%;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    /*transform: rotate(5deg);*/
+    float: right;
+}
+
+
+</style>
+
+<div class="tes1"> Computer Quantistico - Backend/Simulator</div>
+
+<div class="tes2"></div>
+
+
+<div class="tes3">
+    <div class="tes4">
+        
+    </div>
+  
+</div>
+
+<div style="margin: 200px;"></div>
+
+<div class="boxxe" style="background-color: black;color: white;font-size: 25px;text-align: center;">
+Statevector simulator
+</div>
+<div class="boxxe">
+!pip install qiskit<br>
+
+from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister<br>
+from qiskit import Aer, execute<br>
+from qiskit.tools.visualization import plot_state_city<br>
+
+from qiskit.providers.aer import StatevectorSimulator<br>
+import qiskit.tools.visualization<br>
+from qiskit.tools.visualization import plot_state_qsphere<br>
+
+qubits = QuantumRegister(2, 'qubits')<br>
+circuit = QuantumCircuit(qubits)<br>
+circuit.h(qubits[0])<br>
+circuit.cx(qubits[0], qubits[1])<br>
+
+# Statevector  Simulator  Backend<br>
+simulator = Aer.get_backend('statevector_simulator')<br>
+<br>
+
+result = execute(circuit, simulator).result()<br>
+statevector = result.get_statevector(circuit)<br>
+plot_state_city(statevector, title='Bell state StateVector',alpha=0.2,color=['green','green'])<br>
+<br>
+plot_state_qsphere(statevector,figsize=(8,7))<br>
+<br>
+
+<img src="foto/sfera.png" width="500px"  height="300px"><br>
+<br>
+from qiskit.tools.visualization import plot_state_paulivec<br>
+plot_state_paulivec(statevector)<br>
+
+<br>
+
+
+qr = QuantumRegister(2, 'qr')<br>
+cr = ClassicalRegister(2, 'cr')<br>
+circ = QuantumCircuit(qr, cr)<br>
+circ.h(qr[0])<br>
+circ.cx(qr[0], qr[1])<br>
+circ.measure(qr, cr)<br>
+<br>
+simulator = Aer.get_backend('statevector_simulator')<br>
+
+result = execute(circ, simulator,shots=1024).result()<br>
+statevector = result.get_statevector(circ)<br>
+plot_state_city(statevector, title='Bell state dopo Meusurement',alpha=0.4, color=['red','blue'])<br>
+
+
+<br>   
+<img src="foto/city.png" width="500px"  height="300px"><br>
+<br><br><br><br>
+</div>
+
+<div class="boxxe" style="background-color: black;color: white;font-size: 25px;text-align: center;">
+UnitarySimulator<br>
+</div>
+<div class="boxxe">
+<br>
+
+Con Qiskit Aer possiamo testare la unitary matrix di un circuito quantistico.<br>
+<br>
+UnitarySimulator<br>
+
+Lo UnitarySimulator costruisce la unitary matrix per un Qiskit QuantumCircuit 
+applicando ogni gate alla identity matrix. Il circuito può contenere solo gates se inseriamo 
+reset o measure si ha errore.
+
+<br><br><br>
+import numpy as np<br>
+<br>
+from qiskit import QuantumCircuit, QuantumRegister, ClassicalRegister<br>
+from qiskit import Aer, execute<br>
+
+from qiskit.providers.aer import UnitarySimulator<br>
+
+qr = QuantumRegister(2)<br>
+circ = QuantumCircuit(qr)<br>
+circ.h(qr[0])<br>
+circ.x(qr[1])<br>
+
+# Select UnitarySimulator<br>
+simulator = Aer.get_backend('unitary_simulator')<br>
+
+result = execute(circ, simulator).result()<br>
+unitary = result.get_unitary(circ)<br>
+print("Circuito unitary simulator:\n", unitary)<br>
+<br>
+
+Circuito unitary simulator:<br>
+ [[ 0.        +0.00000000e+00j  0.        +0.00000000e+00j<br>
+   0.70710678+0.00000000e+00j  0.70710678-8.65956056e-17j]<br>
+ [ 0.        +0.00000000e+00j  0.        +0.00000000e+00j<br>
+   0.70710678+0.00000000e+00j -0.70710678+8.65956056e-17j]<br>
+ [ 0.70710678+0.00000000e+00j  0.70710678-8.65956056e-17j<br>
+   0.        +0.00000000e+00j  0.        +0.00000000e+00j]<br>
+ [ 0.70710678+0.00000000e+00j -0.70710678+8.65956056e-17j<br>
+   0.        +0.00000000e+00j  0.        +0.00000000e+00j]]<br>
+
+   <br>
+
+Possiamo anche inserire un initial state per l'UnitarySimulator 
+questa è l'initial unitary matrix ed il risultato si ottiene applicando il circuit unitary all'initial unitary matrix.
+<br><br><br>
+qr = QuantumRegister(2)<br>
+circ = QuantumCircuit(qr)<br>
+circ.iden(qr)<br>
+<br>
+# Set initial unitary<br>
+opts = {"initial_unitary": np.array([[ 1,  1,  0,  0],<br>
+                                     [ 0,  0,  1, -1],<br>
+                                     [ 0,  0,  1,  1],<br>
+                                     [ 1, -1,  0,  0]] / np.sqrt(2))}<br>
+                                     <br>
+<br>
+simulator = Aer.get_backend('unitary_simulator')<br>
+
+<br>
+result = execute(circ, simulator, backend_options=opts).result()<br>
+unitary = result.get_unitary(circ)<br>
+<br>
+print("Initial Unitary:\n", unitary)<br>
+<br>
+Initial Unitary:<br>
+ [[ 0.70710678+0.j  0.70710678+0.j  0.        +0.j  0.        +0.j]<br>
+ [ 0.        +0.j  0.        +0.j  0.70710678+0.j -0.70710678+0.j]<br>
+ [ 0.        +0.j  0.        +0.j  0.70710678+0.j  0.70710678+0.j]<br>
+ [ 0.70710678+0.j -0.70710678+0.j  0.        +0.j  0.        +0.j]]<br>
+
+ <br> <br> <br>
+</div>
+ <br>
+ <div class="boxxe" style="background-color: black;color: white;font-size: 25px;text-align: center;">
+ Esempi di alcuni Backend per effettuare test su IBMQ<br>
+ </div>
+ <div class="boxxe">
+ <br>
+ <br>
+ from qiskit import QuantumCircuit, execute, IBMQ<br>
+from qiskit.visualization import plot_gate_map<br>
+%matplotlib inline<br>
+IBMQ.save_account(token)<br>
+#provider = IBMQ.load_account()<br>
+Provider = IBMQ.get_provider(hub='ibm-q')<br>
+backend = Provider.get_backend('ibmq_vigo')<br>
+plot_gate_map(backend)<br>
+<br>
+Backend Vigo<br>
+<br>
+<img src="foto/vigo.png" width="500px"  height="300px"><br>
+
+backend = Provider.get_backend('ibmq_16_melbourne')<br>
+plot_gate_map(backend)<br>
+<br>
+Backend melbourne <br>
+<br>
+<img src="foto/melbourne.png" width="500px"  height="300px"><br>
+<br>
+backend = Provider.get_backend('ibmq_rome')<br>
+plot_gate_map(backend)<br>
+<br>
+Backend Rome <br>
+<br>
+<img src="foto/rome.png" width="500px"  height="300px"><br>
+<br>
+
+</div>
+
+
+
+        </body>
+</html>

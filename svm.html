@@ -1,0 +1,709 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    -->
+    <script src="js/jquery-3.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/navbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
+ 
+</head>
+<body>
+<header>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+              <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+              <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+              <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+              <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+              <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+             <!--
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#Adev">Windows Server</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+            </ul>
+         -->
+            </li>
+    </nav>
+</header>
+<style>
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding:0px;
+}
+
+
+
+.parallax {
+  width: 100%;
+  height: 100%;
+
+  background-image:  url('foto/quantum1.png');
+  background-size: contain;   
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-attachment: fixed;  /*no parallax */
+ 
+}
+
+.titoli {
+    color:rgb(81, 7, 218);
+    font: menu;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:50px;
+    text-align :center;
+    text-shadow: -6px -6px 15px rgba(227, 85, 140, 1);
+    
+}
+.testoq {
+    color:rgb(19, 5, 146);
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    margin:30px;    
+}
+
+.terminal4 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 125px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal3 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 95px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal2 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 65px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+
+.terminal {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: rgb(0, 0, 0);
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: white;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    transition: 3.7s;
+}
+.terminal:hover  {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.ttt {
+    margin: 30px;
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color:#1a368c;
+	line-height: 25px;
+    font-size: 20px;
+    font-family: Consolas, monospace;
+    /*font-family: 'Times New Roman', Times, serif;*/
+	background-color: white;
+	border-radius: 5px;
+    border-color: darkblue;
+    height: auto;
+    width: 90%;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+}
+
+.ter {
+    margin-inline-start: 20px;
+	margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+	background-color: rgb(36, 39, 216);
+	border-radius: 25px;
+    border-color: darkorange;
+}
+.srboxp1 {
+    height:50px;
+    font-size: 25px;
+    /* max-height: 3200px;  */
+    width: auto;
+    padding: 40px !important;
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: rgb(246, 246, 251);
+    background-color: rgb(17, 13, 13);
+    position: relative;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.sx {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxt {
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxtt {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.indent {
+    padding-left:30px ;
+}
+.indent2 {
+    padding-left:60px ;
+}
+.indent3 {
+    padding-left:90px ;
+}
+.indent4 {
+    padding-left:120px ;
+}
+.indent5 {
+    padding-left:150px ;
+}
+
+
+@media only screen and (min-width:50px) and (max-width: 600px) {
+           
+           .titoli {
+               font-size:  15px;
+           }
+
+           .testoq {
+    
+    font-size: 10px;
+    line-height: 15px;
+
+    margin :5px;    
+}
+.tterminal {
+    margin:5px;
+	margin-inline-start: 10px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+	line-height: 20px;
+    font-size: 15px;
+   
+}
+
+
+.ttt {
+    margin: 1%;
+    margin-top: 15px;
+	margin-inline-start: 1%;
+	padding: 1%;
+	line-height: 15px;
+    font-size: 5px;
+  width: auto;
+}
+
+.sxtt {
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 8px;
+}
+
+
+.indent {
+    padding-left: 2% ;
+    margin: 2%;
+}
+.indent2 {
+    padding-left:4% ;
+}
+.indent3 {
+    padding-left:6%;
+}
+.indent4 {
+    padding-left:8% ;
+}
+.indent5 {
+    padding-left:10% ;
+}
+
+img {
+    max-width: 252px;
+}
+
+}
+
+</style>
+
+<body>
+   
+    
+    <div class="titoli">
+       SVM method for Machine Learning
+    </div>
+
+    <div class="testoq">
+SVM, Support Vector Machine è un metodo di Machine Learning per la classificazione di 
+oggetti, immagini ecc.. 
+In questo post usiamo questo metodo per classificare i vini in base a dei parametri inseriti
+in un dataset che si scarica dalla libreria sklearn.
+Poi useremo lo stesso metodo ma con un Quantum SVM. 
+Nel caso successivo useremo il dataset Cancer per la classificazione del cancro tra maligno e Benigno
+sempre utilizzando il metodo SVM e QSVM. 
+<br>
+
+
+    <div>
+   
+        <div class="sxtt">
+              <em class="tterminal">
+                   
+                   <b>Per prima cosa installiamo le librerie necessarie    </b>
+                   </em><br>
+         </div>
+           <div class="ttt">
+               import pandas as pd  <br>
+               import numpy as np  <br>
+               import seaborn as sns  <br>
+               from sklearn.datasets import load_breast_cancer  <br>
+               from sklearn.datasets import load_wine  <br>
+             <br>
+       </div>
+       <br><br>
+
+    <div class="ttt">
+        <br>
+       wine = load_wine() <br>
+       X = wine.data <br>
+       from sklearn.model_selection import train_test_split  <br>
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size= 0.2, random_state = 5) <br>
+<br>
+from sklearn.pipeline import make_pipeline <br>
+from sklearn.decomposition import PCA <br>
+from sklearn.naive_bayes import GaussianNB <br>
+from sklearn import metrics <br>
+import matplotlib.pyplot as plt <br>
+<br>
+RANDOM_STATE = 42 <br>
+FIG_SIZE = (15, 9) <br>
+    </div>
+
+    <div class="ttt">
+# Fit to data and predict using pipelined GNB and PCA. <br>
+unscaled_clf = make_pipeline(PCA(n_components=2), GaussianNB()) <br>
+unscaled_clf.fit(X_train, y_train) <br>
+pred_test = unscaled_clf.predict(X_test) <br>
+<br>
+# Fit to data and predict using pipelined scaling, GNB and PCA. <br>
+std_clf = make_pipeline(StandardScaler(), PCA(n_components=2), GaussianNB()) <br>
+std_clf.fit(X_train, y_train) <br>
+pred_test_std = std_clf.predict(X_test) <br>
+<br>
+
+
+# Extract PCA from pipeline <br>
+pca = unscaled_clf.named_steps['pca'] <br>
+pca_std = std_clf.named_steps['pca'] <br>
+
+<br>
+
+# Use PCA without and with scale on X_train data for visualization. <br>
+X_train_transformed = pca.transform(X_train) <br>
+scaler = std_clf.named_steps['standardscaler'] <br>
+X_train_std_transformed = pca_std.transform(scaler.transform(X_train)) <br>
+<br>
+# visualize standardized vs. untouched dataset with PCA performed <br>
+fig, ax1 = plt.subplots(ncols=1, figsize=FIG_SIZE) <br>
+<br>
+
+for l, c, m in zip(range(0, 3), ('blue', 'red', 'green'), ('^', 's', 'o')): <br>
+<span class="indent">    ax1.scatter(X_train_transformed[y_train == l, 0], </span><br>
+<span class="indent2">     X_train_transformed[y_train == l, 1],  </span><br>
+    <span class="indent2">    color=c,  </span><br>
+        <span class="indent2">   label='class %s' % l,  </span><br>
+            <span class="indent2">   alpha=0.5,  </span><br>
+                <span class="indent2">    marker=m  </span><br>
+                    <span class="indent2">  ) </span><br>
+<br>
+ ax1.set_title('Training dataset Wine after PCA') <br>
+ ax1.set_xlabel('1st component') <br>
+ax1.set_ylabel('2nd component') <br>
+ ax1.legend(loc='upper left') <br>
+  ax1.grid() <br>
+ plt.tight_layout() <br>
+plt.show()   <br>              
+<br>
+
+<br>
+<img src="foto/pcaW.png" width="900px" height="350px">
+</div>
+<br>
+
+<div class="ttt">
+    <br>
+from sklearn.preprocessing import StandardScaler <br>
+sc = StandardScaler() <br>
+X_train = sc.fit_transform(X_train) <br>
+X_test = sc.transform(X_test) <br>
+X = sc.transform(X) <br>
+# Fitting classifier to the Training set <br>
+<br>
+
+
+from sklearn.svm import SVC <br>
+from sklearn.metrics import confusion_matrix, classification_report <br>
+<br>
+classifier = SVC() <br>
+
+classifier.fit(X_train, y_train) <br>
+
+<br>
+# Predicting the Test set results <br>
+y_pred = classifier.predict(X_test) <br>
+# Making the Confusion Matrix <br>
+
+cm = confusion_matrix(y_test, y_pred) <br>
+
+sns.heatmap(cm, annot=True ) <br>
+<br>
+<img src="foto/wine3.png" width="500px" height="350px">
+<br>
+print(classification_report(y_test, y_pred)) <br>
+<br>
+<img src="foto/wine0.png" width="500px" height="350px">
+<br>
+</div>
+<div class="ttt">
+#predict intero dataset <br>
+y_pred_tot = classifier.predict(X) <br>
+# Making the Confusion Matrix <br>
+#from sklearn.metrics import confusion_matrix, classification_report <br>
+cmt = confusion_matrix(y, y_pred_tot) <br>
+
+sns.heatmap(cmt, annot=True, fmt='d') <br>
+<br>
+<img src="foto/wine4.png" width="500px" height="350px">
+<br>
+print(classification_report(y, y_pred_tot)) <br>
+<br>
+<img src="foto/wine1.png"  width="500px"  height="300px" alt="">
+<br>
+
+    </div>
+
+
+
+<div class="ttt">
+    <br>
+    !pip install qiskit-terra[visualization]<br>
+    !pip install qiskit<br>
+
+    <br>
+import qiskit<br>
+import numpy as np<br>
+from qiskit.ml.datasets import wine<br>
+from qiskit import BasicAer<br>
+from qiskit.aqua import QuantumInstance, aqua_globals<br>
+from qiskit.aqua.components.feature_maps import SecondOrderExpansion<br>
+from qiskit.aqua.algorithms import QSVM<br>
+from qiskit.aqua.components.multiclass_extensions import AllPairs<br>
+from qiskit.aqua.utils.dataset_helper import get_feature_dimension<br>
+from qiskit.aqua.algorithms.many_sample.qsvm._qsvm_estimator import _QSVM_Estimator<br>
+from qiskit.ml.datasets import *<br>
+<br>
+    </div>
+<div class="ttt">
+n = 2  # dimension of each data point<br>
+sample_Total, training_input, test_input, class_labels = wine(<br>
+    <span class="indent">     training_size=140,</span><br>
+        <span class="indent">     test_size=30, n=n, plot_data=True</span><br>
+)<br>
+
+<br>
+total = [test_input[k] for k in test_input]<br>
+
+<br>
+total_array = np.concatenate(total)<br><br>
+</div>
+<div class="ttt">
+aqua_globals.random_seed = 10598<br>
+<br>
+backend = BasicAer.get_backend('qasm_simulator')<br>
+feature_map = SecondOrderExpansion(feature_dimension=get_feature_dimension(training_input),<br>
+<span class="indent">  depth=2, entangler_map=[[0, 1]])</span><br>
+svm = QSVM(feature_map, training_input, test_input, total_array,<br>
+<span class="indent">    multiclass_extension=AllPairs(_QSVM_Estimator, [feature_map])) </span><br>
+quantum_instance = QuantumInstance(backend, shots=1024,<br>
+<span class="indent">  seed_simulator=aqua_globals.random_seed,</span><br>
+    <span class="indent"> seed_transpiler=aqua_globals.random_seed)</span><br>
+
+result = svm.run(quantum_instance)<br>
+for k,v in result.items():<br>
+<span class="indent">     print("'{}' : {}".format(k, v))</span><br>
+<br>
+</div>
+ 
+
+<div class="sxtt">
+    <em class="tterminal">
+         
+         <b>Ora sempre con Support Vector Machine classifichiamo di Cancro in Benigno e Maligno.     </b>
+         </em><br>
+</div>
+
+<div class="ttt">
+    <br>
+cancer = load_breast_cancer()<br>
+cancer.keys()<br>
+cancer.values()<br>
+cancer['data'].shape<br>
+<br>
+df = pd.DataFrame(np.c_[cancer['data'],cancer['target']],columns=np.append(cancer['feature_names'], ['target']))<br>
+df.head()<br>
+<br>
+#Nell'immagine sottostante i primi record del dataset caricato nel Dataframe df<br>
+<br>
+<img src="foto/cancer1.png"  width="1000px"  height="300px" alt="">
+<br>
+
+n_train = 500<br>
+<br>
+X = df.drop(['target'],axis=1)<br>
+X = X[:n_train]<br>
+y = pd.DataFrame(df['target'])<br>
+y = y[:n_train]<br>
+<br>
+#dividiamo il file di input in train(80%) e test(20%) <br>
+from sklearn.model_selection import train_test_split <br>
+X_train, X_test, y_train, y_test = train_test_split(X,y, test_size= 0.2, random_state = 5)<br>
+<br>
+X_train = np.array(X_train)<br>
+X_test = np.array(X_test)<br>
+y_train = np.array(y_train)<br>
+y_test = np.array(y_test)<br>
+<br>
+#Standardizzazione dei dati per agrvolare i calcoli<br>
+from sklearn.preprocessing import StandardScaler<br>
+sc = StandardScaler()<br>
+X_train = sc.fit_transform(X_train)<br>
+X_test = sc.transform(X_test)<br>
+X = sc.transform(X)<br>
+<br>
+from sklearn.svm import SVC<br>
+from sklearn.metrics import confusion_matrix, classification_report<br>
+<br>
+classifier = SVC()<br>
+#classificazione - creazione del modello<br>
+classifier.fit(X_train, y_train)<br>
+<br>
+#previsione dei dati di test<br>
+# Predicting the Test set results<br>
+y_pred = classifier.predict(X_test)<br>
+<br>
+# Making the Confusion Matrix<br>
+#confronto dati reali con quelli predetti sopra<br>
+cm = confusion_matrix(y_test, y_pred)<br>
+<br>
+#grafico con risultati ottenuti<br>
+sns.heatmap(cm, annot=True )<br>
+<br>
+<img src="foto/cancer12.png"  width="500px"  height="300px" alt="">
+
+<br>
+print(classification_report(y_test, y_pred))<br><br>
+<br>
+<img src="foto/cancer11.png"  width="500px"  height="300px" alt="">
+<br>
+
+
+#predict intero dataset<br>
+y_pred_tot = classifier.predict(X)<br>
+
+# Making the Confusion Matrix<br>
+#from sklearn.metrics import confusion_matrix, classification_report<br>
+cmt = confusion_matrix(y, y_pred_tot)<br>
+<br>
+sns.heatmap(cmt, annot=True, fmt='d')<br>
+<br>
+<br>
+<img src="foto/cancer3.png"  width="500px"  height="300px" alt="">
+<br>
+<br>
+print(classification_report(y, y_pred_tot))<br>
+<br>
+<br>
+<img src="foto/cancer2.png"  width="500px"  height="300px" alt="">
+<br>
+<br>
+
+</div>
+
+
+<div class="sxtt">
+    <em class="tterminal">
+         
+         <b>Ripetiamo ora la classificazione di Cancro in Benigno e Maligno ma con 
+             il Quantum SVM     </b>
+         </em><br>
+</div>
+
+<div class="ttt">
+    <br>
+
+    from qiskit import BasicAer <br>
+    from qiskit.aqua.utils import split_dataset_to_data_and_labels <br>
+    from qiskit.aqua.utils import map_label_to_class_name <br>
+    from qiskit.aqua.input import ClassificationInput <br>
+    from qiskit.aqua import run_algorithm, QuantumInstance <br>
+    from qiskit.aqua.algorithms import QSVM <br>
+    from qiskit.aqua.components.feature_maps import SecondOrderExpansion <br>
+    <br>
+    feature_dim=2 <br>
+    sT, training_input, test_input, class_labels = ad_hoc_data(<br>
+    <span class="indent">  training_size=400,  </span><br>
+        <span class="indent">  test_size=100, </span><br>
+            <span class="indent">  n=feature_dim, </span><br>
+                <span class="indent">  gap=0.3,</span><br>
+                    <span class="indent">  plot_data=True</span><br>
+) <br><br>
+<img src="foto/cancerq1.png"  width="500px"  height="300px" alt="">
+<br><br>
+test_data = sample_ad_hoc_data(sT, test_size=100, n=feature_dim) <br>
+datapoints, class_to_label = split_dataset_to_data_and_labels(test_data)<br>
+<br>
+seed = 10598<br>
+<br>
+feature_map = SecondOrderExpansion(feature_dimension=n, <br>
+<span class="indent">    depth=2,</span><br>
+    <span class="indent">  entanglement='linear')</span><br>
+
+qsvm = QSVM(feature_map, training_input, test_input, datapoints[0]) <br>
+
+backend = BasicAer.get_backend('qasm_simulator') <br>
+
+quantum_instance = QuantumInstance(backend, shots=1024, seed_transpiler=seed) <br>
+
+result = qsvm.run(quantum_instance) <br>
+
+result['test_success_ratio'] <br><br>
+1.0
+<br><br>
+result['testing_accuracy'] <br><br>
+1.0
+<br><br>
+
+</div>
+
+</body>
+</html>

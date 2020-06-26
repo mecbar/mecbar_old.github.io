@@ -1,0 +1,343 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   -->
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+   
+    <!-- sumome  link social 
+    <script src="//load.sumome.com/" data-sumo-site-id="98711fc4997a561007230296cfc67bf8fe083e4799bea5270763985560b583ec" async="async"></script>
+     font x icone social + email -->
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+    <!-- facebook open graph -->
+    <meta property="og:url" content="https://www.mecbar.com" />
+    <meta property="og:title" content="MecBar the webt for you" />
+    <meta property="og:image" content="https://www.mecbar.com/mecface.jpg" />
+    <meta property="og:description" content="MecBar for you" />
+
+
+</head>
+<style></style>
+<script>
+    window.onload = function () {
+        console.log('carico piano cartesiano');
+        function drawCartesianLine(ctx, x, y,color) {
+            ctx.beginPath();
+            ctx.lineWidth= 3;
+            ctx.strokeStyle = color;
+            ctx.moveTo(x,y);
+            ctx.lineTo(50, 350);
+            ctx.stroke();   
+            ctx.closePath();  
+        }
+  
+    
+        var c = document.getElementById('canvas');
+        var ctx = c.getContext('2d');
+    
+      drawCartesianLine(ctx,400,350,'blue')
+      drawCartesianLine(ctx,50,50,'blue')
+      ctx.beginPath();
+      ctx.fillStyle = 'rgba(0, 142,149,0.5)';
+
+      ctx.font = "25px Arial";
+      ctx.fillText("Qubit" , 500,30 )
+        ctx.fillStyle = 'rgba(0, 0,0,0.5)';
+        ctx.fillText("∣0⟩",350, 340);
+        ctx.fillText("∣1⟩",60, 80);
+       ctx.fillText("α∣0⟩+β∣1⟩" , 210,130 )
+       ctx.fillText("dove α = 0,6 e β = 0,8" , 210,170 )
+       ctx.fillText("vettore v = (α, β)  α amplitude di ∣0⟩ e β amplitude di ∣1⟩" , 500,350 )
+       ctx.stroke();
+       ctx.closePath();
+
+
+      drawCartesianLine(ctx,200,130,'red')
+
+    }
+
+</script>
+        <body>
+    <nav>
+        <li class="nav-wrapper" style="background-color: black;" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+                <li><a href="http://www.mecbar.com/">Home</a></li>
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#block3">Blockchain</a></li>
+                <li><a href="#ml">Machine Learning</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="http://www.mecbar.com/">Home</a></li>
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#block3">Blockchain</a></li>
+                <li><a href="#ml">Machine Learning</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+            </ul>
+            </li>
+    </nav>
+<style>
+.tes1 {
+    
+    background-color: black;
+    width: 100%;
+    height: 100px;
+    line-height: 40px;
+ font-size: 35px;
+ font-family: 'Times New Roman', Times, serif;
+ padding-top: 30px;
+ color: rgb(255, 255, 255);
+text-align: center;
+}
+.tes2 {
+    border-bottom-right-radius: 50%;
+    width: 50%;
+    height: 150px;
+  
+    background-color:  black;
+    float: left;
+
+}
+.tes3 {
+    width: 50%;
+    height: 150px;
+    background-color:black;
+    float: right;
+ 
+}
+.tes4 {
+    border-top-left-radius: 50%;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(255, 255, 255);
+    /*transform: rotate(5deg);*/
+    float: right;
+}
+
+
+</style>
+
+
+<div class="tes1"> Quantistica Computazionale</div>
+
+<div class="tes2"></div>
+
+
+<div class="tes3">
+    <div class="tes4">
+        
+    </div>
+  
+</div>
+
+<div style="margin-bottom: 30px;"></div>
+
+<div class="testo">
+    L'elemento centrale della quantistica computazionale è il QUBIT o bit quantistico di cui si riporta una breve descrizione rimandando a wikipedia per 
+    una esaustiva trattazione del qubit e della meccanica quantistica.<br>
+    <img src="foto/qubit.png" width="350px" height="50px"  alt="qubit">
+    <br>
+    Il Qubit viene rappresentato come nell'immagine sovrastante ed è l'unità base delle informazioni che si possono avere dal quantum.<br> Una proprietà del qubit è la superposition
+    ossia l'indeterminazione dello stato perchè non possiamo sapere con certezza se si trova nello stato 0 o 1.<br> Nell'immagine sottostante 
+    si riporta la simbologia usata per descrivere il Qubit e la rappresentazione grafica con la sfera di Block.<br>
+    Matematicamente il qubit viene descritto tramite un vettore e la unitary matrix(matrice complessa quadrata che ha la matrice inversa) per cui UU* = I,  
+    nello spazio vettoriale di Hilbert, cioè uguale alla identity matrix ad esempio <img src="foto/qubit2.png" width="150px" height="40px"><br>
+    Possiamo rappresentare i Qubits anche tramite un vettore nel piano cartesiano come nell'immagine sottostante:<br>
+    <br>
+    <canvas id="canvas" width="1200" height="400">
+    </canvas>
+    <br>
+    Tramite la unitary matrix viene rappresentata la posizione del qubit all'interno della Bloch sphere e tramite i gate possiamo modificare 
+    il quantum state moltiplicando la unitary matrix con il vettore che rappresenta il gate.
+    Nell'immagine sottostante una riproduzione della sfera di Bloch.<br>
+    <img src="foto/qubit4.png" width="300px" height="200px"> <br>
+
+    Un computer quantistico riesce a modificare lo stato del qubit tramite dei gates(comando pulse ogni gate ha una potenza diversa) per poi osservare lo stato e decidere se la posizione del qubit è uguale a 0 o 1.
+    L'amplitude del qubit è il coefficiente per un particolare stato di superposition ad esempio nello stato 0.6∣0⟩ +0.8∣1⟩    
+    l'amplitude per ∣0⟩ è 0.6 mentre l'amplitude per ∣1⟩ è 0.8.<br>
+    La somma dei quadrati delle amplitude deve essere uguale a 1. Quindi il quadrato di 0.6 = 0,36 + 0.64(quadrato di 0,8) è uguale ad 1.<br>
+    
+    Il quantum state di un qubit è un vettore della lunghezza unitaria in uno spazio vettoriale complesso bidimensionale.<br>
+    
+    La misurazione dello stato di un qubit non è altro che la valutazione della probabilità che il qubit ricada su ∣0⟩ o su ∣1⟩ 
+    Ad esempio con il gate Hadamard abbiamo il 50% di probabilità che il risultato sia ∣0⟩ o ∣1⟩.<br>
+    Mentre nel BELL STATE tra 2 qubits abbiamo il 50% di probabilità di avere ∣00⟩, lo 0% di avere ∣01⟩ o ∣10⟩ ed il 50% di avere
+    ∣11⟩.<br> Il Bell State è importante perchè in esso è presente i 2 più importanti principi della quantistica, la superposition e l'entanglement.<br>
+    Come possiamo vedere nel circuito sottostante in cui è rappresentato il Bell state la superposition è creata con l'Hadamard gate
+    mentre con il Controlled Not gate creiamo l'entanglement.<br>
+    <img src="foto/bell.png" width="350px" height="250px"  alt="circuito bell">
+ <br>
+   Il BELL STATE è la base del Teleportation e del Superdense Coding(trasferire informazioni ad esempio da 2 qubits ad un solo qubit).<br>
+<br>
+<img src="foto/circuit.png" width="550px" height="350px"  alt="circuit">
+<br>
+Se si necessita di creare uno scambio di informazioni ad es. il Teleportation tra 2 qubit che non sono collegati come nell'immagine del 
+circuito sottostante tra il qubit 1 e 9 possiamo trasferire le informazioni del qubit 9 al qubit 5 con il gate swap. <br>
+<div class="row">
+<div class="col l6 m6 s12">
+<img src="foto/circuit1.png" width="600px" height="550px"  alt="circuit">
+</div>
+<div class="col l6 m6 s12">
+<img src="foto/swapgate.png" width="600px" height="550px"  alt="swap">
+</div>
+</div>
+<br>
+<div class="titolo">
+Superdense Coding
+</div>
+
+Superdense coding è un quantum communications protocol che permete ad un utente di inviare 2 bits classici (0,1)
+inviando 1 solo qubit.
+Il protocollo prevde di predisporre un Bell state in 2 qubit separati q0(sender) e q1(receiver).
+Al q0 viene poi assegnato un encoder in cui il sender aggiunge dei gate in base ai 2 bits da inoltrare come nello schema seguente:<br>
+Se input 00 l'encoder inserisce il gate I<br>
+Se input 01 l'encoder inserisce il gate Z<br>
+Se input 10 l'encoder inserisce il gate X<br>
+Se input 11 l'encoder inserisce il gate XZ<br>
+
+Poi si ha il decoder in cui il destinatario tramite il gate Controlled Not(cx) tra i 2 qubit e Hadamard(q0) e poi con Measurement finale riceve i 2 bits
+inviati dal mittente.<br>
+Questo processo può essere usato anche per un controllo di sicurezza perchè se c'è una intrusione nel circuito 
+si verificherebbe un collsso del qubit ed il risultato che il destinatario essendo diverso da quello atteso metterebbe in allarme
+sia il destinatario che il mittente.<br>
+
+<div class="row">
+<div class="col l6 m6 s12" style="padding-top:150px;padding-left: 100px;padding-right: 50px;">
+   Nelle immagini a lato si evidenzia lo schema logico mentre sotto il codice ed i risultati di una dimostrazione del superdence coding.
+<br>
+</div>
+<div class="col l6 m6 s12">
+<img src="foto/superdence.png" width="600px" height="550px"  alt="superdence">
+<br>
+</div>
+</div>
+<br>
+<div class="dense"> 
+!pip install qiskit<br>
+from qiskit import QuantumRegister, ClassicalRegister, QuantumCircuit,execute, Aer<br>
+<br>
+q = QuantumRegister(2,'q')<br>
+c = ClassicalRegister(2,'c')<br>
+<br>
+#inserisco input <br>
+messaggio = '10'<br>
+circuit = QuantumCircuit(q,c) <br>
+<br>
+circuit.h(q[0]) # Hadamard gate applied to q0<br>
+circuit.cx(q[0],q[1]) # CNOT gate<br>
+</div>
+<br>
+<div class="dense1"> 
+#################ENCODER##################<br>
+<br>
+if  messaggio == '00':<br>
+ <span class="indent"> pass    # I gate </span> <br>
+elif messaggio == '10':<br>
+<span class="indent">   circuit.x(q[0]) # X-gate </span> <br>
+elif messaggio == '01':<br>
+<span class="indent">    circuit.z(q[0]) # Z-gate </span> <br>
+elif messaggio == '11':<br>
+<span class="indent">    circuit.z(q[0]) # Z-gate  </span> <br>
+<span class="indent">    circuit.x(q[0]) # X-gate  </span> <br>
+
+    <br>
+</div>
+<div class="dense2">
+################DECODER###################<br>
+<br>
+circuit.cx(q[0],q[1])<br>
+circuit.h(q[0])<br>
+circuit.measure(q,c) # Qubits measured  <br>  
+<br>
+circuit.draw(output='mpl')<br><br>
+<div class="row">
+    <div class="col l3 m6 s12">
+            <img src="foto/sd1.png" width="100%" height="300px"  alt="superdence">
+    </div>
+    <div class="col l3 m6 s12">
+        <img src="foto/sd2.png" width="100%" height="300px"  alt="superdence">
+</div>
+<div class="col l3 m6 s12">
+    <img src="foto/sd3.png" width="100%" height="300px"  alt="superdence">
+</div>
+<div class="col l3 m6 s12">
+    <img src="foto/sd4.png" width="100%" height="300px"  alt="superdence">
+</div>
+</div>
+
+
+<br>
+simulator = Aer.get_backend('qasm_simulator')<br>
+result = execute(circuit, backend = simulator, shots = 1024).result()<br>
+counts = result.get_counts()<br>
+print(counts)<br>
+from qiskit.tools.visualization import plot_histogram<br>
+plot_histogram(counts)<br>
+<br>
+<div class="row">
+    <div class="col l3 m6 s12">
+            <img src="foto/sd1r.png" width="100%" height="300px"  alt="superdence">
+    </div>
+    <div class="col l3 m6 s12">
+        <img src="foto/sd2r.png" width="100%" height="300px"  alt="superdence">
+</div>
+<div class="col l3 m6 s12">
+    <img src="foto/sd3r.png" width="100%" height="300px"  alt="superdence">
+</div>
+<div class="col l3 m6 s12">
+    <img src="foto/sd4r.png" width="100%" height="300px"  alt="superdence">
+</div>
+</div>
+</div>
+
+
+
+
+<div class="titolo">Decoherence  </div>
+
+<br>
+La Decoherence è la perdita di informazioni che si ha nei circuiti quantistici che produce il fenomeno del Quantum Noise.
+Per ridurre la Quantum noise e la Decoherence si usa la Quantum error correction (QEC) cioè dei metodi atti a ridurre tali fenomeni ed avere dei valori 
+più corretti.<br>
+<br>
+
+
+
+
+</div>
+
+
+
+ </body>
+
+</html>

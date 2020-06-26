@@ -1,0 +1,792 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    -->
+    <script src="js/jquery-3.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/navbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
+ 
+</head>
+<body>
+<header>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+              <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+              <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+              <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+              <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+              <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+             <!--
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#Adev">Windows Server</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+            </ul>
+         -->
+            </li>
+    </nav>
+</header>
+<style>
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding:0px;
+}
+
+
+
+.parallax {
+  width: 100%;
+  height: 100%;
+
+  background-image:  url('foto/quantum1.png');
+  background-size: contain;   
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-attachment: fixed;  /*no parallax */
+ 
+}
+
+.titoli {
+    color:rgb(81, 7, 218);
+    font: menu;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:50px;
+    text-align :center;
+    text-shadow: -6px -6px 15px rgba(227, 85, 140, 1);
+    
+}
+.testoq {
+    color:rgb(19, 5, 146);
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    margin:30px;    
+}
+
+.terminal4 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 125px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal3 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 95px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal2 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 65px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+
+.terminal {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: rgb(0, 0, 0);
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: white;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    transition: 3.7s;
+}
+.terminal:hover  {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.tterminal {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color:#1a368c;
+	line-height: 25px;
+    font-size: 20px;
+    font-family: Consolas, monospace;
+    /*font-family: 'Times New Roman', Times, serif;*/
+	background-color: white;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+}
+
+.ter {
+    margin-inline-start: 20px;
+	margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+	background-color: rgb(36, 39, 216);
+	border-radius: 25px;
+    border-color: darkorange;
+}
+.srboxp1 {
+    height:50px;
+    font-size: 25px;
+    /* max-height: 3200px;  */
+    width: auto;
+    padding: 40px !important;
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: rgb(246, 246, 251);
+    background-color: rgb(17, 13, 13);
+    position: relative;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.sx {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxt {
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxtt {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+img {
+    margin-left: 200px;
+
+}
+.indent {
+    padding-left:30px ;
+}
+.indent2 {
+    padding-left:60px ;
+}
+.indent3 {
+    padding-left:90px ;
+}
+.indent4 {
+    padding-left:120px ;
+}
+.indent5 {
+    padding-left:150px ;
+}
+.schema {
+  width: 100%;
+  height: 250px;
+  background-image: url('foto/inQQ.png'),
+      url('foto/outQQ.png'),
+      url('foto/cirQQ.png'),
+      linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat,
+      no-repeat, no-repeat,  no-repeat;
+  background-position: left 100px top 200px ,
+      right 110px top 200px, left 600px top 260px,   left;
+  background-attachment: fixed;
+ 
+}
+
+@media only screen and (min-width:50px) and (max-width: 600px) {
+            img  {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                margin: 1%;
+              }
+            canvas {
+                width: 100%;
+            }    
+            body {
+                overflow-x: hidden;
+            }
+
+          .terminal {
+                width: 75%;
+                padding: 2%;
+                font-size: 15px;
+                line-height:20px;
+                margin: 3%;
+            }   
+            .terminal2 {
+                width: 75%;
+                padding: 4%;
+                font-size: 15px;
+                line-height:20px;
+            }
+            .terminal3 {
+                width: 75%;
+                padding: 6%;
+                font-size: 15px;
+                line-height:20px;
+            }
+            .terminal4 {
+                width: 75%;
+                padding: 6%;
+                font-size: 15px;
+                line-height:20px;
+            }
+            
+            .parallax2 {
+              width : 0%;
+              height: 0%;
+            }
+            .titoli {
+                font-size: 15px;
+                letter-spacing: -0.097em;
+            }
+            .sxtt{
+                margin: 1%;
+            }
+            .sxt{
+                margin: 1%;
+            }
+
+            .tterminal {
+            margin-inline-start: 2%;
+            padding: 2%;
+            color:#1a368c;
+            line-height: 20px;
+            font-size: 15px;
+        
+        }
+        .terminal:hover  {
+	margin-inline-start: 2%;
+	padding:2%;
+    width: 95%;
+	line-height: 20px;
+    font-size: 15px;
+   margin: 3%;
+}
+
+.cirqbox {
+   
+   margin-top: 50px;
+   margin-inline-start: 2%;
+   padding-bottom: 2%;
+   line-height: 20px;
+   font-size: 15px;
+   
+}
+
+.schema {
+    width: 0px;
+    height: 0px;
+}
+        }
+
+</style>
+
+<body>
+   
+    
+    <div class="titoli">
+        Quanvolutional Neural Networks 
+    </div>
+    <div class="schema"></div>
+    <div class="testoq">
+     La Quanvolutional Neural Networks è l'applicazione di una Convolutional Neural Networks
+     con il Quantum computing creando un quantum machine learning model.
+     Nell'esempio sottostante creato su Colab Notebooks si crea un modello ibrido dove i dati estratti dalle immagini
+     vengono inseriti in un circuito quantistico creato con Pennylane un framework open source.
+     I dati vengono estratti dalle foto con lo stesso principio della convulational con un kernel di 2x2 pixel.
+     Partendo dall'alto a sinistra ci si sposta verso destra e poi in basso sempre da sinistra a destra.
+     Come detto i dati così estratti vengono inseriti nel circuito.
+     L'output del circuito diviene poi l'input che inseriamo in un modello classico usato per la 
+     classificazione delle immagini.
+        
+
+
+    <div>
+   
+ <div class="sxtt">
+       <em class="tterminal">
+            
+            <b>Per prima cosa installiamo le librerie necessarie    </b>
+            </em><br>
+  </div>
+
+<div class="sxt">
+    <em class="terminal">
+    
+    <b>!pip install pennylane<br>
+    !pip uninstall tensorflow<br>
+    !pip install --upgrade tensorflow==2.1.0</b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+             
+             <b>Importiamo i moduli che poi verranno utilizzati </b>
+             </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+            <b>import pennylane as qml<br>
+    import numpy as np<br>
+    import tensorflow as tf<br>
+    from tensorflow import keras<br>
+    import matplotlib.pyplot as plt</b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+             
+             <b>Impostiamo alcune variabili   </b>
+             </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+            <b>n_epochs = 35 #Number of epochs<br>
+    n_layers = 1  #random layers<br>
+    n_train = 6700  #Size dataset for training<br>
+    n_test = 3300 #Size dataset for testing<br>
+    CREADATICIRCUITO = False #If True Quantum pre-processing train/test images<br>
+    np.random.seed(0) # Seed for NumPy random number generator<br>
+    tf.random.set_seed(0) # Seed for TensorFlow random number generator<br>
+    !unzip cat-and-dog.zip -d data</b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+             
+        <b>La prima volta carichiamo le immagini di cani e gatti. Qui saltiamo
+            questa parte.    </b>
+             </em><br>
+   </div>
+    <div class="sxt">
+       <em class="terminal">
+       <b>esegui = True<br>
+        if esegui:</b><br>
+       <b class="indent"> import os</b><br>
+       <b class="indent"> #carica dati images cats and dogs</b><br>
+        <b class="indent"> .....</b><br>
+            <b class="indent"> #creo lista y_test e Y_train x cats and dogs</b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">  
+        <b>Nella fase precedente abbiamo generato un array con i dati delle immagini ed un
+            altro con 0 che indica che si tratta di cat o 1 se dog.
+        Ora separiamo in modo random il 33% per l'archivio del test set ed il resto per il training set.   </b>
+             </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+    <b>from sklearn.model_selection import train_test_split<br>
+    X_train, X_test, y_train, y_test = train_test_split(</b><br>
+    <b class="indent">    testitra, yy, test_size=0.33, random_state=42)</b><br>
+    
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>Selezione del numero di foto da inserire nel circuito sia per la fase di training che di test   </b>
+        </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+            <b>train_images = X_train[:n_train]<br>
+    test_images = X_test[:n_test]</b><br>
+
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>Viene aggiunta una dimenione nell'array perchè il circuito vuole in input un
+              array da 4 dimensioni     </b>
+        </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+           
+    <b>train_images = train_images[..., tf.newaxis]<br>
+    test_images = test_images[..., tf.newaxis] </b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>Selezione dello stesso numero di etichette delle immagini 0=cat 1=dog    </b>
+        </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+    <b>train_labels = y_train[:n_train]<br>
+    test_labels = y_test[:n_test]</b>
+    <br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Definizione del circuito con Pennylane - device con 4 Qubits </b>
+        </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+            <b>
+    dev = qml.device("default.qubit", wires=4)<br>
+    #circuit parameters random<br>
+    randparameter = np.random.uniform(high=2 * np.pi, size=(n_layers, 4))<br>
+    randp=randparameter[0]<br>
+    <br>
+def layerRandom(kernel= None):<br>
+<b class="indent2"> nq = 4 </b><br> 
+<b class="indent2">  np.random.seed(42) # per numeri random che non cambiano ogni esecuzione</b><br>
+<b class="indent2">   rotation = [RX, RY , RZ]</b><br>
+<b class="indent2">   qubit = list(range(nq))</b><br>
+<b class="indent2">   i = 0</b><br>
+<b class="indent2">   while i < len(randparameter):</b><br>      
+<b class="indent3"> if np.random.random() > 0.30:  #0.30 ratio rotation cnot gate</b><br>
+<b class="indent4">   #scelta random del gate da inserire nel circuito</b><br>
+<b class="indent4">   gate = np.random.choice(rotation)</b><br>
+<b class="indent4"> qu = np.random.choice(qubit)</b><br>
+<b class="indent4">  gate(kernel[i][i],wires=qu )</b><br>
+<b class="indent4">   i += 1</b><br>
+<b class="indent3">  else:</b><br>
+<b class="indent4">  if len(qubit) > 1:</b><br>
+<b class="indent5">   #scelta random su quale qubit inserire il gate CNOT</b><br>
+<b class="indent5">  on_qubit = np.random.permutation(qubit)[:2]</b><br>
+<b class="indent5">  on_qubit = list(on_qubit)</b><br>
+<b class="indent5"> CNOT(wires=on_qubit)</b><br>
+   
+ <b class="indent2">    return</b><br> 
+    <br><br>
+    @qml.qnode(dev)<br>
+    def circuit(dati=None):</b><br>
+    <b class="indent">#Inserimento dei dati </b><br>
+    <b class="indent">    for i in range(4):</b><br>
+    <b class="indent2">        qml.RY(np.pi * dati[i], wires=i)</b><br>
+    
+    <b class="indent">    #inserisco gate random nei qubits </b><br>
+        <b class="indent">  layerRandom(randp)</b><br>
+    
+            <b class="indent">    #Measurement - ottengo in output 4 valori </b><br>
+                <b class="indent">    return [qml.expval(qml.PauliZ(i)) for i in range(4)]</b><br>
+    
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>Simulazione del circuito quantico con input tutti zeri
+                </b>
+        </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+    <b>qml.about()<br>
+        result = circuit(dati=[0,0,0,0])<br>
+print(circuit.draw())<br>
+print(result) </b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>  Nell' immagine vediamo il circuito creato con i 4 qubits ed i gates creati e sotto il risultato ottenuto  </b>
+        </em><br>
+   </div>
+    <div>
+        <img src="foto/pennycircuit.png" width="400px" height="200px">
+    </div>   
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>La funzione sottostante passa i dati presi dall'immagine(range 2x2) nel circuito
+              ed il risultato ottenuto inserito in array che poi verrà inserito nella rete neurale     </b>
+        </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+    <b>def quantconv(image):</b><br>
+    <b class="indent">"""Fase convolves img into quantum circuit."""</b><br>
+        <b class="indent">  ris = np.zeros((14, 14, 4))</b><br>
+    
+         <b class="indent">   #Come nella conv fase da top-left pixel of 2X2 </b><br>
+         <b class="indent">     for j in range(0, 28, 2):</b><br>
+         <b class="indent2">   for k in range(0, 28, 2):</b><br>
+            <b class="indent3">    #invio 2x2 region of the image into quantum circuit</b><br>
+                <b class="indent3">   q_results = circuit( dati=[image[j, k, 0], image[j, k + 1, 0],</b><br>
+                    <b class="indent4">   image[j + 1, k, 0], image[j + 1, k + 1, 0]])</b><br>
+                <b class="indent3">     #Assegnazione valori differenti canali output pixel (j/2, k/2)</b><br>
+                    <b class="indent3">      for c in range(</b><br>
+                        <b class="indent4">   ris[j // 2, k // 2, c] = q_results[c])</b><br>
+                        <b class="indent">  return ris</b><br>
+    </em><br><br>
+    </div>
+    <div class="schema"></div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>Se non fatto in precedenza si caricano i dati nel circuito ed ottenuti i risultati sia per le immagini 
+              di training che testing vengono creati ora e salvati su 2 array quTrain e quTest   </b>
+        </em><br>
+   </div>
+
+    <div class="sxt">
+        <em class="terminal">
+    
+    
+    <b>if CREADATICIRCUITO:</b><br>
+    <b class="indent" >   quTrain = []</b><br>
+    <b class="indent">   #prendo dati immagini e li processo nel circuito</b><br>
+        <b class="indent">   for idx, img in enumerate(train_images):</b><br>
+         <b class="indent2">  #creo lista con risultati</b><br>
+         <b class="indent2">  quTrain.append(quantconv(img))</b><br>
+        <b class="indent"> quTrain = np.asarray(quTrain)</b><br>
+    
+        <b class="indent">  quTest = []</b><br>
+        <b class="indent">  #processo img per fase testing</b><br>
+        <b class="indent">    for idx, img in enumerate(test_images):</b><br>
+        <b class="indent2"> #creo lista risultati per test</b><br>
+        <b class="indent">   quTest.append(quantconv(img))<br>
+            <b class="indent">  quTest= np.asarray(quTest)</b><br>
+    
+            <b class="indent">  #Salvo risultati in numpy array</b><br>
+            <b class="indent"> np.save("quTrain.npy", quTrain)</b><br>
+            <b class="indent">  np.save("quTest.npy", quTest)</b><br>
+            <b class="indent">  from google.colab import files</b><br>
+            <b class="indent">  files.download('quTrain.npy')</b><br>
+            <b class="indent">  files.download('quTest.npy')</b><br>
+    
+                        <b>else :<br>
+    
+                            <b class="indent"> from google.colab import files</b><br>
+                                <b class="indent"> files.upload('quTrain.npy')</b><br>
+                                    <b class="indent">    files.upload('quTest.npy')</b><br>
+    
+        </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Load array precedentemente elaborati  </b>
+        </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+                <b>quTrain = np.load("quTrain.npy")</b><br>
+                    <b>quTest= np.load("quTest.npy")</b><br>
+</em><br><br>
+</div>
+<div class="sxtt">
+    <em class="tterminal">
+      <b>Creazione modello di Convolution Neural Network per la classificazione delle immagini
+          inserite   </b>
+    </em><br>
+</div>   
+<div class="sxt">
+    <em class="terminal">
+        <b> from tensorflow.keras import Sequential<br>
+    from tensorflow.python.keras.layers import Dense<br>
+    from tensorflow.python.keras.layers import Conv2D<br>
+    from tensorflow.python.keras.layers import MaxPooling2D<br>
+    from tensorflow.python.keras.layers import Flatten, Dropout<br>
+    from tensorflow.keras.optimizers import SGD</b><br>
+    <br>
+    <b> M2():</b><br>
+    <b class="indent"> model = Sequential()</b><br>
+        <b class="indent"> model.add(Conv2D(32, (3, 3), activation='relu', kernel_initializer='he_uniform',</b><br>
+        <b class="indent3">     padding='same',  input_shape=(14, 14, 4)))</b><br>
+        <b class="indent"> model.add(MaxPooling2D((2, 2)))</b><br>
+        <b class="indent"> model.add(Dropout(0.2))</b><br>
+
+        <b class="indent"> model.add(Conv2D(64, (3, 3), activation='relu', kernel_initializer='he_uniform',</b><br>
+        <b class="indent3">   padding='same'))</b><br>
+        <b class="indent"> model.add(MaxPooling2D((2, 2)))</b><br>
+        <b class="indent"> model.add(Conv2D(128, (3, 3), activation='relu', kernel_initializer='he_uniform', </b><br>
+        <b class="indent3">   padding='same'))</b><br>
+        <b class="indent"> model.add(MaxPooling2D((2, 2)))</b><br>
+        <b class="indent"> model.add(Dropout(0.5))</b><br>
+        <b class="indent"> model.add(Flatten())</b><br>
+        <b class="indent"> model.add(Dense(128, activation='relu', kernel_initializer='he_uniform'))<br>
+        <b class="indent"> model.add(Dropout(0.5))</b><br>
+        <b class="indent"> model.add(Dense(1, activation='sigmoid'))</b><br>
+        <b class="indent"> #compile model</b><br>
+        <b class="indent"> opt = SGD(lr=0.001, momentum=0.9)</b><br>
+        <b class="indent">    model.compile(optimizer=opt, loss='binary_crossentropy', metrics=['accuracy'])</b><br>
+        <b class="indent"> return model</b><br>
+    
+</em><br><br>
+</div>   
+<div class="sxtt">
+    <em class="tterminal">
+      <b> Creata istanza ed esecuzione modello con inseriti i dati ottenuti dal circuito quantistico  </b>
+    </em><br>
+</div>  
+<div class="sxt">
+    <em class="terminal">
+    
+    <b>quantum_model = M2()</b><br>
+        <b>quTrain = quTrain[:n_train]</b><br>
+    
+            <b>q_history = quantum_model.fit(</b><br>
+            <b class="indent">quTrain,</b><br>
+                <b class="indent">train_labels,</b><br>
+                    <b class="indent"> validation_data=(quTest, test_labels),</b><br>
+                        <b class="indent">batch_size=4,</b><br>
+                            <b class="indent"> epochs=n_epochs,</b><br>
+                                <b class="indent"> verbose=2,</b><br>
+    <b>)</b>
+</em><br><br>
+</div> 
+<div class="sxtt">
+    <em class="tterminal">
+      <b>Creata istanza ed esecuzione del modello con inseriti i dati delle immagini otttenuti 
+          con il classico metodo per le reti neurali   </b>
+    </em><br>
+</div>
+<div class="sxt">
+    <em class="terminal">
+        <b> classical_model = M2()</b><br>
+    
+            <b>c_history = classical_model.fit(</b><br>
+            <b class="indent">   train_images,</b><br>
+                <b class="indent">     train_labels,</b><br>
+                    <b class="indent">    validation_data=(test_images, test_labels),</b><br>
+                        <b class="indent">    batch_size=4,</b><br>
+                            <b class="indent">    epochs=n_epochs,</b><br>
+                                <b class="indent">     verbose=2,</b><br>
+                                    <b class="indent"> )</b><br>
+</em><br><br>
+</div>
+<div class="sxtt">
+    <em class="tterminal">
+      <b>Creazione del grafico per il confronto dei risultati ottenuti inserendo nel modello sia i dati
+        delle immagini ottenuti nel modo classico che con il circuito quantistico     </b>
+    </em><br>
+</div>
+<div class="sxt">
+    <em class="terminal">
+    import matplotlib.pyplot as plt<br>
+    
+    plt.style.use("seaborn")<br>
+    fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6, 9))<br>
+    
+    ax1.plot(q_history.history["val_accuracy"], "-ob", label="Modello quantum layer")<br>
+    ax1.plot(c_history.history["val_accuracy"], "-og", label="Modello classico")<br>
+    ax1.set_ylabel("Accuracy")<br>
+    ax1.set_ylim([0, 1])<br>
+    ax1.set_xlabel("Epoch")<br>
+    ax1.legend()<br>
+    
+    ax2.plot(q_history.history["val_loss"], "-ob", label="Modello quantum layer")<br>
+    ax2.plot(c_history.history["val_loss"], "-og", label="Modello classico")<br>
+    ax2.set_ylabel("Loss")<br>
+    ax2.set_ylim(top=2.5)<br>
+    ax2.set_xlabel("Epoch")<br>
+    ax2.legend()<br>
+    plt.tight_layout()<br>
+    plt.show()<br>
+    
+</em><br><br>
+</div>
+<div class="sxtt">
+    <em class="tterminal">
+      <b>L'analisi dei risultati non mostra divergenze importanti tra i risultati ottenuti tra i 2 
+          metodi ma naturalmente bisogna effettuare altri esperimenti sia modificando il circuito quantistico 
+        che il modello di CNN </b>
+    </em><br>
+</div>
+<div>
+    <img src="foto/QQris.png" width="800px" height="500px">
+</div>
+

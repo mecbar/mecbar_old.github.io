@@ -1,0 +1,707 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    -->
+    <script src="js/jquery-3.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/navbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
+ 
+</head>
+<body>
+<header>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+              <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+              <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+              <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+              <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+              <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+             <!--
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#Adev">Windows Server</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+            </ul>
+         -->
+            </li>
+    </nav>
+</header>
+<style>
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding:0px;
+}
+
+
+
+.parallax {
+  width: 100%;
+  height: 100%;
+
+  background-image:  url('foto/quantum1.png');
+  background-size: contain;   
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-attachment: fixed;  /*no parallax */
+ 
+}
+
+.titoli {
+    color:rgb(81, 7, 218);
+    font: menu;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:50px;
+    text-align :center;
+    text-shadow: -6px -6px 15px rgba(227, 85, 140, 1);
+    
+}
+.testoq {
+    color:rgb(19, 5, 146);
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    margin:30px;    
+}
+
+.terminal4 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 125px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal3 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 95px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal2 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 65px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+
+.terminal {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: rgb(0, 0, 0);
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: white;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    transition: 3.7s;
+}
+.terminal:hover  {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.ttt {
+    margin: 30px;
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color:#1a368c;
+	line-height: 25px;
+    font-size: 20px;
+    font-family: Consolas, monospace;
+    /*font-family: 'Times New Roman', Times, serif;*/
+	background-color: white;
+	border-radius: 5px;
+    border-color: darkblue;
+    height: auto;
+    width: 90%;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+}
+
+.ter {
+    margin-inline-start: 20px;
+	margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+	background-color: rgb(36, 39, 216);
+	border-radius: 25px;
+    border-color: darkorange;
+}
+.srboxp1 {
+    height:50px;
+    font-size: 25px;
+    /* max-height: 3200px;  */
+    width: auto;
+    padding: 40px !important;
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: rgb(246, 246, 251);
+    background-color: rgb(17, 13, 13);
+    position: relative;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.sx {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxt {
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxtt {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.indent {
+    padding-left:30px ;
+}
+.indent2 {
+    padding-left:60px ;
+}
+.indent3 {
+    padding-left:90px ;
+}
+.indent4 {
+    padding-left:120px ;
+}
+.indent5 {
+    padding-left:150px ;
+}
+
+
+@media only screen and (min-width:50px) and (max-width: 600px) {
+           
+           .titoli {
+               font-size:  15px;
+           }
+
+           .testoq {
+    
+    font-size: 10px;
+    line-height: 15px;
+
+    margin :5px;    
+}
+.tterminal {
+    margin:5px;
+	margin-inline-start: 10px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 5px;
+	padding-right: 5px;
+	
+	line-height: 20px;
+    font-size: 15px;
+   
+}
+
+
+.ttt {
+    margin: 1%;
+    margin-top: 15px;
+	margin-inline-start: 1%;
+	padding: 1%;
+	line-height: 15px;
+    font-size: 5px;
+  width: auto;
+}
+
+.sxtt {
+    margin-left: 0px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 8px;
+}
+
+
+.indent {
+    padding-left: 2% ;
+    margin: 2%;
+}
+.indent2 {
+    padding-left:4% ;
+}
+.indent3 {
+    padding-left:6%;
+}
+.indent4 {
+    padding-left:8% ;
+}
+.indent5 {
+    padding-left:10% ;
+}
+        }
+
+</style>
+
+<body>
+   
+    
+    <div class="titoli">
+       Hybrid Quantum Convolutional Neural Networks with Cirq and Tensorflow-Quantum
+        </div>
+    <img src="foto/hqcnn2.png" width="100%" height="350px">
+    <div class="testoq">
+    Qui prendiamo in considerazione un modello ibrido dove nella prima parte si elaborano i dati 
+    con un circuito quantistico ed i dati di output vengono poi elaborati con un modello classico di 
+    Convolutional Neural Network.
+
+    Dopo aver creato il Cluster State ed inserito i dati nel circuito questi vengono elaborati
+    con la Quantum Convolution ed il Quantum Pooling in più processi paralleli i cui output <Z> vengono
+    poi inseriti in un modello di CNN che tramite la backpropagation e Gradient Descent
+    ci permette di creare un modello da utilizzare per la classificazione.
+   
+<br>
+
+
+    <div>
+   
+        <div class="sxtt">
+              <em class="tterminal">
+                   
+                   <b>Programma in Python </b>
+                   </em><br>
+         </div>
+           <div class="ttt">
+              
+
+!pip install cirq<br>
+!pip install tensorflow==2.1.0<br>
+!pip install tensorflow_quantum <br>
+<br>
+import tensorflow as tf<br>
+import tensorflow_quantum as tfq<br>
+import cirq<br>
+import sympy<br>
+import numpy as np<br>
+import seaborn as sns<br>
+import collections<br>
+# visualization tools<br>
+%matplotlib inline<br>
+import matplotlib.pyplot as plt<br>
+from cirq.contrib.svg import SVGCircuit<br>
+from tensorflow.keras.preprocessing.image import ImageDataGenerator<br>
+import os<br>
+<br>
+batch_size = 2000<br>
+epochs = 15<br>
+IMG_HEIGHT = 4<br>
+IMG_WIDTH = 4<br>
+<br>
+
+          
+</div>
+
+<div class="ttt">
+
+URL = 'https://storage.googleapis.com/mledu-datasets/cats_and_dogs_filtered.zip'<br>
+path = tf.keras.utils.get_file('cats_and_dogs.zip', origin=URL, extract=True)<br>
+PATH = os.path.join(os.path.dirname(path), 'cats_and_dogs_filtered')<br>
+percorso = os.path.join(PATH, 'train')<br>
+percorso_cats = os.path.join(percorso, 'cats')  <br>
+percorso_dogs = os.path.join(percorso, 'dogs')<br>
+
+num_cats = len(os.listdir(percorso_cats )<br>
+num_dogs = len(os.listdir(percorso_dogs ))<br>
+<br>
+
+total_train = num_cats + num_dogs<br>
+
+
+train_data = train_image_generator.flow_from_directory(batch_size=nr,<br>
+<span class="indent">directory=percorso,</span><br>
+<span class="indent">shuffle=True,</span><br>
+<span class="indent">  target_size=(IMG_HEIGHT, IMG_WIDTH),</span><br>
+<span class="indent"> class_mode='binary')</span><br>
+                                                       
+esempio_image, _ = next(train_data)<br>
+
+def plotImages(images):<br>
+<span class="indent"> fig, axes = plt.subplots(1, 5, figsize=(28,28))</span><br>
+<span class="indent">   axes = axes.flatten()</span><br>
+<span class="indent">   for img, ax in zip( images, axes):</span><br>
+<span class="indent2">       ax.imshow(img)</span><br>
+<span class="indent2">       ax.axis('off')</span><br>
+<span class="indent">   plt.tight_layout()</span><br>
+<span class="indent">  plt.show()</span><br>
+    <br>
+
+plotImages(esempio_images[:5])<br>
+<br>
+
+<img src="foto/caniegatti.png" width="100%" height="150px"><br>
+
+<br>
+#data aumentation rotazione-flip-zoom<br>
+image_generata = ImageDataGenerator(<br>
+<span class="indent"> rescale=1./255,</span><br>
+<span class="indent"> rotation_range=45,</span><br>
+<span class="indent"> width_shift_range=.15,</span><br>
+<span class="indent"> height_shift_range=.15,</span><br>
+<span class="indent"> horizontal_flip=True,</span><br>
+<span class="indent"> zoom_range=0.5</span><br>
+<span class="indent"> )</span><br>
+  <br>
+train_image = image_generata.flow_from_directory(batch_size=batch_size,<br>
+<span class="indent">  directory=percorso,</span><br>
+<span class="indent">shuffle=True,</span><br>
+<span class="indent">target_size=(IMG_HEIGHT, IMG_WIDTH),</span><br>
+<span class="indent"> class_mode='binary')</span><br>
+
+</div>
+<div class="ttt">
+#carico dati images e labels<br>
+XX,yy =  next(train_image)<br>
+<br>
+
+
+XX= XX[:,:,:,0] #elimino ultima dim <br>
+XX= XX[..., np.newaxis]  #aggiungo dim vuota<br>
+
+</div>
+
+<div class="ttt">
+
+
+def genera_data(x,y):<br>
+
+<span class="indent"></span>    """Genera training and testing data"""</span><br>
+<span class="indent"></span>    qubits = cirq.GridQubit.rect(1, 16)</span><br>
+<span class="indent"></span>    nr = len(x)  # Produces n_rounds x input image</span><br>
+<span class="indent"></span>    train = []</span><br>
+<span class="indent"></span>    labels = []</span><br>
+
+<span class="indent">   for n in range(nr):</span><br>
+ <span class="indent2">       randparameter = np.random.uniform(high=2 * np.pi, size=(1, 16))</span><br>
+ <span class="indent2">        randp=randparameter[0]</span><br>
+ <span class="indent2"> circuit = cirq.Circuit()</span><br>
+ <span class="indent2">       beta = np.ndarray.flatten(x)</span><br>
+  <span class="indent2">       for i,bit in enumerate(qubits):</span><br>
+ <span class="indent3"> circuit += (cirq.Circuit(cirq.ry(beta[i])(bit)))</span><br>
+  <span class="indent3">train.append(circuit)</span><br>
+ <span class="indent3"> labels.append(1 if (y[n] == 1 ) else -1)</span><br>
+    
+  <span class="indent">    perc = int(len(train) * 0.7)</span><br>
+ <span class="indent">   x_train = train[:perc]</span><br>
+<span class="indent">    test= train[perc:]</span><br>
+  <span class="indent">    train_label = labels[:perc]</span><br>
+  <span class="indent">    test_label = labels[perc:]</span><br>
+   <span class="indent">    return tfq.convert_to_tensor(x_train), np.array(train_label), \</span><br>
+<span class="indent3">        tfq.convert_to_tensor(test), np.array(test_label)</span><br>
+
+<br>
+
+
+
+
+#Generazione dati da inserire nel modello - img inserita nel circuito per estrarre dati <br>
+#e separazione record tra training set e test set<br>
+tm, tlm, teem, telm = genera_data(XX,yy)<br>
+
+ </div>
+
+
+<br>
+<div class="ttt">
+def one_qubit_unitary(bit, symbols):<br>
+<span class="indent"> """creo circuit con rotazione asse X,Y,Z"""</span><br>
+<span class="indent"> return cirq.Circuit(</span><br>
+<span class="indent3">  cirq.X(bit)**symbols[0],</span><br>
+ <span class="indent3">   cirq.Y(bit)**symbols[1],</span><br>
+ <span class="indent3">  cirq.Z(bit)**symbols[2])</span><br>
+<br>
+
+def two_qubit_unitary(bits, symbols):<br>
+<span class="indent">"""Creo circuit 2 qubit unitary."""</span><br>
+<span class="indent"> circuit = cirq.Circuit()</span><br>
+<span class="indent">   circuit += one_qubit_unitary(bits[0], symbols[0:3])</span><br>
+ <span class="indent">  circuit += one_qubit_unitary(bits[1], symbols[3:6])</span><br>
+ <span class="indent">    circuit += [cirq.ZZ(*bits)**symbols[7]]</span><br>
+  <span class="indent">    circuit += [cirq.YY(*bits)**symbols[8]]</span><br>
+  <span class="indent">    circuit += [cirq.XX(*bits)**symbols[9]]</span><br>
+  <span class="indent">    circuit += one_qubit_unitary(bits[0], symbols[9:12])</span><br>
+  <span class="indent">    circuit += one_qubit_unitary(bits[1], symbols[12:])</span><br>
+  <span class="indent">    return circuit</span><br>
+  <br>
+
+def two_qubit_pool(source_qubit, out_qubit, symbols):<br>
+<span class="indent">  """"circuit con parameterized pooling ridurre entanglement da 2 qubits ad 1"""</span><br>
+    <span class="indent">    pool_circuit = cirq.Circuit()</span><br>
+    <span class="indent">    oqu = one_qubit_unitary(out_qubit, symbols[0:3])</span><br>
+    <span class="indent">   source_oqu = one_qubit_unitary(source_qubit, symbols[3:6])</span><br>
+    <span class="indent">    pool_circuit.append(oqu)</span><br>
+    <span class="indent">pool_circuit.append(source_oqu)</span><br>
+    <span class="indent">    pool_circuit.append(cirq.CNOT(control=source_qubit, target=out_qubit))</span><br>
+    <span class="indent">    pool_circuit.append(oqu**-1)</span><br>
+    <span class="indent">    return pool_circuit</span><br>
+
+    <br>
+
+def quantum_conv_circuit(bits, symbols):<br>
+<span class="indent"> """Quantum Convolution Layer two_qubit_unitary ai qubits pari"""</span><br>
+<span class="indent"> circuit = cirq.Circuit()</span><br>
+<span class="indent">  for first, second in zip(bits[0::2], bits[1::2]):</span><br>
+<span class="indent2">         circuit += two_qubit_unitary([first, second], symbols)</span><br>
+<span class="indent"> for first, second in zip(bits[1::2], bits[2::2] + [bits[0]]):</span><br>
+<span class="indent2">    circuit += two_qubit_unitary([first, second], symbols)</span><br>
+<span class="indent"> return circuit</span><br>
+<br>   
+
+def quantum_pool_circuit(source_bits, dest_bits, symbols):<br>
+<span class="indent">"""quantum pooling operation rileva info importanti - da 2 qubit ad 1 """</span><br>
+<span class="indent">   circuit = cirq.Circuit()</span><br>
+<span class="indent"> for source, dest in zip(source_bits, dest_bits):</span><br>
+<span class="indent2">    circuit += two_qubit_pool(source, dest, symbols) </span> <br>
+<span class="indent"> return circuit</span><br>
+
+<br>
+</div>
+<div class="ttt">
+
+testQuantum = cirq.GridQubit.rect(1, 16)<br>
+<br>
+SVGCircuit(<br>
+ <span class="indent">  quantum_pool_circuit(testQuantum[:8], testQuantum[8:], sympy.symbols('x0:6')))</span><br>
+
+ <br>
+ <img src="foto/qcnncirc.png" width="100%" height="450px"><br>
+</div>
+<br>
+<div class="ttt">
+<br>    
+def clusterStateCircuit(qubits):<br>
+<span class="indent"> circuit = cirq.Circuit() </span><br>
+
+<span class="indent">circuit.append(cirq.H.on_each(bits))</span><br>
+    <span class="indent">for bit1,bit2 in zip(bits, bits[1:] + [bits[0]]):</span><br>
+        <span class="indent2">    circuit.append(cirq.CZ(bit1, bit2))</span><br>
+ <span class="indent"> return circuit  </span><br>
+ <br>
+# Custom accuracy metric.<br>
+@tf.function<br>
+def custom_accuracy(y_true, y_pred):<br>
+<span class="indent">  y_true = tf.squeeze(y_true) </span><br>
+<span class="indent"> y_pred = tf.map_fn(lambda x: 1.0 if x >= 0 else -1.0, y_pred) </span><br> 
+<span class="indent">  return tf.keras.backend.mean(tf.keras.backend.equal(y_true, y_pred)) </span><br> 
+
+       </div>
+       <br><br>
+
+<div class="ttt">
+<br>
+circuitO = cirq.GridQubit.rect(1, 16)<br>
+readouts = [cirq.Z(bit) for bit in circuitO[8:]]<br>
+
+def readoutModelCircuit(qubits):<br>
+<span class="indent"> #circuito con 1 solo Q_conv e Q_pool</span><br>
+<span class="indent">  circuit = cirq.Circuit()</span><br>
+<span class="indent"> symbols = sympy.symbols('qconv0:21')</span><br>
+<span class="indent"> circuit += quantum_conv_circuit(qubits, symbols[0:15])</span><br>
+<span class="indent"> circuit += quantum_pool_circuit(qubits[:4], qubits[4:], symbols[15:21])</span><br>
+<span class="indent"> return circuit</span><br>
+<br>
+    inputLayer = tf.keras.Input(shape=(), dtype=tf.dtypes.string)<br>
+    <br>
+    csm = tfq.layers.AddCircuit()(<br>
+    <span class="indent">  inputLayer , prepend=clusterStateCircuit(cluster_state)) </span><br>
+        <br>
+    # apply 3 different filters and measure expectation values<br>
+    
+    qmodel1 = tfq.layers.PQC(<br>
+    <span class="indent">  readoutModelCircuit(circuitO), </span><br>
+        <span class="indent">  readouts)(csm) </span><br>
+    
+    qmodel2 = tfq.layers.PQC(<br>
+    <span class="indent"> readoutModelCircuit(circuitO), </span><br>
+        <span class="indent">  readouts)(csm) </span><br>
+    
+    qmodel3 = tfq.layers.PQC(<br>
+    <span class="indent"> readoutModelCircuit(circuitO), </span><br>
+        <span class="indent">  readouts)(csm) </span><br>
+        <br>
+    # concatenate outputs and feed into a small classical NN<br>
+    qmodel4= tf.keras.layers.concatenate(<br>
+    <span class="indent"> [qmodel1, qmodel2, qmodel3]) </span><br>
+        <br>
+    dense1 = tf.keras.layers.Dense(8)(qmodel4)<br>
+    dense2 = tf.keras.layers.Dense(32)(dense1)<br>
+    dense3 = tf.keras.layers.Dense(1)(dense2)<br>
+    <br>
+    model = tf.keras.Model(inputs=[inputLayer],<br>
+    <span class="indent">  outputs=[dense3]) </span><br>
+ <br>
+    # Display the model architecture<br>
+    tf.keras.utils.plot_model(model,<br>
+ <span class="indent">  show_shapes=True, </span><br>
+ <span class="indent">  show_layer_names=True, </span><br>
+  <span class="indent">  dpi=70) </span><br>
+
+
+    
+    <br>
+<img src="foto/hqcnn2model.png" width="500px" height="600px">
+<br>
+</div>
+
+<div class="ttt">
+    model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.0002),<br>
+    <span class="indent">   loss=tf.losses.mse, </span><br>
+      <span class="indent">  metrics=[custom_accuracy]) </span><br>
+        <br>   
+    #elaborazione del modello<br>            
+    history = model.fit(x=tm,<br>
+    <span class="indent">  y=tlm, </span><br>
+    <span class="indent">  batch_size=64, </span><br>
+    <span class="indent"> epochs=5, </span><br>
+    <span class="indent"> verbose=1, </span><br>
+    <span class="indent">  validation_data=(teem, </span><br>
+    <span class="indent">  telm)) </span><br>
+    
+  </div>
+  
+<div class="ttt">      
+    <br>
+      plt.plot(history.history['loss'], label='Training')<br>
+plt.plot(history.history['val_loss'], label='Validation')<br>
+plt.title('Training Quantum CNN to Classification Cats and Dogs')<br>
+plt.xlabel('Epochs')<br>
+plt.ylabel('Loss')<br>
+plt.legend()<br>
+plt.show()<br>
+<br>
+
+
+
+<img src="foto/hqcnn2loss.png" width="500px" height="400px">
+
+</div>
+
+<div class="ttt">      
+    <br>
+    plt.plot(history.history['custom_accuracy'][:25], label='Training Hybrid QCNN')<br>
+    plt.plot(history.history['val_custom_accuracy'][:25], label='Testing Hybrid QCNN')<br>
+    plt.title('Training Quantum CNN to Classification Cats and Dogs')<br>
+    plt.xlabel('Epochs')<br>
+    plt.legend()<br>
+    plt.ylabel('Accuracy')<br>
+    plt.show()<br>
+<br>
+
+
+
+<img src="foto/hqcnn2acc.png" width="500px" height=400px">
+
+</div>
+
+
+
+</body>
+</html>
+            

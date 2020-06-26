@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution TFQ</title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    -->
+    <script src="js/jquery-3.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/navbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
+ 
+</head>
+<body>
+<header>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+              <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+              <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+              <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+              <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+              <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+             <!--
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#Adev">Windows Server</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+            </ul>
+         -->
+            </li>
+    </nav>
+</header>
+<style>
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding:0px;
+}
+
+
+
+.parallax {
+  width: 100%;
+  height: 100%;
+
+  background-image:  url('foto/quantum1.png');
+  background-size: contain;   
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-attachment: fixed;  /*no parallax */
+ 
+}
+
+.titoli {
+    color:rgb(81, 7, 218);
+    font: menu;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:50px;
+    text-align :center;
+    text-shadow: -6px -6px 15px rgba(227, 85, 140, 1);
+    
+}
+.testoq {
+    color:rgb(19, 5, 146);
+    font-size: 20px;
+    line-height: 30px;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    /*font-family: Georgia, 'Times New Roman', Times, serif;*/
+    margin:30px;    
+}
+
+.terminal4 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 125px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal3 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 95px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal2 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 65px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+
+.terminal {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: rgb(0, 0, 0);
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: white;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    transition: 3.7s;
+}
+.terminal:hover  {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.tterminal {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color:#1a368c;
+	line-height: 25px;
+    font-size: 20px;
+    font-family: Consolas, monospace;
+    /*font-family: 'Times New Roman', Times, serif;*/
+	background-color: white;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    width: 90%;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+}
+
+.ter {
+    margin-inline-start: 20px;
+	margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+	background-color: rgb(36, 39, 216);
+	border-radius: 25px;
+    border-color: darkorange;
+}
+.srboxp1 {
+    height:50px;
+    font-size: 25px;
+    /* max-height: 3200px;  */
+    width: auto;
+    padding: 40px !important;
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: rgb(246, 246, 251);
+    background-color: rgb(17, 13, 13);
+    position: relative;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.sx {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxt {
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxtt {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+img {
+    margin-left: 100px;
+
+}
+.indent {
+    padding-left:30px ;
+}
+.indent2 {
+    padding-left:60px ;
+}
+.indent3 {
+    padding-left:90px ;
+}
+.indent4 {
+    padding-left:120px ;
+}
+.indent5 {
+    padding-left:150px ;
+}
+.schema {
+  width: 100%;
+  height: 300px;
+  background-image: url('foto/qqqq.png'),
+      linear-gradient(to right, rgb(255, 254, 254), rgba(255, 255, 255, 0));
+  background-repeat: no-repeat,
+      no-repeat, no-repeat,  no-repeat;
+  background-position: left 50px top 200px ,
+      right 50px top 200px, left 600px top 260px,   left;
+  background-attachment: fixed;
+ 
+}
+
+
+</style>
+
+<body>
+   
+    
+    <div class="titoli">
+        Quantum Neural Networks with Cirq and Tensorflow-Quantum
+    </div>
+    <div class="schema"></div>
+    <div class="testoq">
+   In questo esempio usiamo la Convolutional Neural Network con il quantum computing usando cirq
+   per creare i circuiti, sympy per inserire i simboli nel circuito e Tensorflow-Quantum per 
+   creare il modello CNN.
+  </div>
+ 
+ <div class="sxtt">
+       <em class="tterminal">
+            
+            <b>Per prima cosa installiamo le librerie necessarie  </b>
+            </em><br>
+  </div>
+
+<div class="sxt">
+    <em class="terminal">
+    
+    <b>!pip install cirq<br>
+        !pip install tensorflow==2.1.0<br>
+        !pip install tensorflow_quantum
+  </b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+             
+             <b>Importiamo i moduli che poi verranno utilizzati </b>
+             </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+            <b>
+           import tensorflow as tf<br>
+import tensorflow_quantum as tfq<br>
+
+import cirq<br>
+import sympy<br>
+import numpy as np<br>
+import seaborn as sns<br>
+import collections<br>
+
+# visualization tools<br>
+%matplotlib inline<br>
+import matplotlib.pyplot as plt<br>
+from cirq.contrib.svg import SVGCircuit<br>
+            </b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+             
+             <b>Impostiamo alcune variabili   </b>
+             </em><br>
+   </div>
+    <div class="sxt">
+        <em class="terminal">
+     
+
+    
+    np.random.seed(0) # Seed for NumPy random number generator<br>
+    tf.random.set_seed(0) # Seed for TensorFlow random number generator<br>
+    !unzip cat-and-dog.zip -d data</b><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">
+             
+        <b>La prima volta carichiamo le immagini di cani e gatti. Qui saltiamo
+            questa parte.    </b>
+             </em><br>
+   </div>
+    <div class="sxt">
+       <em class="terminal">
+       <span class="indent"> import os</span><br>
+       <span class="indent"> #carica dati images cats and dogs</span><br>
+       <span class="indent"> .....</span><br>
+       <span class="indent"> #creo lista Train con la lista delle immagini di cani e gatti</span><br>
+       <span class="indent">   ed y con lista delle labels con 0 per i cani ed 1 per i gatti</span><br>
+       </span><br>
+    </em><br><br>
+    </div>
+    <div class="sxtt">
+        <em class="tterminal">  
+        <b>Nella fase precedente abbiamo generato un array con i dati delle immagini ed un
+            altro con 0 che indica che si tratta di cat o 1 se dog.
+
+          Ora si definisce il CLUSTER STATE che poi verrà inserito nel modello TFQ con la funzione 
+            tfq.layers.AddCircuit           </b>
+    </em><br>
+</div>
+ <div class="sxt">
+    <em class="terminal">
+    def cluster_state_circuit(bits):<br>
+    <span class="indent">      """cluster state"""</span><br>
+        <span class="indent">      circuit = cirq.Circuit()</span><br>
+            <span class="indent">      circuit.append(cirq.H.on_each(bits))</span><br>
+                <span class="indent">      for  bit1, bit2in zip(bits, bits[1:] + [bits[0]]):</span><br>
+                    <span class="indent2">          circuit.append(cirq.CZ(bit1, bit2))</span><br>
+                        <span class="indent">      return circuit</span><br>
+    </em>
+ </div>
+
+
+<div class="sxtt">
+    <em class="tterminal">
+      <b> One qubit unitary esegue una rotazione in base al valore in sumbol sugli assi x,y, ed z
+          Two qubit unitary costruisce un parameterized two qubit unitary  
+          The two_qubit_pool rappresenta un CNOT usando il one_qubit_unitary sul control e target qubits
+          </b>
+    </em><br>
+</div>
+
+<div class="sxt">
+    <em class="terminal">   
+
+def one_qubit_unitary(bit, symbols):<br>
+<span class="indent">   """ Cirq circuit con rotation in bloch sphere assi X,Y e Z in base a valori in symbols"""</span><br>
+        <span class="indent">   return cirq.Circuit(</span><br>
+            <span class="indent2">        cirq.X(bit)**symbols[0],</span><br>
+                <span class="indent2">        cirq.Y(bit)**symbols[1],</span><br>
+                    <span class="indent">  cirq.Z(bit)**symbols[2])</span><br>
+<br>
+SVGCircuit(one_qubit_unitary(cirq.GridQubit(0, 0), sympy.symbols('x0:3')))<br>
+<br>
+<img src="foto/oqu.png" width="400px" height="100px">
+<br>
+
+def two_qubit_unitary(bits, symbols):<br>
+<span class="indent">     """Cirq circuit two qubit unitary"""</span><br>
+<span class="indent">     circuit = cirq.Circuit()</span><br>
+<span class="indent">     circuit += one_qubit_unitary(bits[0], symbols[0:3])</span><br>
+<span class="indent">     circuit += one_qubit_unitary(bits[1], symbols[3:6])</span><br>
+<span class="indent">     circuit += [cirq.ZZ(*bits)**symbols[7]]</span><br>
+<span class="indent">     circuit += [cirq.YY(*bits)**symbols[8]]</span><br>
+<span class="indent">     circuit += [cirq.XX(*bits)**symbols[9]]</span><br>
+<span class="indent">     circuit += one_qubit_unitary(bits[0], symbols[9:12])</span><br>
+<span class="indent">     circuit += one_qubit_unitary(bits[1], symbols[12:])</span><br>
+<span class="indent">     return circuit</span><br>
+<br>
+
+
+<br>
+<img src="foto/tqu.png" width="600px" height="200px">
+<br>
+
+def two_qubit_pool(squbit, iqubit, symbols):<br>
+ <span class="indent">"""Make a Cirq circuit to do a parameterized 'pooling' operation, which</span><br>
+ <span class="indent">attempts to reduce entanglement down from two qubits to just one."""</span><br>
+ <span class="indent">pool_circuit = cirq.Circuit()</span><br>
+ <span class="indent">sss = one_qubit_unitary(iqubit, symbols[0:3])</span><br>
+ <span class="indent">ttt= one_qubit_unitary(squbit, symbols[3:6])</span><br>
+ <span class="indent">pool_circuit.append(sss)</span><br>
+ <span class="indent">pool_circuit.append(ttt)</span><br>
+ <span class="indent">pool_circuit.append(cirq.CNOT(control=squbit, target=iqubit))</span><br>
+ <span class="indent">pool_circuit.append(sss**-1)</span><br>
+ <span class="indent">return pool_circuit</span><br>
+
+  
+
+    <br>
+    <img src="foto/tqp.png" width="800px" height="300px">
+    <br></em></div>
+    <br>
+
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>Qui il Quantum_conv_circuit applica la convolution che prende in input n qubits e restituisce
+              in output n/2 qubits   </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+
+    def quantum_conv_circuit(bits, symbols):<br>
+    <span class="indent">   """Quantum Convolution Layer</span><br>
+            <span class="indent">         Output a Cirq circuit two_qubit_unitary di qubits in bits"""</span><br>
+                    <span class="indent">         circuit = cirq.Circuit()</span><br>
+                        <span class="indent">      for p, q in zip(bits[0::2], bits[1::2]):</span><br>
+                            <span class="indent2">           circuit += two_qubit_unitary([p, q], symbols)</span><br>
+                                <span class="indent">        for b, b2 in zip(bits[1::2], bits[2::2] + [bits[0]]):</span><br>
+                                    <span class="indent2">             circuit += two_qubit_unitary([b, b2], symbols)</span><br>
+                                        <span class="indent">           return circuit</span><br>
+<br>
+        SVGCircuit( quantum_conv_circuit(cirq.GridQubit.rect(1, 4), sympy.symbols('x0:15')))<br>
+        <br>
+        <img src="foto/qcc.png" width="800px" height="300px">
+        <br>
+        <br></em></div>
+        <br>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Ora si definisce il Quantum Pooling Circuit che prende in input n qubits(elaborati prima da quantum_conv_circuit) 
+              e restituisce in output n/2 qubits   </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+
+            def quantum_pool_circuit(sb, sbs, symbols):<br>
+                <span class="indent"> Quantum pool layer estrapola caratteristiche da N qubits in N/2 qubits  </span><br>
+                        <span class="indent">  circuit = cirq.Circuit()</span><br>
+                            <span class="indent">   for s, s2 in zip(sb, sb2):</span><br>
+                                <span class="indent2">  circuit += two_qubit_pool(s, s2, symbols)</span><br>
+                                    <span class="indent">  return circuit</span><br>
+     <br>
+     #Test quantum_pool_circuit<br>
+  test_bits = cirq.GridQubit.rect(1, 4)<br>
+<br>
+                SVGCircuit(quantum_pool_circuit(test_bits[:2], test_bits[2:], sympy.symbols('x0:6')))<br>
+                <br>
+                <img src="foto/qpc.png" width="600px" height="200px">
+                <br>
+                    
+    <br></em></div>
+
+
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Creazione di sequenze alternate di convolution e pooling.
+
+              </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+
+            def create_model_circuit(qubits):<br>
+   <span class="indent">  """convolution and pooling </span><br>
+    <span class="indent"> model = cirq.Circuit()</span><br>
+   <span class="indent">  symbols = sympy.symbols('qconv0:63')</span><br>
+    <span class="indent"> #TensorFlow Quantum</span><br>
+    <span class="indent"> model += quantum_conv_circuit(qubits, symbols[0:15])</span><br>
+    <span class="indent"> model += quantum_pool_circuit(qubits[:4], qubits[4:], symbols[15:21])</span><br>
+    <span class="indent"> model += quantum_conv_circuit(qubits[4:], symbols[21:36])</span><br>
+    <span class="indent">  model += quantum_pool_circuit(qubits[4:6], qubits[6:], symbols[36:42])</span><br>
+    <span class="indent">  model += quantum_conv_circuit(qubits[6:], symbols[42:57])</span><br>
+    <span class="indent">  model += quantum_pool_circuit([qubits[6]], [qubits[7]], symbols[57:63])</span><br>
+    <span class="indent">  return model</span><br>
+    <br></em></div>
+    
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>  Creazione di qubits and readout(output) in Cirq <br>
+        Prendiamo l'ultimo qubits come output del modello Qconv + Qpool
+              </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">                                                   
+    
+        cluster_state_bits = cirq.GridQubit.rect(1, 16)<br>
+       <br>
+        readout = cirq.Z(cluster_state_bits[-1])<br>
+        
+        #definizione dell'input come stringa<br>
+        input = tf.keras.Input(shape=(), dtype=tf.dtypes.string)<br>
+        cluster_state = tfq.layers.AddCircuit()(<br>
+        <span class="indent">  input, prepend=cluster_state_circuit(cluster_state_bits))</span><br>
+        
+        quantum_model = tfq.layers.PQC(create_model_circuit(cluster_state_bits),<br>
+        <span class="indent">   readout)(cluster_state)</span><br>
+        
+        qcnn_model = tf.keras.Model(inputs=[input], outputs=[quantum_model])<br>
+        
+        #Visualizzazione del modello creato con la funzione di plot di Keras<br>
+        tf.keras.utils.plot_model(qcnn_model,<br>
+        <span class="indent"> show_shapes=True,</span><br>
+            <span class="indent"> show_layer_names=False,</span><br>
+                <span class="indent">  dpi=100)</span><br>
+
+                    <br>
+
+<br>
+<img src="foto/cmc.png" width="400px" height="300px">
+<br>
+
+    <br></em></div>
+
+
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Creazione di una funzione custom per misurare l'accuratezza del modello creato.    </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+
+            # Custom accuracy metric.<br>
+            @tf.function<br>
+            def custom_accuracy(y_true, y_pred):<br>
+            <span class="indent">  y_true = tf.squeeze(y_true)</span><br>
+            <span class="indent">y_pred = tf.map_fn(lambda x: 1.0 if x >= 0 else -1.0, y_pred)</span><br>
+            <span class="indent">  return tf.keras.backend.mean(tf.keras.backend.equal(y_true, y_pred))</span><br>
+
+    <br></em></div>
+
+
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>Funzione per generare i dati che poi saranno usati in input per creare il modello.
+            Generazione training data,testing data e labels training e tesing     
+        </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+
+            def creadati(x,y):<br>
+     <span class="indent">   """Generazione training e testing data """</span><br>
+          <span class="indent">qubits = cirq.GridQubit.rect(1, 16)</span><br>
+        <span class="indent">nr = len(x) </span><br>
+     <span class="indent">  data = []</span><br>
+        <span class="indent">  labels = []</span><br>
+            
+    <span class="indent">    for n in range(nr):</span><br>
+         <span class="indent2">   circuit = cirq.Circuit()</span><br>
+        <span class="indent2">   beta = np.ndarray.flatten(x[n])</span><br>
+        <span class="indent2">  for i,bit in enumerate(qubits):</span><br>
+ <span class="indent3">    circuit += (cirq.Circuit(cirq.rx(beta[i])(bit)))</span><br>
+                
+          <span class="indent2">  data.append(circuit)</span><br>
+       <span class="indent2">     labels.append(1 if (y[n] == 1 ) else -1)</span><br>
+        <span class="indent">     perc = int(len(data) * 0.8)  #80% pre training e resto per testing</span><br>
+            <span class="indent"> train_data = data[:perc]</span><br>
+                <span class="indent"> test_data = data[perc:]</span><br>
+           <span class="indent">train_labels = labels[:perc]</span><br>
+        <span class="indent"> test_labels = labels[perc:]</span><br>
+      <span class="indent"> return tfq.convert_to_tensor(train_data), np.array(train_labels), \</span><br>
+        <span class="indent2">tfq.convert_to_tensor(test_data), np.array(test_labels)</span><br>
+
+
+    <br></em></div>
+
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Creazione della lista di training_data(tm) e testing_data(teem) convertiti in tensor di TFQ e 
+              e della lista di label training(tlm) e label testing(telm)      </b>
+         
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+            tm, tlm, teem, telm = creadati(<br>
+            <span class="indent">  Train,yy)</span><br>
+
+
+
+    <br></em></div>
+
+
+    <div class="sxtt">
+        <em class="tterminal">
+          <b>Compilazione del modello con inserimento dell'optimizer e cost function  </b>
+            poi la creazione del modello(fit) con inserimento dei dati creati precedentemente
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+
+            qcnn_model.compile(optimizer=tf.keras.optimizers.Adam(learning_rate=0.05),<br>
+            <span class="indent">  loss=tf.losses.mse,</span><br>
+                <span class="indent">   metrics=[custom_accuracy])</span><br>
+
+
+model = qcnn_model.fit(x=tm,<br>
+<span class="indent"> y=tlm,  </span><br>
+    <span class="indent">  batch_size=4, </span><br> 
+        <span class="indent"> epochs=5,  </span><br>
+            <span class="indent"> verbose=1, </span><br> 
+                <span class="indent">  validation_data=(teem ,telm))  </span><br>
+
+
+    <br></em></div>
+
+
+
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Grafico per visualizzare andamento cost function   </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+            plt.plot(model.history['loss'][1:], label='Training')<br>
+            plt.plot(model.history['val_loss'][1:], label='Validation')<br>
+            plt.title('Training a Quantum CNN to Classification image')<br>
+            plt.xlabel('Epochs')<br>
+            plt.ylabel('Loss')<br>
+            plt.legend()<br>
+            plt.show()<br>
+
+    <br></em></div>
+
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Grafico per visualizzare andamento cost function  </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+    <br></em></div>
+    <div class="sxtt">
+        <em class="tterminal">
+          <b> Grafico per visualizzare andamento dell'accuratezza del modello  </b>
+        </em><br>
+    </div>
+    
+    <div class="sxt">
+        <em class="terminal">   
+
+            plt.plot(model.history['custom_accuracy'][:],label='Training')<br>
+            plt.plot(model.history['val_custom_accuracy']  [:],label='Testing')<br>
+            plt.title('Training a Quantum CNN for Classification of image ')<br>
+            plt.xlabel('Epochs')<br>
+            plt.ylabel('Accuracy')<br>
+            plt.legend()<br>
+            plt.show()<br>
+            <br>
+
+    <br></em></div>
+

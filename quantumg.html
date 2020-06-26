@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    -->
+    <script src="js/jquery-3.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/navbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
+ 
+</head>
+<header>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+              <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+              <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+              <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+              <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+              <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+             <!--
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#Adev">Windows Server</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+            </ul>
+         -->
+            </li>
+    </nav>
+</header>
+<style>
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding:0px;
+}
+
+.sxt {
+    overflow: hidden;
+}
+
+.parallax {
+  width: 100%;
+  height: 100%;
+
+  background-image:  url('foto/quantum1.png');
+  background-size: contain;   
+  background-repeat: no-repeat;
+  background-position:  center top;
+  background-attachment: fixed;  /*no parallax */
+ 
+}
+
+.titoli {
+    color:rgb(81, 7, 218);
+    font: menu;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:40px;
+    text-align :center;
+    text-shadow: -6px -6px 15px rgba(227, 85, 140, 1);
+    
+}
+.testoq {
+    color:rgb(42, 8, 235);
+    font-size: 22px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:30px;    
+}
+
+.terminal4 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 125px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal3 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 95px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+.terminal2 {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 65px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+
+
+.ter {
+    margin-inline-start: 20px;
+	margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+	background-color: rgb(36, 39, 216);
+	border-radius: 25px;
+    border-color: darkorange;
+}
+.srboxp1 {
+    height:50px;
+    font-size: 25px;
+    /* max-height: 3200px;  */
+    width: auto;
+    padding: 40px !important;
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: rgb(246, 246, 251);
+    background-color: rgb(17, 13, 13);
+    position: relative;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.sx {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxt {
+    margin-left: 150px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+img {
+    margin-left: 300px;
+
+}
+
+.cirq-text {
+    margin-top: 50px;
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: rgb(0, 0, 0);
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+
+    background: linear-gradient(21deg, rgb(255, 250, 187), rgba(248, 178, 26, 0.911));
+	border-radius: 1px;
+    border: 0px solid rgb(17, 17, 17);
+    width: 97%;
+    height: auto;
+    display: inline-block;
+    transition: 3.7s;
+    box-sizing: border-box;
+}
+
+.cirqbox {
+   
+    margin-top: 50px;
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: rgb(0, 0, 0);
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	/*background: linear-gradient(21deg, rgb(255, 250, 187), rgba(248, 178, 26, 0.911));
+	*/
+    background-color: white;
+    border-radius: 1px;
+    border: 1px solid rgb(3, 3, 3);
+    width: 97%;
+    height: auto;
+    display: inline-block;
+    transition: 3.7s;
+    box-sizing: border-box;
+}
+
+
+.terminal:hover  {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.tterminal {
+	margin-inline-start: 20px;
+	padding-bottom: 15px;
+	padding-top: 15px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: black;
+	line-height: 25px;
+    font-size: 25px;
+    font-family: 'Times New Roman', Times, serif;
+	background-color: white;
+	border-radius: 25px;
+    border-color: darkblue;
+    height: auto;
+    display: inline-block;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+}
+
+@media only screen and (min-width:50px) and (max-width: 600px) {
+            img  {
+                width: 100%;
+                max-width: 500px;
+                height: auto;
+                margin: 1%;
+              }
+            canvas {
+                width: 100%;
+            }    
+            body {
+                overflow-x: hidden;
+            }
+
+          .terminal {
+                width: 75%;
+                padding: 2%;
+                font-size: 15px;
+                line-height:20px;
+            }   
+            .terminal2 {
+                width: 75%;
+                padding: 4%;
+                font-size: 15px;
+                line-height:20px;
+            }
+            .terminal3 {
+                width: 75%;
+                padding: 6%;
+                font-size: 15px;
+                line-height:20px;
+            }
+            .terminal4 {
+                width: 75%;
+                padding: 6%;
+                font-size: 15px;
+                line-height:20px;
+            }
+            
+            .parallax2 {
+              width : 0%;
+              height: 0%;
+            }
+            .titoli {
+                font-size: 15px;
+                letter-spacing: -0.097em;
+            }
+            .sxt{
+                margin: 1%;
+            }
+
+.cirq-text {
+    margin-top: 50px;
+	margin-inline-start: 2%;
+	padding-bottom: 2%;
+
+	
+	line-height: 20px;
+    font-size: 15px;
+  
+}
+
+.cirqbox {
+   
+   margin-top: 50px;
+   margin-inline-start: 2%;
+   padding-bottom: 2%;
+   line-height: 20px;
+   font-size: 15px;
+   
+}
+
+
+        }
+
+
+</style>
+
+<body>
+ 
+    <div class="titoli">
+        Quantum computing con Cirq 
+    </div>   
+    <div class="cirq-text"> 
+    <div>
+    In questo post si parla della programmazione in Python di un quantum in Colab Notebooks, naturalmente è possibile installare le sottostanti librerie in un proprio
+    ambiente virtuale ad esempio tramite Anaconda/Conda o tramite lo stesso Python. 
+    Ora analizziamo come creare dei cicuiti con il framework Cirq.<br>
+    Con Cirq è possibile realizzare un circuito quantistico partendo dalla unità più piccola che sono le Operation.
+    Una operation, ad esempio un gate, è una operazione che modifica lo stato di un qubit.
+    L'insieme di diverse operation compongono un Moment che come si evince dall'immagine sottostante è composto da diverse operationeseguite su diversi 
+    qubit.
+    Mentre la totalità dei Moment compongono il Circuit.
+    Come vedremo poi negli esempi sottostanti prima si definisce il circuito poi si possono aggiungere uno o più Momentum con diverse tecniche.   
+    </div>
+    <br>
+        <img src="foto/cirq0.png" width="500px" height="350px"><br>
+    <div>    
+    Ora prima installiamo e poi importiamo le librerie necessarie per creare i circuiti.
+    </div>
+</div>
+    <div class="cirqbox"> 
+    !pip install qiskit-terra[visualization]<br>
+    !pip install cirq<br>
+    from qiskit.visualization import plot_bloch_multivector, plot_histogram<br>
+    import cirq<br>
+    import sympy<br>
+    import numpy as np<br>
+
+    # visualization tools<br>
+    %matplotlib inline<br>
+    import matplotlib.pyplot as plt<br>
+    from cirq.contrib.svg import SVGCircuit<br>
+    </div>
+    <div class="cirq-text"> 
+    Per iniziare definiamo 2 simboli s1 ed s2 che poi verranno inseriti nel circuito.
+    Creiamo prima 2 qubits, q0 e q1 poi il circuit a cui nel momento della creazione 
+    inseriamo con delle Operation dei Gate di rotazione negli assi x, y e z poi il Gate CNOT.    
+
+    </div>
+    <div class="cirqbox"> 
+    s1, s2 = sympy.symbols('s1 s2')<br>
+# Create two qubits<br>
+q0, q1 = cirq.GridQubit.rect(1, 2)<br>
+
+# Create a circuit<br>
+circuit = cirq.Circuit(<br>
+    cirq.rx(s1).on(q0),<br>
+    cirq.rz(3.2).on(q0),<br>
+    cirq.ry(s2).on(q1), cirq.CNOT(q0,q1))<br>
+    <br>
+SVGCircuit(circuit)<br><br>
+<div>
+    <img src="foto/cirq11.png" width="300px" height="220px">
+</div>
+<br>
+    </div>
+<div class="cirq-text"> 
+Ora assegniamo dei valori ai simboli inseriti nel circuito e facciamo una simulazione 
+del circuito dove ris è il risultato ottenuto con le relative sfere di Block dei 2 qubit
+
+</div>    
+    <div class="cirqbox"> 
+#Calculate a state vector<br>
+param = cirq.ParamResolver({s1: 8.7, s2: -3.4})<br>
+ris = cirq.Simulator().simulate(circuit, param).final_state<br>
+ris<br>
+<br>
+
+array([-0.00133373-0.04565706j, -0.01026521-0.35140425j,<br>
+        0.9268634 +0.02707551j,  0.12042501+0.00351785j], dtype=complex64)<br>
+
+       <br>
+
+       plot_bloch_multivector(ris)<br><br>
+       <br>
+       <div>
+        <img src="foto/cirq12.png" width="500px" height="220px">
+    </div>
+    <br>
+    </div>
+    <div class="cirq-text"> 
+    Nel circuito inseriamo la funzione measure per determinare il valore 0 o 1 per i qubits 
+    che ci interessano in questo caso prendiamo l'output di q0 e q1 e visualizziamo di nuovo il 
+    circuito con i simboli inseriti
+    </div>
+    <div class="cirqbox"> 
+    circuit.append(cirq.measure(q0,q1, key="z"))  <br>
+
+SVGCircuit(circuit)<br><br>
+<div>
+    <img src="foto/cirq13.png" width="500px" height="220px">
+</div>
+<br>
+</div>
+<div class="cirq-text"> 
+Qui dopo aver inserito i dati dei parametri simuliamo per 500 ripetizioni il circuito e vediamo l'esito 
+nell'istogramma sottostante 
+</div>
+
+<div class="cirqbox"> 
+param = cirq.ParamResolver({s1: 10.2, s2: -314})  <br>
+res =cirq.Simulator().run(program=circuit, param_resolver=param, repetitions=500)  <br>
+
+# plot the output distribution  <br>
+cirq.plot_state_histogram(res)  <br>
+<br>
+<div>
+    <img src="foto/cirq14.png" width="500px" height="220px">
+</div>
+<br>
+</div>
+<div class="cirq-text">
+Creiamo un nuovo modello ma con 4 qubits e 3 parametri simbolici e la misurazione di tutti i qubits 
+e la visualizzazione del circuito creato
+</div>
+
+
+<div class="cirqbox"> 
+
+s1, s2, a  = sympy.symbols('s1 s2 a')  <br>
+
+q0, q1, q2, q3 = cirq.GridQubit.rect(2, 2)  <br>
+
+# Create a circuit   <br>
+circuit = cirq.Circuit(  <br>
+    cirq.H.on(q0),  <br>
+    cirq.H.on(q1),  <br>
+    cirq.H.on(q2),  <br>
+    cirq.H.on(q3),  <br>
+    cirq.rx(s1).on(q0),  <br>
+    cirq.X.on(q2),  <br>
+    cirq.ry(s2).on(q3))  <br>
+    <br>
+circuit +=  cirq.Circuit(  <br>
+    cirq.rz(a).on(q1), cirq.CNOT(q0,q1))  <br>
+circuit.append(cirq.measure(q0,q1,q2,q3))  <br>
+SVGCircuit(circuit)  <br><br>
+<div>
+    <img src="foto/cirq15.png" width="500px" height="220px">
+</div>
+<br>
+</div>
+<div class="cirq-text">
+Inseriamo dei valori per i simboli inseriti nel modello ed eseguiamo una simulazione del 
+circuito prendendo i valori finali della simulazione per ciascun qubits ( ris ) e visualizziamo
+l'array ottenuto nell' immagine sottostante
+
+</div>
+
+
+<div class="cirqbox"> 
+param = cirq.ParamResolver({s1: 2, s2: -34, a:150 })  <br>
+ris = cirq.Simulator().simulate(circuit, param).final_state  <br>
+ris  <br><br>
+<br>
+
+<div>
+    <img src="foto/cirq16.png" width="500px" height="220px">
+</div>
+<br>
+</div>
+
+<div class="cirq-text">
+Eseguiamo la stampa della sfera di Bloch con i dati ottenuti. Nell'immagine si può osservare
+per ciascun qubit l'esatta posizione all'interno della sfera 
+</div>
+<div class="cirqbox"> 
+
+plot_bloch_multivector(ris)  <br><br>
+
+<div>
+    <img src="foto/cirq17.png" width="900px" height="320px">
+</div>
+<br>
+</div>
+
+<div class="cirq-text">
+Creazione di un altro circuito. Da notare che i 4 qubits creati vengono inseriti nella
+lista qubits in modo da poter utilizzare le caratteristiche delle liste   
+</div>
+
+<div class="cirqbox"> 
+
+qubits = cirq.GridQubit.rect(2, 2)<br>
+alpha = sympy.Symbol('alpha')<br>
+beta = sympy.Symbol('beta')<br>
+gamma = sympy.Symbol('gamma')<br>
+circuit = cirq.Circuit(<br>
+    cirq.rx(alpha).on(qubits[0]),<br>
+    cirq.rx(gamma).on(qubits[1]),<br>
+    cirq.X.on(qubits[2]),<br>
+    cirq.ry(beta).on(qubits[3]))<br>
+    <br>
+for qu in qubits: <br>
+    circuit.append(cirq.H.on(qu)) <br>
+circuit.append(cirq.measure(*qubits, key='mec'))<br>
+print(circuit)<br>
+<br>
+<div>
+    <img src="foto/cirq18.png" width="400px" height="250px">
+</div>
+</div>
+<div class="cirq-text">
+ Con la funzione sweep è possibile simulare, come vediamo con i comandi sottostanti, la 
+ ripetizione dell'esecuzione del circuito più volte modificando i parametri inseriti con i 
+ simboli. In questo esempio inseriamo per i parametri alpha, beta e gamma dei valori che 
+ partono da 0,1 fino a 1 con lunghezza di 5 casi per simbolo per un totale di 15 combinazioni. In questo modo si possono simulare e valutare la creazione
+ di diversi circuiti con i parametri desiderati. Sotto viene presentato l'istogramma con l'esito
+ di 200 reiterazioni  
+</div>
+<div class="cirqbox"> 
+sweep = (cirq.Linspace(key='alpha', start=0.1, stop=1, length=5)<br>
+         * cirq.Linspace(key='beta', start=0.1, stop=1, length=5)<br>
+         * cirq.Linspace(key='gamma', start=0.1, stop=1, length=5))<br>
+results = cirq.Simulator().run_sweep(circuit, params=sweep, repetitions=200)<br>
+<br>
+cirq.plot_state_histogram(result)<br>
+<br>
+<div>
+    <img src="foto/cirq19.png" width="400px" height="250px">
+</div>
+</div>
+<div class="cirq-text">
+    Come accennato prima ci sono diversi metodi per costruire un circuito ed ora passiamo
+    in dettaglio questi metodi
+</div>
+
+
+ <div class="sxt">
+            <em class="terminal">!pip install cirq </em><br><br>
+        <em class="terminal">import cirq</em><br><br>
+        <em class="terminal">   import sympy</em><br><br>
+        <em class="terminal">    import numpy as np</em><br><br>
+            
+        <em class="terminal">    # visualization tools</em><br><br>
+        <em class="terminal">    %matplotlib inline</em><br><br>
+        <em class="terminal">   import matplotlib.pyplot as plt</em><br><br>
+        <em class="terminal">  from cirq.contrib.svg import SVGCircuit</em><br><br>
+
+        <em class="terminal">    # define the length of the grid.</em><br><br>
+        <em class="terminal">length = 3</em><br><br>
+        <em class="terminal"># define qubits on the grid.</em><br><br>
+        <em class="terminal">qubits = [cirq.GridQubit(i, j) for i in range(length) for j in range(length)]</em><br><br>
+        <em class="terminal">print(qubits)</em><br><br>
+        <em class="terminal">[cirq.GridQubit(0, 0), cirq.GridQubit(0, 1), cirq.GridQubit(0, 2), cirq.GridQubit(1, 0),<br>
+             cirq.GridQubit(1, 1), cirq.GridQubit(1, 2), cirq.GridQubit(2, 0), cirq.GridQubit(2, 1), cirq.GridQubit(2, 2)]
+</em><br><br> 
+
+</div>
+
+<div class="cirq-text">
+    Inseriamo gate H(hadamard) nei qubits pari e gate X nei qubits dispari
+</div>
+<br>
+<div class="sxt">
+<em class="terminal">circuit = cirq.Circuit()</em><br><br>
+<em class="terminal">circuit.append(cirq.H(q) for q in qubits if (q.row + q.col) % 2 == 0)</em><br><br>
+  <em class="terminal"> circuit.append(cirq.X(q) for q in qubits if (q.row + q.col) % 2 == 1)</em><br><br>
+  <em class="terminal"> print(circuit)</em><br><br>
+
+   <div>
+            <img src="foto/qcir2.png" width="400px" height="300px">
+  </div>
+  <br>
+</div>
+ <div class="cirq-text">
+        Insert GATE in diversi moment
+ </div>
+<br>
+<div class="sxt">
+<em class="terminal"> circuit = cirq.Circuit()</em><br><br>
+    <em class="terminal"> circuit.append([cirq.H(q) for q in qubits if (q.row + q.col) % 2 == 0],</em><br><br>
+<em class="terminal"> strategy=cirq.InsertStrategy.EARLIEST)</em><br><br>
+ <em class="terminal"> circuit.append([cirq.X(q) for q in qubits if (q.row + q.col) % 2 == 1],</em><br><br>
+  <em class="terminal"> strategy=cirq.InsertStrategy.NEW_THEN_INLINE)</em><br><br>
+<em class="terminal"> print(circuit)</em><br><br>
+
+ <div>
+  <img src="foto/qcir3.png" width="400px" height="300px">
+ </div>
+
+<em class="terminal"> simulator = cirq.Simulator()</em><br><br>
+    <em class="terminal"> #circuit = cirq.Circuit()</em><br><br>
+        <em class="terminal"> #circuit.append(funz(0.1, 0.2, 0.3))</em><br><br>
+            <em class="terminal"> circuit.append(cirq.measure(*qubits, key='x'))</em><br><br>
+                <em class="terminal"> results = simulator.run(circuit, repetitions=100)</em><br><br>
+                    <em class="terminal"> print(results.histogram(key='x'))</em><br><br>
+                  
+  <br>
+Counter({255: 7, 447: 7, 507: 6, 238: 6, 430: 5, 174: 5, 250: 5, 506: 4, 239: 3, <br>
+    442: 3, 494: 3, 251: 3, 171: 3, 510: 3, 446: 3, 491: 3, 431: 3, 187: 3, 495: 3,<br>
+ 511: 3, 443: 3, 190: 2, 235: 2, 427: 2, 175: 2, 426: 2, 170: 2, 490: 1, 254: 1, 186: 1, 191: 1})
+<br><br>
+<em class="terminal"> #Creo una istanza dell'oggetto Pauli X gate</em><br><br>
+<em class="terminal"> x_gate = cirq.X</em><br><br>
+<em class="terminal"> # metto il gate in una operation.</em><br><br>
+<em class="terminal"> x_op = x_gate(qubits[0])</em><br><br>
+<em class="terminal"> print(x_op)</em><br><br>
+<em class="terminal"> # prints "X((0, 0))"</em><br><br>
+ <em class="terminal"> Moments</em><br><br>
+<em class="terminal"> cz = cirq.CZ(qubits[0], qubits[1])</em><br><br>
+<em class="terminal"> x = cirq.X(qubits[2])</em><br><br>
+<em class="terminal"> moment = cirq.Moment([x, cz])</em><br><br>
+<em class="terminal"> print(moment)</em><br><br>
+ <em class="terminal"> X((0, 2)) and CZ((0, 0), (0, 1))</em><br><br>
+<em class="terminal"> altro metodo x creare momentum</em><br><br>
+<em class="terminal"> cz01 = cirq.CZ(qubits[0], qubits[1])</em><br><br>
+<em class="terminal"> x2 = cirq.X(qubits[2])</em><br><br>
+<em class="terminal"> cz12 = cirq.CZ(qubits[1], qubits[2])</em><br><br>
+<em class="terminal"> moment0 = cirq.Moment([cz01, x2])</em><br><br>
+<em class="terminal"> moment1 = cirq.Moment([cz12])</em><br><br>
+<em class="terminal"> circuit = cirq.Circuit((moment0, moment1))</em><br><br>
+<em class="terminal"> print(circuit)</em><br><br>
+ <div>
+       <img src="foto/qci4.png" width="300px" height="200px">
+</div>
+  <br>
+</div>
+<div class="cirq-text">
+   Metodo append per costruire circuito
+</div>
+<br>
+<div class="sxt">  
+
+<br>
+    <em class="terminal"> from cirq.ops import CZ, H</em><br><br>
+        <em class="terminal"> q0, q1, q2 = [cirq.GridQubit(i, 0) for i in range(3)]</em><br><br>
+            <em class="terminal"> circuit = cirq.Circuit()</em><br><br>
+                <em class="terminal"> circuit.append([CZ(q0, q1), H(q2)])</em><br><br>
+                    <em class="terminal"> print(circuit)</em><br><br>
+
+  <div>
+     <img src="foto/qci5.png" width="300px" height="200px">
+  </div>
+    <br>
+    </div>
+     <div class="cirq-text">
+          Append un intero moment al circuito
+    </div>
+  <br>
+<div class="sxt">  
+
+<br>
+<em class="terminal">circuit.append([H(q0), CZ(q1, q2)])</em><br><br>
+    <em class="terminal">print(circuit)</em><br><br>
+<div>
+    <img src="foto/qci6.png" width="300px" height="200px">
+</div>
+<br>
+</div>
+<div class="cirq-text">
+   Vediamo ora i seguenti metodi : <br>
+
+InsertStrategies<br> InsertStrategy.EARLIEST <br>
+InsertStrategy.NEW <br>InsertStrategy.INLINE<br>
+  InsertStrategy.NEW_THEN_INLINE <br> 
+  
+</div>
+<br>
+<div class="sxt">  
+
+<br>
+<em class="terminal">from cirq.circuits import InsertStrategy</em><br><br>
+    <em class="terminal">circuit = cirq.Circuit()</em><br><br>
+        <em class="terminal">circuit.append([CZ(q0, q1)])</em><br><br>
+            <em class="terminal">circuit.append([H(q0), H(q2)], strategy=InsertStrategy.EARLIEST) </em><br><br>
+            <em class="terminal">  #aggiunta nel primo moment libero vedi q2</em><br><br>
+                <em class="terminal">print(circuit)</em><br><br>
+<div>
+    <img src="foto/qci7.png" width="300px" height="200px">
+</div>
+
+<em class="terminal">circuit = cirq.Circuit()</em><br><br>
+    <em class="terminal">circuit.append([H(q0), H(q1), H(q2)], strategy=InsertStrategy.NEW)</em><br><br>
+        <em class="terminal">   #ogni append crea un nuovo moment</em><br><br>
+        <em class="terminal">print(circuit)</em><br><br>
+
+<div>
+    <img src="foto/qci8.png" width="300px" height="200px">
+</div>
+
+<em class="terminal">circuit = cirq.Circuit()</em><br><br>
+    <em class="terminal">circuit.append([CZ(q1, q2)])</em><br><br>
+        <em class="terminal">circuit.append([CZ(q1, q2)])</em><br><br>
+            <em class="terminal">circuit.append([H(q0), H(q1), H(q2)], strategy=InsertStrategy.INLINE) </em><br><br>
+                <em class="terminal">print(circuit)</em><br><br>
+<div>
+    <img src="foto/qci9.png" width="300px" height="200px">
+</div>
+<em class="terminal">circuit = cirq.Circuit()</em><br><br>
+ <em class="terminal">circuit.append([CZ(q1, q2)])</em><br><br>
+ <em class="terminal">circuit.append([CZ(q1, q2)])</em><br><br>
+<em class="terminal">circuit.append([H(q0), H(q1), H(q2)], strategy=InsertStrategy.INLINE)</em><br><br>
+ <em class="terminal">  #add the operation insert into moment just before the desired insert location</em><br><br>
+<em class="terminal">print(circuit)</em><br><br>
+
+<div>
+    <img src="foto/qci10.png" width="300px" height="200px">
+</div>
+<br>
+
+<em class="terminal">circuit = cirq.Circuit()</em><br><br>
+    <em class="terminal">circuit.append([H(q0)])</em><br><br>
+        <em class="terminal">circuit.append([CZ(q1,q2), H(q0)], strategy=InsertStrategy.NEW_THEN_INLINE)</em><br><br>
+            <em class="terminal">print(circuit)</em><br><br>
+
+<div>
+    <img src="foto/qci11.png" width="300px" height="200px">
+</div>
+<br>
+
+<br>
+<em class="terminal">from cirq.ops import CNOT</em><br><br>
+    <em class="terminal">from cirq.devices import GridQubit</em><br><br>
+        <em class="terminal">q0, q1 = (GridQubit(0, 0), GridQubit(0, 1))</em><br><br>
+            <em class="terminal">print(CNOT.on(q0, q1))</em><br><br>
+     
+            <br>
+CNOT((0, 0), (0, 1))
+<br>
+<br>
+
+<em class="terminal">import cirq</em><br><br>
+    <em class="terminal">print(cirq.unitary(cirq.X))</em><br><br>
+# prints<br>
+# [[0.+0.j 1.+0.j]<br>
+# [1.+0.j 0.+0.j]]<br>
+<em class="terminal">sqrt_x = cirq.X**0.5</em><br><br>
+    <em class="terminal">print(cirq.unitary(sqrt_x))</em><br><br>
+# prints<br>
+# [[0.5+0.5j 0.5-0.5j]<br>
+# [0.5-0.5j 0.5+0.5j]]<br>
+<br>
+<em class="terminal">circuit = cirq.Circuit()</em><br><br>
+  <em class="terminal">circuit.append([H(q0)])</em><br><br>
+ <em class="terminal">circuit.append([CZ(q1,q2), H(q0)], strategy=InsertStrategy.NEW_THEN_INLINE)</em><br><br>
+ <em class="terminal">circuit.append([H(q0)])</em><br><br>
+  <em class="terminal">circuit.append([CZ(q1,q2), H(q0)], strategy=InsertStrategy.NEW_THEN_INLINE)</em><br><br>
+ <em class="terminal">for i, step in enumerate(simulator.simulate_moment_steps(circuit)):</em><br><br>
+ <em class="terminal"> print('risultato allo step %d: %s' % (i, np.around(step.state_vector(), 3)))</em><br><br>
+
+     state at step 0: [ 0.707+0.j  0. +0.j  0. +0.j  0. +0.j  0.707+0.j -0. +0.j -0. +0.j -0.  0.j] <br>
+    state at step 1: [ 1.+0.j  0.+0.j  0.+0.j -0.+0.j -0.+0.j  0.+0.j  0.+0.j  0.+0.j]<br>
+    state at step 2: [ 0.707+0.j  0.  +0.j  0.  +0.j  0. +0.j  0.707+0.j -0.  +0.j  -0.  +0.j -0. +0.j]<br>
+    state at step 3: [ 1.+0.j  0.+0.j  0.+0.j -0.+0.j -0.+0.j  0.+0.j  0.+0.j  0.+0.j]<br>
+
+</div>
+
+
+
+
+</body>
+</html>
+

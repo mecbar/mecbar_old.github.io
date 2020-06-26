@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+    <!-- CSS  -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    -->
+    <script src="js/jquery-3.js"></script>
+    
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+
+    <link href="css/style2.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="css/navbar.css" type="text/css" rel="stylesheet" media="screen,projection" />
+ 
+</head>
+<body>
+<header>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+              <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+              <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+              <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+              <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+              <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+             <!--
+              <ul class="side-nav" id="mobile-demo">
+                <li><a href="#Ablog">Blog</a></li>
+                <li><a href="#Adev">Windows Server</a></li>
+                <li><a href="#Alinux">Linux</a></li>
+                <li><a href="#Aus">Contatti</a></li>
+            </ul>
+         -->
+            </li>
+    </nav>
+</header>
+<style>
+body, html {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding:0px;
+}
+
+
+
+.parallax {
+  width: 100%;
+  height: 450px;
+
+  background-image: url('foto/p1.png'),
+      url('foto/logo.png'),
+      url('foto/p3.png'),
+    
+      linear-gradient(to right, rgba(79, 41, 250, 0.856), rgba(255, 255, 255, 0.883));
+  background-repeat: no-repeat,
+      no-repeat, no-repeat, no-repeat;
+  background-position:  left 50px top 250px, left 220px top 80px, right top 60px ,  left;
+  background-attachment: fixed;  /*no parallax */
+ 
+}
+
+.testo {
+    color:rgb(81, 7, 218);
+    font: menu;
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin:10px;
+    text-align :center;
+    text-shadow: -6px -6px 15px rgba(227, 85, 140, 1);
+    
+}
+
+.terminal {
+	margin-inline-start: 20px;
+    margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 20px;
+    width: 90%;
+	background-color: black;
+	border-radius: 25px;
+    border-color: darkblue;
+}
+.ter {
+    margin-inline-start: 20px;
+	margin: 20px !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 35px;
+	padding-right: 35px;
+	color: white;
+	line-height: 40px;
+    font-size: 25px;
+	background-color: rgb(36, 39, 216);
+	border-radius: 25px;
+    border-color: darkorange;
+}
+.srboxp1 {
+    height:50px;
+    font-size: 25px;
+    /* max-height: 3200px;  */
+    width: auto;
+    padding: 40px !important;
+
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: rgb(246, 246, 251);
+    background-color: rgb(17, 13, 13);
+    position: relative;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(88, 85, 85, 0.92);
+
+}
+
+.sx {
+    margin-left: 50px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.sxt {
+    margin-left: 250px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+@media only screen and (min-width:50px) and (max-width: 600px) {
+  
+  
+
+.parallax {
+  width: 100%;
+  height: 450px;
+
+  background-image: url('foto/p3.png'),
+    
+    
+      linear-gradient(to right, rgba(79, 41, 250, 0.856), rgba(255, 255, 255, 0.883));
+  background-repeat: no-repeat,
+      no-repeat;
+  background-position:  left top 60px ,  left;
+  background-attachment: fixed;  /*no parallax */
+ 
+}  
+.testo {
+    font-size: 20px;
+}
+
+.ter {
+letter-spacing: -0.53px; 
+line-height: 30px;
+font-size: 10px;
+margin-inline-start: 0px;
+margin: 0px !important;
+padding-left: 5px;
+padding-right: 5px;
+}
+.sxt {
+    margin-left: 2%;
+}
+.sx {
+    margin-left: 10px;
+}
+
+.terminal {
+	margin-inline-start: 2%;
+    margin: 2% !important;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 2%;
+	padding-right: 2%;
+	letter-spacing: -0.212px;
+	line-height: 40px;
+    font-size: 10px;
+
+}
+
+
+
+
+
+
+</style>
+
+
+    <div class="parallax">
+     
+    </div>
+    
+    <div class="testo">
+       
+        <b class="center">Python comandi per operare in Colab Notebooks  </b>
+        <br>
+    </div>
+    <div class="sx">
+        <em class="ter"> Tensorflow-Quantum   </em>
+        </div>
+        <div class="sxt">
+            <em class="terminal">#SETUP</em><br>
+             <em class="terminal">try: </em><br>
+             <em class="terminal"># %tensorflow_version only works in Colab </em><br>
+                <em class="terminal">  %tensorflow_version 2.x</em><br>
+                    <em class="terminal">   except Exception:</em><br>
+                        <em class="terminal">    pass   </em><br>
+                        <em class="terminal"> #INSTALL </em><br>
+                            <em class="terminal"> !pip install tensorflow-quantum </em><br>
+                         <em class="terminal"> import tensorflow as tf </em><br>
+                         <em class="terminal"> import tensorflow_quantum as tfq </em><br>
+                        <em class="terminal">  import cirq </em><br>
+                        <em class="terminal">   import sympy </em><br>
+                        <em class="terminal">  import numpy as np </em><br>
+                        <em class="terminal">  #VISUALIZATION TOOLS </em><br>
+                        <em class="terminal">  %matplotlib inline </em><br>
+                        <em class="terminal">  import matplotlib.pyplot as plt </em><br>
+                        <em class="terminal">  from cirq.contrib.svg import SVGCircuit </em><br>
+
+        </div>
+
+
+
+
+    <div class="sx">
+    <em class="ter"> Comando per installare software   </em>
+    </div>
+    <div class="sxt">
+         <em class="terminal" >!pip install soundfile   </em><br>
+    </div>
+    <div class="sx">
+       <em class="ter">  Comando per importare file from drive </em><br>
+           
+    </div>
+    <div class="sxt">
+        <em class="terminal" > from google.colab import drive </em><br>
+            <em class="terminal" > drive.mount('/content/drive')  </em>
+    </div>
+  
+    <div class="sx">
+        <em class="ter">Import files from drive with pandas</em>
+         <br>
+    </div> 
+    <div class="sxt">
+        <em class="terminal" > file1 = pd.read_csv('/content/drive/My Drive/Colab Notebooks/...../*.csv',   header=0)
+        </em>
+    </div>
+
+     <div class="sx">
+            <em class="ter"> Lista files from drive</em>
+     </div>
+
+   <div class="sxt">
+    <em class="terminal" > import os </em> <br>
+        <em class="terminal">    lista =os.listdir('/content/drive/My Drive/Colab Notebooks/.../')
+    </em>
+   </div>
+    <div class="sx">
+            <em class="ter">  Save data into drive </em>
+            <br>
+    </div>
+    <div class="sxt">
+        <em class="terminal">
+            import joblib </em>
+            <br>
+            <em class="terminal"> joblib.dump(dati_da_salvare, '/content/drive/My Drive/Colab Notebooks/..../nome_file')
+        </em>
+        <br>
+    </div>
+    
+    <div class="sx">
+        <em class="ter">    Downloads file da Colab to your computer </em>
+    </div>     
+        
+   <div class="sxt">
+        <em class="terminal">
+            from google.colab import files</em>
+            <br>   
+            <em class="terminal"> files.download('nome_file')  </em>
+   </div>
+
+
+   <div class="sx">
+    <em class="ter">   
+       Identificare TPU  per la configurazione TensorFlow
+    </em>
+   </div>
+   <div class="sxt">
+    <em class="terminal"> TPU_WORKER = 'grpc://' + os.environ['COLAB_TPU_ADDR'] </em> <br>
+    <em class="terminal">  tf.logging.set_verbosity(tf.logging.INFO)  </em> <br>
+   
+        <em class="terminal"> tsu_model = tf.contrib.tpu.keras_to_tpu_model(  </em> <br>
+            <em class="terminal">    model,  </em> <br>
+                <em class="terminal">    strategy=tf.contrib.tpu.TPUDistributionStrategy( </em> <br>
+                    <em class="terminal">     tf.contrib.cluster_resolver.TPUClusterResolver(TPU_WORKER)))  </em> <br>
+     
+    </div>
+    <div class="sx">
+        <em class="ter">   
+           Salvare documenti da Colab a bucket S3 su AWS
+        </em>
+       </div>
+
+       <div class="sxt">
+        <em class="terminal"> import boto3</em> <br>
+        <em class="terminal"> import joblib</em> <br>
+
+        <em class="terminal">  s3r = boto3.resource('s3', aws_access_key_id=aws_access_key_id,</em> <br>
+        <em class="terminal">  aws_secret_access_key=aws_secret_access_key)</em> <br>
+        <em class="terminal">  bucket = s3r.Bucket('nome_bucket').put_object(Key = 'example.wav', Body='example.wav')</em> <br>
+        
+        <em class="terminal"> oppure con joblib --> import joblib</em> <br>
+        <em class="terminal">  joblib.dump(nome_array,</em> <br>
+        <em class="terminal">"s3r.Bucket('nome_bucket').put_object(Key='example_array.pkl',Body='example_array.pkl')")</em><br>
+       </div>
+       
+       <div class="sx">
+        <em class="ter">
+            Salvare i dati da Colab a Google Cloud Platform (GCP)
+        </em>
+    </div>
+
+    <div class="sxt">
+     <em class="terminal">#mount drive</em> <br>
+          <em class="terminal"> from google.colab import auth</em> <br>
+          <em class="terminal"> auth.authenticate_user()</em> <br>
+          <em class="terminal"> from google.colab import drive</em> <br>
+          <em class="terminal"> drive.mount('/content/drive')</em> <br>
+          <em class="terminal"> project_id = 'my-project-name'</em> <br>
+          <em class="terminal">#connect with cgp </em> <br>
+          <em class="terminal">!gcloud config set project {project_id}</em> <br>
+          <em class="terminal">!gsutil ls</em> <br>
+          <em class="terminal">#define output</em> <br>
+          <em class="terminal">bucket_name = 'my-bucket'</em> <br>
+          <em class="terminal">#copy file from ... to ....</em> <br>
+          <em class="terminal">!gsutil -m cp -r /content/drive/My\ Drive/Colab\ Notebooks/tts/data/*  \</em><br>
+          <em class="terminal">  gs://{bucket_name}</em> <br>
+    </div>
+
+
+
+    <div class="parallax"> </div>
+
+
+    <div class="testo">
+       
+        <b>Python comandi per generare file eseguibili in Windows</b>
+        <br>
+    </div>
+    <div class="sx">
+        <em class="ter">
+            PyInstaller  
+        </em>
+    </div>
+    <div class="sxt">
+        <em class="terminal">pip install PyInstaller</em> <br>
+        <em class="terminal">pyinstaller -wF nome_programma.py</em> <br>
+    </div>
+    <div class="sx">
+        <em class="ter">
+            Nuitka  
+        </em>
+    </div>
+    <div class="sxt">
+        <em class="terminal">install mingGW64   64 bit su c:\MinGW64</em> <br>
+        <em class="terminal">install Python</em> <br>
+        <em class="terminal">install Nuitka</em> <br>
+        <em class="terminal">python -m nuitka  --mingw64 --standalone --show-progress nome_programma.py</em> <br>
+    </div>
+    
+
+    <div class="parallax"> </div>
+
+</body>
+</html>

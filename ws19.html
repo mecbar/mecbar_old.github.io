@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+
+    <title>Windows Server 2019</title>
+
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+
+</head>
+<style>
+.srbox {
+    height:400px;
+    /* max-height: 3200px;  */
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: rgb(240, 8, 8);
+    background-color: white;
+    margin-bottom: 30px !important;
+    position: relative;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+
+}
+.srbox:hover {
+
+  box-shadow: 15px 10px 12px 4px rgba(89, 89, 89, 0.92)
+  
+  
+}
+.srbox2 {
+    height:250px;
+    font-size: 20px;
+    /* max-height: 3200px;  */
+    padding-left: 40px !important;
+    padding-right: 40px !important;
+    margin-top: 50px;
+    margin-bottom: 70px;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 5px;
+    /* box-shadow: 1px 5px 15px 0px black; */
+    color: rgb(8, 16, 131);
+    background-color: white;
+    position: relative;
+    -webkit-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    -moz-box-shadow: 15px -10px 12px -4px rgba(89, 89, 89, 0.92);
+    box-shadow: 15px 10px 12px 4px rgba(89, 89, 89, 0.92);
+
+}
+
+.tt {
+  column-count:2;
+  column-gap: 60px;
+   background-color: white;
+   color:rgb(6, 6, 99);
+   font-size: 25px;
+   margin:40px;
+}
+.ttt {
+  background-color: white;
+  font-size: 25px;
+  margin:40px
+}
+
+@media only screen and (max-width: 600px) {
+ p {
+  font-size: 15px;
+  line-height: 17px;
+ }
+  .tt {
+  column-count:1;
+  font-size: 15px;
+  margin:1%;
+  line-height: 17px;
+}
+.ttt {
+  font-size: 15px;
+  margin:1%;
+  line-height: 17px;
+}
+
+.srbox2 {
+  font-size: 15px;
+  line-height: 17px;
+}
+}
+
+
+</style>
+<body>
+    <nav>
+        <li class="nav-wrapper back-home" id="head">
+            <a href="http://www.mecbar.com/" class="brand-logo mecbar">Mecbar</a>
+            <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+            <ul class="right hide-on-med-and-down">
+                <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
+              -->
+
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+                <li>
+                    <a href=""> </a>
+                </li>
+                <li>
+                    <a href=""> </a>
+                </li>
+            </ul>
+            <ul class="side-nav" id="mobile-demo">
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Ablock">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#Amachine">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
+            </ul>
+            </li>
+    </nav>
+    <br><br>
+    <div class="row">
+        <div class="col s12 m12 l12">
+            <div class="logistic-titolo center spazio2001" style="font-size:30px !important"> Windows Server 2019 </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="srbox2">
+             <b>Introduction </b>
+             <br>
+             <p>In questo spazio passiamo in rassegna Windows Server 2019. In dettaglio nelle immagini 
+               sottostanti parliamo di come installare nuove funzioni e monitorare il server ed infine come 
+               schedulare un task indicando quando eseguirlo. 
+             </p>
+
+
+        </div>
+    </div>
+    <div class="row">
+    <div class="col s12 m12 l6">  
+      <div class="srbox">
+        <img src="foto/sr190.PNG" width="100%" height="100%" alt="Windows Server 2019">
+      </div>
+    </div>
+    <div class="col s12 m12 l6"> 
+     <div class="srbox">
+      <img src="foto/sr19ana.PNG" width="100%" height="100%" alt="Windows Server 2019">
+    </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="tt">  
+      <b>Per installare nuovi componenti aprire il Server Manager e selezionare Add Roles and Features
+      poi selezionare i componenti che si desidera rendere disponibili. In questo esempio vengono selezionati i servizi DHCP ed SMTP. Seguire il menu ed
+    attendere che l' installazione sia completa. Dalla Dashboard è sempre possibile verificare i servizi installati ed eventualmente 
+  installarne altri oppure modificarne i parametri. Inoltre è possibile controllare gli eventi e lo stato del server.    </b>
+    </div> 
+   </div>
+
+   <div class="row">
+    <div class="col s12 m12 l6">  
+      <div class="srbox">
+        <img src="foto/sr191.PNG" width="100%" height="100%" alt="Windows Server 2019">
+      </div>
+    </div>
+    <div class="col s12 m12 l6"> 
+     <div class="srbox">
+      <img src="foto/sr192.PNG" width="100%" height="100%" alt="Windows Server 2019">
+    </div>
+    </div>
+   </div>
+   
+
+   <div class="row">
+    <div class="col s12 m12 l6">  
+      <div class="srbox">
+        <img src="foto/sr193.PNG" width="100%" height="100%" alt="Windows Server 2019">
+      </div>
+    </div>
+    <div class="col s12 m12 l6"> 
+     <div class="srbox">
+      <img src="foto/sr194.PNG" width="100%" height="100%" alt="Windows Server 2019">
+    </div>
+    </div>
+   </div>
+
+   <div class="row">
+    <div class="col s12 m12 l6">  
+      <div class="srbox">
+        <img src="foto/sr195.PNG" width="100%" height="100%" alt="Windows Server 2019">
+      </div>
+    </div>
+    <div class="col s12 m12 l6"> 
+      <div class="ttt">
+       A questo punto l'installazione è terminata ed è possibile verificare nella Dashboard lo stato del sistema
+       e l'attivazione dei nuovi componenti. 
+      </div>
+    </div>
+   </div>
+    <br><br>
+
+    <div class="srbox2">
+      <br>
+      <b style="color:darkred"> TASK SCHEDULER</b>
+        <br><br>
+      <br>
+      Ora vediamo come schedulare uno script o programma. Da Server Manager selezionare Tools e dal menu dropdown 
+      selezionare Task Manager. Poi creare un nuovo folder e all'interno di questo folder dal menu selezionare Create new Task ed inserire le opzioni 
+      come da videata sottostante. Continua ......
+    </div>
+   <div class="row">
+    <div class="col s12 m12 l6">  
+      <div class="srbox">
+        <img src="foto/sr196.PNG" width="100%" height="100%" alt="Windows Server 2019">
+      </div>
+    </div>
+    <div class="col s12 m12 l6"> 
+     <div class="srbox">
+      <img src="foto/sr197.PNG" width="100%" height="100%" alt="Windows Server 2019">
+    </div>
+    </div>
+   </div> 
+      
+      
