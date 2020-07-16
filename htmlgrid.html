@@ -1,0 +1,105 @@
+<html>
+
+<style>
+
+* {
+  padding : 0;
+  margin:0;
+  box-sizing: border-box;
+}
+.titolo {
+       font-size: 20px;
+       color:#001aff;
+       text-align: center;
+    }
+.MyGrid {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top:100px;
+
+}
+.uno {
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    grid-row: 1/3;
+    width: 85%;
+    height: 90%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-self: center;
+}
+.due {
+    background-color: rgb(184, 15, 15);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color:white;
+    width: 85%;
+    height: 90%;
+    justify-self: center;
+}
+.tre {
+    background-color: rgb(204, 62, 7);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color:white;
+    grid-row: 1/4;
+    width: 85%;
+    height: 100%;
+    justify-self: center;
+}
+.quattro {
+    background-color: rgb(12, 0, 180);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color:white;
+    width: 85%;
+    height: 90%;
+    justify-self: center;
+}
+
+.cinque {
+    background-color: rgb(197, 7, 204);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color:white;
+    width: 85%;
+    height: 100%;
+    justify-self: center;
+}
+</style>
+
+<body>
+    <div class="titolo">
+ESEMPIO GRID
+    </div>
+
+<div class="MyGrid">
+
+  <div  class="uno">
+    box1 
+  </div>
+  <div class="due">
+    box2
+  </div>
+  <div class="tre">
+    box3
+  </div>
+  <div class="quattro">
+    box4
+  </div>
+  <div class="cinque">
+    box5
+  </div>
+
+</div>
+
+</body>
+
+</html>

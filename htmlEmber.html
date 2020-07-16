@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+</head> 
+<body>
+<style>
+* {
+  padding : 0;
+  margin:0;
+  box-sizing: border-box;
+}
+.titolo {
+       font-size: 20px;
+       color:#001aff;
+       text-align: center;
+}
+.MyFlex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: space-around;
+}
+
+.MyFlex2 {
+	display: flex;
+  margin:10%;
+	flex-direction: row;
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    width:80%;
+    margin-top:100px;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.uno {
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    width:30%;
+    margin-top:100px;
+}
+.due {
+    background-color: rgb(184, 15, 15);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    width:30%;
+    margin-top:100px;
+    color:white;
+}
+.tre {
+    background-color: rgb(204, 62, 7);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    width:30%;
+    margin-top:100px;
+    color:white;
+}
+.quattro {
+    background-color: rgb(12, 0, 180);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    width:30%;
+    margin-top:100px;
+    color:white;
+}
+
+.testo {
+   color:black;
+    text-align: left;
+    line-height: 30px;
+    font-size: 18px;
+    padding:5%;
+    font-family: "Tahoma";
+    font-style: normal;
+    font-weight: 500;
+
+
+}
+
+.titolo {
+  color:rgb(6, 3, 194);
+    text-align: center;
+    line-height: 35px;
+    font-size: 30px;
+    margin:30px;
+}
+img { 
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.img {
+  margin:20px;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+}
+</style>
+<div class="titolo">
+  EMBERJS
+</div>
+<div class="testo">
+    Anche EmberJs è un Web Framework open-source che ci permette di fare il render dei dati tra Back-end e Front-end.
+    Prerequisiti essenziali sono NodeJS e NPM. <br>Con il comando cli  <i style="background:black;color:white;padding:5px">
+    npm install -g ember-cli</i> installiamo le versione di ember che ci permette poi di creare la nostra applicazione. 
+    Poi sempre da Terminal lanciare il comando <i style="background:black;color:white;padding:5px">ember new nome_progetto</i> per creare 
+    la nostra applicazione. 
+    Una volta creata per lanciare la nostra applicazione aprire dalla folder della app il terminal e lanciare <i style="background:black;color:white;padding:5px">ember serve</i>
+    Per creare una nuova pagina web diversa da quella di base fornita dall'app basta lanciare da un Terminal aperto nella folder della stessa app 
+    <i style="background:black;color:white;padding:5px">ember generate template application</i> che creerà un template vuoto(application.hbs) in cui 
+    possiamo inserire il codice html(solo il contenuto del body) per gestire la nuova applicazione. Con lo stesso 
+    comando possiamo creare altri documenti in cui inserire il codice html per inserire altre pagine web da gestire poi con il routing.
+    Per utilizzare il routing bisogna generare il relativo file con il comando <i style="background:black;color:white;padding:5px">
+    ember g route nome_file</i> nel nostro esempio il file è stato chiamata mec e nell'immagine sottostante in cui si può osservare  
+    la struttura del folder generato si vede il file mec.js che è appunto il file creato.<br>
+    <img src="foto/emberfolder.png" width="100%" height="600px"><br>
+    Nella immagine sottostante si riproduce la creazione di un nuovo file di routing con l'indicazione dei file creati.
+<br><br>
+  <img src="foto/emberroute.png" width="50%" height="70px"> <br>
+  Vediamo che è stato creato il file mecbar.js ed il template mecbar.hbs. All'interno di questo file andremo ad inserire del codice html 
+  per poi vedere i risultati ottenuti. <br>
+  Ora vediamo i 2 file applicazione.hbs e mecbar.hbs <br>
+  <img src="foto/emberapp.png" width="100%" height="100px"><br>
+  <img src="foto/embermecb.png" width="100%" height="100px"><br>
+  <div style="display:flex">
+    <div>  
+  Il risultato invece è il seguente inserenfo la pagina iniziale con il link localhost:4200  <br>
+  
+  <img class="img" src="foto/emberhome.png" width="90%" height="450px"><br>
+    </div>
+    <div>
+mentre se andiamo all'indirizzo localhost:4200/mecbar otteniamo la seguente pagina <br> 
+   
+<img class="img" src="foto/embermecbar.png" width="90%" height="450px"><br>
+come possiamo vedere abbiamo ottenuto l'unione dei contenuti dei 2 file .hbs <br>
+    </div>
+  </div>
+  <br><br>
+Ember ci fornisce un intero ecosistema che noi possiamo modellare per creare applicazioni complete e scalabili. 
+<br> Ad esempio per creare degli oggetti bisogna utilizzare gli oggetti predefiniti exdendendo gli oggetti predefiniti. 
+Vediamo un esempio per creare un oggetto. 
+
+<img src="foto/embermec.png" width="100%" height="380px"><br>
+

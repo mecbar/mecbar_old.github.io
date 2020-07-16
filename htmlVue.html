@@ -1,0 +1,226 @@
+<html>
+
+<style>
+
+* {
+  padding : 0;
+  margin:0;
+  box-sizing: border-box;
+}
+.titolo {
+       font-size: 20px;
+       color:#001aff;
+       text-align: center;
+    }
+.MyGrid {
+	  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top:100px;
+    background-color: black;
+    line-height: 20px;
+    font-size: 18px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.uno {
+  padding-top: 20px;
+    color:white;
+    text-align: center;
+    grid-row: 1/3;
+    width: 100%;
+    height: 60%;
+    justify-self: center;
+}
+.due {
+  padding-top: 20px;
+    text-align: left;
+    grid-row: 1/3;
+    color:white;
+    width: 100%;
+    height: 40%;
+    justify-self: center;
+}
+.tre {
+  padding-top: 20px;
+    text-align: left;
+    color:white;
+    grid-row: 1/4;
+    width: 100%;
+    height: 40%;
+    justify-self: center;
+}
+.quattro {
+  padding-top: 20px;
+    text-align: center;
+    color:white;
+    width: 100%;
+    height: 40%;
+    justify-self: center;
+
+}
+
+.cinque {
+  padding-top: 20px;
+    text-align: left;
+    color:white;
+    width: 100%;
+    height: 40%;
+    justify-self: center;
+}
+</style>
+<script src="https://unpkg.com/vue"></script>
+<body>
+    <div class="titolo"><br>
+RENDERING DATA CON FRAMEWORK VueJS
+    </div>
+    <p style="margin: 20px;font-size: 25px;line-height: 40px;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+    In questo breve post viene analizzato il Web Framework VueJS lato Front-end che permette il rendering dei dati tra 
+    il Back-end e la pagina web. Aprendo il link vedremo un esempio di rendering di semplici messaggi ed operazioni matematiche, 
+    liste, dati in input, condizionare la visualizzazione di elementi html. Naturalmente ci sono molti altri 
+    comandi e/o direttive che si possono utilizzare per creare pagine web interattive.
+    </p>
+<div class="MyGrid">
+ 
+  <div id ="v1" class="uno">
+     <b>UNO</b><br><br>
+      Render Operazioni Matematiche   {{ count + 1 }} <br>
+      {{ mess }} EveryBody <br><br>
+      Sotto la parte html e script<br>
+      <img src="foto/vuev1.png" width="100%" height="350px">
+
+  </div>
+  <div id ="v2" class="due">
+    <ul>
+      <b>DUE</b><br><br>
+        Render Liste<br><br>
+        <li v-for="product in products">
+         {{ product }}
+        </li>
+    </ul>
+    <br><br>
+    Sotto la parte html e script<br> <br>
+    <img src="foto/vuev2.png" width="100%" height="350px">
+
+
+  </div>
+  <div id ="v3" class="tre">
+    <b>TRE</b><br><br>
+      Render Input Data  <br>
+      Checkbox 
+    <input type="checkbox" v-model="count"><br>
+    Files
+    <input type="file" v-on="count"><br><br>
+    Insert message
+    <input placeholder="inserisci un messaggio"  v-model="newmess"><br>
+   <button v-on:click="computed">Insert message</button><br><br>
+    Select from option 
+    <select v-model="products">
+        <option value="Auto">Auto</option>
+        <option value="Moto">Moto</option>
+        <option value="Barca">Barca</option>
+    </select>
+    <br> <br>
+    Sotto la parte html e script<br> <br>
+    <img src="foto/vuev3.png" width="100%" height="550px">
+  </div>
+  <div  class="quattro">
+    <b>QUATTRO</b><br><br>
+    Render messaggio inserito in TRE <br><br>
+    <b  id ="v4"> {{ newmess3 }} </b>
+    <br><br>
+    Sotto la parte html e script<br> <br>
+    <img src="foto/vuev4.png" width="100%" height="350px">
+  </div>
+  <div id ="v5" class="cinque">
+    <b>CINQUE</b><br><br>
+    Render elemento con codizione<br><br><br>
+    <b v-bind:title="view"  v-if="view == 'True'">Condizione rispettata v-if</b>
+    <b   v-else>Condizione rispettata v-else</b>
+    <br><br>
+    <button v-on:click="change">Change state</button>
+    <br><br>
+    Sotto la parte html e script<br> <br>
+    <img src="foto/vuev5.png" width="100%" height="350px">
+  </div>
+
+</div>
+
+</body>
+<script>
+
+
+var uno =  new Vue({
+  el : '#v1',
+  data : { count :2 ,
+          mess : 'Hello '}
+})
+
+const due  =  new Vue({
+  el : '#v2',
+  data : {
+      products: [
+          'Auto',
+          'Moto',
+          'Barca',
+      ]
+  }
+});
+
+
+
+var tre  =  new Vue({
+   
+  el : '#v3',
+  data : {
+      count:4,
+      newmess : '',
+      products: [
+          'Auto',
+          'Moto',
+          'Barca',
+      ],
+  computed: function() {
+       arr = [];
+       this.arr.push(this.tre.newmess);
+      // this.ww.newmess3 =  this.tre.newmess
+       console.log(arr, this.tre.newmess);
+       this.tre.newmess= '';
+       if (arr.length > 0 ) {
+          quattro.newmess3= arr[arr.length -1];
+          console.log(arr);
+
+       }
+    }
+   } 
+});
+
+var  quattro = new Vue({
+     el : '#v4',
+     data : {
+            mess: 'Ciao',
+            newmess3 : ''
+            }
+})
+
+var  cinque = new Vue({
+    el : '#v5',
+    data : {
+         view: 'True'
+    },
+    methods : {
+        change: function() {
+            console.log(this.view);
+            if (this.view == 'True') {
+              this.view = 'False' ;
+            } else 
+            {
+            this.view = 'True' 
+          }
+       }
+    }
+})
+
+
+</script>
+
+</html>

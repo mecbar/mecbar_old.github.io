@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+    <meta name="google-site-verification" content="VXixwtxrf--qUV1swfStEg9jOGPKgUm6C3Ub_vouqmc" />
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Satisfy" rel="stylesheet">
+    <title>MecBar | The Mec Evolution </title>
+    <link rel="icon" href="foto/favicon.ico"/>
+</head> 
+<body>
+<style>
+* {
+  padding : 0;
+  margin:0;
+  box-sizing: border-box;
+}
+.titolo {
+       font-size: 20px;
+       color:#001aff;
+       text-align: center;
+}
+.MyFlex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: space-around;
+}
+
+.MyFlex2 {
+	display: flex;
+  margin:10%;
+	flex-direction: row;
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 30px;
+    font-size: 30px;
+    width:80%;
+    margin-top:100px;
+    align-items: center;
+    align-content: space-around;
+    justify-content: space-around;
+}
+.uno {
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    width:30%;
+    margin-top:100px;
+}
+.due {
+    background-color: rgb(184, 15, 15);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    width:30%;
+    margin-top:100px;
+    color:white;
+}
+.tre {
+    background-color: rgb(204, 62, 7);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    width:30%;
+    margin-top:100px;
+    color:white;
+}
+.quattro {
+    background-color: rgb(12, 0, 180);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    width:30%;
+    margin-top:100px;
+    color:white;
+}
+
+.testo {
+   color:black;
+    text-align: left;
+    line-height: 46px;
+    font-size: 29px;
+    padding:5%;
+    font-family: "Satisfy";
+    font-style: normal;
+    font-weight: 600;
+
+
+}
+
+.titolo {
+  color:rgb(6, 3, 194);
+    text-align: center;
+    line-height: 35px;
+    font-size: 30px;
+    margin:30px;
+}
+
+.img {
+  margin:20px;
+  border-top: 2px solid red;
+  border-bottom: 2px solid red;
+}
+</style>
+<div class="titolo">
+  REACTJS
+</div>
+<div class="testo">
+  Un altro Web Framework è ReactJS. Anche questo open-source ed anche questo ci permette di 
+  fare il render dei dati tra Back-end e Front-end. Con ReactJS possiamo creare dei componenti
+  che possono essere utilizzati più volte all'interno dello stesso progetto anche in altri progetti.
+  Prerequisiti essenziali sono aver installato NodeJS e NPM. <br>Con il comando cli  
+  <i style="background:black;color:white;padding:5px">npx create-react-app nom_app</i> 
+  si crea una applicazione completa di landing-page. Dopo aver inserito i propri contenuti l'applicazione è 
+  pronta.  
+  Una volta creata la folder dell'applicazione abbiamo inserito nella folder src la folder components e all'interno di quest'ultima la folder pagina. 
+  Qui si è creato lo script Pagina.js che per questa app è il nostro file Javascript principale al quale poi facciamo confluire tutti gli elementi creati a parte come ad esempio
+  il componente Saluto.js e Testo.js che come possiamo vedere nelle immagini sottostanti sono importate nel file Pagina.js ed inserite 
+  con la sintassi JSX. 
+  L'app in automatico farà il render dei contenuti all'interno di Pagina.js e questa all'interno della pagina html iniziale index.html presente nella folder public. 
+  
+  
+
+    Per attivare l'applicazione aprire il terminale nella folder dell'applicazione e poi inserire il comando 
+    <i style="background:black;color:white;padding:5px">npm start</i> questo lancerà la parte server e nel browser andare 
+    all'indirizzo localhost:3000 dove apparirà la nostra applicazione come nell'immagine sottostante.<br>
+    <img class="img" src="foto/reacthome.png" width="100%" height="500px">
+ 
+    Sotto sono riportati i file che abbiamo creato per comporre questo semplice esempio. Naturalmente sono disponibili 
+    molte librerie che si possono utilizzare per creare applicazioni più complesse installandole con npm install nome_compenente. 
+    In questo esempio abbiamo installato react-router-dom per gestire il routing tra Link1 e Link2 per inserire parte di html da questi 2 componenti. 
+    Per il Data Handling bisogna installare Flux che è un altro componente importante ma che non analizzeremo per il momento.  
+  </div>
+<div class="MyFlex">
+
+  <div class="uno">
+    Index.js 
+    <img  src="foto/reactindex.png" width="100%" height="500px">
+  </div>
+  <div class="uno">
+   App.js 
+    <img  src="foto/reactapp.png" width="100%" height="500px">
+  </div>
+</div>
+<div class="MyFlex2">
+
+      Pagina.js
+    <img class="img" class="img" src="foto/reactpagina.png" width="80%" height="500px">
+
+</div>
+<div class="MyFlex">
+  <div class="uno">
+    Testo.js
+    <img src="foto/reacttesto.png" width="100%" height="500px">
+
+  </div>
+  <div class="uno">
+    Saluto.js
+    <img src="foto/reactsaluto.png" width="100%" height="500px">
+  </div>
+
+</div>
+
+<div style="height:50px"></div>
+
+
+</body>
+
+
+</html>
