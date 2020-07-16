@@ -355,13 +355,13 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
             <ul class="right hide-on-med-and-down">
-              <li><a href="#block3">Blockchain</a></li>
-                <li><a href="#quantum">Quantum</a></li>
-                <li><a href="#ml">Machine Learning</a></li>
-                <li><a href="#Ablog">Blog</a></li>
-                <li><a href="#Adev">Develop</a></li>
-                <li><a href="#Alinux">Linux</a></li>
-                <li><a href="#Aus">Contatti</a></li>
+              <li><a href="http://www.mecbar.com/#block3">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#quantum">Quantum</a></li>
+                <li><a href="http://www.mecbar.com/#ml">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Adev">Develop</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
                 <li>
                     <a href=""> </a>
                 </li>
@@ -428,7 +428,15 @@
    font-size : 15px;
  }
 }
-
+.MyFlex {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: space-around;
+          align-items: baseline;
+          align-content: space-around;
+         
+       }
 </style>
 <body>
 
@@ -436,9 +444,26 @@
 
  <div class="row">
    <div class="col s12 m12 l10">
-      <h3 id="zero" class="center color scrollspy">Built in Function</h3>
+
+      <h3 id="menouno" class="center color scrollspy">Decoratori e Metodi</h3>
       <div class="testo">
-      Lista delle funzioni built in messe a disposizione da Python.<br>
+         Quando definiamo un metodo all'interno di una classe e poi creiamo un istanza della classe al metodo viene passata come parametro la classe stessa. Vediamo con il seguente esempio che se poi lanciamo il metodo2 l'interprete ci ritorna un errore perchè si aspetta un parametro. Possiamo ovviare passando il parametro self al metodo oppure inserendo il decoratore staticmethod come possiamo vedere nelle immagini sottostanti. 
+   
+         <div class="MyFlex">
+          <div style="width: 50%;">
+         <img src="foto/pymetod1.png" width="90%" height="450px">
+          </div>
+          <div style="width: 50%;">
+         <img src="foto/pymetod2.png" width="90%" height="450px">
+         </div>
+       </div>
+      </div>
+ 
+
+
+      <h3 id="zero" class="center color scrollspy">Built-in Function</h3>
+      <div class="testo">
+      Lista delle funzioni built-in messe a disposizione da Python.<br>
       <img src="foto/pybuiltin.png" width="100%" height="450px">
       </div>
 
@@ -730,6 +755,7 @@ funzione in un dictionary.<br>
    <div class="posmenu posse pospy">
        <!--  <ul class="section table-of-contents">  -->
        <ul class="my_menu">
+         <li><a href="#menouno">Decoratori e Metodi</a></li>
          <li><a href="#zero">Built in Function</a></li>
            <li><a href="#uno">Soap</a></li>
            <li><a href="#due">Registri Windows</a></li>
