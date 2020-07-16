@@ -355,13 +355,13 @@
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 
             <ul class="right hide-on-med-and-down">
-              <li><a href="#block3">Blockchain</a></li>
-                <li><a href="#quantum">Quantum</a></li>
-                <li><a href="#ml">Machine Learning</a></li>
-                <li><a href="#Ablog">Blog</a></li>
-                <li><a href="#Adev">Develop</a></li>
-                <li><a href="#Alinux">Linux</a></li>
-                <li><a href="#Aus">Contatti</a></li>
+              <li><a href="http://www.mecbar.com/#block3">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#quantum">Quantum</a></li>
+                <li><a href="http://www.mecbar.com/#ml">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#Adev">Develop</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
                 <li>
                     <a href=""> </a>
                 </li>
@@ -423,12 +423,253 @@
     margin:50px;
 
  } 
-
+ .MyFlex {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: baseline;
+	align-content: space-around;
+}
+.boxhtml {
+   width: 49%;
+}
+.boxcss {
+   width: 49%;
+}
 
 </style>
 
 
 <h1 class="center">Pillole di CSS<h1> 
+
+   <h3 class="center color">CSS Grid Layout </h3>
+   <br>
+   <div class="testo">
+      Vediamo un esempio di come creare una impostazione di una pagina tramite con la griglia GRID che 
+      permette di creare diversi contenitori divisi in colonne e/o righe.
+   </div>  
+<div class="MyFlex">
+  <div class="boxhtml">
+   <textarea rows="50"  readonly style="height: 500px;background-color: black;color:white;padding:10px">
+                        HTML
+
+   <body>
+    <div class="titolo">
+       ESEMPIO GRID
+    </div>
+    <div class="MyGrid">
+      <div class="uno">
+         box1
+      </div>
+      <div class="due">
+         box2
+      </div>
+      <div class="tre">
+         box3
+      </div>
+      <div class="quattro">
+         box4
+      </div>
+      <div class="cinque">
+         box5
+      </div>
+    </div>
+   </body>
+</textarea>
+  </div>
+
+
+ <div class="boxcss">
+   <textarea rows="50" readonly style="height: 500px;background-color: black;color:white;padding:10px">  
+CSS
+
+* {
+   padding : 0;
+   margin:0;
+   box-sizing: border-box;
+ }
+ .MyGrid {
+	display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin-top:100px;
+
+}
+.uno {
+    background-color: black;
+    color:white;
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    grid-row: 1/3;
+    width: 85%;
+    height: 90%;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    justify-self: center;
+}
+.due {
+    background-color: rgb(184, 15, 15);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color:white;
+    width: 85%;
+    height: 90%;
+    justify-self: center;
+}
+.tre {
+    background-color: rgb(204, 62, 7);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color:white;
+    grid-row: 1/4;
+    width: 85%;
+    height: 100%;
+    justify-self: center;
+}
+.quattro {
+    background-color: rgb(12, 0, 180);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color:white;
+    width: 85%;
+    height: 90%;
+    justify-self: center;
+}
+
+.cinque {
+    background-color: rgb(197, 7, 204);
+    text-align: center;
+    line-height: 130px;
+    font-size: 30px;
+    color:white;
+    width: 85%;
+    height: 100%;
+    justify-self: center;
+}
+   </textarea>  
+  </div>
+</div>
+<br><br>
+<iframe style="border:none;" src="htmlgrid.html" width="100%" height="600px" ></iframe>
+
+   
+<h3 class="center color">CSS Flex Layout </h3>
+<br>
+<div class="testo">
+   Vediamo un esempio di come creare una impostazione di una pagina tramite con la griglia GRID che 
+   permette di creare diversi contenitori divisi in colonne e/o righe.
+</div>  
+<div class="MyFlex">
+<div class="boxhtml">
+<textarea rows="50"  readonly style="height: 500px;background-color: black;color:white;padding:10px">
+                     HTML
+
+   <div class="titolo">
+         ESEMPIO FLEX 
+   </div>
+   <div class="MyFlex">
+    <div class="uno">
+          box1
+    </div>
+    <div class="due">
+         box2
+    </div>
+    <div class="tre">
+         box3
+    </div>
+    <div class="quattro">
+        box4
+    </div>
+    <div class="cinque">
+        box5
+    </div>
+   </div>
+</textarea>
+</div>
+
+
+<div class="boxcss">
+<textarea rows="50" readonly style="height: 500px;background-color: black;color:white;padding:10px">
+   CSS
+
+        * {
+         padding : 0;
+         margin:0;
+         box-sizing: border-box;
+       }
+       .MyFlex {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: baseline;
+          align-content: space-around;
+       }
+       
+       .MyFlex2 {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-around;
+          align-items: stretch;
+          align-content: space-around;
+       }
+       .uno {
+           background-color: black;
+           color:white;
+           text-align: center;
+           line-height: 130px;
+           font-size: 30px;
+           width:30%;
+           margin-top:100px;
+       }
+       .due {
+           background-color: rgb(184, 15, 15);
+           text-align: center;
+           line-height: 130px;
+           font-size: 30px;
+           width:30%;
+           margin-top:100px;
+           color:white;
+       }
+       .tre {
+           background-color: rgb(204, 62, 7);
+           text-align: center;
+           line-height: 130px;
+           font-size: 30px;
+           width:30%;
+           margin-top:100px;
+           color:white;
+       }
+       .quattro {
+           background-color: rgb(12, 0, 180);
+           text-align: center;
+           line-height: 130px;
+           font-size: 30px;
+           width:30%;
+           margin-top:100px;
+           color:white;
+       }
+       
+       .cinque {
+           background-color: rgb(197, 7, 204);
+           text-align: center;
+           line-height: 130px;
+           font-size: 30px;
+           width:30%;
+           margin-top:100px;
+           color:white;
+       }
+</textarea>  
+</div>
+</div>
+<br><br>
+<iframe style="border:none;" src="htmlFlex.html" width="100%" height="600px" ></iframe>
+
 
 <h3 class="center color">Clip-path Property</h3>
 <br>
@@ -479,7 +720,7 @@ Vediamo nel riquadro sotto la parte html ed il relativo codice css.<br>
   margin: 10%; 
   vertical-align: middle; 
   font-size: 30px; 
-  font-family: Cambria; 
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
 } 
 .BOX:before { 
    content:''; 
