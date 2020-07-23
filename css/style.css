@@ -9,6 +9,24 @@
     padding: 0px;
  }
 
+ .teleport {
+    font-size: 25px;
+    font-family:  'Trebuchet MS', sans-serif;
+    margin-top:50px;
+    margin-bottom:50px;
+    border-top: 2px solid #be0643;
+    border-bottom: 2px solid #be0643;
+    border-left: 2px solid #f5e392;
+    border-right: 2px solid #f5e392;
+    box-sizing: border-box;
+    /*background-color: black;*/
+    text-decoration: inherit;
+    font-size: 18px;
+    padding:30px;
+    width: 100%;
+    height: auto;
+   
+ }
 .boxGo {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
