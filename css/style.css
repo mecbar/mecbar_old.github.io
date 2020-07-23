@@ -9,6 +9,42 @@
     padding: 0px;
  }
 
+.boxGo {
+    font-size: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:50px;
+    margin-bottom:50px;
+    border-top: 5px solid #0684be;
+    border-bottom: 5px solid #0684be;
+    border-left: 2px solid #f5e392;
+    border-right: 2px solid #f5e392;
+    box-sizing: border-box;
+    /*background-color: black;*/
+    text-align: center;
+    text-decoration: inherit;
+    display: flex;
+    font-size: 18px;
+    width: 100%;
+    height: 350px;
+
+}
+
+.boxGo div a {
+    font-size:40px;
+    color : rgba(198, 31, 184, 0.99);
+    text-align: center;
+    vertical-align: middle;
+    padding-top:100px;
+    padding-left:100px;
+}
+
+.titoloGo {
+    background-color: black;
+    color:white;
+    padding:10px;
+    font-weight: bold;
+    font-family: Helvetica, Arial, sans-serif;
+}
 
  .bottone {
     margin:20px;
@@ -287,6 +323,35 @@ z-index: -1;
     float: left;
     margin: 10px;
     }
+
+.pillolepy2 {
+    background-image: url('pyindex.png');
+    clip-path: polygon(-6px -4px, 22px 196px, 505px 190px, 555px 0px);
+    shape-rendering: crispEdges;
+    width: 100%;
+    height: 400px;
+    color: white;
+    line-height:200px ;
+    text-align: left;
+    }
+
+.pillolepy2:hover {
+    clip-path: polygon(-6px -4px, -1px 414px, 433px 415px, 372px -4px);
+    font-size:35px;
+    line-height:400px ;
+}
+.pillolepy2 a {
+    font-size:55px;
+    color: white;
+    padding: 18px;
+    font-size:35px;
+}
+.pillolepy2 a:hover {
+    font-size:35px;
+    color: white;
+    padding: 1px;
+}
+
 .varie {
     display: grid;
     height:300px;
@@ -435,7 +500,7 @@ text-align: center;
 .testo {
  font-family:  Georgia, Cambria, "Times New Roman", Times, serif;
  color: rgb(9, 9, 10);
- line-height: 40px;
+ line-height: 30px;
  font-size: 22px;
  
  margin: 50px;
@@ -2498,8 +2563,9 @@ text-align: center;
         .pospy {
             top:45px;
             line-height: 15px;
-            font-size: 15px;;
+            font-size: 15px;
         }
+
 
         .posse {
             position: fixed !important;
@@ -2530,15 +2596,17 @@ text-align: center;
             font-size: 15px;;
         }
         .my_menu a:hover {
-            color: #000000;
+            color: #ffffff;
             padding-left: 5px;
-            padding-right: 5px;;
-            background-color: #db0847;
-            border-left: 1px solid #f5e50d;
+            padding-right: 5px;
+            padding-bottom: 5px;
+            background-color:black;
+            border-left: 10px solid #f5e50d;
             box-sizing: border-box;
             width:auto;
             height:auto;
-            border-radius: 20%;
+            border-radius: 20px;
+            font-size: 20px;
 
         }
         
