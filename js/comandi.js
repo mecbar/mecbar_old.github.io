@@ -17,6 +17,18 @@ var count_bot = 1;
 
 
 
+function callAppunti() {
+
+
+ var url = "https://www.mecbar.com/appunti.html";
+ window.open(url, '_blank');
+
+
+}
+
+
+
+
 function closeChat() {
     // seleziono tutti gli id = ch1
     $('[id = ch1]').remove();
