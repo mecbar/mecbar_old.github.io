@@ -1869,7 +1869,7 @@ Barren Plateau
 
 <div class="teleport">
 
-<b style="color:blue;font-size:35px">Quantum Teleportation</b> <br>
+<div  onmouseover="calcolaDim()" id="teleport3" class="teleport3">Quantum Teleportation</div><br>
 <br>
 Con il Quantum Teleportation possiamo trasferire lo stato di un qubit da una posizione ad una altra 
 posizione. Nell'esempio sottostante lo stato del qubit q0 viene trasferito al qubit q2. In questo modo 
@@ -2238,7 +2238,7 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
         </div> 
 
         </div>
-
+        <br> <br> <br>
         <div style="display: flex;">
             
           
@@ -2275,7 +2275,35 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
      </div>
     </div> 
 
-    
+    <div class="boxGo">
+        <b style="font-size: 40px;padding:30px">
+        <a href="SOLIDITY.html">Programmare Smart Contract con Solidity</a> </b>
+        <br> <br>
+        <img src="foto/solidity2.png" width="100%" height="100%">
+     
+    </div> 
+    <div class="boxGet">
+        <a href="Blockchain.html">
+        <div class="geth"> 
+            <div class="geth1">   
+                <div class="geth2">  Geth Console for Blockchain </div>  
+            </div>
+        
+        </div></a>
+        <div class="geth">  
+              <div class="geth1">   
+                    <div class="geth2"> Decentralize Application </div> 
+                </div>
+         </div>
+         <a href="blockchainjs.html">
+        <div class="geth">  
+             <div class="geth1">  
+                 <div class="geth2"> Web3Js Javascript for Blockchain </div>  
+              </div>
+        </div></a>
+     
+    </div> 
+ 
        <div class="excel">
              <div class="boxxe">
                 <p style="text-align:center;width:100%;font-size:25px; color: darkorange;">Unire 2 fogli Excel/LibreOffice con dati 1 colonna</p>
@@ -3755,10 +3783,17 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
             </div>
         </div>
     </div>
+   
+   <div class="appuntiCall">
+
+    <div onclick="callAppunti()" id="tasto-app" class="tasto-app"  title="App">Appunti</div>
+   </div>
+   
+   
     <!--  <button onclick="callBot()" id="tasto-bot" title="Bot">Call Bot</button>  -->
     <div class="bot-contenitore">
    <!-- <button onclick="callBot()" id="tasto-ver" classe="chaTab" title="Bot">Call Bot</button> -->
-    <div onclick="callBot()" id="tasto-ver" class="tasto-ver"  title="Bot">Call Bot</div>
+      <div onclick="callBot()" id="tasto-ver" class="tasto-ver"  title="Bot">Call Bot</div>
     </div>
     <button onclick="topFunction()" id="tasto-su" title="Go to top">Scroll-Top</button>
 </body>
@@ -3822,6 +3857,13 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
 
     $('.button-collapse').sideNav();
 </script>
-
+<script>
+    function calcolaDim() {
+      var dim=   document.getElementById("teleport3").offsetWidth;
+      var dim2 = dim + 'px';
+      $('.teleport3:hover::after').css('width',dim2)
+      console.log(dim2);
+    }
+</script>
 
 </html>

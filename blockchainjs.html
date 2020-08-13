@@ -366,503 +366,326 @@
 <style>
     @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
 
-    #zoom {
-        border-bottom-right-radius: 5%;
-        margin: 20px;
-        box-shadow: 3px 3px orange, -1em 0 .4em gray;
-    }
-    #zoom:hover {
-        height: 600px;
-    }
-   .testo {
-       font-family: Poppins;
-       font-size: 18px;
-       letter-spacing: -.39px;
-       line-height: 25px;
-       font-weight: 400 ;
-       margin:50px;
+body {
+   font-size: 23px;
+   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-   }
-   .boxxe {
-    margin:5px;
-    border-bottom: 2px solid black;
-    border-left:2px solid black;
-    border-bottom-left-radius: 10%;
-    margin-top:80px;
-    padding: 20px;
-    background-color: black;
-    color: white;
-    box-shadow: 6px 4px 5px 1px rgb(174, 179, 179); 
-}
-   .center {
-       text-align: center;
-   }
-   .color {
-       color: blue;
-   }
-
-   .scriviT {
-    overflow: hidden; 
-    white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .1em; 
-    color:#001aff;
-    animation:  scrivi 17.5s infinite;
-  }
-@keyframes scrivi {
-    from { width: 0 }
-    to { width: 100% }
-  }
- .html {
-    margin:50px;
-
- } 
- .MyFlex {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: baseline;
-	align-content: space-around;
-}
-.boxhtml {
-   width: 49%;
-}
-.boxcss {
-   width: 49%;
 }
 
+.titolo:hover {
+ color:#f13000;
+}
+
+.elenco {
+   display:flex;
+   color : #fff;
+   width: 100% ;
+  align-items: center;
+  justify-content:center;
+} 
+.elenco div {
+   width: auto ;
+ height: auto ;
+ border : 2px solid #f18300;
+ padding:5px;
+ color: #fff;
+background-color: rgb(38, 0, 255);
+ margin:10px;
+}
+.elenco div:hover {
+ color: rgb(47, 0, 255);
+ background-color:#fff;
+}
+.elenco div a {
+   color:rgb(0, 0, 0);
+}
+.boxex {
+    color:#fff;
+    background-color: #000;
+    font-size: 25px;
+    border-bottom-right-radius: 250px;
+    margin: 50px;
+    padding:5%;
+    box-shadow: 5px 7px rgb(255, 81, 0), -1em 0 .4em rgb(40, 51, 218);
+     }
 </style>
-
-
-<h1 class="center">Pillole di CSS<h1> 
-
-   <h3 class="center color">CSS Grid Layout </h3>
-   <br>
-   <div class="testo">
-      Vediamo un esempio di come creare una impostazione di una pagina tramite con la griglia GRID che 
-      permette di creare diversi contenitori divisi in colonne e/o righe.
-   </div>  
-<div class="MyFlex">
-  <div class="boxhtml">
-   <textarea rows="50"  readonly style="height: 500px;background-color: black;color:white;padding:10px">
-                        HTML
-
-   <body>
-    <div class="titolo">
-       ESEMPIO GRID
-    </div>
-    <div class="MyGrid">
-      <div class="uno">
-         box1
-      </div>
-      <div class="due">
-         box2
-      </div>
-      <div class="tre">
-         box3
-      </div>
-      <div class="quattro">
-         box4
-      </div>
-      <div class="cinque">
-         box5
-      </div>
-    </div>
-   </body>
-</textarea>
-  </div>
-
-
- <div class="boxcss">
-   <textarea rows="50" readonly style="height: 500px;background-color: black;color:white;padding:10px">  
-CSS
-
-* {
-   padding : 0;
-   margin:0;
-   box-sizing: border-box;
- }
- .MyGrid {
-	display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-top:100px;
-
-}
-.uno {
-    background-color: black;
-    color:white;
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    grid-row: 1/3;
-    width: 85%;
-    height: 90%;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    justify-self: center;
-}
-.due {
-    background-color: rgb(184, 15, 15);
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    color:white;
-    width: 85%;
-    height: 90%;
-    justify-self: center;
-}
-.tre {
-    background-color: rgb(204, 62, 7);
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    color:white;
-    grid-row: 1/4;
-    width: 85%;
-    height: 100%;
-    justify-self: center;
-}
-.quattro {
-    background-color: rgb(12, 0, 180);
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    color:white;
-    width: 85%;
-    height: 90%;
-    justify-self: center;
-}
-
-.cinque {
-    background-color: rgb(197, 7, 204);
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    color:white;
-    width: 85%;
-    height: 100%;
-    justify-self: center;
-}
-   </textarea>  
-  </div>
-</div>
-<br><br>
-<iframe style="border:none;" src="htmlgrid.html" width="100%" height="600px" ></iframe>
-
-   
-<h3 class="center color">CSS Flex Layout </h3>
-<br>
-<div class="testo">
-   Vediamo un esempio di come creare una impostazione di una pagina tramite con la griglia GRID che 
-   permette di creare diversi contenitori divisi in colonne e/o righe.
-</div>  
-<div class="MyFlex">
-<div class="boxhtml">
-<textarea rows="50"  readonly style="height: 500px;background-color: black;color:white;padding:10px">
-                     HTML
-
-   <div class="titolo">
-         ESEMPIO FLEX 
-   </div>
-   <div class="MyFlex">
-    <div class="uno">
-          box1
-    </div>
-    <div class="due">
-         box2
-    </div>
-    <div class="tre">
-         box3
-    </div>
-    <div class="quattro">
-        box4
-    </div>
-    <div class="cinque">
-        box5
-    </div>
-   </div>
-</textarea>
+<div class="titolo">
+  PILLOLE DI BLOCKCHAIN  -- JAVASCRIPT 
 </div>
 
+<div class="elenco">
+   <div><a href="#connessione">Connessione</a></div>
+   <div><a href="#listening">Listening</a></div>
+   <div><a href="#peer">Peer</a></div>
+    <div><a href="#sincro">Syncro</a></div>
+    <div><a href="#blocco">getNumber</a></div>
 
-<div class="boxcss">
-<textarea rows="50" readonly style="height: 500px;background-color: black;color:white;padding:10px">
-   CSS
+    <div><a href="#mining">Mining</a></div>
+    <div><a href="#account">Accounts</a></div>
 
-        * {
-         padding : 0;
-         margin:0;
-         box-sizing: border-box;
-       }
-       .MyFlex {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-items: baseline;
-          align-content: space-around;
-       }
-       
-       .MyFlex2 {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-items: stretch;
-          align-content: space-around;
-       }
-       .uno {
-           background-color: black;
-           color:white;
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-       }
-       .due {
-           background-color: rgb(184, 15, 15);
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-           color:white;
-       }
-       .tre {
-           background-color: rgb(204, 62, 7);
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-           color:white;
-       }
-       .quattro {
-           background-color: rgb(12, 0, 180);
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-           color:white;
-       }
-       
-       .cinque {
-           background-color: rgb(197, 7, 204);
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-           color:white;
-       }
-</textarea>  
+     <div><a href="#balance"> Balance</a> </div>
+      <div> <a href="#sblocco"> Unlock Account </a></div>
 </div>
+<div class="elenco">
+  <div> <a href="#compile"> Compile </a> </div>
+     <div> <a href="#infoT"> Info Transaction </a></div>
+ <div> <a href="#deploy">  Deploy Contract</a></div>
+ <div><a href="#sm"> Invoke Smart Contract </a></div>
+   <div> <a href="#node">NodeJs </a> </div>
 </div>
-<br><br>
-<iframe style="border:none;" src="htmlFlex.html" width="100%" height="600px" ></iframe>
 
-
-<h3 class="center color">Clip-path Property</h3>
-<br>
-<div class="testo">
-    Con il comando clip-path insieme a shape-inside selezioniamo una parte di una immagine e lasciamo una parte esterna vuota 
-    e nella parte ulteriore si può inserire anche il testo come nell'immagine sottostante.<br>
-    <img id="zoom" src="foto/clip_path.png" width="90%" height="300px">
-    <br>
-    <img id="zoom" src="foto/clip_path2.png" width="90%" height="300px">  <br>
-</div>  
-<br>
-<h3 class="center color"> Scrittura di testo</h3>
-<br>
-<div class="testo">
-   Animazione per scrivere testo in movimento.<br>
-   <img id="zoom" src="foto/cssscrivi.PNG" width="90%" height="200px">  <br>
-
-   <div class="scriviT">
-      The blockchain is a revolutionary tecnology. It is a database of transactions structured in block. <br>Every block contains the transactions performed into a interval of time set by the administrator of blockchain.<br> One blockchain contains lot of blocks. One block contains a lot of transactions.
-   </div>
-</div>
-<br>
-<h3 class="center color">Creare box con contorni linear gradient</h3>
-<br>
-<div class="testo">
-Vediamo nel riquadro sotto la parte html ed il relativo codice css.<br>
+<div class="tot">
+Per comunicare con la blockchain tramite Javascript usiamo il modulo web3js che può essere richiamato da 
+NodeJS se abbiamo una applicazione server o tramite MetaMask se ci vogliamo connettere senza server tramite il 
+browser.<br> 
 <br> 
-   <textarea rows="20" style="height: 200px;background-color: black;color:white;padding:30px">
-                                  HTML
+MetaMask è una extention che si può applicare ai diversi Browser Come Firefox o Chrome <br> 
+<br> 
+Il modulo web3js ci fornisce i seguenti sottosistemi:<br> 
 
-<div id="Aus" class="outbox">
-   <div> </div>
-   <div class="BOX">
-     <div style="color: rgb(22, 19, 219); font-size:25px"> Mecbar</div>
-   </div>
- </div>
+<i><b> eth</i> </b> per inteagire con la ethereum blockchain <br> 
+<i><b> net</i> </b>  per interagire con i node network <br> 
+<i><b> personal</i> </b> per interagire con gli accounts e send the transaction <br> 
+<i><b> db</i> </b> per fare la get/put dei dati sul local db <br> 
+<i><b> shh</i> </b>  per p2p messagging con Whisper <br> 
+<br> 
+Nelle function possiamo sempre inserire il callback oppure la <i><b> Promise</i> </b> cioè il metodo .then che 
+effettua la promise cioè l'impegno ad eseguire il codice inserito nella promise quando la transazione è termianta  <br>
+Nell'esempio sottostante creiamo un nuovo account con la password inserita e quando l'operazione è terminata si esegue il codice inserito nella 
+.then che in questo esempio è di inserire nella console l'esito della operazione<br> <br>  
+web3.eth.personal.newAccount(password)<br> 
+.then(console.log);<br> <br> <br> 
 
-                                   CSS
+<span id="connessione">CONNESSIONE </span><br> <br> 
+Vediamo come connettere tramite Javascript la nostra applicazione alla blockchain <br> 
 
- .BOX { 
-   display: flex;
-   flex: auto; 
-   justify-content: center; 
-   align-items: center; 
-   position: relative; 
-   height: auto; 
-   background: #000; 
-  margin: 10%; 
-  vertical-align: middle; 
-  font-size: 30px; 
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-} 
-.BOX:before { 
-   content:''; 
-   position: absolute; 
-   top:-2px; 
-   left:-2px; 
-   right:-2px; 
-   bottom:-2px; 
-   background: #fff; 
-   z-index: -1;  
-} 
-
-.BOX::after { 
-   content:''; 
-   position: absolute; 
-   top:-2px; 
-   left:-2px; 
-   right:-2px; 
-   bottom:-2px; 
-   background: #fff; 
-   z-index: -2; 
-} 
-.outbox { 
-   margin-top:50px; 
-   margin-bottom:50px;  
-   position: relative; 
-   width: 100%; 
-   height: 200px; 
-   background-color: #000; 
-   display: grid; 
-   grid-template-columns: 33% 33% auto; 
-   grid-column: auto; 
-   grid-template-rows: auto; 
-   z-index: 1; 
- } 
-.BOX::before , 
-.BOX::after  
-{ 
-   background:linear-gradient(325deg,#51e315 , #000 ,#996706ed) 
-} 
-
- </textarea>
-
-<br><br>
-Nell'immagine sottostante possiamo vedere il risultato.<br>
-<br>
-<img src="foto/cssbox.PNG" width="100%" height="200px">  <br>
+Possiamo optare per una function sincrona o asincrona (callback)<br> 
 </div>
-
-<h3 class="center color">Unità di misura vw, vh, vmin e vmax </h3>
-
-<div class="testo">
-   Con il CSS3 sono state introdotte queste nuove unità di misura che si riferiscono alle dimensioni 
-   degli oggetti in percentuale alla viewport(dimensione finestra del browser). Questa è molto utile per il responsive design 
-   senza utilizzare li media query soprattutto per il font-size ma va bene per tutti gli elementi che hanno il parametro height. <br>
-   Vediamo qualche esempio:<br>
-   100 vw = 100% dimensione finestra, se si vuole impostare il 10% impostare 10vw per width o 10 vh 
-   per height.<br>
-   Il parametro vmin permette di selezionare il valore minore per height tra vw o vh mentre vmax 
-   assegna alla larghezza width il maggiore tra vh e vw.<br>
-   <img src="foto/cssvh.png" width="100%" height="100px">  <br><br>
-</div>
-<h3 class="center color">Unità di misura em e rem </h3>
-
-<div class="testo">
-L'unità di misura em applicata ad un elemento modifica il valore della property indicata rispetto 
-al valore inherited dallo stesso.
-Vediamo i seguenti esempi :<br>
-
-p { line-height: 1.2em } incrementa del 20% il valore che line-height ha assegnato per la property p. <br> 
-
-h1 { font-size: 1.3em } incrementa del 30% il valore che font-size eradita da h1.<br> 
-
-
-Mentre il parametro rem inherit dal root element il valore assegnato all'elemento e lo modifica 
-con i dati inseriti come nell'esempio sottostante:<br>
-h1 { font-size: 1.2rem } <br>
-dove il font-size ereditato dall'elemento h1 viene incrementato del 20% <br>
-L'assegnazione dei valori può essere effettuato anche usando la funzione calc<br>
-p { calc(10px + 0.5vh } <br>
-
-
-</div>
-<h3 class="center color">BUTTON PER CAMBIARE IL COLORE BACKGROUND PAGINA O BOX </h3>
-
-<div class="boxxe">
-Se vogliamo cambiare il colore standard della pagina web per prima cosa inseriamo un pulsante di tipo button 
-nella pagina web e poi tramite css e javascript vediamo il colore assegnato e di conseguenza cambiamo il parametro css 
-per impostare un nuovo colore. Nel nostro esempio il colore di background è nero e con il click lo facciamo diventare bianco 
-e se premo di nuovo il pulsante ritornerà nero.
-
-<input type="button" class="button" onclick="changeBack()" value="Change Background">
-<br><br> 
-<img src="foto/chgback1.png" width="100%" height="350px">
-<br><br><br>
-
-</div>
-
-
-</script>
-<br><br><br>
-<h3 class="center color">CAMBIARE IL COLORE BACKGROUND O TESTO PAGINA O BOX CON COLORE RANDOM </h3>
-
-<div class="boxxe">
-   Per selezionare un colore in modo random utilizzamo la funzione math di Javascript.
-   Click mouse sopra il pulsante a lato.
-    <button type="button" id="color" class="bottone" value="Chg random color" onclick="setColor(this.id)">Chg random color</button>
-   <br>
-
-   <textarea rows="20" style="height: 200px;background-color: rgb(143, 13, 13);color:white;padding:30px">
-   
-      <button type="button" id="color" class="bottone" value="Chg random color" onclick="setColor(this.id)">Chg random color</button>
-      <br>
-      <script>
-           const setColor  = (id ) => {
-        const randomColor = Math.floor(Math.random()*16777215).toString(16);
-       var color = "#" + randomColor;
-       console.log(color)
-       $(".boxxe").css('color', color);
-   
-       }
-      </script>
-      </textarea>
-</div>
-
 <div class="boxex">
+var web3 = new Web3(Web3.givenProvider || "ws://localhost:8545");<br> <br> 
 
-EFFETTO SOTTOLINEATURA MOBILE QUANDO MOUSE PASSA SOPRA OGGETTO <br><br>
+window.addEventListener('load', function() {<br> 
+    if (typeof web3 !== 'undefined' ) {<br> 
+        window.web3 = new Web3(web3.currentProvider);<br> 
+    } else {<br> 
+        console.log('web3 not found')<br> 
+        var provider = document.getElementById('provider1').value;<br> 
+        window.web3 = new Web3(new Web3.providers.HttpProvider(provider));<br> 
 
-Definire in CSS componente ::after <br><br>
+    }<br> 
+    }<br> 
+</div>
+<div class="tot">
+Vediamo ora una lista di operazioni che si possono utilizzare con il relativo risultato atteso.
+
+Per vericare se siamo connessi alla blockchain 
+</div>
+<div class="boxex">
+if (web3 && web3.isConnected()) {     }<br> 
+</div>
+<div id="listening" class="tot">
+Comando per verificare se siamo in ascolto nella porta assegnata
+</div>
+<div class="boxex">
+web3.net.getlistening(function(error, result) {<br> 
+    <br> 
+})<br> 
+</div>
+<div id="peer" class="tot">
+
+Per ottenere numero dei peer connessi
+</div>
+<div class="boxex">
+web3.net.getPeerCount()<br> 
+</div>
+<div id="sincro" class="tot">
+Verificare se il nostro nodo è sincronizzato
+</div>
+<div class="boxex">
+web3.isSyncing()<br> 
+</div>
+<div id="blocco" class="tot">
+Ottenere numero blocco corrente  
+</div>
+<div class="boxex">
+web3.eth.getBlockNumber([callback])<br>
+</div>
+<div id="mining" class="tot">
+Verificare se si sta minando nuovi blocchi
+</div>
+<div class="boxex">
+web3.mining/getMining 
+</div>
+<div id="account" class="tot">
+
+Ottenere gli accounts operativi nella chain
+</div>
+<div class="boxex">
+web3.eth.accounts <br> <br> 
+
+web3.eth.personal.getAccounts([callback])<br> 
+
+</div>
+<div class="tot">
+Creare un nuovo account 
+</div>
+<div class="boxex">
+web3.eth.personal.newAccount(password, [callback])<br> 
+</div>
+
+<div id="balance" class="tot">
+Ottenere il credito di un determinato account
+</div>
+<div class="boxex">
+web3.eth.getBalance(account)<br> 
+</div>
+<div class="tot">
+Ottenere il relativo valore in wei dato un importo in ether 
+</div>
+<div class="boxex">
+web3.fromWei(valore, 'ether').toFixed(2);<br> 
+</div>
+<div id="sblocco" class="tot">
+Sbloccare un account per eseguire delle transazioni
+</div>
+<div class="boxex">
+web3.personal.unlockAccount(account, password, function(error, result) {<br> 
+    <br> 
+})<br> <br> 
+web3.eth.personal.unlockAccount(address, password, unlockDuraction [, callback])<br> 
+</div>
+<div class="tot">
+
+Creare un oggetto per eseguire ad esempio una transazione 
+</div>
+<div class="boxex">
+var obj = {}<br> 
+obj.from = address<br> 
+obj.to = address ricevente <br> 
+var importo = ether <br> 
+obj.value = web3.towei(importo, 'ether')<br> 
+var obj.data = web3.toHex(data)  // per inserire extradata into transaction  <br>  <br>  <br> 
+possiamo inserire anche il gas e se vogliamo rieseguire una operazione per fare l'update 
+dobbiamo inserire nell'oggetto anche nonce : numero nonce della vecchia transazione ancora non minata 
+altrimenti non è possile modificare l'operazione.<br> <br> 
+
+web3.eth.sendTransaction(transactionObject [, callback])<br> 
+l'operazione ritorna l'hash della transazione e se mettiamo il callback possiamo verificare l' esito
+<br> 
+</div>
+<div id="compile" class="tot">
+Comando per compilare uno smart contract in Solidity  
+</div>
+<div class="boxex">
+web3.eth.compile.solidity(source_program, function() {<br> 
+    <br> 
+})<br> 
+Il risultato è il codice abi e bin <br> 
+
+Una volta compilato possiamo procedere ad inserire il codice nella Blockchain <br>  <br> 
+var contract = web3.eth.contract(abi)<br> 
+
+Poi creare una istanza del contract che va inserita nella chain, questa operazione richiede una fee 
+ma ricordarsi che si può richiamare l'istanza solo dopo che il blocco dove viene inserita sia stato minato  <br>  <br> 
+var istanzaContratto = contract.new(from:account, data: bin, gas:gas ) si può inserire <br> 
+callback  (result = transaction hash )<br> 
+<br> 
+</div>
+<div id="infoT" class="tot">
+
+Ottenere info su di una transazione di cui si possiede il codice hash 
+</div>
+<div class="boxex">
+web3.eth.getTransactioReceipt(transactionHash, function(error, result) {<br> 
+
+}) <br> 
+Risultato è l'address della operazione <br> 
+<br> 
+</div>
+<div id="deploy" class="tot">
+
+DEPLOY contract con transaction <br> 
+</div>
+<div class="boxex">
+var ins = contract.new.getData(param, {data: bytecode(bin)})
+</div>
+<div id="sm" class="tot">
+Una volta che il contract è stato minato può essere invocato per eseguire un metodo. Si può procedre 
+tramite la function Call o sendTransaction. 
+Di seguito illustriamo le differenze tra i 2 metodi.
+
+<br> 
+CALL <br> 
+Per invocare un metodo inserito in un smart contract usare l'istanza creata quando inserito il contract 
+</div>
+<div class="boxex">
+contractInstance.nome_method_dello_smart_contract.call()<br> 
+</div>
+<div class="tot">
+la Call viene eseguita nel nodo locale, il risultato è il risultato della funzione, nulla viene modificato 
+nel conntract e non si pagano fee <br> 
+
+SENDTRANSACTION <br> 
+<br> 
+Per invocare il metodo tramite una sendTRansaction il comado è il seguente
+
+</div>
+<div class="boxex">
+contractInstance.method.sendTransaction()
+
+</div>
+<div class="tot">
+Questa operazione viene eseguita nel node del minatore ci ritorna la transaction hash e apporta una change state nel contract
+necessita di gas quindi c'è una fee da pagare al minatore<br> 
+ 
+</div>
+<div class="boxex">
+ESEMPIO CALL<br><br>
+
+var ABIdefinition = JSON.parse(abistring);<br> 
+var contract = web3.eth.contract(ABIdefinition)<br> 
+var istanza = contract.at(addtess)<br> 
+var risultato = istanza.metthods.call(paramtri)  //mettere nome metodo al posto di methods<br> 
+
+ESEMPIO SENDTRANSACTION<br><br>
+
+var obj= {<br> 
+    from: address;<br> 
+    gas:  gasStimato <br> 
+}<br> 
+<br> 
+istanza.methods.sendTransaction(eventuale parametro, obj, function(error,result) {} )<br> 
 
 
-.nome_classe:after {<br>
-   content: '';<br>
-   display: block;<br>
-   border-bottom: 3px solid rgba(255, 102, 0, 0.692);<br>
-   width:0;<br>
-   position: relative;<br>
-   -webkit-transition: 1s ease;<br>
-   transition: 1s ease;<br>
-   
-   }<br><br>
-.nome_classe:hover:after { <br>
-   width: 100%;<br>
-   left:0;<br>
-   -webkit-transition: 1s ease;<br>
-   transition: 1s ease;<br>
-   }<br>
+<br> 
+web3.eth.sendTransaction({from: '0x123...', data: '0x432...'})<br> 
+.on('sending', function(payload){ ... })<br> 
+.on('sent', function(payload){ ... })<br> 
+.on('transactionHash', function(hash){ ... })<br> 
+.on('receipt', function(receipt){ ... })<br> 
+.on('confirmation', function(confNumber, receipt, latestBlockHash){ ... })<br> 
+.on('error', function(error){ ... })<br> 
+.then(function(receipt){<br> 
+    // will be fired once the receipt is mined<br> 
+});<br> 
+<br> 
+
+</div>
+<div id="node" class="tot">
+
+Vediamo come con NodeJs possiamo creare una connessione con web3js alla blockchain 
+
+
+</div>
+<div class="boxex">
+var Eth = require('web3-eth');<br> 
+<br> 
+var eth = new Eth(Eth.givenProvider || 'ws://some.local-or-remote.node:8546');<br> 
+
+oppure <br> 
+
+var Web3 = require('web3');<br> 
+var web3 = new Web3(Web3.givenProvider || 'ws://some.local-or-remote.node:8546');<br> 
 
 </div>
 
@@ -872,29 +695,5 @@ Definire in CSS componente ::after <br><br>
 
 
 </body>
-   <script>
-      function changeBack() {
-       
-          var attuale = $(".boxxe").css('background-color');
-      
-          console.log(attuale)
-          if (attuale == 'rgb(0, 0, 0)') {
-         
-             console.log('cambio');
-             $(".boxxe").css({"backgroundColor" : "#fff", "color": "#000"})
-         }  else  { 
-            $(".boxxe").css({"backgroundColor" : "#000", "color": "#fff"})
-         }
-      }
-   
-   </script>  
-   <script>
-        const setColor  = (id ) => {
-     const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    var color = "#" + randomColor;
-    console.log(color)
-    $(".boxxe").css('color', color);
 
-    }
-   </script>
 </html>

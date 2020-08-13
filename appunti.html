@@ -364,507 +364,120 @@
             </li>
     </nav>
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+    body {
+        width: 100%;
+        /*overflow: hidden;*/
+    } 
+    input[type="text"] {
+    background-color: transparent;
+    border: black;
+        border-bottom-color: currentcolor;
+        border-bottom-style: none;
+        border-bottom-width: medium;
+    border-bottom: 1px solid #9e9e9e;
+    border-left: 2px solid #9e9e9e;
+    border-radius: 8px;
+    outline: none;
+    height: 3rem;
+    width: 100%;
+    font-size: 15px;
+    margin: 0 0 20px 0;
+    padding: 5px;
+    box-shadow: none;
+    box-sizing: content-box;
+    transition: all 0.3s;
+}
 
-    #zoom {
-        border-bottom-right-radius: 5%;
-        margin: 20px;
-        box-shadow: 3px 3px orange, -1em 0 .4em gray;
+input[type="text"]:focus {
+border-bottom: 2px solid #03b671 !important;
+border-left: 2px solid #03b671 !important;
+    box-shadow: 0 2px 5px 0 #03b671 !important;
+}
+
+::placeholder {
+  color: rgb(43, 30, 30);
+  font-size: 15px;;
+}
+
+    .insA {
+        width : 100%;
+        height : 700px;
+        padding:15px;
+        background: linear-gradient(-215deg , #060606 50%, #5b22d9 100% );
+        color:#ffffff;
+        font-size: 25px;
+        line-height: 30px;
+        font-style: italic;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
-    #zoom:hover {
-        height: 600px;
+    .appunti {
+        text-align: center;
+        overflow: hidden;
+        margin-top:50px;
+        margin-bottom: 50px;
+        padding:20px;
+        width : 100%;
+        height : 100px;
+        font-size: 30px;
+        line-height: 40px;
+        font-style: italic;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        vertical-align: middle;
+       color:darkblue;
     }
-   .testo {
-       font-family: Poppins;
-       font-size: 18px;
-       letter-spacing: -.39px;
-       line-height: 25px;
-       font-weight: 400 ;
-       margin:50px;
-
-   }
-   .boxxe {
-    margin:5px;
-    border-bottom: 2px solid black;
-    border-left:2px solid black;
-    border-bottom-left-radius: 10%;
-    margin-top:80px;
-    padding: 20px;
-    background-color: black;
-    color: white;
-    box-shadow: 6px 4px 5px 1px rgb(174, 179, 179); 
-}
-   .center {
-       text-align: center;
-   }
-   .color {
-       color: blue;
-   }
-
-   .scriviT {
-    overflow: hidden; 
-    white-space: nowrap; 
-    margin: 0 auto; 
-    letter-spacing: .1em; 
-    color:#001aff;
-    animation:  scrivi 17.5s infinite;
-  }
-@keyframes scrivi {
-    from { width: 0 }
-    to { width: 100% }
-  }
- .html {
-    margin:50px;
-
- } 
- .MyFlex {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: baseline;
-	align-content: space-around;
-}
-.boxhtml {
-   width: 49%;
-}
-.boxcss {
-   width: 49%;
-}
-
-</style>
-
-
-<h1 class="center">Pillole di CSS<h1> 
-
-   <h3 class="center color">CSS Grid Layout </h3>
-   <br>
-   <div class="testo">
-      Vediamo un esempio di come creare una impostazione di una pagina tramite con la griglia GRID che 
-      permette di creare diversi contenitori divisi in colonne e/o righe.
-   </div>  
-<div class="MyFlex">
-  <div class="boxhtml">
-   <textarea rows="50"  readonly style="height: 500px;background-color: black;color:white;padding:10px">
-                        HTML
-
-   <body>
-    <div class="titolo">
-       ESEMPIO GRID
-    </div>
-    <div class="MyGrid">
-      <div class="uno">
-         box1
-      </div>
-      <div class="due">
-         box2
-      </div>
-      <div class="tre">
-         box3
-      </div>
-      <div class="quattro">
-         box4
-      </div>
-      <div class="cinque">
-         box5
-      </div>
-    </div>
-   </body>
-</textarea>
-  </div>
-
-
- <div class="boxcss">
-   <textarea rows="50" readonly style="height: 500px;background-color: black;color:white;padding:10px">  
-CSS
-
-* {
-   padding : 0;
-   margin:0;
-   box-sizing: border-box;
- }
- .MyGrid {
-	display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    margin-top:100px;
-
-}
-.uno {
-    background-color: black;
-    color:white;
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    grid-row: 1/3;
-    width: 85%;
-    height: 90%;
+    .appunti2 {
+        display: flex;
+        text-align: center;
+        margin-top:5px;
+        margin-bottom: 50px;
+        padding:20px;
+        width : 100%;
+        height : 100px;
+        font-size: 30px;
+        line-height: 30px;
+        font-style: italic;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        vertical-align: middle;
+       color:darkblue;
+    }
+    .appunti3 {
+        text-align: left;
+        margin-top:10px;
+        margin-bottom: 10px;
+        padding:10px;
+        width : 30%;
+        height : 100px;
+        font-size: 40px;
+       color:darkblue;
+    }
+ label {
+    font-size: 25px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    justify-self: center;
-}
-.due {
-    background-color: rgb(184, 15, 15);
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    color:white;
-    width: 85%;
-    height: 90%;
-    justify-self: center;
-}
-.tre {
-    background-color: rgb(204, 62, 7);
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    color:white;
-    grid-row: 1/4;
-    width: 85%;
-    height: 100%;
-    justify-self: center;
-}
-.quattro {
-    background-color: rgb(12, 0, 180);
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    color:white;
-    width: 85%;
-    height: 90%;
-    justify-self: center;
-}
-
-.cinque {
-    background-color: rgb(197, 7, 204);
-    text-align: center;
-    line-height: 130px;
-    font-size: 30px;
-    color:white;
-    width: 85%;
-    height: 100%;
-    justify-self: center;
-}
-   </textarea>  
-  </div>
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    color:rgb(6, 3, 167);
+ }
+</style>
+<body>
+<div id="appunti" class="appunti">
+      APP APPUNTI <br>
+        <b span style="font-size: 15px;color:black">
+            Save data into file and Dowinload it !!!  </b>
 </div>
-<br><br>
-<iframe style="border:none;" src="htmlgrid.html" width="100%" height="600px" ></iframe>
-
-   
-<h3 class="center color">CSS Flex Layout </h3>
-<br>
-<div class="testo">
-   Vediamo un esempio di come creare una impostazione di una pagina tramite con la griglia GRID che 
-   permette di creare diversi contenitori divisi in colonne e/o righe.
-</div>  
-<div class="MyFlex">
-<div class="boxhtml">
-<textarea rows="50"  readonly style="height: 500px;background-color: black;color:white;padding:10px">
-                     HTML
-
-   <div class="titolo">
-         ESEMPIO FLEX 
-   </div>
-   <div class="MyFlex">
-    <div class="uno">
-          box1
-    </div>
-    <div class="due">
-         box2
-    </div>
-    <div class="tre">
-         box3
-    </div>
-    <div class="quattro">
-        box4
-    </div>
-    <div class="cinque">
-        box5
-    </div>
-   </div>
-</textarea>
-</div>
-
-
-<div class="boxcss">
-<textarea rows="50" readonly style="height: 500px;background-color: black;color:white;padding:10px">
-   CSS
-
-        * {
-         padding : 0;
-         margin:0;
-         box-sizing: border-box;
-       }
-       .MyFlex {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-items: baseline;
-          align-content: space-around;
-       }
-       
-       .MyFlex2 {
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-around;
-          align-items: stretch;
-          align-content: space-around;
-       }
-       .uno {
-           background-color: black;
-           color:white;
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-       }
-       .due {
-           background-color: rgb(184, 15, 15);
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-           color:white;
-       }
-       .tre {
-           background-color: rgb(204, 62, 7);
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-           color:white;
-       }
-       .quattro {
-           background-color: rgb(12, 0, 180);
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-           color:white;
-       }
-       
-       .cinque {
-           background-color: rgb(197, 7, 204);
-           text-align: center;
-           line-height: 130px;
-           font-size: 30px;
-           width:30%;
-           margin-top:100px;
-           color:white;
-       }
-</textarea>  
-</div>
-</div>
-<br><br>
-<iframe style="border:none;" src="htmlFlex.html" width="100%" height="600px" ></iframe>
-
-
-<h3 class="center color">Clip-path Property</h3>
-<br>
-<div class="testo">
-    Con il comando clip-path insieme a shape-inside selezioniamo una parte di una immagine e lasciamo una parte esterna vuota 
-    e nella parte ulteriore si può inserire anche il testo come nell'immagine sottostante.<br>
-    <img id="zoom" src="foto/clip_path.png" width="90%" height="300px">
-    <br>
-    <img id="zoom" src="foto/clip_path2.png" width="90%" height="300px">  <br>
-</div>  
-<br>
-<h3 class="center color"> Scrittura di testo</h3>
-<br>
-<div class="testo">
-   Animazione per scrivere testo in movimento.<br>
-   <img id="zoom" src="foto/cssscrivi.PNG" width="90%" height="200px">  <br>
-
-   <div class="scriviT">
-      The blockchain is a revolutionary tecnology. It is a database of transactions structured in block. <br>Every block contains the transactions performed into a interval of time set by the administrator of blockchain.<br> One blockchain contains lot of blocks. One block contains a lot of transactions.
-   </div>
-</div>
-<br>
-<h3 class="center color">Creare box con contorni linear gradient</h3>
-<br>
-<div class="testo">
-Vediamo nel riquadro sotto la parte html ed il relativo codice css.<br>
-<br> 
-   <textarea rows="20" style="height: 200px;background-color: black;color:white;padding:30px">
-                                  HTML
-
-<div id="Aus" class="outbox">
-   <div> </div>
-   <div class="BOX">
-     <div style="color: rgb(22, 19, 219); font-size:25px"> Mecbar</div>
-   </div>
- </div>
-
-                                   CSS
-
- .BOX { 
-   display: flex;
-   flex: auto; 
-   justify-content: center; 
-   align-items: center; 
-   position: relative; 
-   height: auto; 
-   background: #000; 
-  margin: 10%; 
-  vertical-align: middle; 
-  font-size: 30px; 
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; 
-} 
-.BOX:before { 
-   content:''; 
-   position: absolute; 
-   top:-2px; 
-   left:-2px; 
-   right:-2px; 
-   bottom:-2px; 
-   background: #fff; 
-   z-index: -1;  
-} 
-
-.BOX::after { 
-   content:''; 
-   position: absolute; 
-   top:-2px; 
-   left:-2px; 
-   right:-2px; 
-   bottom:-2px; 
-   background: #fff; 
-   z-index: -2; 
-} 
-.outbox { 
-   margin-top:50px; 
-   margin-bottom:50px;  
-   position: relative; 
-   width: 100%; 
-   height: 200px; 
-   background-color: #000; 
-   display: grid; 
-   grid-template-columns: 33% 33% auto; 
-   grid-column: auto; 
-   grid-template-rows: auto; 
-   z-index: 1; 
- } 
-.BOX::before , 
-.BOX::after  
-{ 
-   background:linear-gradient(325deg,#51e315 , #000 ,#996706ed) 
-} 
-
- </textarea>
-
-<br><br>
-Nell'immagine sottostante possiamo vedere il risultato.<br>
-<br>
-<img src="foto/cssbox.PNG" width="100%" height="200px">  <br>
-</div>
-
-<h3 class="center color">Unità di misura vw, vh, vmin e vmax </h3>
-
-<div class="testo">
-   Con il CSS3 sono state introdotte queste nuove unità di misura che si riferiscono alle dimensioni 
-   degli oggetti in percentuale alla viewport(dimensione finestra del browser). Questa è molto utile per il responsive design 
-   senza utilizzare li media query soprattutto per il font-size ma va bene per tutti gli elementi che hanno il parametro height. <br>
-   Vediamo qualche esempio:<br>
-   100 vw = 100% dimensione finestra, se si vuole impostare il 10% impostare 10vw per width o 10 vh 
-   per height.<br>
-   Il parametro vmin permette di selezionare il valore minore per height tra vw o vh mentre vmax 
-   assegna alla larghezza width il maggiore tra vh e vw.<br>
-   <img src="foto/cssvh.png" width="100%" height="100px">  <br><br>
-</div>
-<h3 class="center color">Unità di misura em e rem </h3>
-
-<div class="testo">
-L'unità di misura em applicata ad un elemento modifica il valore della property indicata rispetto 
-al valore inherited dallo stesso.
-Vediamo i seguenti esempi :<br>
-
-p { line-height: 1.2em } incrementa del 20% il valore che line-height ha assegnato per la property p. <br> 
-
-h1 { font-size: 1.3em } incrementa del 30% il valore che font-size eradita da h1.<br> 
-
-
-Mentre il parametro rem inherit dal root element il valore assegnato all'elemento e lo modifica 
-con i dati inseriti come nell'esempio sottostante:<br>
-h1 { font-size: 1.2rem } <br>
-dove il font-size ereditato dall'elemento h1 viene incrementato del 20% <br>
-L'assegnazione dei valori può essere effettuato anche usando la funzione calc<br>
-p { calc(10px + 0.5vh } <br>
+<div id="appunti2" class="appunti2">
+     <div id="insNome" class="appunti3" >
+         <label for="insNome">Insert file name</label>
+         <input type="text" id="nomefile" name="nomefile" size="40" placeholder="Insert here the file name"> 
+     </div>
+     <div style="width:60%"></div>
+     <div class="appunti3">
+         <input type="button" id="save" value="Save file" onclick="salvaAppunti()" 
+          class="blog-btn-espandi">
+     </div> 
 
 
 </div>
-<h3 class="center color">BUTTON PER CAMBIARE IL COLORE BACKGROUND PAGINA O BOX </h3>
 
-<div class="boxxe">
-Se vogliamo cambiare il colore standard della pagina web per prima cosa inseriamo un pulsante di tipo button 
-nella pagina web e poi tramite css e javascript vediamo il colore assegnato e di conseguenza cambiamo il parametro css 
-per impostare un nuovo colore. Nel nostro esempio il colore di background è nero e con il click lo facciamo diventare bianco 
-e se premo di nuovo il pulsante ritornerà nero.
-
-<input type="button" class="button" onclick="changeBack()" value="Change Background">
-<br><br> 
-<img src="foto/chgback1.png" width="100%" height="350px">
-<br><br><br>
-
-</div>
-
-
-</script>
-<br><br><br>
-<h3 class="center color">CAMBIARE IL COLORE BACKGROUND O TESTO PAGINA O BOX CON COLORE RANDOM </h3>
-
-<div class="boxxe">
-   Per selezionare un colore in modo random utilizzamo la funzione math di Javascript.
-   Click mouse sopra il pulsante a lato.
-    <button type="button" id="color" class="bottone" value="Chg random color" onclick="setColor(this.id)">Chg random color</button>
-   <br>
-
-   <textarea rows="20" style="height: 200px;background-color: rgb(143, 13, 13);color:white;padding:30px">
-   
-      <button type="button" id="color" class="bottone" value="Chg random color" onclick="setColor(this.id)">Chg random color</button>
-      <br>
-      <script>
-           const setColor  = (id ) => {
-        const randomColor = Math.floor(Math.random()*16777215).toString(16);
-       var color = "#" + randomColor;
-       console.log(color)
-       $(".boxxe").css('color', color);
-   
-       }
-      </script>
-      </textarea>
-</div>
-
-<div class="boxex">
-
-EFFETTO SOTTOLINEATURA MOBILE QUANDO MOUSE PASSA SOPRA OGGETTO <br><br>
-
-Definire in CSS componente ::after <br><br>
-
-
-.nome_classe:after {<br>
-   content: '';<br>
-   display: block;<br>
-   border-bottom: 3px solid rgba(255, 102, 0, 0.692);<br>
-   width:0;<br>
-   position: relative;<br>
-   -webkit-transition: 1s ease;<br>
-   transition: 1s ease;<br>
-   
-   }<br><br>
-.nome_classe:hover:after { <br>
-   width: 100%;<br>
-   left:0;<br>
-   -webkit-transition: 1s ease;<br>
-   transition: 1s ease;<br>
-   }<br>
-
-</div>
+<textarea id="insA" class="insA"></textarea>
 
 
 
@@ -872,29 +485,5 @@ Definire in CSS componente ::after <br><br>
 
 
 </body>
-   <script>
-      function changeBack() {
-       
-          var attuale = $(".boxxe").css('background-color');
-      
-          console.log(attuale)
-          if (attuale == 'rgb(0, 0, 0)') {
-         
-             console.log('cambio');
-             $(".boxxe").css({"backgroundColor" : "#fff", "color": "#000"})
-         }  else  { 
-            $(".boxxe").css({"backgroundColor" : "#000", "color": "#fff"})
-         }
-      }
-   
-   </script>  
-   <script>
-        const setColor  = (id ) => {
-     const randomColor = Math.floor(Math.random()*16777215).toString(16);
-    var color = "#" + randomColor;
-    console.log(color)
-    $(".boxxe").css('color', color);
-
-    }
-   </script>
+<script src="js/appunti.js"></script>
 </html>
