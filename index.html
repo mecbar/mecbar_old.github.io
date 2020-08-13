@@ -2292,7 +2292,7 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
         </div></a>
         <div class="geth">  
               <div class="geth1">   
-                    <div class="geth2"> Decentralize Application </div> 
+                    <div class="geth2"> Decentralized Application </div> 
                 </div>
          </div>
          <a href="blockchainjs.html">
@@ -2437,121 +2437,7 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
         </div>
 
 
-    
-        <div class="frame">
-            <div id="frame-inizio">
-                <div class="row">
-                    <div class="blog-principale" id="vr-frame1">
-                        <div class="blog2">
-                            <div class="row">
-                                <!-- <div id="vr-ita">
-                                    <h3 class="blog-titolo" style="padding-top:20px">La realtà virtuale </h3>
-                                    <div class="col s12 m6 l3" id="vr-testa">
-                                        <img src="foto/vr-terra.png" id="vr-spazio" class="spazioimg" width="100%" height="250px" alt="images virtual box">
-                                    </div>
-                                    <div class="col l9" id="vr-coda">
-                                        <div classe="blog-img-principale">
-                                            <p class="caratter-text">
-                                                In questo post parliamo della realtà virtuale e più specificamente del web framework A-FRAME per inserire nelle pagine web immagini da noi create. Per fare questo si possono utilizzare delle risorse già create o crearne delle personali tramite delle librerie
-                                                apposite. Nella finestra sottostante un esempio di cosa si può creare. </p>
-                                            <iframe id="vr-frame" src="vr/vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe>
-                                            <button class="blog-btn-espandi" type="button" id="blog-frame-espandi" onclick="espandiBlog2()"> Read more</button>
-                                            <div class="caratter-text" id="blog-btn-espandi2">
-                                                Iniziamo a vedere le librerie disponibili <br> inserire il seguente script con la libreria
-                                                <p class="terminal">
-                                                    https://aframe.io/releases/0.6.1/aframe.min.js
-                                                </p>
-                                                per definire poi delle figure predisposte e riutilizzabili utilizziamo anche le suguenti librerie
-                                                <p class="terminal">
-                                                    https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js
-                                                    https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.js
-                                                </p>
-                                                Possiamo prendere delle figure già create inserendo
-                                                <img src="vr/vr1.png" width="100%" height="100px" alt="comandi vr"> opppure si possono inserire foto a 360 gradi come esempio seguente.
-                                                <iframe id="vr-foto" src="vr/foto-vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe> Inoltre possiamo creare tutto ciò che vogliamo utilizzando la libreria Three.js
-                                                che ci mette a disposizione innumerevoli funzioni javascript. Il sottostante frame è stato creato con Three.js ed è sensibile al movimento del mouse nel frame.
-                                                <button class="blog-btn-espandi" type="button" onclick="planet2()"> Change Earth</button>
-                                                <button class="blog-btn-espandi" type="button" onclick="planet3()"> Change Earth and Mars</button>
-                                                <div id="globo"></div>
 
-                                                Vediamo nello specifico come creare immagini statiche o animate con Three.js. Innanzi tutto bisogna definire in uno script gli oggetti SCENE, CAMERA e RENDERER<br> L'oggetto SCENE identifica lo spazio dove
-                                                inserire altri oggetti mentre l'oggetto CAMERA definisce il modo di visualizzazione e l'oggetto RENDERER definisce la pubblicazione delle immagini create. Naturalmente poi per oggetto che creiamo ci sono
-                                                diversi parametri da inserire come poi vedremo negli esempi successivi. Altri oggetti da definire sono GEOMETRY come ad esempio box o sfere o altre figure geometriche, MATERIAL oggetti da inserire da complemento
-                                                come ad esempio il parametro color e MESH.Quest'ultimo prende GEOMETRY e ci applica MATERIAL. Poi dobbiamo prendere l'oggetto creato con MESH e lo aggganciamo a SCENE con il comando Camera.position.z = 5
-                                                -> assegniamo una posizione diversa per non assegnare a tutti le coordinate(0,0,0) a questo punto basta fare il RENDERER per visualizzare a video l'oggetto creato oppure se vogliamo una animazione la inseriamo
-                                                contestualmente. Animate per creare una animazione e renderer.render(scene,camera) per visualizza l'oggetto creato senza animazione. Ora vediamo nello specifico l'html utilizzato.
-                                                <img src="three/torus.png" width="100%" height="500px" alt="javascript command"> <br> e questo è il risultato di questo semplice script in javascript <br>
-                                                <div id="terra1"></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> -->
-                                <div id="vr-eng">
-                                    <h3 class="blog-titolo" style="padding-top:20px">The virtual reality </h3>
-                                    <div class="col s12 m12 l3" id="vr-testa">
-                                        <img data-src="foto/vr-terra.png" id="vr-spazio" class="spazioimg" width="100%" height="250px" alt="images virtual box">
-                                    </div>
-                                    <div class="col m12 l9" id="vr-coda">
-                                        <div classe="blog-img-principale">
-                                            <p class="caratter-text">
-                                                In this post we analyze the virtual reality and specifically of the Web Framework A-FRAME. We use A-FRAME for inserting image into web pages. To do this we can use resources already created or create new with special library. In below window there is
-                                                an example. </p>
-
-                                            <iframe id="vr-frame" src="vr/vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe>
-                                            <a href="#Aframe-inizio" class="blog-btn-espandi" id="blog-frame-espandi" onclick="espandiBlog2()"> Read more </a>
-                                            <div class="caratter-text" id="blog-btn-espandi2">
-                                                Now, the library available
-                                                <br> insert into html page the script :
-                                                <p class="terminal">
-                                                    https://aframe.io/releases/0.6.1/aframe.min.js
-                                                </p>
-                                                Then you must insert the others library for create new images or for use old images :
-                                                <p class="terminal">
-
-                                                    https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js
-                                                    https://unpkg.com/aframe-extras.ocean@%5E3.5.x/dist/aframe-extras.ocean.js
-                                                </p>
-                                                If you want use images already available, you must insert the following code :
-                                                <img data-src="vr/vr1.png" width="100%" height="100px" alt="comandi vr"> We can also include 360 degree photos. Below there is an example:
-                                                <iframe id="vr-foto" data-src="vr/foto-vr.html" allowfullscreen="no" allowvr="yes" scrolling="no" width="100%" height="400px"></iframe> Furthermore, with the javascript library Three.Js we can create any object.
-                                                The frame below, for example, is been created with Three.js and it moves with the scroll of the mouse. Click on the following button for change the images into the frame.
-
-
-                                                <button class="blog-btn-espandi" type="button" onclick="planet2()"> Change Earth</button>
-
-                                                <button class="blog-btn-espandi" type="button" onclick="planet3()"> Change Earth and Mars</button>
-
-                                                <div id="globo"></div>
-
-                                                Now, we see how create static or animated images with Three.js. First of all, we have need to define into an script the objects SCENE, CAMERA and RENDERER.
-
-                                                <br> The SCENE object identifies the space where will be insert the others objects, while the object CAMERA defines how to view the images and the object RENDERER defines how publicat the images created.
-                                                Naturally, for every object, there will be others parameter to insert how we'll see in the later examples. Others objects to define are GEOMETRY (as box and spheres or the geometry figures), MATERIAL (complement
-                                                object as, for example , color parameter) and MESH. This MESH takes object GEOMETRY and apply to it the object MATERIAL. Then we must take the object created with MESH and we catch it with SCENE with the
-                                                command Camera.position.z = 5 attention to assign a different position at the objects, otherwise everyone has the coordinate (0,0,0). Now we must do the RENDERER for viewing into the video the object created
-                                                or, if we need an animation, we can insert it simultaneously. Animate for create an animation and RENDERER. RENDER(scene, camera) for view created object without animation. In the image below we see the
-                                                html code used.
-
-
-                                                <img data-src="three/torus.png" width="100%" height="500px" alt="javascript command">
-                                                <br> This is the result of the same code in javascript.
-                                                <br>
-                                                <div id="terra1"></div>
-
-
-
-
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="blog" id="bloggo">
             <div id="blog-inizio" style="margin-bottom:15px">
 
@@ -3292,6 +3178,14 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
         </a-scene>
     </section>
 -->
+
+    <div id="virtual" class="blog-principale" style="height: 350px !important">
+
+     <a href="https://www.mecbar.com/virtual.html">
+    <img src="foto/virtual.png" width="100%" height="350px">
+    </a>
+
+    </div>
 
         <div id="Adev"  class="tbox13">
             <div> </div>   
