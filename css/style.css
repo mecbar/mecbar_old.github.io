@@ -9,6 +9,92 @@
     padding: 0px;
  }
 
+.geth {
+    height: 340px;
+    width: 100%;
+    box-sizing: border-box;
+    background: linear-gradient(115deg,#f1e315 ,#cf6706ed ,#f30957);
+    padding:10%;  
+    font-size: 25px;
+    border: 3px solid black;
+}
+.geth1 {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid black;
+    background: linear-gradient(15deg,#0064a7 0,#004777 100%);
+   padding:10%;  
+}
+.geth2 {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: 3px solid black;
+    background: linear-gradient(315deg,#f1e315 ,#cf6706ed ,#f30957);
+   padding:10%;  
+   text-align: center;
+}
+.geth:hover {
+   background: linear-gradient(115deg,#0064a7 0,#004777 100%);
+  
+}
+.geth1:hover {
+    background: linear-gradient(100deg,#f1e315 ,#cf6706ed ,#f30957);
+ }
+ .geth2:hover {
+    background: linear-gradient(210deg,#0064a7 0,#004777 100%);
+ }
+
+ .SolBox {
+    height: auto;
+    width: 90%;
+    box-sizing: border-box;
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+    position: relative;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    color:rgb(19, 15, 228);
+    line-height: 20px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:20px;
+ }
+.SolBox:hover {
+    border-radius: 25px;
+    box-shadow: 1px 5px 15px 3px rgb(236, 123, 123);  
+}
+
+.commento {
+    padding-left:5px;
+    color: black !important;
+    font-size: 13px !important;
+}
+.commento2 {
+    padding-left:25px;
+    color: black !important;
+    font-size: 13px !important;
+}
+ .terminal_mini {
+    height: auto;
+    width: max-content;
+    box-sizing: border-box;
+    border-radius: 25px;
+    box-shadow: 1px 5px 15px 3px rgb(143, 113, 113);
+    margin-bottom: 30px !important;
+    margin-top: 30px !important;
+    position: relative;
+    overflow: hidden;
+    background-color: #000;
+    color:#fff;
+    line-height: 20px;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding:20px;
+  
+}
+
  .teleport {
     font-size: 25px;
     font-family:  'Trebuchet MS', sans-serif;
@@ -27,6 +113,50 @@
     height: auto;
    
  }
+
+ .teleport3 {
+    background-size: 100% 3px;
+    color:#1000f0;
+    font-size: 35px;
+    margin-left:20%;
+    margin-right:20%;
+    text-align: center;
+    line-height: 100px;
+
+ }
+ 
+
+ .teleport3:hover {
+    position: relative;
+    background-image: linear-gradient(0deg,#ff623b 0,#f00e59c7 100%);
+    background-position: 100% 100%;
+    background-size: 0 3px;
+    background-repeat: no-repeat;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+ }
+
+ .teleport3:after {
+    content: '';
+    display: block;
+    border-bottom: 3px solid rgba(255, 102, 0, 0.692);
+   /* width: 0;  */
+    width:0;
+    position: relative;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+
+  }
+  
+  .teleport3:hover:after { 
+    width: 100%;
+   
+    left:0;
+    -webkit-transition: 1s ease;
+    transition: 1s ease;
+  }
+
+
 .boxGo {
     font-size: 25px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -41,11 +171,49 @@
     text-align: center;
     text-decoration: inherit;
     display: flex;
-    font-size: 18px;
+    /* font-size: 18px; */
     width: 100%;
     height: 350px;
 
 }
+
+.boxex {
+    color:#fff;
+    background-color: #000;
+    font-size: 25px;
+    border-bottom-right-radius: 9%;
+    margin: 50px;
+    padding:5%;
+    box-shadow: 3px 3px orange, -1em 0 .4em rgb(53, 59, 146);
+     }
+ .boxxx {
+    color:#ffffff;
+ font-size: 25px;
+ border-bottom-right-radius: 9%;
+ margin: 50px;
+ padding:5%;
+ box-shadow: 3px 3px rgb(44, 41, 34), -1em 0 .4em rgb(53, 59, 146);
+ background: linear-gradient(55.68deg,#f18300 0,#df5534 84.89%,#f96b00 100%);
+  }
+  .tot {
+    font-size: 23px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding:50px;
+ 
+ }
+.boxGet {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    box-sizing: border-box;
+    font-size: 18px;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    width: 100%;
+    grid-gap: 2%;
+    grid-row-start: initial;
+    grid-auto-rows: min-content;
+}
+
 
 .boxGo div a {
     font-size:40px;
@@ -1161,6 +1329,31 @@ text-align: center;
             vertical-align: middle;
         }
 
+        .tasto-app {
+
+            font-size: 21px !important;
+            writing-mode: tb-rl;
+            white-space: nowrap;
+            position: fixed;
+            top: 230px;
+            right: 0px;
+            width : auto !important;
+            transition: all 0.1s ease-in;
+            transform-origin: 0% 0%;
+            padding-top: 25px;
+            height: 121px !important;
+            padding-right: 3px;
+            padding-left: 3px;
+            background: rgb(4, 8, 255);
+            color: white;
+            border-top-left-radius: 0%;
+            border-top-right-radius: 0%;
+            border-bottom-left-radius: 0%;
+            border-bottom-right-radius: 0%;
+            cursor: pointer;
+            vertical-align: middle;
+        }
+
         .mecbar {
             color: -moz-linear-gradient(144deg, rgba(196,0,0,1) 0%, rgba(0,0,0,1) 100%) !important; /* ff3.6+ */
             color: -webkit-gradient(linear, left top, right bottom, color-stop(0%, rgba(0,0,0,1)), color-stop(100%, rgba(196,0,0,1))) !important; /* safari4+,chrome */
@@ -1541,6 +1734,24 @@ text-align: center;
         }
         
         .button:hover {
+            box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .button2 {
+            background-color: rgb(255, 255, 255);
+            border-radius: 25px;
+            border: 3px solid black;
+            color: rgb(238, 15, 15);
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 15px;
+            margin: 10px 10px;
+            cursor: pointer;
+        }
+        
+        .button2:hover {
             box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
         }
         
@@ -2574,6 +2785,14 @@ text-align: center;
             margin-top: 0px;
         }
         
+
+        .pos {
+            float: right !important;
+         }
+         .pos2 {
+            float: left !important;
+         }
+         
         .posmenu {
             position: relative;
             margin-top: 5px;
