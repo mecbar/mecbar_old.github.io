@@ -29,9 +29,21 @@
 
 
 </head>
-
 <body>
-    
+   <style>
+      table,
+        th,
+        td  {
+         background-color: rgb(252, 192, 82);
+         width:auto !important;
+         border-spacing: 2px !important;
+         border-color: darkred;
+         text-align: center !important;
+         padding:5px !important;
+         vertical-align: middle !important;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+      }
+   </style>  
     <nav>
         <li class="nav-wrapper back-home" id="head">
             <a href="http://www.mecbar.com/" class="aabrand-logo mecbar">
@@ -368,21 +380,71 @@
     @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
   .mini {
             height: auto;
-            width: auto;
+            width: max-content;
             box-sizing: border-box;
-            border-radius: 5px;
-            box-shadow: 1px 5px 15px 3px black;
-            margin-bottom: 10px !important;
+            border-radius: 25px;
+            box-shadow: 1px 5px 15px 3px rgb(143, 113, 113);
+            margin-bottom: 30px !important;
+            margin-top: 30px !important;
             position: relative;
-            top: 20px;
             overflow: hidden;
             background-color: #000;
             color:#fff;
             line-height: 20px;
-            font-size: 15px;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
             padding:20px;
           
   }
+
+  .arra {
+            height: auto;
+            width: auto;
+            box-sizing: border-box ;
+            border:  1px solid black;
+            margin-bottom: 30px !important;
+            margin-top: 30px !important;
+            margin-left: 35% !important;
+            position: relative;
+           /* background-color: rgba(248, 227, 105, 0.616);*/
+            color:rgb(206, 82, 10);
+            line-height: 20px;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding:20px;
+
+  }
+  .bb1 {
+            height: auto;
+            width: auto;
+            box-sizing: border-box;
+            border-top: 3px solid #c6126a;
+            border-left: 3px solid #100dca;
+            position: relative;
+            color:rgb(7, 7, 7);
+            line-height: 20px;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding:30px;
+
+  }
+
+  .bb2 {
+            height: auto;
+            width: auto;
+            box-sizing: border-box;
+            border-right: 3px solid #c6126a;
+            border-top: 3px solid #100dca;
+            position: relative;
+            color:rgb(10, 10, 10);
+            line-height: 20px;
+            font-size: 18px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            padding:30px;
+
+  }
+
+
   .terminal22 {
      padding-left:70px;
      }
@@ -402,6 +464,14 @@
 .posse ul li a {
     font-size: 13px;
  }
+.pos {
+   float: right !important;
+}
+.pos2 {
+   float: left !important;
+}
+
+
  @media only screen and (max-width: 600px) {
  .testo {
    font-size : 12px;
@@ -418,34 +488,1751 @@
 
    <h1 class="center">Pillole di Python 2<h1> 
 
- <div class="row">
-   <div class="col s12 m12 l10">
-      <h3 id="zero" class="center color scrollspy">Logging</h3>
-      <div class="testo">
-    Per avere un log del nostro programma possiamo usare il modulo logging fornito da Python. Nell'immagine sottostante 
-    vediamo come inserire i messaggi del log solo in un file. <br>
-    <img src="foto/log1.png" width="100%" height="200px">
-    
-    
+<div class="row">
 
+   <div class="col hide-on-small-only l2 pos2">
+      <div class="posmenu posse pospy">
+          <!--  <ul class="section table-of-contents">  -->
+          <ul class="my_menu">
+            <li><a href="#uno">Logging</a></li>
+              <li><a href="#due">Methods</a></li>
+              <li><a href="#tre">Debugger</a></li>
+              <li><a href="#quattro">Pandas</a></li>
+              <li><a href="#cinque">Numpy</a></li>
+            </div>
+          </ul>
+   </div>
+
+
+   <div class="col pos s12 m12 l10">
+      <h3 id="uno" class="center color scrollspy">Logging</h3>
+      <div class="testo">
+      Per avere un log del nostro programma possiamo usare il modulo logging fornito da Python. Nell'immagine sottostante 
+      vediamo come inserire i messaggi del log solo in un file. <br>
+      <img src="foto/log1.png" width="100%" height="200px">
+   
+      </div>
+   </div>
+   <div class="col pos s12 m12 l10">
+      <h3 id="due" class="center color scrollspy">Methods</h3>
+      <div class="testo">
+      Per usare i metodi all'interno di una class ci sono 2 diversi modi di operarare come si evince dalle immagini sottostanti, 
+      uno è quello di dichiarare il metodo con la property Staticmethod oppure passare il parametro self al metodo stesso altrimenti abbiamo l'errore 
+       riprodotto nella Figura 1. <br> <br>
+       <b>Figura 1 </b><br><br>
+      <img src="foto/pymetod1.png"  width="100%" height="350px" alt="Python Methods"><br>
+      <b>Figura 2</b><br><br>
+        <img src="foto/pymetod2.png"  width="100%" height="350px" alt="Python Methods">
+      </div>
+   </div>
+ 
+   <div class="col pos  s12 m12 l10">
+      <h3 id="tre" class="center color scrollspy"> DEBUGGER </h3>
+      <div class="testo">
+         Con PDB vediamo come è possibile sapere il valore dei qualsiasi variabile all'interno del programma ed è 
+         possibile interrompere e far ripartire l'esecuzione dello stesso. PDB fa parte della libreria di python.
+         Inserire questa riga di comando nel punto in cui si vuole interrompere programma ed entrare in modalità debugger.<br>
+         <br>
+         <div class="terminal"><br>
+         <code>import pdb; pdb.set_trace()</code> <br><br><br>
+         Dalla versione Python 3.7 è possibile fare la stessa cosa inserendo solo <br><br>
+         <code>breakpoint()</code><br><br><br>
+         Mentre da CLI si può inserire il comando<br><br>
+         <code>python -m pdb nome_programma.py [argument1 argument2 ....]</code><br>
+         <br> <br>
+         </div>
+         <br>
+         Di seguito i principali comandi disponibili : <br> <br>
+         <b>></b> riga di comando già eseguita<br>
+            <b> -></b> riga di comando di prossima esecuzione<br>
+         <b> b </b> breakpoint  <br>
+         <b> b </b> arguments - setta un nuovo breakpoint <br>
+         <b> cl argument</b>  - cancella il breakpoint  <br>
+         <b> enable 1 </b>- riabilita breakpoint 1 <br>
+         <b> disable </b> - disabilita breakpoint  <br>
+         <b> c </b> continua fino a raggiungere un breakpoint <br>
+         <b> p nome variabile </b> - print contenuto variabile <br>
+         <b> pp nome variabile </b> - print contenuto variabile <br>
+         <b> display  nome variabile </b> - print contenuto variabile  <br>
+         <b> n </b>- step - va avanti nei comandi ma solo all'interno della funzione corrente   <br>
+         <b> s </b>- step - prosegue esecuzione anche all'interno di una funzione chiamata <br>
+         <b> unt </b>- esecuzione continua si ferma se la line è maggiore di quella in esecuzione <br>
+         <b> unt numero</b> - esecuzione continua si ferma se la line è maggiore o uguale di quella in esecuzione <br>
+         <b> q </b> uscire <br><br>
+         <div class="terminal">
+         <code>#!/usr/bin/env python3<br>
+            <br>
+            import pdb;<br>
+            msg = "Hello World"<br>   
+            pdb.set_trace()<br>
+            print(f'messaggio  = { msg}')<br>
+            msg = "Hi everyone"<br>
+            breakpoint()<br>
+            print(f'messaggio  = { msg}')</code>
+         </div>
+            <br>  <br>
+            Ora vediamo l'esecuzione del programma sopra riportato:<br><br>
+            <div class="terminal">
+               xxxxx:~$ ./provapdb.py<br>
+               > /home/mecbar/provapdb.py(6)<module>()<br>
+               -> print(f'messaggio  = { msg}')<br>
+               (Pdb) p msg<br>
+               'Hello World'<br>
+               (Pdb) c<br>
+               messaggio  = Hello World<br>
+               > /home/mecbar/provapdb.py(9)<module>()<br>
+               -> print(f'messaggio  = { msg}')<br>
+               (Pdb) p msg<br>
+               'Hi everyone'<br>
+               (Pdb) c<br>
+               messaggio  = Hi everyone<br>
+               xxxxx:~$ <br>
+            </div>
 
       </div>
+  </div>
+  <div class="col pos  s12 m12 l10">
+      <h3 id="quattro" class="center color scrollspy"> PANDAS </h3>
+      <div class="testo">
+         Con la libreria Pandas possiamo utilizzare le proprietà dei Dataframe per manipolare ed 
+         elaborare i dati che possono essere importati anche da file ad esempio i file csv.<br>
+         La prima struttura che analizziamo sono le Series(one-dimensional labeled array) che possono contenere
+         ogni tipo di dato.<br><br>
+         SERIES :<br><br>
+         serie1  = pd.Series(data, index=index)<br>
+         data può essere dictionary, scalar o ndarray<br>
+         Nell'esempio sottostante inseriamo un ndarray in una serie.<br><br>
+         <div class="terminal">import pandas as pd<br>
+         import numpy as np<br>
+         myarray = np.array([1,2,3,4,5])<br>
+         serie1 = pd.Series(myarray, index=['a', 'b', 'c', 'd', 'e'])</div>
+         <br><br>
+         serie1 è uguale :<br>
+         <table>
+            <tr>
+               <th>a</th>
+               <th>1</th>
+            </tr>
+         <tr>
+            <th>b</th>
+            <th>2 </th>
+         </tr>
+         <tr>
+            <th>c</th>
+            <th>3</th>
+         </tr>
+         <tr>
+            <th>d</th>
+            <th>4</th>
+         </tr>
+         <tr>
+            <th>e</th>
+            <th>5</th>
+         </tr>
+         </table>
+         dtype: int64<br>
+         <br>
+         <span class="terminal">
+         dict1  = {'b': 2, 'a': 1, 'c': 3, 'd':4,'e':5}</span>
+         <br><br>
+         pd.Series(dict1)<br>
+         <br>
+         <table>
+            <tr>
+               <th>b</th>
+               <th>2</th>
+            </tr>
+         <tr>
+            <th>a</th>
+            <th>1 </th>
+         </tr>
+         <tr>
+            <th>c</th>
+            <th>3</th>
+         </tr>
+         <tr>
+            <th>d</th>
+            <th>4</th>
+         </tr>
+         <tr>
+            <th>e</th>
+            <th>5</th>
+         </tr>
+         </table>
+         dtype: int64<br>
+         <br>
+         SERIES FROM SCALAR :<br>
+         <br>
+         <span class="terminal">
+         serie2 = pd.Series((100,200,300,400,500), index=['a', 'b', 'c', 'd', 'e'])
+         </span>
+         <br><br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>a</th>
+               <th>100</th>
+            </tr>
+         <tr>
+            <th>b</th>
+            <th>200 </th>
+         </tr>
+         <tr>
+            <th>c</th>
+            <th>300</th>
+         </tr>
+         <tr>
+            <th>d</th>
+            <th>400</th>
+         </tr>
+         <tr>
+            <th>e</th>
+            <th>500</th>
+         </tr>
+         </table>
+         dtype: int64<br>
+         <br>
+         SLICING :<br>
+         <br>
+         <div class="terminal">
+         serie2[0]   Out 100<br>
+         serie2['c'] Out[: 300<br>
+         serie2['c'] = 350   <br>
+         serie2[:4]
+         </div>
+         <br><br>
+         Out:<br>
+         <table>
+            <tr>
+               <th>a</th>
+               <th>100</th>
+            </tr>
+         <tr>
+            <th>b</th>
+            <th>200 </th>
+         </tr>
+         <tr>
+            <th>c</th>
+            <th>350</th>
+         </tr>
+         <tr>
+            <th>d</th>
+            <th>400</th>
+         </tr>
+         </table>
+         dtype: int64<br>
+         <br>
+         <span class="terminal">
+         'b' in serie2   Out: True </span>
+         <br><br>
+         <span class="terminal">
+         serie2[serie2 > serie2.mean()]</span><br><br>
+         Out:<br>
+         <table>
+            <tr>
+               <th>c</th>
+               <th>350</th>
+            </tr>
+         <tr>
+            <th>d</th>
+            <th>400 </th>
+         </tr>
+         <tr>
+            <th>e</th>
+            <th>500</th>
+         </tr>
+         </table>
+         dtype: int64<br>
+         <br>
+         <span class="terminal">
+         serie3 = serie2 * 3</span>
+         <br>
+         <br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>a</th>
+               <th>300</th>
+            </tr>
+         <tr>
+            <th>b</th>
+            <th>600 </th>
+         </tr>
+         <tr>
+            <th>c</th>
+            <th>1050</th>
+         </tr>
+         <tr>
+         <th>d</th>
+         <th>1200</th>
+         </tr>
+         <tr>
+            <th>e</th>
+            <th>1500</th>
+            </tr>
+         </table>
+         dtype: int64<br>
+         <br>
+         <span class="terminal">
+         serie3 = serie3[:2] + serie2[:2]</span>
+         <br><br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>a</th>
+               <th>400</th>
+            </tr>
+         <tr>
+            <th>b</th>
+            <th>800 </th>
+         </tr>
+         </table>
+         dtype: int64<br>
+         <br><br>
+         DATAFRAME:<br><br>
+         Un Dataframe è un 2-dimensional labeled data structure e può contenere :<br>
+         Dictionary of 1D ndarrays, lists, dictionary o Series <br>
+         2-D numpy.ndarray<br>
+         Structured or record ndarray<br>
+         un altro DataFrame<br>
+         <br>
+         Vediamo degli esempi di cosa possiamo fare:<br><br>
+         DATAFRAME FROM SERIES<br><br>
+         <div class="terminal">
+         df1= {'one': serie1,<br>
+            'two': serie2,<br>
+            'tre': serie3}<br>
+            <br>
+         df = pd.DataFrame(df1)<br>
+         </div><br>
+         Out: <br>
+         <table>
+            <tr>
+               <th></th>
+               <th>one</th>
+               <th>two</th>
+               <th>three</th>
+            </tr>
+         <tr>
+            <th>a </th>
+            <th>1 </th>
+            <th>100</th>
+            <th>400.0</th>
+         </tr>
+         <tr>
+            <th>b </th>
+            <th>2 </th>
+            <th>200 </th>
+            <th>800.0</th>
+         </tr>
+         <tr>
+            <th>c</th>
+            <th>3</th>
+            <th>350 </th>
+            <th>NaN</th>
+         </tr>
+         <tr>
+            <th>d</th>
+            <th>4</th>
+            <th>400</th>
+            <th>NaN</th>
+         </tr>
+         <tr>
+            <th>e</th>
+            <th>5</th>
+            <th>500</th>
+            <th>NaN</th>
+         </tr>
+         </table><br><br>
+         DATAFRAME FROM DICTIONARY :<br><br>
+         <div class="terminal">
+         df_from_dict = [{'alfa': 1, 'beta': 2,'a3':3 }, {'alfa': 100, 'beta': 101, 'gamma': 105}]<br>
+         df = pd.DataFrame(df_from_dict)</div>
+         <br>
+         Out:<br>
+         <table>
+            <tr>
+               <th></th>
+               <th>alfa</th>
+               <th>beta</th>
+               <th>a3</th>
+               <th>gamma</th>
+            </tr>
+         <tr>
+            <th>0 </th>
+            <th>1 </th>
+            <th>2 </th>
+            <th>3.0</th>
+            <th>Nan</th>
+         </tr>
+         <tr>
+            <th>1 </th>
+            <th>100 </th>
+            <th>101 </th>
+            <th>Nan</th>
+            <th>105.0</th>
+         </tr>
+         <tr>
+         
+         </table>
+         <br>
+         DATAFRAME FROM FILE :<br><br>
+         <span class="terminal">
+         df = pd.read_csv('path/nome_file') </span> <br><br>
+         Out:<br>
+         <table>
+            <tr>
+               <th></th>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+            </tr>
+         <tr>
+            <th>0 </th>
+            <th>1 </th>
+            <th>12 </th>
+            <th>33</th>
+         </tr>
+         <tr>
+            <th>1 </th>
+            <th>2 </th>
+            <th>1 </th>
+            <th>33 </th>
+         </tr>
+         <tr>
+            <th>2 </th>
+            <th>3 </th>
+            <th>12 </th>
+            <th>33</th>
+         </tr>
+         <tr>
+            <th>3 </th>
+            <th>4</th>
+            <th>1</th>
+            <th>1 </th>
+         </tr>
+         <tr>
+            <th>4</th>
+            <th>5</th>
+            <th>12</th>
+            <th>2 </th>
+         </tr>
+         </table>
+         <br>
+         SELECT DATA FROM COLUMN:<br><br>
+         <span class="terminal">
+         df1=df['alfa']  // otteniamo una series </span> <br>
+         <br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>0</th>
+               <th>1</th>
+            </tr>
+            <tr>
+               <th>1</th>
+               <th>2</th>
+            </tr>
+            <tr>
+               <th>2</th>
+               <th>3</th>
+            </tr>
+            <tr>
+               <th>3</th>
+               <th>4</th>
+            </tr>
+            <tr>
+               <th>4</th>
+               <th>5</th>
+            </tr>
+         </table>
+         Name: alfa, dtype: int64<br>
+         <br>
+         SELECT DATA FROM ROW:<br><br>
+         Prima carico i  dati da file con indice presente nel file csv.<br>
+         <span class="terminal">
+         df = pd.read_csv('/path/data.csv', index_col='index')</span> <br>
+         <br>             
+         <table>
+            <tr>
+               <th>index</th>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+            </tr>
+         <tr>
+            <th>a </th>
+            <th>1 </th>
+            <th>12 </th>
+            <th>33</th>
+         </tr>
+         <tr>
+            <th>b </th>
+            <th>2 </th>
+            <th>1 </th>
+            <th>33 </th>
+         </tr>
+         <tr>
+            <th>c </th>
+            <th>3 </th>
+            <th>12 </th>
+            <th>33</th>
+         </tr>
+         <tr>
+            <th>d </th>
+            <th>4</th>
+            <th>1</th>
+            <th>1 </th>
+         </tr>
+         <tr>
+            <th>e </th>
+            <th>5</th>
+            <th>12</th>
+            <th>2 </th>
+         </tr>
+         </table>
+         <br><span class="terminal">
+         s1 = df.loc['a']  //loc[label row] out = Series</span> <br><br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>alfa</th>
+               <th>1</th>
+            </tr>
+            <tr>
+               <th>gamma</th>
+               <th>12</th>
+            </tr>
+            <tr>
+               <th>beta</th>
+               <th>33</th>
+            </tr>
+         </table>
+         Name: a, dtype: int64<br>
+         <br>
+         <span class="terminal">
+         s2 = df.iloc[2]  //iloc[number row] out = Series</span> <br> <br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>alfa</th>
+               <th>3</th>
+            </tr>
+            <tr>
+               <th>gamma</th>
+               <th>12</th>
+            </tr>
+            <tr>
+               <th>beta</th>
+               <th>33</th>
+            </tr>
+         </table>
+         Name: c, dtype: int64<br>
+         <br>
+         <span class="terminal">df4 = df[2:4]  //slice out = DataFrame</span> <br> <br>
+         Out: <br>            
+         <table>
+            <tr>
+               <th>index</th>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+            </tr>
+            <tr>
+               <th>c</th>
+               <th>3</th>
+               <th>12</th>
+               <th>33</th>
+            </tr>
+            <tr>
+               <th>d</th>
+               <th>4</th>
+               <th>1</th>
+               <th>1</th>
+            </tr>
+         </table>
+         <br>
+         QUERY:<br><br>
+         Select con diversi parametri e con il metodo query<br>
+         <br>
+         <span class="terminal">
+         df5 = df[(df['gamma'] > 10)] //select by parameter out = DataFrame</span> <br> <br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>index</th>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+            </tr>
+            <tr>
+               <th>a</th>
+               <th>1</th>
+               <th>12</th>
+               <th>33</th>
+            </tr>
+            <tr>
+               <th>c</th>
+               <th>3</th>
+               <th>12</th>
+               <th>33</th>
+            </tr>
+            <tr>
+               <th>e</th>
+               <th>5</th>
+               <th>12</th>
+               <th>2</th>
+            </tr>
+         </table>
+
+         <br>
+         Select con parametri multipli:<br>
+         <br>
+         <span class="terminal">
+         df6 = df[(df['alfa'] == 1) & (df['gamma'] == 12)]  //select multiple parameter </span><br><br> 
+         Out: <br>
+         <table>
+            <tr>
+               <th>index</th>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+            </tr>
+            <tr>
+               <th>a</th>
+               <th>1</th>
+               <th>12</th>
+               <th>33</th>
+            </tr>
+         </table>
+         <br>
+         <span class="terminal">
+         df.query('(alfa == 1) & (gamma == 12)')</span><br> <br> 
+         Out: <br>
+         <table>
+            <tr>
+               <th>index</th>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+            </tr>
+            <tr>
+               <th>a</th>
+               <th>1</th>
+               <th>12</th>
+               <th>33</th>
+            </tr>
+         </table>
+         <br>
+         <span class="terminal">
+         df[::3] </span><br><br> 
+         Out: <br> 
+         <table>
+         <tr>
+            <th>index</th>
+            <th>alfa</th>
+            <th>gamma</th>
+            <th>beta</th>
+         </tr>
+         <tr>
+            <th>a</th>
+            <th>1</th>
+            <th>12</th>
+            <th>33</th>
+         </tr>
+         <tr>
+            <th>d</th>
+            <th>4</th>
+            <th>1</th>
+            <th>1</th>
+         </tr>
+         </table>
+         <br>
+         <span class="terminal">df[1:3]  //da 1 a 3</span><br><br>
+         Out: <br>    
+         <table>
+            <tr>
+               <th>index</th>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+            </tr>
+            <tr>
+               <th>b</th>
+               <th>2</th>
+               <th>1</th>
+               <th>33</th>
+            </tr>
+            <tr>
+               <th>c</th>
+               <th>3</th>
+               <th>12</th>
+               <th>33</th>
+            </tr>
+         </table>
+         <br>
+         <span class="terminal">df3 & df2</span><br><br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>alfa</th>
+               <th>1</th>
+            </tr>
+            <tr>
+               <th>gamma</th>
+               <th>12</th>
+            </tr>
+            <tr>
+               <th>beta</th>
+               <th>33</th>
+            </tr>
+         </table>
+         dtype: int64<br>
+         <br>
+         <span class="terminal">df3 | df2</span> <br><br>
+         Out: <br>
+         <table>
+            <tr>
+               <th>alfa</th>
+               <th>3</th>
+            </tr>
+            <tr>
+               <th>gamma</th>
+               <th>12</th>
+            </tr>
+            <tr>
+               <th>beta</th>
+               <th>33</th>
+            </tr>
+         </table>
+         dtype: int64<br>
+         <br>
+         OPERAZIONI MATEMATICHE NEI DATAFRAME:<br><br>
+         <span class="terminal">df - df.loc['a']</span> <br><br>
+         <table>
+            <tr>
+               <th>index</th>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+            </tr>
+         <tr>
+            <th>a </th>
+            <th>0 </th>
+            <th>0 </th>
+            <th>0 </th>
+         </tr>
+         <tr>
+            <th>b </th>
+            <th>1 </th>
+            <th>-11 </th>
+            <th>0 </th>
+         </tr>
+         <tr>
+            <th>c </th>
+            <th>2 </th>
+            <th>0 </th>
+            <th>0 </th>
+         </tr>
+         <tr>
+            <th>d </th>
+            <th>3</th>
+            <th> -11</th>
+            <th>-32 </th>
+         </tr>
+         <tr>
+            <th>e </th>
+            <th>4</th>
+            <th> 0</th>
+            <th>-31 </th>
+         </tr>
+         </table>
+         <br>
+         <span class="terminal">df + df.iloc[3]</span> <br><br>
+         <table>
+            <tr>
+            <th>index</th>
+            <th>alfa</th>
+            <th>gamma</th>
+            <th>beta</th>
+            </tr>
+            <tr>
+               <th> a</th>
+               <th> 5</th>
+               <th>13 </th>
+               <th>34 </th>
+            </tr>
+            <tr>
+               <th>b </th>
+               <th>6 </th>
+               <th>2 </th>
+               <th>34 </th>
+            </tr>
+            <tr>
+               <th>c </th>
+               <th>7 </th>
+               <th> 13</th>
+               <th> 34</th>
+            </tr>
+            <tr>
+               <th>d </th>
+               <th> 8</th>
+               <th> 2</th>
+               <th>2 </th>
+            </tr>
+            <tr>
+               <th> e</th>
+               <th>9</th>
+               <th>13 </th>
+               <th>3 </th>
+            </tr>
+         </table>        
+         <br>
+         Principali metodi applicabili ad un DataFrame :<br>
+         <br>
+         'abs',
+         'add',
+         'add_prefix',
+         'add_suffix',
+         'agg',
+         'aggregate',
+         'alfa',
+         'align',
+         'all',
+         'any',
+         'append',
+         'apply',
+         'applymap',
+         'asfreq',
+         'asof',
+         'assign',
+         'astype',
+         'at',
+         'at_time',
+         'attrs',
+         'axes',
+         'beta',
+         'between_time',
+         'bfill',
+         'bool',
+         'boxplot',
+         'clip',
+         'columns',
+         'combine',
+         'combine_first',
+         'convert_dtypes',
+         'copy',
+         'corr',
+         'corrwith',
+         'count',
+         'cov',
+         'cummax',
+         'cummin',
+         'cumprod',
+         'cumsum',
+         'describe',
+         'diff',
+         'div',
+         'divide',
+         'dot',
+         'drop',
+         'drop_duplicates',
+         'droplevel',
+         'dropna',
+         'dtypes',
+         'duplicated',
+         'empty',
+         'eq',
+         'equals',
+         'eval',
+         'ewm',
+         'expanding',
+         'explode',
+         'ffill',
+         'fillna',
+         'filter',
+         'first',
+         'first_valid_index',
+         'floordiv',
+         'from_dict',
+         'from_records',
+         'gamma',
+         'ge',
+         'get',
+         'groupby',
+         'gt',
+         'head',
+         'hist',
+         'iat',
+         'idxmax',
+         'idxmin',
+         'iloc',
+         'index',
+         'infer_objects',
+         'info',
+         'insert',
+         'interpolate',
+         'isin',
+         'isna',
+         'isnull',
+         'items',
+         'iteritems',
+         'iterrows',
+         'itertuples',
+         'join',
+         'keys',
+         'kurt',
+         'kurtosis',
+         'last',
+         'last_valid_index',
+         'le',
+         'loc',
+         'lookup',
+         'lt',
+         'mad',
+         'mask',
+         'max',
+         'mean',
+         'median',
+         'melt',
+         'memory_usage',
+         'merge',
+         'min',
+         'mod',
+         'mode',
+         'mul',
+         'multiply',
+         'ndim',
+         'ne',
+         'nlargest',
+         'notna',
+         'notnull',
+         'nsmallest',
+         'nunique',
+         'pct_change',
+         'pipe',
+         'pivot',
+         'pivot_table',
+         'plot',
+         'pop',
+         'pow',
+         'prod',
+         'product',
+         'quantile',
+         'query',
+         'radd',
+         'rank',
+         'rdiv',
+         'reindex',
+         'reindex_like',
+         'rename',
+         'rename_axis',
+         'reorder_levels',
+         'replace',
+         'resample',
+         'reset_index',
+         'rfloordiv',
+         'rmod',
+         'rmul',
+         'rolling',
+         'round',
+         'rpow',
+         'rsub',
+         'rtruediv',
+         'sample',
+         'select_dtypes',
+         'sem',
+         'set_axis',
+         'set_index',
+         'shape',
+         'shift',
+         'size',
+         'skew',
+         'slice_shift',
+         'sort_index',
+         'sort_values',
+         'squeeze',
+         'stack',
+         'std',
+         'style',
+         'sub',
+         'subtract',
+         'sum',
+         'swapaxes',
+         'swaplevel',
+         'tail',
+         'take',
+         'to_clipboard',
+         'to_csv',
+         'to_dict',
+         'to_excel',
+         'to_feather',
+         'to_gbq',
+         'to_hdf',
+         'to_html',
+         'to_json',
+         'to_latex',
+         'to_markdown',
+         'to_numpy',
+         'to_parquet',
+         'to_period',
+         'to_pickle',
+         'to_records',
+         'to_sql',
+         'to_stata',
+         'to_string',
+         'to_timestamp',
+         'to_xarray',
+         'transform',
+         'transpose',
+         'truediv',
+         'truncate',
+         'tshift',
+         'tz_convert',
+         'tz_localize',
+         'unstack',
+         'update',
+         'values',
+         'var',
+         'where',
+         'xs']<br><br>
+
+         APPEND:<br>
+         <br>
+         <span class="terminal">
+         df.append(df,ignore_index = True)  //append altro DataFrame senza tener conto degli indici</span>
+         <br><br>
+         Out: <br>
+         <table>
+            <tr>
+            <th>index</th>
+            <th>alfa</th>
+            <th>gamma</th>
+            <th>beta</th>
+            </tr>
+            <tr>
+            <td>0</td>
+            <td>1</td>
+            <td>12</td>
+            <td>33</td>
+            </tr>
+            <tr>
+               <td>1</td>
+               <td>2</td>
+               <td>1</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>2</td>
+               <td>3</td>
+               <td>12</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>3</td>
+               <td>4</td>
+               <td>1</td>
+               <td>1</td>
+            </tr>
+            <tr>
+               <td>4</td>
+               <td>5</td>
+               <td>12</td>
+               <td>2</td>
+            </tr>
+            <tr>
+               <td>5</td>
+               <td>1</td>
+               <td>12</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>6</td>
+               <td>2</td>
+               <td>1</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>7</td>
+               <td>3</td>
+               <td>12</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>8</td>
+               <td>4</td>
+               <td>1</td>
+               <td>1</td>
+            </tr>
+            <tr>
+               <td>9</td>
+               <td>5</td>
+               <td>12</td>
+               <td>2</td>
+            </tr>
+
+
+         </table> 
+
+         <br>
+         <span class="terminal">
+         dfapp = df.append(df,ignore_index = False) //append altro DataFrame mantenendo indici
+         </span>
+         <br><br>
+         Out: <br>
+         <table>
+            <tr>
+            <th>index</th>
+            <th>alfa</th>
+            <th>gamma</th>
+            <th>beta</th>
+            </tr>
+            <tr>
+            <td>a</td>
+            <td>1</td>
+            <td>12</td>
+            <td>33</td>
+            </tr>
+            <tr>
+               <td>b</td>
+               <td>2</td>
+               <td>1</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>c</td>
+               <td>3</td>
+               <td>12</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>d</td>
+               <td>4</td>
+               <td>1</td>
+               <td>1</td>
+            </tr>
+            <tr>
+               <td>e</td>
+               <td>5</td>
+               <td>12</td>
+               <td>2</td>
+            </tr>
+            <tr>
+               <td>a</td>
+               <td>1</td>
+               <td>12</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>b</td>
+               <td>2</td>
+               <td>1</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>c</td>
+               <td>3</td>
+               <td>12</td>
+               <td>33</td>
+            </tr>
+            <tr>
+               <td>d</td>
+               <td>4</td>
+               <td>1</td>
+               <td>1</td>
+            </tr>
+            <tr>
+               <td>e</td>
+               <td>5</td>
+               <td>12</td>
+               <td>2</td>
+            </tr>
+
+
+         </table> <br><br>
+         TRASFORMARE DATAFRAME IN ARRAY:<br><br>
+         <span class="terminal">
+         array1 = np.asarray(dfapp)  //creo array con i dati del DataFrame</span>
+         <br><br>
+         Out: <br>
+         array([[ 1, 12, 33],<br>
+               [ 2,  1, 33],<br>
+               [ 3, 12, 33],<br>
+               [ 4,  1,  1],<br>
+               [ 5, 12,  2],<br>
+               [ 1, 12, 33],<br>
+               [ 2,  1, 33],<br>
+               [ 3, 12, 33],<br>
+               [ 4,  1,  1],<br>
+               [ 5, 12,  2]])<br>
+               <br><br>
+
+
+
+         SAVE DATAFRAME AS CSV:<br><br>
+         <span class="terminal">
+         nome_dataFrame.to_csv('path/output.csv', index=False, header=False) </span><br><br>
+         Si può gestire con i parametri se salvare indici e/o header 
+         <br><br>
+      </div>
+   </div>
+   <div class="col pos s12 m12 l10">
+      <h3 id="cinque" class="center color scrollspy"> NUMPY </h3>
+      <div class="testo">
+            Numpy è una libreria molto importante di Python utile per elaborare tramite gli array i dati per il machine learning. 
+            Innanzi tutto importiamo la libreria:<br>
+            <div class="mini">
+            import numpy as np
+            </div>
+            <br>
+            <div class="bb1">
+               CREAZIONE ARRAY<br> <br>
+             <br>
+            <div class="mini">
+            a = np.ones((3,4),dtype=np.int8)  //creare array di tutti 1 <br>
+            </div>
+            <div class="arra">
+            array([[1, 1, 1, 1],<br>
+                   [1, 1, 1, 1],<br>
+                   [1, 1, 1, 1]], dtype=int8)<br>
+            </div>
+            <div class="mini">
+            a[1,1] = 2   //modifichiamo il valore dell'elemento con coordinate 1,1 
+            </div>
+            <div class="arra">
+            array([[1, 1, 1, 1],
+                   [1, 2, 1, 1],
+                   [1, 1, 1, 1]], dtype=int8)
+            </div>
+            <div class="mini">
+            b = np.zeros((3,3,2),dtype=np.int) //crea array di tutti 0
+            </div>
+            <div class="arra">
+            array([[[0, 0],
+                    [0, 0],
+                    [0, 0]],
+                     [[0, 0],
+                     [0, 0],
+                     [0, 0]],
+                   [[0, 0],
+                    [0, 0],
+                    [0, 0]]])
+            </div>
+            <div class="mini">
+            c = np.random.random((3,3))
+            </div>
+            <div class="arra">
+            array([[0.51958235, 0.97222284, 0.05322551],
+                           [0.75779435, 0.14079785, 0.87762524],
+                           [0.88294465, 0.18826504, 0.78701276]])
+            </div>
+            <div class="mini">
+            d = np.linspace(0,5,10) //crea array con 10 elementi con valori da 0 a 5
+            </div>
+            <div class="arra">
+            array([0.        , 0.55555556, 1.11111111, 1.66666667, 2.22222222,
+                                  2.77777778, 3.33333333, 3.88888889, 4.44444444, 5.        ])                   
+            </div>
+            <div class="mini">
+            e = np.arange(1,10,2) //crea array con values da start a stop e step
+            </div>
+            <div class="arra">
+            array([1, 3, 5, 7, 9])
+            </div>
+            <div class="mini">
+            f = np.empty(4) //crea array vuoto ma il vengono assegnati valori random
+            </div>
+            <div class="arra">
+            array([5., 0., 0., 2.])
+            </div>
+            <div class="mini">
+            g = np.full((3,3),'a') //crea array pieno con valore assegnato
+            </div>
+            <div class="arra">
+            array([['a', 'a', 'a'],
+                  ['a', 'a', 'a'],
+                  ['a', 'a', 'a']], dtype='U1')
+            </div>
+            <div class="mini">
+            h = np.eye(5)  //crea Identity matrix
+            </div>
+            <div class="arra">
+            array([[1., 0., 0., 0., 0.],
+                         [0., 1., 0., 0., 0.],
+                         [0., 0., 1., 0., 0.],
+                         [0., 0., 0., 1., 0.],
+                         [0., 0., 0., 0., 1.]])
+            
+            </div>
+            <div class="mini">
+            I = np.identity(2) //crea Identity matrix
+            </div>
+            <div class="arra">
+            array([[1., 0.],
+                    [0., 1.]])
+            </div>
+            <div class="mini">
+            mat = np.array([[5,7],[3,2]])
+            </div>
+            <div class="arra">
+            array([[5, 7],
+                   [3, 2]])
+            </div>
+            <div class="mini">
+            Nmat = mat * I  //moltiplicazione con Identity matrix
+            </div>
+            <div class="arra">
+            array([[5., 0.],
+                    [0., 2.]])             
+             </div>
+            </div>
+            <div class="bb2">  
+
+               CARATTERISTICHE ARRAY: <br> <br>
+               DIMENSIONE: <br> 
+               <div class="mini">
+               len(Nmat) : 2 <br> <br> 
+               Nmat.ndim : 2 //n.ro dimwnsioni <br> <br> 
+               Nmat.size : 4 //size <br> <br> 
+               Nmat.shape  : 2, 2 //shape <br> <br> 
+               Nmat.flags : <br>
+               <br>
+               C_CONTIGUOUS : True <br>
+               F_CONTIGUOUS : False <br>
+               OWNDATA : True <br>
+               WRITEABLE : True <br>
+               ALIGNED : True <br>
+               WRITEBACKIFCOPY : False <br>
+               UPDATEIFCOPY : False <br>
+               <br>
+
+               Nmat.itemsize : 8 <br>
+               <br>
+               Nmat.nbytes : 32 <br>
+            </div>
+            </div>
+            <div class="bb1">  
+            SLICE e SELEZIONE :<br>
+            <br>
+            <div class="mini">
+            ns = Nmat[1,1] 
+            </div>
+            <div class="arra">
+               2.0
+            </div>
+            <div class="mini">
+               ns2 = Nmat[1:]  
+            </div>
+            <div class="arra">
+            array([[0., 2.]])
+            </div>
+            <div class="mini">
+            ns3 = Nmat[:1] 
+            </div>
+            <div class="arra">
+               array([[5., 0.]])
+            </div>
+            <div class="mini">
+            ns4 = Nmat > 3
+            </div>
+            <div class="arra">
+            array([[ True, False],
+                  [False, False]])
+            </div>
+            <div class="mini">
+                  ns5 = Nmat < 1
+            </div>
+            <div class="arra">
+                  array([[False,  True],
+                        [ True, False]])
+            </div>
+            <div class="mini">   
+               ns6 = (Nmat  > 3) | (Nmat == 0 )
+            </div>
+            <div class="arra">
+               array([[ True,  True],
+                     [ True, False]])
+            </div>
+            </div>
+
+            <div class="bb2">  
+            MODIFICARE UN ARRAY:
+            <br> <br>
+            MODIFICARE TYPE DATI<br> <br>
+            <div class="mini">
+               Nmat.astype(int)  //da float a int
+            </div>
+            <div class="arra">
+            array([[5, 0],
+                  [0, 2]])
+
+            </div>
+
+
+            RESHAPE <br> <br>
+
+            array a con shape 3 x 4<br> <br>
+            <div class="arra">
+            array([[1, 1, 1, 1],
+                  [1, 1, 1, 1],
+                  [1, 1, 1, 1]], dtype=int8)
+            </div>
+            <div class="mini">
+            res = a.reshape(4,3)   
+            </div>
+            <div class="arra">
+            array([[1, 1, 1],
+                  [1, 1, 1],
+                  [1, 1, 1],
+                  [1, 1, 1]], dtype=int8)
+            </div>
+
+            RESIZE <br> <br>
+            <div class="mini">
+                  a.resize(3,3, refcheck=False)
+            </div>
+            <div class="arra">
+            array([[1, 1, 1],
+                        [1, 1, 1],
+                        [1, 1, 1]], dtype=int8)
+            </div>
+            RAVEL  -- flatten array <br> <br>
+            <div class="mini">
+            aa = a.ravel()
+            </div>
+            <div class="arra">
+            array([1, 1, 1, 1, 1, 1, 1, 1, 1], dtype=int8)
+            </div>
+            INSERT  <br> <br>
+            <div class="mini">
+            np.insert(a, 1, 5,axis=0)
+            </div>
+            <div class="arra">
+            array([[1, 1, 1],
+                  [5, 5, 5],
+                  [1, 1, 1],
+                  [1, 1, 1]], dtype=int8)
+            </div>
+
+            DELETE  <br> <br>
+            <div class="mini">
+            aa = np.delete(aa,[1], axis=1)
+            </div>
+            <div class="arra">
+            array([[1, 1],
+                  [5, 5],
+                  [1, 1],
+                  [1, 1]], dtype=int8)
+            </div>
+            </div>
+
+            <div class="bb1">  
+
+            CARICARE DATI DA FILE IN UN ARRAY  <br><br>
+
+            CARICAMENTO CON SPACCHETTAMENTO<br>
+            <div class="mini">
+            alfa, gamma, beta = np.loadtxt('path/data.csv',
+                        skiprows=1,delimiter=',',
+                        unpack=True)
+            </div>
+            <div class="arra">
+               alfa 
+            array([1., 2., 3., 4., 5.])
+            
+            gamma
+            array([12.,  1., 12.,  1., 12.])
+
+            beta
+            array([33., 33., 33.,  1.,  2.])
+            </div>
+
+            CARICAMENTO SENZA SPACCHETTAMENTO<br>
+            <div class="mini">
+            arrayfromtext= np.loadtxt('path/data.csv',
+                              skiprows=1,delimiter=',',
+                              unpack=False)
+            </div>
+
+            <div class="arra">
+            array([[ 1., 12., 33.],
+                  [ 2.,  1., 33.],
+                  [ 3., 12., 33.],
+                  [ 4.,  1.,  1.],
+                  [ 5., 12.,  2.]])
+
+            </div>      
+            CARICARE ARRAY CON DATI DA FILE <br><br>
+            Nella Tabella sottostante i dati contenuti nel file <br><br>
+            <table>
+               <tr>
+               <th>alfa</th>
+               <th>gamma</th>
+               <th>beta</th>
+               </tr>
+               <tr>
+               <td>1</td>
+               <td>12</td>
+               <td>33</td>
+               </tr>
+               <tr>
+                  <td>2</td>
+                  <td>1</td>
+                  <td>33</td>
+               </tr>
+               <tr>
+                  <td>3</td>
+                  <td>12</td>
+                  <td></td>
+               </tr>
+               <tr>
+                  <td>4</td>
+                  <td>1</td>
+                  <td>1</td>
+               </tr>
+               <tr>
+                  <td></td>
+                  <td>12</td>
+                  <td>2</td>
+               </tr>
+            </table>
+            <br><br>
+            CARICARE ARRAY CON DATI DA FILE E DOVE NON CI SONO VALORI INSERIAMO 0 <br>
+            (altrimenti ci sarebbero dei NaN)     
+            <div class="mini"> 
+            
+            arrayfromtext2 = np.genfromtxt('path/data.csv',
+                     skip_header=1,delimiter=',',
+                     filling_values=0)
+            </div>
+            <div class="arra">
+            array([[ 1., 12., 33.],
+            [ 2.,  1., 33.],
+            [ 3., 12.,  0.],
+            [ 4.,  1.,  1.],
+            [ 0., 12.,  2.]])
+            </div>
+
+            <div class="mini">
+               arrayfromtext2[0,1] = 50
+            </div>
+
+            <div class="arra">
+                  array([[ 1., 50., 33.],
+                        [ 2.,  1., 33.],
+                        [ 3., 12., 33.],
+                        [ 4.,  1.,  1.],
+                        [ 5., 12.,  2.]])
+            </div>
+
+            <div class="mini">
+                  head = np.array([['alfa' ,'gamma','beta']]) <br><br>
+
+               arrayfromtext2 =np.append(head, arrayfromtext2 ,axis=0) <br><br>
+
+
+               arrayflatten =np.append(head, arrayfromtext2 )
+            </div>
+            <div class="arra">
+            array(['alfa', 'gamma', 'beta', '1.0', '50.0', '33.0', '2.0', '1.0',
+                  '33.0', '3.0', '12.0', '33.0', '4.0', '1.0', '1.0', '5.0', '12.0',
+                  '2.0'], dtype='U32')
+            </div>
+
+            </div>
+            <div class="bb2">
+            SALVATAGGIO ARRAY IN UN FILE  <br><br>
+            <div class="mini">
+               np.savetxt('path/data.csv', arrayfromtext2, fmt='%s', delimiter=',') <br><br>
+
+               np.save('path/data', arrayfromtext2) //save file binary .npy <br><br>
+               np.savez('path/data', arrayfromtext2) //save file binary non compresso .npz   <br><br>
+               np.savez_compressed('path/dataz', arrayfromtext2) //save file binary compresso .npz  <br><br>
+            </div>
+            </div>
+            <div class="bb1">
+               ALGEBRA LINEARE CON NUMPY  <br><br>
+               Iniziamo con caricare i dati di un vettore v = [1,3,5,7,9] ed uno scalare sca = 5
+               e moltiplichiamo il vettore per lo scalare. <br>
+               
+               <div class="mini">
+                  v = np.array([1,3,5,7,9])<br>
+                  sca = 5<br>
+                  vsca = v * sca<br>
+               </div>
+                  ed otteniamo <br>
+                  <div class="arra">
+                     array([ 5, 15, 25, 35, 45])<br>
+                  </div>
+
+                 Ora vediamo la somma e la differenza tra i vettori già definiti v e vsca  <br>
+                 <div class="mini">
+                  sommav = vsca + v<br>
+                  sottv = abs(v - vsca)<br>
+                 </div>
+                 con i relativi risultati<br>
+                 <div class="arra">
+                 array([ 6, 18, 30, 42, 54])<br>
+                 array([ 4, 12, 20, 28, 36])<br>
+                 </div>
+
+                 La moltiplicazione o divisione sono le 2 operazioni seguenti seguita dal prodotto scalare 
+                 che riporta coma risultato uno scalare
+                 <div class="mini">
+                  mol = v * vsca<br>
+                  div = mol / v<br>
+                              
+                  pscal = np.dot(v, vsca)  //prodotto scalare<br>
+                 </div>
+                 <div class="arra">
+                  array([  5,  45, 125, 245, 405])   //mol<br>
+                  array([ 5., 15., 25., 35., 45.])   //div<br>
+                  825   //pscal<br>
+                  
+                 </div>
+                MATRICI <br><br>
+                Vediamo ora il prodotto tra matrici (linee per colonne) caricando prima la mat1 e mat2
+                La 2 matrici devono essere compatibili n.ro colonne mat1 == n.ro righe mat2. In questo caso abbiamo mat1 2 colonne e mat2 2 righe 
+                ed otteniamo una nuova mattrice con shape 2X3<br>
+                <div class="mini">
+                  mat1 = np.array([[1,2],[3,4]])<br>
+
+                  mat2 = np.array([[5,6,7],[8,9,10]])<br><br>
+                  mat3 = np.dot(mat1,mat2)<br>  //Prodotto tra matrici riga x colonna
+                  mat3.shape <br>
+                </div>
+                <div class="arra">
+                  array([[21, 24, 27],<br>
+                  [47, 54, 61]])<br>
+                  (2, 3)   //mat3 shape<br>
+                </div>
+               Con la funzione dot è possibile anche ottenere il prodotto tra vettori e tra metrice e vettore
+               sempre tra linee e colonne<br><br>
+               Proseguiamo nell'analisi della algebra lineare con Numpy e vediamo le funzioni e metodi che ci mette 
+               a disposizione<br><br>
+               <div class="mini">
+                  alg = np.linalg<br>
+                  dir(alg)
+               </div>
+               <div class="arra"> 
+                  Lista funzioni e metodi <br><br>
+               'absolute_import',
+               'cholesky',
+               'cond',
+               'det',
+               'division',
+               'eig',
+               'eigh',
+               'eigvals',
+               'eigvalsh',
+               'inv',
+               'lapack_lite',
+               'linalg',
+               'lstsq',
+               'matrix_power',
+               'matrix_rank',
+               'multi_dot',
+               'norm',
+               'pinv',
+               'print_function',
+               'qr',
+               'slogdet',
+               'solve',
+               'svd',
+               'tensorinv',
+               'tensorsolve',
+               'test'
+
+               </div>
+              Vediamone alcuni in azione<br><br>
+              inv - calcola la matrice inversa <br>
+              det - calcola il determinante di una matrice<br>
+              eigvals - calcola il valore Eigenvalue di una matrice quadrata<br>
+              solve - risolve un sistema lineare di equazioni<br><br>
+            Per questi esempi prendiamo i dati da un esercizio svolto alla pagina di Algebra Lineare al seguente link 
+            <a href="https://www.mecbar.com/Algebra_lineare.html">Algebra Lineare</a><br>
+            <br>
+            Esempio di come trovare 3 incognite di un sistema lineare di equazioni con solve <br><br>
+            <div class="mini">
+               M = np.array([[-1,3,1],[2,3,1],[3,2,1]] )<br>
+
+               b= np.array([3.54515,5.59135,5.19768  ])<br>
+               
+               var = alg.solve(M,b)<br>
+
+            </div>
+
+            Vediamo i risultati ottenuti
+            <div class="arra">
+               array([[-1,  3,  1],   //matrice con coefficienti equazioni<br> 
+               [ 2,  3,  1],<br>
+               [ 3,  2,  1]])<br><br>
+        
+              array([3.54515, 5.59135, 5.19768])  //b risultato equazioni<br><br>
+        
+              array([0.68206667, 1.07573667, 1.00000667])   //risultato x=0.68, y=1.07, z=1 <br>
+            </div>
+
+             Ora vediamo per la matrice M il calcolo del valore Eigenvalue poi sempre della stessa matrice troviamo il determinante e la matrice inversa
+
+      <div class="mini">
+         eigenv = alg.eigvals(M)   //calcolo Eigenvalue<br>
+         deter = alg.det(M)   //calcolo Determinante<br>
+         inv = alg.inv(M)   //calcolo matrice inversa<br>
+
+      </div>
+      <div class="arra">
+         array([ 5.19767753, -2.43473828,  0.23706074])  //Eigenvalue<br><br>
+
+         -3.0000000000000004   //determinante<br><br>
+
+         array([[-0.33333333,  0.33333333,  0.        ],   //matrice inversa <br>
+         [-0.33333333,  1.33333333, -1.        ],<br>
+         [ 1.66666667, -3.66666667,  3.        ]])<br>
+      </div>
+
+     
+   </div>
+
+
+</div>
+</div>
+
+
+
+   <div class="col pos s12 m12 l10">
+      <h3 id="" class="center color scrollspy">  </h3>
+      <div class="testo">
+ 
+      </div>
+   </div>
+   <div class="col pos s12 m12 l10">
+      <h3 id="" class="center color scrollspy">  </h3>
+      <div class="testo">
+ 
+      </div>
+   </div>
+   <div class="col pos s12 m12 l10">
+   <h3 id="" class="center color scrollspy">  </h3>
+     <div class="testo">
+
+     </div>
+   </div>
+  <div class="col pos s12 m12 l10">
+   <h3 id="" class="center color scrollspy">  </h3>
+    <div class="testo">
+
     </div>
+  </div>
+<div class="col pos s12 m12 l10">
+   <h3 id="" class="center color scrollspy">  </h3>
+   <div class="testo">
+
+   </div>
+</div>
  
 
 
- 
- <div class="col hide-on-small-only l2">
-    <div class="posmenu posse pospy">
-        <!--  <ul class="section table-of-contents">  -->
-        <ul class="my_menu">
-          <li><a href="#zero">Logging</a></li>
-            <li><a href="#uno">PDB debug</a></li>
-           
-          </div>
-        </ul>
-    </div>
- 
  </div>
  
  
