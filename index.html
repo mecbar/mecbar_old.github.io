@@ -1875,9 +1875,12 @@ Con il Quantum Teleportation possiamo trasferire lo stato di un qubit da una pos
 posizione. Nell'esempio sottostante lo stato del qubit q0 viene trasferito al qubit q2. In questo modo 
 effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
 <img src="foto/teleportation.png" width="100%" height="300px">
+<br><br>
 
-
-
+Recentemente è stato realizzato il teletrasporto quantico nei <b>Qutrit.</b> 
+Il qutrit utilizza lo stesso principio del qubit ma oltre ai valori 0, 1 si ha anche il 2, ossia 
+∣0⟩, ∣1⟩ e ∣2⟩ aumentando in modo esponenziale le possibili combinazioni permettendo di raggiungere una velocità 
+enorme nei calcoli ma naturalmente aumenta anche la complessità e gli errori da gestire.
 
 </div>
 
@@ -2266,6 +2269,17 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
        </div> 
 
        </div>
+       <div>
+        <div class="boxxeinv">
+            <p style="text-align:center;width:100%;font-size:45px; color: rgba(58, 7, 197, 0.774);">Pillole di Javascript</p>
+            <a href="pillolejs.html">
+                <img id="jshome" src="foto/jshome2.png" width="85%" height="300px">
+           
+            </a> 
+        </div>
+
+
+       </div>
 
     <div class="boxGo">
         <img src="foto/go.png" width="33%" height="340px">
@@ -2282,45 +2296,56 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
         <img src="foto/solidity2.png"  height="100%">
      
     </div> 
+
+
     <div class="boxGet">
         <a href="Blockchain.html">
-        <div class="geth"> 
-            <div class="geth1">   
-                <div class="geth2">  Geth Console for Blockchain </div>  
+        <div id="getho" class="geth"  onmouseover="setSfondo(id)"> 
+            <div id="getho1" class="geth1" onmouseover="setSfondo(id)">   
+                <div id="getho2" class="geth2" onmouseover="setSfondo(id)">  Geth Console for Blockchain </div>  
             </div>
         
         </div></a>
-        <div class="geth">  
-              <div class="geth1">   
-                    <div class="geth2"> Decentralized Application </div> 
-                </div>
+        <div id="getho3"  class="geth"  onmouseover="setSfondo(id)">        <a href="Dapp.html">
+            <div id="getho4" class="geth1"  onmouseover="setSfondo(id)">   
+                <div id="getho5" class="geth2" onmouseover="setSfondo(id)"> Decentralized Application </div> 
+              </a>  </div>
          </div>
          <a href="blockchainjs.html">
-        <div class="geth">  
-             <div class="geth1">  
-                 <div class="geth2"> Web3Js Javascript for Blockchain </div>  
+        <div id="getho6"  class="geth"  onmouseover="setSfondo(id)">  
+             <div id="getho7" class="geth1"  onmouseover="setSfondo(id)">   
+                 <div id="getho8" class="geth2" onmouseover="setSfondo(id)"> Web3Js Javascript for Blockchain </div>  
               </div>
         </div></a>
      
     </div> 
  
+
+
+
        <div class="excel">
              <div class="boxxe">
-                <p style="text-align:center;width:100%;font-size:25px; color: darkorange;">Unire 2 fogli Excel/LibreOffice con dati 1 colonna</p>
+                <p style="text-align:center;width:100%;font-size:25px; color:  rgb(17, 0, 255);">Unire 2 fogli Excel/LibreOffice con dati 1 colonna</p>
                 <a href="esempi_excel.html">
                 <img src="foto/excel5.png" width="100%" height="350px">
                 </a> 
             </div>
-             <div>
-                <div class="boxxeinv">
-                    <p style="text-align:center;width:100%;font-size:25px; color: darkorange;">Pillole di Javascript</p>
-                    <a href="pillolejs.html">
-                    <img src="foto/jsoggetti.png" width="100%" height="250px">
-                    </a> 
-                </div>
-
-
-
+             <div class="boxxeinv">
+                <a href="mongoDB.html">  <p style="text-align:center;width:100%;font-size:25px; color: rgb(17, 0, 255);">MongoDB</p>
+               <div class="terminal">                      
+                > use mecbar<br>
+                switched to db mecbar<br>
+                > show collections<br>
+                argomenti<br>
+                siti<br>
+                > db.argomenti.find()<br>
+                { "_id" : ObjectId("5f3c362808f4769b4fc3aad9"), "item" : "quantum", "settore" : "algebra" }
+                <br>{ "_id" : ObjectId("5f3c363208f4769b4fc3aada"), "item" : "quantum", "settore" : "gate" }
+                <br>{ "_id" : ObjectId("5f3c367a08f4769b4fc3aadb"), "item" : "blockchain", "settore" : "ethereum" }
+                <br>{ "_id" : ObjectId("5f3c36a908f4769b4fc3aadc"), "item" : "blockchain", "settore" : "smart contract" }
+                > <br>
+               </div>
+                </a>
              </div>
         </div>
          <div class="row">
@@ -3759,5 +3784,22 @@ effettuiamo anche il passaggio delle informazioni da Alice a Mario.<br>
       console.log(dim2);
     }
 </script>
+
+<script>
+ const setSfondo  = (id) => {
+ const randomColor = Math.floor(Math.random()*16777215).toString(16);
+var color = "#" + randomColor;
+const randomColor2 = Math.floor(Math.random()*16777215).toString(16);
+var color2 = "#" + randomColor2;
+var back= "linear-gradient(" + "35deg," + color + " 35%," + color2 + " 100%)";
+$("#" + id ).css('background', back);
+
+}
+</script>
+
+
+
+
+
 
 </html>
