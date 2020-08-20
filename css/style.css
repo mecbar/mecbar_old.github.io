@@ -9,11 +9,27 @@
     padding: 0px;
  }
 
+#jshome {
+    border-top-style: groove;
+    border-top :2px solid #091fe4;
+    border-top-right-radius: 30%;
+    box-sizing: border-box;
+    box-shadow: 0px 18px 19px -10px #0a0ee82e;
+}
+
+#getho {
+    height: 340px;
+    width: 100%;
+    box-sizing: border-box;
+    padding:10%;  
+    font-size: 25px;
+    border: 3px solid black;
+}
+
 .geth {
     height: 340px;
     width: 100%;
     box-sizing: border-box;
-    background: linear-gradient(115deg,#f1e315 ,#cf6706ed ,#f30957);
     padding:10%;  
     font-size: 25px;
     border: 3px solid black;
@@ -23,7 +39,7 @@
     width: 100%;
     box-sizing: border-box;
     border: 3px solid black;
-    background: linear-gradient(15deg,#0064a7 0,#004777 100%);
+ 
    padding:10%;  
 }
 .geth2 {
@@ -31,20 +47,25 @@
     width: 100%;
     box-sizing: border-box;
     border: 3px solid black;
-    background: linear-gradient(315deg,#f1e315 ,#cf6706ed ,#f30957);
    padding:10%;  
    text-align: center;
 }
-.geth:hover {
+
+
+#getho,  #getho8,  #getho5 {
    background: linear-gradient(115deg,#0064a7 0,#004777 100%);
   
 }
-.geth1:hover {
-    background: linear-gradient(100deg,#f1e315 ,#cf6706ed ,#f30957);
+#getho7 ,  #getho3 {
+    background: linear-gradient(10deg,#f1e315 ,#cf6706ed ,#f30957);
  }
- .geth2:hover {
-    background: linear-gradient(210deg,#0064a7 0,#004777 100%);
+  #getho4,  #getho1 {
+    background: linear-gradient(30deg,#bb551b ,#cc9b6ded ,#f309d4);
  }
+ #getho2,  #getho6 {
+    background: linear-gradient(55deg,#c40303cb 0,#242319 100%);
+ }
+
 
  .SolBox {
     height: auto;
@@ -1335,16 +1356,16 @@ text-align: center;
             writing-mode: tb-rl;
             white-space: nowrap;
             position: fixed;
-            top: 230px;
+            top: 300px;
             right: 0px;
             width : auto !important;
             transition: all 0.1s ease-in;
             transform-origin: 0% 0%;
             padding-top: 25px;
-            height: 121px !important;
+            height: 120px !important;
             padding-right: 3px;
             padding-left: 3px;
-            background: rgb(4, 8, 255);
+            background: rgb(223, 10, 30);
             color: white;
             border-top-left-radius: 0%;
             border-top-right-radius: 0%;
@@ -1352,6 +1373,7 @@ text-align: center;
             border-bottom-right-radius: 0%;
             cursor: pointer;
             vertical-align: middle;
+            z-index: 3;
         }
 
         .mecbar {
