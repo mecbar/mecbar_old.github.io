@@ -111,11 +111,11 @@
                 <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
               -->
                 <li><a href="http://www.mecbar.com/">Home</a></li>
-                <li><a href="#Ablog">Blog</a></li>
-                <li><a href="#block3">Blockchain</a></li>
-                <li><a href="#ml">Machine Learning</a></li>
-                <li><a href="#Alinux">Linux</a></li>
-                <li><a href="#Aus">Contatti</a></li>
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#block3">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#ml">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
                 <li>
                     <a href=""> </a>
                 </li>
@@ -125,11 +125,11 @@
             </ul>
             <ul class="side-nav" id="mobile-demo">
                 <li><a href="http://www.mecbar.com/">Home</a></li>
-                <li><a href="#Ablog">Blog</a></li>
-                <li><a href="#block3">Blockchain</a></li>
-                <li><a href="#ml">Machine Learning</a></li>
-                <li><a href="#Alinux">Linux</a></li>
-                <li><a href="#Aus">Contatti</a></li>
+                <li><a href="http://www.mecbar.com/#Ablog">Blog</a></li>
+                <li><a href="http://www.mecbar.com/#block3">Blockchain</a></li>
+                <li><a href="http://www.mecbar.com/#ml">Machine Learning</a></li>
+                <li><a href="http://www.mecbar.com/#Alinux">Linux</a></li>
+                <li><a href="http://www.mecbar.com/#Aus">Contatti</a></li>
             </ul>
             </li>
  </nav>
@@ -190,6 +190,10 @@
 <div class="testo">
 Per creare un circuito quantistico si usano dei gates che qui vengono esplicati. Nel computer quantistico per 
 eseguire i gates si esegue una fase detta Pulse che richiede una diversa quantità di energia per ciascun gate. <br>
+I quantum gates vengono rappresentati da una Unitary matrix: U<sup>†</sup>U = UU<sup>†</sup> = 1  <br>   
+Con la Dirac Notation U = ( U00 U01  U10 U11) = U00 |0x0| + U01 |0x1| + U10 |1x0| + U11 |1x1| 
+
+
 </div>
 <br>
 <div class="titolo-gate2">
@@ -205,10 +209,30 @@ Nello spazio vettoriale di Hilbert il gate H viene rappresentato con la seguente
 <br>
     </div>
 
+ <div class="row">
+   <div class="col l4 m6 s12">
+            <img src="foto/hadamard1.gif" width="250px" height="250px">
+    </div>
+     <div class="col l8 m6 s12">
+         <br> 
+         <div class="testo">
+       Nella figura a lato vediamo il risultato dell'operazione  H∣0⟩ = ∣+⟩ (x) mentre se si esegue 
+       H∣1⟩ = ∣-⟩ parte opposta della x. 
+         </div>
+      </div>
+</div>
+
 <div class="testo">
    
 Matematicamente, tramite l'algebra vettoriale quando applichiamo questo gate eseguiamo le seguenti operazioni sui 2 qubit:<br>
 <br>
+H = 1/√2 (1 1  1 -1) = 1/√2 (|0x0| + |0x1| + |1x0| - |1x1|)<br>
+H|0⟩  = 1/√2 (1 1  1 -1) (1 0) = 1/√2 (1 1) = |+⟩ <br>
+H|1⟩  = |-⟩ <br>
+<br>
+con H creiamo superposition e può essere usato anche per il change tra x e z bases.  <br>
+ H|+⟩ = |0⟩    H|-⟩ = |1⟩<br><br>
+
 <div class="row">
 <div class="col l6 m6 s12">
 <img src="foto/H+.png" width="100%" height="50px">
@@ -220,10 +244,10 @@ Matematicamente, tramite l'algebra vettoriale quando applichiamo questo gate ese
 <br>
 
 Qui vediamo un esempio di un circuito a cui applichiamo il gate H :<br>
-<img src="foto/H.png" width="350px" height="150px">
+<img src="foto/H.png" width="250px" height="150px">
 <br>
-Sotto vediamo l'esito di una simulazione e la distribuzione dei risultati su 5000 shots:<br> 
-<img src="foto/Hplot.png" width="400px" height="300px">
+Sotto vediamo l'esito di una simulazione e la distribuzione dei risultati su 5000 shots:<br> <br> <br> 
+<img src="foto/Hplot.png" width="500px" height="400px">
 <br>
 
 <br>
@@ -237,17 +261,29 @@ Sotto vediamo l'esito di una simulazione e la distribuzione dei risultati su 500
 </div>
 
 <div class="testo">
-Il gate X è un bit-flip gate nel senso che inverte il valore che trova in input. Se input = ∣0⟩ l'output diviene
+Il Pauli gate X è un bit-flip gate nel senso che inverte il valore che trova in input. Se input = ∣0⟩ l'output diviene
 ∣1⟩ e viceversa.
+Questo gate  ruota la superposition nell'asse x.
 <br>
 Il risultato si ottiene moltiplicando algebricamente X con ∣0⟩ e con ∣1⟩. <br>
-Equivale ad una rotazione nell'asse x nella sfera di Bloch π radians.
+Equivale ad una rotazione nell'asse x nella sfera di Bloch di π radians. <br>
+Il gate x = (0 1  1 0) nella Dirac Notation |0x1| + |1x0|  
+applicato a |0⟩ = (01  10) (1 0) = (01 + 10   11 + 00) = (0 1) = |1⟩ <br>
+mentre x|1⟩ = (|0x1| + |1x0| ) * |1⟩ = ∣0⟩<1|1> + |1x0∣1⟩ = |0⟩ + 0 = ∣0⟩    cioè (1 0)  <br>
+
 <br>
-<img src="foto/X.png" width="150px" height="50px">
-<br>
-<img src="foto/x.png" width="350px" height="150px">
-<br>
-<br><br>
+
+<div class="row">
+  <div class="col l6 m6 s12">
+    <img src="foto/x.gif" width="250px" height="250px">
+  </div>
+  <div class="col l6 m6 s12">
+      <br>
+    <img src="foto/X.png" width="250px" height="150px">
+  </div>
+</div>
+
+
 </div>
 <div class="titolo-gate2">    
     <div class="titolo-gate">  <span class="boxxeg">Y GATE</span>
@@ -256,9 +292,25 @@ Equivale ad una rotazione nell'asse x nella sfera di Bloch π radians.
 <br>
 <div class="testo">
 Il Pauli Y gate equivale al Ry. Equivale anche agli effetti conbinati di X e Z.
+Questo gate ruota la superposition nell'asse y.
 <br>
-<img src="foto/y.png" width="350px" height="150px">
+The Pauli Y gate è un single-qubit rotation attraverso π radians nell'asse delle y. Effettua un bit e fase flip.
 <br>
+Y = (0 -i   i 0 ) = i σx σz<br>
+σi² = I matrix = ( 1 0  0 1)  applicata ad un qubit non modifica nulla. <br>
+La I matrix e le Pauli matrix formano basis della 2x2 matrix quindi ogni rotazione può essere scritta come linear combination
+ dei gates importante per error correction.<br>
+
+<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/y.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/Y.png" width="250px" height="150px">
+    </div>
+</div>
 </div>
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">Z GATE</span>
@@ -266,9 +318,23 @@ Il Pauli Y gate equivale al Ry. Equivale anche agli effetti conbinati di X e Z.
 </div> <br>
 <div class="testo">
 Il gate Z effettua una rotazione di π radians nell'asse della z.
+Questo gate ruota la superposition nell'asse z.
 <br>
-<img src="foto/z.png" width="350px" height="150px">
-<br>
+gate z = (1 0 0 -1)= |0x0|-|1x1| e se applicato z∣+⟩ = (1 0 0 -1) 1/√2 (1 1) = 1/√2 (1 -1) = ∣-⟩  <br>
+mentre z∣-⟩ = (|0x0|-|1x1|) 1/√2 (∣0⟩-∣1⟩) = 1/√2 (∣0⟩+∣1⟩) = ∣+⟩<br>
+
+
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/z.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+       <br> 
+      <img src="foto/Z.png" width="250px" height="150px">
+    </div>
+</div>
+
+
 
 </div>
 <div class="titolo-gate2">
@@ -276,11 +342,24 @@ Il gate Z effettua una rotazione di π radians nell'asse della z.
 </div>
 </div><br>
 <div class="testo">
-Il controlled-NOT gate opera su più qubits, uno control qubit e gli altri sono i target qubit.<br>
+Il controlled-NOT gate opera su più qubits, un control qubit e gli altri sono i target qubit.<br>
 Se il control qubit è nello stato ∣1⟩ esegue il gate X nel target qubit.<br>
 Se il control qubit è in superposition il C-NOT gate crea l'entanglement.<br>
+
+Per calcolare il valore dei qubits si effettua il tensor product  
+∣a⟩ X ∣b⟩ = (a1 a2 ) x (b1 b2) e otteniamo il vettore (a1b1 a1b2 a2b1 a2b2).  <br>
+Quando siamo in presenza di più qubit vengono rappresentati con il simolo ∣00⟩ o ∣000⟩ in base al numero 
+dei qubits. Se i qubits sono correlati si ha il fenomeno chiamato entanglement e si rappresenta<br>
+ |ψ⟩= 1/√2 (|00⟩ + |11⟩)  = 1/√2 (1 0 0 1)<br> 
+ <br>
+
+C-NOT = (1000  0100  0001  0010) in Dirac Notation  |00x00| + |01x01| + |10x11| + |11x10|<br> 
+<br> 
+C-NOT|00⟩ = C-NOT(1000) = (1000) = |00⟩   mentre C-NOT|10⟩ = |11⟩
+
+
 <br>
-<img src="foto/cx.png" width="450px" height="150px">
+<img src="foto/cx.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -290,7 +369,7 @@ Se il control qubit è in superposition il C-NOT gate crea l'entanglement.<br>
 <div class="testo">
 L'identity gate è un gate che non fa nulla al qubit. Tutto rimane inalterato.<br>
 <br>
-<img src="foto/id.png" width="450px" height="150px">
+<img src="foto/id.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -299,10 +378,19 @@ L'identity gate è un gate che non fa nulla al qubit. Tutto rimane inalterato.<b
 </div><br>
 <div class="testo">
 Questo gate genera una rotazione del qubit state nell'asse delle x nella Bloch sphere dell'angolo espresso in radianti che viene inserito come input. 
+Nelle figure sottostanti un esempio con Rx(0.2).
 <br>
-<img src="foto/rx.png" width="450px" height="150px">
-<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/rx2.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/rx.png" width="250px" height="150px">
+    </div>
 </div>
+</div>
+
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">RY GATE</span>
 </div>
@@ -311,8 +399,16 @@ Questo gate genera una rotazione del qubit state nell'asse delle x nella Bloch s
 Questo gate genera una rotazione del qubit state nell'asse delle y nella Bloch sphere dell'angolo espresso in radianti che viene inserito come parametro in input. 
 <br>
 <br>
-<img src="foto/ry.png" width="450px" height="150px">
-<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/ry2.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/ry.png" width="250px" height="150px">
+    </div>
+</div>
+
 </div>
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">RZ GATE</span>
@@ -322,8 +418,16 @@ Questo gate genera una rotazione del qubit state nell'asse delle y nella Bloch s
 Questo gate genera una rotazione del qubit state nell'asse delle Z nella Bloch sphere dell'angolo espresso in radianti che viene inserito come input. 
 
 <br>
-<img src="foto/rz.png" width="450px" height="150px">
-<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/rz.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/rz.png" width="250px" height="150px">
+    </div>
+</div>
+
 </div>
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">S GATE</span>
@@ -331,10 +435,21 @@ Questo gate genera una rotazione del qubit state nell'asse delle Z nella Bloch s
 </div>
 <div class="testo">
 Il gate S equivale al Rz gate per l'angolo π/2. Muove informazioni tra gli assi x ed y.<br>
+
+S gate add 90 gradi alla fase φ  <br>S = (1 0 0 i)  se applico S∣+⟩ ottengo ∣+i⟩ mentre se applico S∣-⟩ ottengo ∣-i⟩ 
+se applico SH cambio la basis da z a y.  
 <br>
-<img src="foto/s.png" width="450px" height="150px">
-<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/s.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/s.png" width="250px" height="150px">
+    </div>
 </div>
+</div>
+
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">SDG GATE</span>
 </div>
@@ -342,26 +457,50 @@ Il gate S equivale al Rz gate per l'angolo π/2. Muove informazioni tra gli assi
 <div class="testo">
 Il gate SDG(S dagger gate) è l'inverso del gate S. E' l'equivalente del gate Rz per l'angolo -π/2. Anche questo gate muove informazioni tra gli assi x ed y.
 <br>
-<img src="foto/sdg.png" width="450px" height="150px">
-<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/sdg.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/sdg.png" width="250px" height="150px">
+    </div>
 </div>
+</div>
+
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">T GATE</span></div>
 </div>
 <div class="testo">
 The T gate è uguale ad una rotazione di Rϕ con ϕ = π/4.
 <br>
-<img src="foto/t.png" width="450px" height="150px">
-<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/t.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/t.png" width="250px" height="150px">
+    </div>
+</div>
+
 </div>
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">TDG GATE</span></div>
 </div>
 <div class="testo">
-Il T dagger gate è l'inverso del gate T.
+Il T dagger gate è l'inverso del gate T quybdi con una rotazione di -π/4.
 <br>
-<img src="foto/tdg.png" width="450px" height="150px">
-<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/tdg.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/tdg.png" width="250px" height="150px">
+    </div>
+</div>
+
 </div>
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">CH GATE</span></div>
@@ -369,7 +508,7 @@ Il T dagger gate è l'inverso del gate T.
 <div class="testo">
  Il controlled-Hadamard gate, come il controlled-NOT, esegue un controllo sul control qubit ed esegue un H gate sul target qubit se il control qubit è nello stato ∣1⟩.
 <br>
-<img src="foto/ch.png" width="450px" height="150px">
+<img src="foto/ch.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -378,7 +517,7 @@ Il T dagger gate è l'inverso del gate T.
 <div class="testo">
 Il controlled-Z gate, esegue un controllo sul control qubit ed esegue un Z gate sul target qubit se il control qubit è nello stato ∣1⟩. 
 <br>
-<img src="foto/cz.png" width="450px" height="150px">
+<img src="foto/cz.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -387,7 +526,7 @@ Il controlled-Z gate, esegue un controllo sul control qubit ed esegue un Z gate 
 <div class="testo">
 Il controlled-Rz gate, esegue un controllo sul control qubit ed esegue una rotazione Rz sul target qubit se il control qubit è nello stato ∣1⟩. 
 <br>
-<img src="foto/crz.png" width="450px" height="150px">
+<img src="foto/crz.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -397,7 +536,7 @@ Il controlled-Rz gate, esegue un controllo sul control qubit ed esegue una rotaz
 Il ccX(Controlled-Controlled NOT gate) conosciuto anche come Toffoli gate ha 2 control qubits ed un target. Se entrambi i 2 control qubit sono nello stato ∣1⟩ applica un X gate nel target qubit.
 
 <br>
-<img src="foto/ccx.png" width="450px" height="150px">
+<img src="foto/ccx.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -407,7 +546,7 @@ Il ccX(Controlled-Controlled NOT gate) conosciuto anche come Toffoli gate ha 2 c
 Lo SWAP gate esegue uno swaps dello stato tra 2 qubits. In questo modo posso ad esempio fare un entanglement tra 2 qubits che non sono fisicamente vicini.
 
 <br>
-<img src="foto/swap.png" width="450px" height="150px">
+<img src="foto/swap.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -417,7 +556,7 @@ Lo SWAP gate esegue uno swaps dello stato tra 2 qubits. In questo modo posso ad 
 Per rendere il circuito più efficiente il barrier gate previene la congiunzione dei gates.
 
 <br>
-<img src="foto/barrier.png" width="450px" height="150px">
+<img src="foto/barrier.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -430,7 +569,7 @@ Per rendere il circuito più efficiente il barrier gate previene la congiunzione
 L'operazione di reset riporta un qubit allo stato precedente.
 
 <br>
-<img src="foto/reset.png" width="450px" height="150px">
+<img src="foto/reset.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
@@ -447,28 +586,43 @@ L'operazione di reset riporta un qubit allo stato precedente.
 Fa collassare il qubit nello stato ∣0⟩ o ∣1⟩ per poi misurarne lo stato.
 
 <br>
-<img src="foto/measure.png" width="450px" height="150px">
+<img src="foto/measure.png" width="250px" height="150px">
 <br>
 </div>
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">U3 GATE</span></div>
 </div>
 <div class="testo">
- I tre parametri (theta θ, phi φ e lamda λ) e permettono di operare contemporaneamente su di un singolo qubit.
-
+ Inserendo i tre parametri (theta θ, phi φ e lamda λ) effetuiamo una rotazione contemporaneamente sui 3 assi di un singolo qubit.
 <br>
-<img src="foto/u3.png" width="450px" height="150px">
-<br>
+Nella simulazione sottostante i valori di θ, φ e λ sono tutti di π/2.<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/u3.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/u3.png" width="250px" height="150px">
+    </div>
 </div>
+</div>
+
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">U2 GATE</span></div>
 </div>
 <div class="testo">
- I 2 parametri (φ, λ) permettono 2 diverse rotazioni nel gate.
+ I 2 parametri (φ, λ) permettono 2 diverse rotazioni nel gate e nell'esempio sottostante i parametri inseriti sono -0.9 e 0.1.
+<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/u2.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/u2.png" width="250px" height="150px">
+    </div>
+</div>
 
-<br>
-<img src="foto/u2.png" width="450px" height="150px">
-<br>
 </div>
 <div class="titolo-gate2">
 <div class="titolo-gate"> <span class="boxxeg">U1 GATE</span></div>
@@ -478,8 +632,16 @@ Con λ si realizza una rotazione come con il gate Rz.
  
 </div>
 <br>
-<img src="foto/u1.png" width="450px" height="150px">
-<br>
+<div class="row">
+    <div class="col l6 m6 s12">
+      <img src="foto/u1.gif" width="250px" height="250px">
+    </div>
+    <div class="col l6 m6 s12">
+        <br>
+      <img src="foto/u1.png" width="250px" height="150px">
+    </div>
+</div>
+
 
 
 </div>

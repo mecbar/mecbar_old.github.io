@@ -42,7 +42,10 @@
   }
 
 </style>
+
 <script>
+       //drawCartesianLineX(ctx,100,100,'orange')
+  
     window.onload = function () {
         console.log('carico piano cartesiano');
         
@@ -298,12 +301,12 @@
             <ul class="right hide-on-med-and-down">
                 <!--  <li> <a class="btn" onclick="Materialize.toast('Hello', 4000, 'Ciao' ,4000 )">Touch Me</a> </li>
               -->
-                <li><a href="http://www.mecbar.com/"><span  style="color: black !important">Home</span></a></li>
-                <li><a href="#Ablog"><span  style="color: black !important">Blog</span></a></li>
-                <li><a href="#block3"><span  style="color: black !important">Blockchain</span></a></li>
-                <li><a href="#ml"><span  style="color: black !important">Machine Learning</span></a></li>
-                <li><a href="#Alinux"><span  style="color: black !important">Linux</span></a></li>
-                <li><a href="#Aus"><span  style="color: black !important">Contatti</span></a></li>
+                <li><a href="https://www.mecbar.com/"><span  style="color: black !important">Home</span></a></li>
+                <li><a href="https://www.mecbar.com/#Ablog"><span  style="color: black !important">Blog</span></a></li>
+                <li><a href="https://www.mecbar.com/#block3"><span  style="color: black !important">Blockchain</span></a></li>
+                <li><a href="https://www.mecbar.com/#ml"><span  style="color: black !important">Machine Learning</span></a></li>
+                <li><a href="https://www.mecbar.com/#Alinux"><span  style="color: black !important">Linux</span></a></li>
+                <li><a href="https://www.mecbar.com/#Aus"><span  style="color: black !important">Contatti</span></a></li>
                 <li>
                     <a href=""> </a>
                 </li>
@@ -312,12 +315,12 @@
                 </li>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-              <li><a href="http://www.mecbar.com/"><span  style="color: black !important">Home</span></a></li>
-              <li><a href="#Ablog"><span  style="color: black !important">Blog</span></a></li>
-              <li><a href="#block3"><span  style="color: black !important">Blockchain</span></a></li>
-              <li><a href="#ml"><span  style="color: black !important">Machine Learning</span></a></li>
-              <li><a href="#Alinux"><span  style="color: black !important">Linux</span></a></li>
-              <li><a href="#Aus"><span  style="color: black !important">Contatti</span></a></li>
+              <li><a href="https://www.mecbar.com/"><span  style="color: black !important">Home</span></a></li>
+              <li><a href="https://www.mecbar.com/#Ablog"><span  style="color: black !important">Blog</span></a></li>
+              <li><a href="https://www.mecbar.com/#block3"><span  style="color: black !important">Blockchain</span></a></li>
+              <li><a href="https://www.mecbar.com/#ml"><span  style="color: black !important">Machine Learning</span></a></li>
+              <li><a href="https://www.mecbar.com/#Alinux"><span  style="color: black !important">Linux</span></a></li>
+              <li><a href="https://www.mecbar.com/#Aus"><span  style="color: black !important">Contatti</span></a></li>
             </ul>
             </li>
     </nav>
@@ -341,7 +344,272 @@
 <div class="col l12 m12 s12">
   L'algebra lineare è la branca della matematica che si occupa dello studio dei vettori,
   spazi vettoriali(piano cartesiano), trasformazioni lineari e sistemi di equazioni lineari.<br>
-    Vediamo ora come eseguire le moltiplicazione tra vettori o tra matrici e vettori che sono la base 
+  Qui analizziamo quelle che sono le componenti dell'algebra che vengono utilizzate nella quantistica computazionale.<br>
+  <br><br> 
+ <b>Vector e vector spaces</b> <br><br> 
+Indichiamo con il simbolo |v⟩ il vettore composto da ( x y ), compongono il vector spaces che viene rappresentato  
+nel piano cartesiano come nell'immagine sottostante dove vediamo il vector space del vettore  v=(1 3) <br>
+<img src="foto/vector.png" width="35%" height="250px">  <br><br> 
+
+<b>Linear combination</b><br><br>
+La linear combination di 2 o più vettori è il vettore che si ottiene dalla somma dei vettori 
+(anche con differenti direzioni) e moltiplicati con uno scalare.
+Prendiamo ad esempio 3 vettori V1=(2 3) V2=(1 3) e V3=(-1 2) ed i 3 seguenti scalari 
+C1=2 C2=1	e	C3=0 con la formula c1v1 + c2v2 + c3v3 procediamo con i calcoli siostituendo i valori 
+degli scalari ed otteniamo 2v1 + 1v2 + 0v3 ora sostituiamo i valore dei vettori 2(2 3) + 1(1 3) + 0(-1 2) 
+poi moltiplichiamo gli scalari con i valori dei vettori (4 6) + (1 3) + 0 infine essendo 0 eliminiamo il valore del terzo 
+vettore e sottraiamo i valori rimasti dei rimanenti 2 vettori per trovare il valore di x ed y del vettore 
+che si ottiene dalla linear combination (4–1  6–3) il risultato finale è il nuovo vettore con i seguenti valori 			
+(3 3)   				
+<br>
+Nel grafico sottostante vemgono raffigurati nel piano cartesiano i 3 vettori v1,v2,v3 e il vettore creato 
+con la linear combination<br><br>
+<img src="foto/vector1.png" width="45%" height="250px">  <br><br>
+
+
+
+<b>Span</b> <br><br> 
+Lo span è l'insieme dei vettori che possono essere rappresentati con la linear combination in uno spazio vettoriale e possiamo 
+indicarlo come il prolungamento della linea della rappresentazione del vettore verso l'alto o il basso. 
+<img src="foto/vector2.png" width="45%" height="250px">  <br><br>
+
+Nel grafico possiamo notare lo span che è nel vettore (1 3) la continuazione della rapprresentazione 
+grafica che continua verso il basso e verso l'alto. Quindi nello span possono essere compresi 
+
+Nella quantistica si parla di state vectors che indica lo space vectors dell’algebra lineare,
+Per state vector indichiamo un vector che punta verso uno specifico quantum state. Nella sfera di Bloch visualizziamo
+ lo state vector e il vettore viene indicato con il termine <b>state space</b> nell'immagine sottostante 
+  viene rappresentata la superposition(tra 0 e 1) ed il vector che vediamo può rotare nella sfera ed ogni punto in cui può rotare consiste 
+  in un diverso quantunm state.<br><br>
+ <img src="foto/sphere.png" width="45%" height="250px">  <br><br>
+
+ <b>Matrix </b> <br><br>
+ Un vettore è una matrice di una sola colonna e nella quantistica si applica ad ogni state vector 
+ per manipolarlo un gate che viene rappresentato da una matrice che viene moltiplicata al vettore (state vector).
+ <br><br>
+  
+ Nella quantistica si usano Hermitian matrix ed unitary matrix. <br><br>
+ 
+ <b>Hermitian matrix </b> <br><br>La Hermitian matrix è una matrice che è uguale alla conjugate transpose.
+ <br><br> 
+
+ <b>Unitary matrix</b> <br><br>
+ La Unitary matrix è simile alla Hermitian ed è una matrice dove la matrice inversa è uguale alla conjugate transpose della mtrice originale.
+
+ Matrice inversa di A(elevata alla -1) * A  = A* A elevata -1 = I  dove I è la identity matrix cioè una matrice 
+ che ha tutti 1 nella diagonale da sx a dx e 0 in tutti gli altri elementi.<br> 
+ La unitary matrix è importante perchè applicandola al quantum state non lo modifica.<br> <br> 
+<b>Linear independing</b><br> <br> 
+Un vettore il cui span non rientra nella linear combination degli altri vettori viene indicato come linear independent. 
+<br> <br> 
+ <b>Basis</b><br> <br> 
+ Il basis è lo span ottenuto da una linear independent. <br> 
+ Perciò il basis di un vector space è il minimo che lo span può avere nell'intero space.<br> 
+ 
+ Basis e span nel quantum state sono importanti perchè ci permettono di ridurre verso il basso il vector space. 
+ Conosciamo ogni vector nello space vector perchè sono una linear combination del basis vector.
+Nella quantum computation i basis più comuni sono |0⟩ e |1⟩ ma si possono avere altri qubit state come
+ una linear combination di questi basis vectors ad esempio |0⟩+|1⟩/√2 che rappresenta la superposition 
+ dove si hanno le stesse probabilità che si abbia |0⟩ o |1⟩.<br> <br> 
+ 
+<b>Hilbert Space</b><br> <br> 
+ 
+ Lo <b>state space</b> è lo spazio che contiene tutti i quantum state vectors. 
+ La differenza tra Hilbert state e altri vector space è che il primo ha un <b>inner product</b>, 
+ una operazione effettuata tra 2 vettori che restituisce uno scalare.<br> <br> 
+ In quantum computing l'inner product ritorna una scalare che identifica la quantità di un vettore che è compreso nell’altro vettore.
+ In differenti quantum state si calcola la probabilità con il totale che deve essere uguale a 1 ma qui non appofondiremo questo aspetto.
+ 
+ La Bloch sphere rappresenta un valido Hilbert state ed il radius della Bloch sphere è uguale ad 1.
+ <br> <br> 
+ 
+ <b>Unitary matrix</b><br> <br> 
+ La Unitary matrix è importante in quantum computation perchè preserva l'inner product.
+ La unitary transformation nella Bloch sphere non è altro che la rotazione dello state vectors in diverse posizioni 
+ all’interno della sfera con la lunghezza dello state vector che non cambia.<br> <br> 
+ 
+ <b>Eigenvectors and Eigenvalues</b><br> <br>  
+ 
+ Per definire cosa sono gli eigenvectors e eigenvalues partiamo dalla seguente formula:<br> <br> 
+ A|v⟩ = λ|v⟩ <br> <br>    dove A è una matrice e λ è un numero <br> <br> 
+ Date alcune matrici A, dobbiamo cercare i vettori |v⟩ ed i numeri λ che soddisfino la relazione.
+ Questi vettori vengono chiamati eigenvectors ed i relativi numeri moltiplicatori eigenvalues. <br> 
+ <br> 
+  Eigenvectors and eigenvalues sono concetti importanti nella contesto della quantistica computazionale. <br> 
+  <br> 
+ Quando si deve misurare il valore di un qubit nel Z-basis l'operazione di misurazione fa collassare 
+ il qubit state all'interno di uno dei possibili eigenvectors della Z matrix cioè |0⟩ o |1⟩. 
+ L'eigenvectors del Pauli-Z matrix sono i quantum computational basis states |0⟩ e |1⟩.
+ Ritorneremo sotto a parlare di eigenvectors e eigenvalues.
+ <br> <br> 
+ 
+<b>Orthogonal</b><br> <br> 
+ 2 vettori sono orthogonal se il loro inner product è uguale a zero. Mentre un vettore è normalizzato se 
+ se la sua magnitude è uguale a 1. Si dice che 2 vettori sono Orthonormal se entrambi sono orthogonal e normalizzati.
+ In quantum computing si usano gli orthonormal basis vectors |0⟩ e |1⟩ per rappresentare lo stato del qubit.<br>
+Ci sono altre basis i più comuni derivano dai vectors |+⟩ e |-⟩ con |+⟩ = 1/√2 (1 1) e |-⟩ = 1/√2 (1 -1)
+<br> 
+
+<br> 
+Ora le riscriviamo con |0⟩ e |1⟩ e vediamo l'inner products ottenuto è uguale :<br> <br> 
+
+|+⟩ = 1/√2 (|0⟩+|1⟩) 〈0|0〉= 1 〈0|1〉= 0<br> 
+|-⟩ = 1/√2 (|0⟩-|1⟩) 〈0|+〉= 1/√2 〈0|-〉= - 1/√2 <br> <br> 
+
+<b>Inner Product</b> <br>  <br> 
+Moltiplicando  bra e ket con la moltiplicazione delle matrici si ottiene uno scalare<br>  
+Per esempio prendiamo i seguenti bra e ket : <br> <br> 
+〈a|b〉= (a1 a2 a3) (b1 b2 b3) = a1b1 + a2b2 + a3b3 <br> <br> 
+se |a⟩ e |b⟩ sono orthogonal abbiamo 〈a|b〉= 0 e se |a⟩ è normalizzato〈a|a〉= 1<br>  <br> 
+<b>The Outer Product</b> <br>  <br> 
+Sempre per le regole della moltiplicazione tra matrici vediamo come ottenere l'outer product 
+usando ket e bra:
+ |a〉〈b| = (a1 a2) (b1 b2) = vettore = (a1b1 a1b2 b1a1 b2a2)<br> <br> 
+
+ <b>DIRAC NOTATION</b>  <br>  <br>   
+ Per descrivere il quantum state nello spazio di Hilbert si può usare anche la Dirac Notation o notazione bra-ket che indica il prodotto 
+ scalare di 2 stati indicati nella forma 〈a|b〉.<br> 
+ Nell'algebra lineare ci sono vettori di riga e di colonna e nella Dirac notation sono indicati con ⟨Bras| and |Kets⟩. <br>
+ Vediamo un esempio dove <br> ket |a⟩ = (a1 a2) vettore colonna <br>bra vettore riga〈b| = (b1 b2) = |b⟩+ (b1* b2*) 
+<br> bra-ket = 〈b|a〉 = inner product = a1b1 + a2b2  = 〈a|b〉 *  appartiene  complex number<br>
+ket-bra = |axb| = vettore (a1b1  a1b2   a2b1  a2b2)<br> 
+Define state |0⟩ = (1 0)    |1⟩ = (0  1)   inner product  = 〈0|1〉sono ortogonali si calcola (1 0) * (0 1)  = 1 0 + 0 1 = 0 <br> 
+  
+In questa immagine vediamo la matrice che contiene il valore del gate x 
+<img src="foto/matr1.png" width="5%" height="50px">  gli stessi dati possono essere rappresentati con la Dirac Notation 
+|0x1| + |1x0| ora per esempio applichiamo il gate x a |0⟩ ed otteniamo (01  10) (1 0) = (01 + 10  11 + 00) = (0 1) = |1⟩
+un altro esempio utile è della seguente matrice (1 0 0 -1) che nella Dirac Notation diviene |0x0| - |1x1| <br>
+
+Con la normalizzazione abbiamo〈ψ|ψ〉= 1 quindi abbiamo come e.g. |ψ⟩ = 1/√2(|0⟩ + |1⟩) = (1/√2  1/√2) 
+ <br>  <br> 
+
+ <b>MEASUREMENTS</b> <br>  <br> 
+ La fase di misurazione del qubit fa collassare verso il basis |0⟩ o |1⟩ quindi collassa nello stato 
+ 0 o 1. Questo avviene perchè queste sono gli eigenstates del σ-z operator. Nella quantistica sono presenti 
+ 3 Pauli matrix che si identificano con i simboli  σ-x  σ-y  σ-z. La  σ-z chiamata anche z-measurement viene utilizzata 
+ per misurare se il qubit è nella posizione |0⟩ o |1⟩.  <br> 
+ Naturalmente non ci sono solo le basis 0 e 1 e le più comuni basis sono: <br>  <br> 
+
+ 
+ |+⟩ = 1/√2 (|0⟩ + |1⟩)  <br> 
+ |-⟩ = 1/√2 (|0⟩ - |1⟩)  <br> 
+ <br> 
+ per interferenze e differente amplitude ci sono altre 2 ortagonal states ed altre comuni basis utili che sono:
+ <br> 
+ |+i⟩ = 1/√2 (|0⟩ + i|1⟩)   <br> 
+ |-i⟩ = 1/√2 (|0⟩ - i|1⟩)  <br> 
+ sono ortogonal con numeri immaginari  <br> 
+ questi ultimi corrispondono a eigenstates σ-x e σ-y e si usano per measure x e y.
+ 
+ <br>  <br> 
+
+ 
+ <b>Born Rule</b> <br>  <br> 
+ La born rule restituisce la probabilità che una misurazione su un sistema quantistico produrrà un dato risultato. 
+Quindi possiamo calcolare la probabilità che  |ψ⟩ collassi nel basis  <br> 
+{ |x⟩, |x+⟩} nello state |x⟩ sono P(x) = |〈x|ψ〉|²  se normalizzato ∑<sub>i</sub> P(xi) = 1 <br> 
+vediamo un esempio:  <br>  <br> 
+ |ψ⟩ = 1/√3 (|0⟩ + √2<sup>i</sup> |1⟩ ) misurato in basis {|0⟩, |1⟩}   <br> 
+  P(0) = inner product P(0) = |〈0| 1/√3 (|0⟩ + √2|1⟩) |²  =
+  | 1/√3 〈0|0〉 + √2/3 〈0|1〉|² = | 1/√3 1 + √2/3  0 |² = 1/3 <br> 
+                                                                            0    <br> 
+ quindi P(1)= 2/3 <br>  <br> 
+ altro esempio : <br>  <br> 
+ |ψ⟩ = 1/√2 (|0⟩ - |1⟩) misurato in basis {|+⟩,|-⟩}  <br> 
+ P(+) = |〈+|ψ〉|² = | 1/√2 (〈0| +〈1|) 1/√2 (|0⟩ - |1⟩) |²  = 
+ 1/4 |〈0|0〉- 〈0|1〉+〈1|0〉-〈1|1〉|² = | 1 - 1 | = 0  <br>   
+ <br> 
+ atteso come   〈+|ψ〉 = 〈+|-〉  = 0 
+ <br>  <br> 
+
+
+ <b>BLOCH SPHERE</b> <br> <br> 
+ Per descrivere il quantum state normalizzato detto pure state si utilizza la Bloch Sphere che è 
+ una rappresentazione geometrica dello spazio di Hilbert di raggio 1 dove trova una corretta identificazione 
+ un qubit.<br> <br> 
+
+  <div style="display: flex;">
+    <div>
+<img src="foto/qubit4.png" width="100%" height="250px"> </div>
+ 
+<div>
+<img src="foto/blocksfera.png" width="100%" height="250px">
+ </div>
+  </div>
+<br> <br> 
+Nell'immagine sopra che descrive la sfera possiamo vedere gli assi x, y e z, lo stato |0⟩ e |1⟩, i parametri 
+θ e φ. <br> 
+Con la formula seguente indichiamo uno stato che può così essere rappresentato nella Bloch sphere e 
+possiamo calcolare la probabilità che abbia un valore.<br> 
+Vediamo la formula e come calcolare la probabilità.<br> <br> 
+
+|ψ⟩ = (cos (θ/2)|0⟩ + e<sup>iφ</sup>  sin (θ/2)|1⟩ )  con φ ∈ { 0, 2π } che descrive la fase e θ ∈ { 0, π }  determina  la 
+probabilità P di misurare |0⟩ o |1⟩. <br> <br>P(0) = cos² θ/2  e P(1) = sin² θ/2 <br> <br> 
+Nella Bloch sphere viene illustrata con sfera radius = 1 e con coordinate calcolate con il seguente Bloch vector <br> 
+(sinθ cosθ <br> sinθ sinφ  <br> cosθ) <br> 
+i valori calcolati nel Bloch vector identificano le coordinate x,y e z.<br><br> 
+
+ Vediamo un esempio di come calcolare le coordinate per diversi stati ad iniziare da <br>
+  <b>|0⟩ </b> con θ = 0 ,  φ valore arbitrario <br>
+  sin(0)=0   cos(0)=1    quindi x = 0<br>
+  sin(0)=0   sin(1)=0,8415  quindi y = 0<br>
+  cos(0)=1  quindi z = 1 <br>
+  per cui le coordinate nella Bloch Sphere sono ( 0,0,1 )<br>
+  con qiskit se inseriamo il comando sottostante otteniamo la relativa Bloch Sphere.<br
+  plot_bloch_vector([0,0,1], title="Bloch Sphere")<br>
+  <img src="foto/sfera0.png" width="250px" height="250px"><br><br>
+
+<b>|1⟩</b> con θ = π,  φ valore arbitrario in questo esempio 1 <br>
+   sin(π)=0    cos(π)=-1    quindi x = 0<br>
+   sin(π)=0   sin(1)=0,8415  quindi y = 0<br>
+   cos(π)=-1  quindi z = -1 <br>
+   per cui le coordinate nella Bloch Sphere sono ( 0,0,-1 )<br>
+   con qiskit se inseriamo il comando sottostante otteniamo la relativa Bloch Sphere.<br
+   plot_bloch_vector([0,0,1], title="Bloch Sphere")<br>
+   <img src="foto/sfera1.png" width="250px" height="250px"><br><br>
+
+   <b>|+⟩ </b> con θ = π/2,  φ = 0 otteniamo il Bloch vector ( 1 0 0 ) <br>
+   e se con qiskit inseriamo il comando sottostante otteniamo la relativa Bloch Sphere.<br
+   plot_bloch_vector([1,0,0], title="Bloch Sphere")<br>
+   <img src="foto/sferapi.png" width="250px" height="250px"><br><br>
+   <b>|-⟩ </b> con θ = π/2,  φ = π otteniamo il Bloch vector ( -1 0 0 ) <br>
+   e se con qiskit inseriamo il comando sottostante otteniamo la relativa Bloch Sphere.<br
+   plot_bloch_vector([-1,0,0], title="Bloch Sphere")<br>
+   <img src="foto/sferame.png" width="250px" height="250px"><br><br> 
+
+   <b>|+i⟩ </b> con θ = π/2,  φ =  π/2 otteniamo il Bloch vector ( 0 1 0 ) <br>
+   e se con qiskit inseriamo il comando sottostante otteniamo la relativa Bloch Sphere.<br
+   plot_bloch_vector([0,1,0], title="Bloch Sphere")<br>
+   <img src="foto/sferapiui.png" width="250px" height="250px"><br><br> 
+   <b>|-i⟩</b> con θ = π/2,  φ = 3 π/2 otteniamo il Bloch vector ( 0 -1 0 ) <br>
+   e se con qiskit inseriamo il comando sottostante otteniamo la relativa Bloch Sphere.<br
+   plot_bloch_vector([0,-1,0], title="Bloch Sphere")<br>
+   <img src="foto/sferamei.png" width="250px" height="250px"><br><br> 
+ 
+  Nella Bloch Sphere |0⟩ e |1⟩ sono ortagonali e θ è l'angolo della Bloch sphere  
+  mentre θ/2 è l'angolo dell'Hilbert space. <br> <br> 
+
+ Ora che abbiamo visto nella Bloch sphere le assi x, y e z possiamo ritornare alla fase di 
+ misurazione indicando che queste sono delle proiezioni sul relativo asse per cui <br> 
+ z-measurement è la proiezione sull'asse delle z (|0⟩ o |1⟩) <br> 
+  x-measurement è la proiezione sull'asse delle x (|+⟩ o |-⟩) <br> 
+  y-measurement è la proiezione sull'asse delle y (|+i⟩ o |-i⟩) <br> 
+  inoltre si possono creare quante si vogliono assi nella Bloch sphere e misurare le relative proiezioni.
+  <br> <br> 
+ <b>Bell State</b>
+ <br> <br> 
+ Il Bell State è la base dell'entanglement e matematicamente lo possiamo rappresentare come segue:<br> 
+ |ψ<sup>00</sup>⟩ =  1/√2 (|00⟩ + |11⟩  <br> 
+ |ψ<sup>01</sup>⟩ =  1/√2 (|01⟩ + |10⟩ <br> 
+ |ψ<sup>10</sup>⟩ =  1/√2 (|00⟩ + |11⟩ <br> 
+ |ψ<sup>11</sup>⟩ =  1/√2 (|01⟩ + |10⟩ <br> 
+ <br> 
+ in generale |ψ<sup>ij</sup>⟩ = (I ⊗ σ<sup>j</sup><sub>x</sub> σ<sup>i</sup><sub>z</sub>)  |ψ<sup>00</sup>⟩ 
+ dove I è la Identity matrix <br> 
+
+ <br> 
+<b>Operazioni tra vettori e matrici</b><br> <br> 
+ Vediamo ora come eseguire le moltiplicazione tra vettori o tra matrici e vettori che sono la base 
     per eseguire le operazioni per i tensor oppure per operazioni nei circuiti quantistici.<br>
     Sotto vediamo 2 diversi esempi, il primo di moltiplicazione tra vettori ed il secondo di moltiplicazione
     tra matrice e vettore.<br><br>   
@@ -364,6 +632,8 @@
     
     <img src="foto/ket.png" width="700px" height="300px"> 
 <br>
+<br> 
+<b>Applicazione Gates</b><br> <br> 
   Vediamo come vengono applicati i gates nei qubit sia nel procedimento che a livelli di calcoli algebrici.
   Se su di un qubit dobbiamo applicare più gates prima moltiplichiamo i loro valori algebrici tra loro ed il risultato viene poi 
   moltiplicato per il valore del qubit.<br>
